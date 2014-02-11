@@ -1,0 +1,7 @@
+parameters:
+#    evteae.example.class: EVT\EAEBundle\Example
+
+services:
+#    evteae.example:
+#        class: %evteae.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

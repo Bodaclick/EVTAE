@@ -1,0 +1,5 @@
+evt_hook:
+    resource: "@EVTHookBundle/Controller/"
+    type:     annotation
+    prefix:   /hooks/
+
