@@ -20,9 +20,12 @@ class WelcomeHookController  extends Controller
      */
     public function postWelcomeUserAction(Request $request)
     {
+        $data = $request->request->all();
+        $data['subject'] = $this->get('translator')->trans('user.welcome.subject', [], 'email');
+
         $domain = $request->request->get('vertical')['domain'];
         $this->get('evt.mailer')->send(
-            $request->request->all(),
+            $data,
             'EVTEAEBundle:Email:Welcome.' . $domain . '.html.twig'
         );
         $response = new JsonResponse();
