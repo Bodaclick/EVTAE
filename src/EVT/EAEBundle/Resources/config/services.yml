@@ -5,3 +5,11 @@ services:
     evt.mailer:
         class: EVT\EAEBundle\Communication\Email\Emailer
         arguments: [@mailer, @twig]
+
+    evt.api_key.user_provider:
+        class: EVT\EAEBundle\Security\ApiKeyUserProvider
+        arguments: [%evteae.api_keys%]
+
+    evt.api_key.authenticator:
+        class:     EVT\EAEBundle\Security\ApiKeyAuthenticator
+        arguments: [@evt.api_key.user_provider]

@@ -15,4 +15,5 @@ parameters:
     aws_key: aws_key
     aws_secret: aws_secret
     aws_region: region
+    api_keys: [{key: '1234', name: local}]
 

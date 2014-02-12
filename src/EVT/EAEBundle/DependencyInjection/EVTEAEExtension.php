@@ -24,5 +24,6 @@ class EVTEAEExtension extends Extension
 
         $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.yml');
+        $container->setParameter('evteae.api_keys', $config['api_keys']);
     }
 }

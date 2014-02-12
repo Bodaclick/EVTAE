@@ -77,4 +77,6 @@ evteae:
         key: %aws_key%
         secret: %aws_secret%
         region: eu-west-1
+    api_keys: %api_keys%
+
 

@@ -25,6 +25,13 @@ class Configuration implements ConfigurationInterface
                 ->scalarNode('key')->end()
                 ->scalarNode('secret')->end()
                 ->scalarNode('region')->end()
+            ->end()
+            ->end()
+            ->arrayNode('api_keys')->isRequired()->requiresAtLeastOneElement()->useAttributeAsKey('key')
+                ->prototype('array')
+                    ->children()
+                        ->scalarNode('name')->isRequired()->end()
+                    ->end()
                 ->end()
             ->end()
         ->end();
