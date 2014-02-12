@@ -2,20 +2,18 @@
 
 namespace EVT\EAE\Tests\Communication\Mailer;
 
-use EVT\EAE\Communication\Mailer\AWSWelcomeMailer;
+use EVT\EAE\Communication\Mailer\WelcomeMailer;
 
 /**
  * Class AWSWelcomeMailerTest
  * @author Eduardo Gulias Davis <eduardo.gulias@bodaclick.com>
 @copyright 2014 Bodaclick */
-class AWSWelcomeMailerTest extends \PHPUnit_Framework_TestCase
+class WelcomeMailerTest extends \PHPUnit_Framework_TestCase
 {
     public function testSendWelcomeEmail()
     {
-        $awsSes = $this->getMockBuilder('Aws\Ses\SesClient')->disableOriginalConstructor()
-            ->setMethods(['sendEmail'])->getMock();
-        $awsSes->expects($this->once())->method('sendEmail')->will($this->returnValue(1));
-        $config = [];
+        $mailer = $this->getMockBuilder('\Swift_Mailer')->disableOriginalConstructor()->getMock();
+        $mailer->expects($this->once())->method('send')->will($this->returnValue(1));
         $data = [
             'user' => [
                 'username' => 'testUsername',
@@ -31,7 +29,7 @@ class AWSWelcomeMailerTest extends \PHPUnit_Framework_TestCase
         ];
         $template = 'string';
 
-        $mailer = new AWSWelcomeMailer($awsSes, $config);
+        $mailer = new WelcomeMailer($mailer);
         $mailer->send($data, $template);
     }
 
@@ -40,14 +38,12 @@ class AWSWelcomeMailerTest extends \PHPUnit_Framework_TestCase
      */
     public function testDataIsNotArray()
     {
-        $awsSes = $this->getMockBuilder('Aws\Ses\SesClient')->disableOriginalConstructor()
-            ->setMethods(['sendEmail'])->getMock();
-        $awsSes->expects($this->never())->method('sendEmail')->will($this->returnValue(1));
-        $config = [];
+        $mailer = $this->getMockBuilder('\Swift_Mailer')->disableOriginalConstructor()->getMock();
+        $mailer->expects($this->never())->method('send')->will($this->returnValue(1));
         $data = 'string';
         $template = 'string';
 
-        $mailer = new AWSWelcomeMailer($awsSes, $config);
+        $mailer = new WelcomeMailer($mailer);
         $mailer->send($data, $template);
 
     }

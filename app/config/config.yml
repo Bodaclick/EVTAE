@@ -66,7 +66,12 @@ swiftmailer:
     host:      "%mailer_host%"
     username:  "%mailer_user%"
     password:  "%mailer_password%"
-    spool:     { type: memory }
+    auth_mode: login
+    encryption: tls
+    port:       587
+    logging:    %kernel.debug%
+
+
 evteae:
     aws:
         key: %aws_key%

@@ -34,7 +34,7 @@ class PostWelcomeEmailTest extends WebTestCase
                     'domain' => 'test.com'
                 ]
         ];
-        $mailerMock = $this->getMockBuilder('EVT\EAE\Communication\Mailer\AWSWelcomeMailer')
+        $mailerMock = $this->getMockBuilder('EVT\EAE\Communication\Mailer\WelcomeMailer')
             ->disableOriginalConstructor()->getMock();
         $mailerMock->expects($this->once())->method('send');
 

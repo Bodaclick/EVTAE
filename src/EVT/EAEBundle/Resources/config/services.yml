@@ -7,9 +7,9 @@ services:
         arguments: [%aws_key%, %aws_secret%, %aws_region%]
 
     evt.mailer.base_aws_mailer:
-        class: EVT\EAE\Communication\Mailer\AWSWelcomeMailer
+        class: EVT\EAE\Communication\Mailer\WelcomeMailer
         arguments: [@aws.ses, []]
 
     evt.mailer.aws_welcome:
-        class: EVT\EAEBundle\Factory\AWSMailerFactory
+        class: EVT\EAEBundle\Factory\MailerFactory
         arguments: [@twig, @translator, @evt.mailer.base_aws_mailer]

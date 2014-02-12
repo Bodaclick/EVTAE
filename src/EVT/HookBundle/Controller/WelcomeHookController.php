@@ -20,7 +20,6 @@ class WelcomeHookController  extends Controller
      */
     public function postWelcomeUserAction(Request $request)
     {
-        var_dump($this->container->getParameter('aws_key'));
         $domain = $request->request->get('vertical')['domain'];
         $this->get('evt.mailer.aws_welcome')->send(
             $request->request->all(),
