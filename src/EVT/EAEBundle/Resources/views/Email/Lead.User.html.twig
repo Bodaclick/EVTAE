@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+Gracias por tu solicitud. Hemos recibido correctamente tu solicitud de información para {{ showroom.name }}  - {{ showroom.phone }}  con los siguientes datos
+<table>
+    <tr>
+        <td>{% trans %}lead.event.date{% endtrans %}</td>
+        <td>{% trans %}lead.event.type{% endtrans %}</td>
+        <td>{% trans %}lead.event.location{% endtrans %}</td>
+        <td>{% trans %}lead.observations{% endtrans %}</td>
+        <td>{% trans %}lead.date{% endtrans %}</td>
+    </tr>
+    <tr>
+        <td>{{ lead.event.date | date("d/m/Y") }}</td>
+        <td>{{ lead.event.type.type }}</td>
+        <td>{{ lead.event.location.admin_level1  }} - {{ lead.event.location.admin_level2 }}</td>
+        <td>{{ informatiion_bag.parameters.observations | default('') }}</td>
+        <td>{{ created_at | date("d/m/Y") }}</td>
+    </tr>
+</table>
+
+En breve nos pondremos en contacto contigo.
+</body>
+</html>

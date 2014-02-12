@@ -6,6 +6,30 @@
                 <source>user.welcome.subject</source>
                 <target>Bienvenido</target>
             </trans-unit>
+            <trans-unit id="2">
+                <source>user.lead.subject</source>
+                <target>Has hecho una solicitud de informacion</target>
+            </trans-unit>
+            <trans-unit id="3">
+                <source>lead.event.date</source>
+                <target>Fecha del evento</target>
+            </trans-unit>
+            <trans-unit id="4">
+                <source>lead.event.type</source>
+                <target>Tipo del evento</target>
+            </trans-unit>
+            <trans-unit id="5">
+                <source>lead.event.location</source>
+                <target>Lugar</target>
+            </trans-unit>
+            <trans-unit id="6">
+                <source>lead.observations</source>
+                <target>Observaciones</target>
+            </trans-unit>
+            <trans-unit id="7">
+                <source>lead.date</source>
+                <target>Fecha solicitud</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>
