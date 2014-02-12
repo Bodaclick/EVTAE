@@ -1,19 +1,21 @@
 <?php
 
-namespace EVT\EAE\Tests\Communication\Mailer;
+namespace EVT\EAEBundle\Tests\Communication\Emailer;
 
-use EVT\EAE\Communication\Mailer\WelcomeMailer;
+use EVT\EAEBundle\Communication\Email\Emailer;
 
 /**
- * Class AWSWelcomeMailerTest
+ * Class AWSEmailerTest
  * @author Eduardo Gulias Davis <eduardo.gulias@bodaclick.com>
 @copyright 2014 Bodaclick */
-class WelcomeMailerTest extends \PHPUnit_Framework_TestCase
+class EmailerTest extends \PHPUnit_Framework_TestCase
 {
     public function testSendWelcomeEmail()
     {
         $mailer = $this->getMockBuilder('\Swift_Mailer')->disableOriginalConstructor()->getMock();
         $mailer->expects($this->once())->method('send')->will($this->returnValue(1));
+        $twig = $this->getMockBuilder('\Twig_Environment')->disableOriginalConstructor()->getMock();
+        $twig->expects($this->once())->method('render');
         $data = [
             'user' => [
                 'username' => 'testUsername',
@@ -29,23 +31,7 @@ class WelcomeMailerTest extends \PHPUnit_Framework_TestCase
         ];
         $template = 'string';
 
-        $mailer = new WelcomeMailer($mailer);
+        $mailer = new Emailer($mailer, $twig);
         $mailer->send($data, $template);
     }
-
-    /**
-     * @expectedException \InvalidArgumentException
-     */
-    public function testDataIsNotArray()
-    {
-        $mailer = $this->getMockBuilder('\Swift_Mailer')->disableOriginalConstructor()->getMock();
-        $mailer->expects($this->never())->method('send')->will($this->returnValue(1));
-        $data = 'string';
-        $template = 'string';
-
-        $mailer = new WelcomeMailer($mailer);
-        $mailer->send($data, $template);
-
-    }
-
 }

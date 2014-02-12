@@ -21,7 +21,7 @@ class WelcomeHookController  extends Controller
     public function postWelcomeUserAction(Request $request)
     {
         $domain = $request->request->get('vertical')['domain'];
-        $this->get('evt.mailer.aws_welcome')->send(
+        $this->get('evt.mailer')->send(
             $request->request->all(),
             'EVTEAEBundle:Email:Welcome.' . $domain . '.html.twig'
         );

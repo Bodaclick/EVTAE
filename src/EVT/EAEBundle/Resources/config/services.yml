@@ -2,14 +2,6 @@ parameters:
 #    evteae.example.class: EVT\EAEBundle\Example
 
 services:
-    aws.ses:
-        class: Aws\Ses\SesClient
-        arguments: [%aws_key%, %aws_secret%, %aws_region%]
-
-    evt.mailer.base_aws_mailer:
-        class: EVT\EAE\Communication\Mailer\WelcomeMailer
-        arguments: [@aws.ses, []]
-
-    evt.mailer.aws_welcome:
-        class: EVT\EAEBundle\Factory\MailerFactory
-        arguments: [@twig, @translator, @evt.mailer.base_aws_mailer]
+    evt.mailer:
+        class: EVT\EAEBundle\Communication\Email\Emailer
+        arguments: [@mailer, @twig]
