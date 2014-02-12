@@ -2,6 +2,14 @@ parameters:
 #    evteae.example.class: EVT\EAEBundle\Example
 
 services:
-#    evteae.example:
-#        class: %evteae.example.class%
-#        arguments: [@service_id, "plain_value", %parameter%]
+    aws.ses:
+        class: Aws\Ses\SesClient
+        arguments: [%aws_key%, %aws_secret%, %aws_region%]
+
+    evt.mailer.base_aws_mailer:
+        class: EVT\EAE\Communication\Mailer\AWSWelcomeMailer
+        arguments: [@aws.ses, []]
+
+    evt.mailer.aws_welcome:
+        class: EVT\EAEBundle\Factory\AWSMailerFactory
+        arguments: [@twig, @translator, @evt.mailer.base_aws_mailer]

@@ -8,5 +8,5 @@ namespace EVT\EAE\Communication;
 @copyright 2014 Bodaclick */
 interface Mailer
 {
-    public function send();
+    public function send($data, $template);
 }

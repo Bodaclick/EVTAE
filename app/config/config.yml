@@ -67,11 +67,9 @@ swiftmailer:
     username:  "%mailer_user%"
     password:  "%mailer_password%"
     spool:     { type: memory }
+evteae:
+    aws:
+        key: %aws_key%
+        secret: %aws_secret%
+        region: eu-west-1
 
-platinum_pixs_aws:
-    base:
-        region: us-east-1
-        key: my-access-key
-        secret: my-secret-key
-    #key:                        %aws_key%
-    #secret:                     %aws_secret%

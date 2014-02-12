@@ -1,6 +1,6 @@
 <?php
 
-namespace EVT\HookBundle\Tests\Controller;
+namespace EVT\HookBundle\Tests\Functional\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
@@ -34,12 +34,11 @@ class PostWelcomeEmailTest extends WebTestCase
                     'domain' => 'test.com'
                 ]
         ];
-        $mailerMock = $this->getMockBuilder('EVT\EAE\Communication\Mailer\WelcomeMailer')
+        $mailerMock = $this->getMockBuilder('EVT\EAE\Communication\Mailer\AWSWelcomeMailer')
             ->disableOriginalConstructor()->getMock();
         $mailerMock->expects($this->once())->method('send');
-        $mailerMock->expects($this->once())->method('prepare')->will($this->returnSelf());
 
-        $this->client->getContainer()->set('evt.welcome_mailer', $mailerMock);
+        $this->client->getContainer()->set('evt.mailer.aws_welcome', $mailerMock);
 
         $this->client->request(
             'POST',

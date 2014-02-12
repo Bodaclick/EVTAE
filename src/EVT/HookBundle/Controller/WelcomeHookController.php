@@ -20,7 +20,12 @@ class WelcomeHookController  extends Controller
      */
     public function postWelcomeUserAction(Request $request)
     {
-        $this->get('evt.welcome_mailer')->prepare($request->request->all())->send();
+        var_dump($this->container->getParameter('aws_key'));
+        $domain = $request->request->get('vertical')['domain'];
+        $this->get('evt.mailer.aws_welcome')->send(
+            $request->request->all(),
+            'EVTEAEBundle:Email:Welcome.' . $domain . '.html.twig'
+        );
         $response = new JsonResponse();
         return $response->setStatusCode(202);
     }
