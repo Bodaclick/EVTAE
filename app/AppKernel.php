@@ -19,6 +19,7 @@ class AppKernel extends Kernel
             new EVT\HookBundle\EVTHookBundle(),
             new EVT\EAEBundle\EVTEAEBundle(),
             new PlatinumPixs\Aws\PlatinumPixsAwsBundle(),
+            new EVT\IntranetBundle\EVTIntranetBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
