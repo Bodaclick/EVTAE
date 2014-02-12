@@ -11,7 +11,8 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 /**
  * Class UserWelcomeHookController
  * @author Eduardo Gulias Davis <eduardo.gulias@bodaclick.com>
-@copyright 2014 Bodaclick */
+ * @copyright 2014 Bodaclick
+ */
 class WelcomeHookController  extends Controller
 {
     /**
@@ -24,12 +25,8 @@ class WelcomeHookController  extends Controller
         $data['subject'] = $this->get('translator')->trans('user.welcome.subject', [], 'email');
 
         $domain = $request->request->get('vertical')['domain'];
-        $this->get('evt.mailer')->send(
-            $data,
-            'EVTEAEBundle:Email:Welcome.' . $domain . '.html.twig'
-        );
+        $this->get('evt.mailer')->send($data, 'EVTEAEBundle:Email:Welcome.' . $domain . '.html.twig');
         $response = new JsonResponse();
         return $response->setStatusCode(202);
     }
-
-} 
+}

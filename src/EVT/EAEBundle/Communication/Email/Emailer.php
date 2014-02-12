@@ -24,7 +24,7 @@ class Emailer
             ->setSubject($data['subject'] . ' - ' . $data['vertical']['domain'])
             ->setFrom(['no-reply@' . $data['vertical']['domain']])
             ->setTo([$data['user']['email']])
-            ->setBody($this->twig->render($template, $data));
+            ->setBody($this->twig->render($template, $data), 'text/html');
         $this->mailer->send($message);
     }
 }

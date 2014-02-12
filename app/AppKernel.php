@@ -18,7 +18,6 @@ class AppKernel extends Kernel
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new EVT\HookBundle\EVTHookBundle(),
             new EVT\EAEBundle\EVTEAEBundle(),
-            new PlatinumPixs\Aws\PlatinumPixsAwsBundle(),
             new EVT\IntranetBundle\EVTIntranetBundle(),
         );
 

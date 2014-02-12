@@ -18,9 +18,7 @@
         "sensio/distribution-bundle": "~2.3",
         "sensio/framework-extra-bundle": "~3.0",
         "sensio/generator-bundle": "~2.3",
-        "incenteev/composer-parameter-handler": "~2.0",
-        "aws/aws-sdk-php": "2.5.*",
-        "platinumpixs/aws-symfony2-bundle": "dev-master"
+        "incenteev/composer-parameter-handler": "~2.0"
     },
 
     "scripts": {
