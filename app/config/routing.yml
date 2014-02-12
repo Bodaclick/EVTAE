@@ -1,0 +1,10 @@
+evt_intranet:
+    resource: "@EVTIntranetBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+evt_hook:
+    resource: "@EVTHookBundle/Controller/"
+    type:     annotation
+    prefix:   /hooks/
+

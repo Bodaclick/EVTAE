@@ -34,3 +34,12 @@ assetic:
 
 #swiftmailer:
 #    delivery_address: me@example.com
+swiftmailer:
+    transport: "%mailer_transport%"
+    host:      "%mailer_host%"
+    username:  "%mailer_user%"
+    password:  "%mailer_password%"
+    auth_mode: login
+    encryption: tls
+    port:       587
+    logging:    %kernel.debug%
