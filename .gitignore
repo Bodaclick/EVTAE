@@ -11,3 +11,11 @@ web/bundles/*
 # Configuration files
 app/config/parameters.ini
 app/config/parameters.yml
+
+.idea/*
+build/
+bin/
+composer.phar
+.buildpath
+.project
+.settings/

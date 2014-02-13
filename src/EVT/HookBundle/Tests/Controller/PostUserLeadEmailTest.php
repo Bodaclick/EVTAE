@@ -17,32 +17,32 @@ class PostUserLeadEmailTest extends WebTestCase
     public function testReceiveHook()
     {
         $params = [
-            'lead' => [
-                'event' => [
-                    'date' => '2015-12-31T00:00:00+0000',
-                    'type' => ['type' => 'type'],
-                    'location' => [
-                        "lat"=> 10,
-                        "long" => 10,
-                        "admin_level1" => "Getafe",
-                        "admin_level2" => "Madrid",
-                        "country" => "Spain"
-                    ]
-                ],
-                'personal_info' => [
-                    'name' => 'testUserName',
-                    'surname' => 'testUserSurname',
-                    'email' => 'valid@email.com',
-                    'phone' => '+34 0123456789'
+            'event' => [
+                'date' => '2015-12-31T00:00:00+0000',
+                'type' => ['type' => 'type'],
+                'location' => [
+                    "lat"=> 10,
+                    "long" => 10,
+                    "admin_level1" => "Getafe",
+                    "admin_level2" => "Madrid",
+                    "country" => "Spain"
                 ]
+            ],
+            'personal_info' => [
+                'name' => 'testUserName',
+                'surname' => 'testUserSurname',
+                'email' => 'valid@email.com',
+                'phone' => '+34 0123456789'
             ],
             'showroom' => [
                 "slug"=> "name",
                 "score"=> 0,
+                "name" => 'name',
+                "phone" => '1234-call-me',
                 "provider"=> [
                     "id"=> "1",
-                    "name"=> "name",
-                    "slug"=> "name",
+                    "name"=> "name1",
+                    "slug"=> "name1",
                     "notification_emails"=> [],
                     "managers"=> [],
                     "location"=> [
@@ -65,7 +65,7 @@ class PostUserLeadEmailTest extends WebTestCase
             "information_bag"=> [
                 "parameters"=> []
             ],
-            "created_at"=> "2014-02-12T11=>19=>29+0000",
+            "created_at"=> "2014-02-12T11:19:29+0000",
             "email"=> [
                 "email"=> "valid@email.com"
             ],
@@ -80,12 +80,12 @@ class PostUserLeadEmailTest extends WebTestCase
         $this->client->request(
             'POST',
             '/hooks/lead/user?apikey=1234',
-            $params,
             [],
-            $this->header
+            [],
+            $this->header,
+            json_encode($params)
         );
 
         $this->assertEquals(202, $this->client->getResponse()->getStatusCode());
     }
 }
- 

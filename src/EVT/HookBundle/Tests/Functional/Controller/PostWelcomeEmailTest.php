@@ -43,13 +43,12 @@ class PostWelcomeEmailTest extends WebTestCase
         $this->client->request(
             'POST',
             '/hooks/welcome/user?apikey=1234',
-            $params,
             [],
-            $this->header
+            [],
+            $this->header,
+            json_encode($params)
         );
 
         $this->assertEquals(202, $this->client->getResponse()->getStatusCode());
     }
-
 }
- 

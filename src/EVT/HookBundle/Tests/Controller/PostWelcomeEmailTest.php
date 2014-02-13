@@ -23,29 +23,29 @@ class PostWelcomeEmailTest extends WebTestCase
     public function testReceiveHook()
     {
         $params = [
-                'user' => [
-                    'personal_info' => [
-                        'name' => 'testUserName',
-                        'surname' => 'testUserSurname',
-                        'phone' => '+34 0123456789'
-                    ],
-                    'username' => 'testUsername',
-                    'email' => 'valid@email.com',
+            'user' => [
+                'personal_info' => [
+                    'name' => 'testUserName',
+                    'surname' => 'testUserSurname',
+                    'phone' => '+34 0123456789'
                 ],
-                'vertical' => [
-                    'domain' => 'fiestaclick.mx'
-                ]
+                'username' => 'testUsername',
+                'email' => 'valid@email.com',
+            ],
+            'vertical' => [
+                'domain' => 'fiestaclick.mx'
+            ]
         ];
 
         $this->client->request(
             'POST',
             '/hooks/welcome/user?apikey=1234',
-            $params,
             [],
-            $this->header
+            [],
+            $this->header,
+            json_encode($params)
         );
 
         $this->assertEquals(202, $this->client->getResponse()->getStatusCode());
     }
 }
- 
