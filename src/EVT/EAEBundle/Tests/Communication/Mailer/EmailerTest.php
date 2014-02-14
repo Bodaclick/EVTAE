@@ -6,8 +6,9 @@ use EVT\EAEBundle\Communication\Email\Emailer;
 
 /**
  * Class AWSEmailerTest
- * @author Eduardo Gulias Davis <eduardo.gulias@bodaclick.com>
-@copyright 2014 Bodaclick */
+ * @author    Eduardo Gulias Davis <eduardo.gulias@bodaclick.com>
+ * @copyright 2014 Bodaclicki
+ */
 class EmailerTest extends \PHPUnit_Framework_TestCase
 {
     public function testSendWelcomeEmail()
