@@ -23,16 +23,17 @@ class PostWelcomeEmailTest extends WebTestCase
     public function testReceiveHook()
     {
         $params = [
-                'user' => [
-                    'username' => 'testUsername',
+            'user' => [
+                'email' => ['email' => 'valid@email.com'],
+                'personal_info' => [
                     'name' => 'testUserName',
                     'surname' => 'testUserSurname',
-                    'email' => 'valid@email.com',
                     'phone' => '+34 0123456789'
-                ],
-                'vertical' => [
-                    'domain' => 'test.com'
                 ]
+            ],
+            'vertical' => [
+                'domain' => 'test.com'
+            ]
         ];
         $mailerMock = $this->getMockBuilder('EVT\EAEBundle\Communication\Email\Emailer')
             ->disableOriginalConstructor()->getMock();

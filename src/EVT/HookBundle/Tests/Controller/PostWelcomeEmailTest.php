@@ -24,16 +24,15 @@ class PostWelcomeEmailTest extends WebTestCase
     {
         $params = [
             'user' => [
+                'email' => ['email' => 'valid@email.com'],
                 'personal_info' => [
                     'name' => 'testUserName',
                     'surname' => 'testUserSurname',
                     'phone' => '+34 0123456789'
-                ],
-                'username' => 'testUsername',
-                'email' => 'valid@email.com',
+                ]
             ],
             'vertical' => [
-                'domain' => 'fiestaclick.mx'
+                'domain' => 'test.com'
             ]
         ];
 
