@@ -27,9 +27,10 @@ class EmailHookController extends Controller
             $data = json_decode($content, true); // 2nd param to get as array
         }
         $data['subject'] = $this->get('translator')->trans('user.welcome.subject', [], 'email', 'es_ES');
+        $data['user']['email'] = $data['user']['email']['email'];
 
         $domain = $data['vertical']['domain'];
-        $this->get('evt.mailer')->send($data, 'EVTEAEBundle:Email:Welcome.' . $domain . '.html.twig');
+        $this->get('evt.mailer')->send($data, 'EVTEAEBundle:Email:Welcome.User.html.twig');
         $response = new JsonResponse();
         return $response->setStatusCode(202);
     }
@@ -49,8 +50,8 @@ class EmailHookController extends Controller
         $data['vertical'] = $data['showroom']['vertical'];
         $data['user']['email'] = $data['email']['email'];
 
-        $domain = $request->request->get('vertical')['domain'];
-        $this->get('evt.mailer')->send($data, 'EVTEAEBundle:Email:Lead.User' . $domain . '.html.twig');
+        $domain = $data['vertical']['domain'];
+        $this->get('evt.mailer')->send($data, 'EVTEAEBundle:Email:Lead.User.html.twig');
         $response = new JsonResponse();
         return $response->setStatusCode(202);
     }
