@@ -1,10 +1,10 @@
 <?php
 
-namespace EVT\HookBundle\Tests\Controller;
+namespace EVT\HookBundle\Tests\Functional\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
-class PostUserLeadEmailTest extends WebTestCase
+class PostManagerLeadEmailTest extends WebTestCase
 {
     private $client;
 
@@ -71,21 +71,10 @@ class PostUserLeadEmailTest extends WebTestCase
             ],
             "id"=> "1"
         ];
-        $mailerMock = $this->getMockBuilder('EVT\EAEBundle\Communication\Email\Emailer')
-            ->disableOriginalConstructor()->getMock();
-        $mailerMock->expects($this->once())->method('send')
-            ->with(
-                $this->callback(function ($array) {
-                          return is_array($array) && isset($array['mailing']);
-                }),
-                $this->equalTo('EVTEAEBundle:Email:Lead.User.html.twig')
-            );
-
-        $this->client->getContainer()->set('evt.mailer', $mailerMock);
 
         $this->client->request(
             'POST',
-            '/hooks/lead/user?apikey=1234',
+            '/hooks/lead/manager?apikey=1234',
             [],
             [],
             $this->header,

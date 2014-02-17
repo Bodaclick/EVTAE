@@ -21,10 +21,20 @@ class Emailer
     public function send(array $data, $template)
     {
         $message = \Swift_Message::newInstance()
-            ->setSubject($data['subject'] . ' - ' . $data['vertical']['domain'])
+            ->setSubject($data['mailing']['subject'] . ' - ' . $data['vertical']['domain'])
             ->setFrom(['no-reply@' . $data['vertical']['domain']])
-            ->setTo([$data['user']['email']])
             ->setBody($this->twig->render($template, $data), 'text/html');
+
+        if (is_array($data['mailing']['to'])) {
+            $message->setTo($data['mailing']['to']);
+        } else {
+            $message->setTo([$data['mailing']['to']]);
+        }
+
+        if (isset($data['mailing']['cc'])) {
+            $message->setCc([$data['mailing']['cc']]);
+        }
+
         $this->mailer->send($message);
     }
 }
