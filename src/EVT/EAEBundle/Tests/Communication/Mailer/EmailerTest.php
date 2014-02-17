@@ -28,7 +28,10 @@ class EmailerTest extends \PHPUnit_Framework_TestCase
             'vertical' => [
                 'domain' => 'test.com'
             ],
-            'subject' => 'Welcome to '
+            'mailing' => [
+                'to' => 'valid@email.com',
+                'subject' => 'Welcome to '
+            ],
         ];
         $template = 'string';
 
