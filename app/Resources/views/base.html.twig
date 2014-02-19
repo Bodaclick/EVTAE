@@ -1,13 +1,104 @@
 <!DOCTYPE html>
-<html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
     <head>
-        <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <meta charset="utf-8"/>
+        <title>Everticals {% block title %}Admin{% endblock %}</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta content="width=device-width, initial-scale=1" name="viewport"/>
+        <meta content="" name="description"/>
+        <meta content="" name="author"/>
+        <!-- BEGIN GLOBAL MANDATORY STYLES -->
+        <link href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css"/>
+
+        {% stylesheets filter='cssrewrite,?yui_css'
+        'bundles/evtintranet/assets/plugins/font-awesome/css/font-awesome.min.css'
+        'bundles/evtintranet/assets/plugins/bootstrap/css/bootstrap.min.css'
+        'bundles/evtintranet/assets/plugins/uniform/css/uniform.default.css'
+        'bundles/evtintranet/assets/plugins/gritter/css/jquery.gritter.css'
+        'bundles/evtintranet/assets/plugins/bootstrap-daterangepicker/daterangepicker-bs3.css'
+        'bundles/evtintranet/assets/plugins/fullcalendar/fullcalendar/fullcalendar.css'
+        'bundles/evtintranet/assets/plugins/jqvmap/jqvmap/jqvmap.css'
+        'bundles/evtintranet/assets/plugins/jquery-easy-pie-chart/jquery.easy-pie-chart.css'
+        'bundles/evtintranet/assets/css/style-metronic.css'
+        'bundles/evtintranet/assets/css/style.css'
+        'bundles/evtintranet/assets/css/style-responsive.css'
+        'bundles/evtintranet/assets/css/plugins.css'
+        'bundles/evtintranet/assets/css/pages/tasks.css'
+        output='css/evt.css'
+        %}
+        <link href="{{ asset_url }}" type="text/css" rel="stylesheet" />
+        {% endstylesheets %}
+
+        <link href="{{ asset('bundles/evtintranet/assets/css/themes/default.css') }}" rel="stylesheet" type="text/css" id="style_color"/>
+        <link href="{{ asset('bundles/evtintranet/assets/css/print.css') }}" rel="stylesheet" type="text/css" media="print"/>
+        <link href="{{ asset('bundles/evtintranet/assets/css/custom.css') }}" rel="stylesheet" type="text/css"/>
+        <!-- END THEME STYLES -->
         {% block stylesheets %}{% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <link rel="shortcut icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
-    <body>
-        {% block body %}{% endblock %}
+<!-- END HEAD -->
+<!-- BEGIN BODY -->
+    <body class="page-header-fixed page-sidebar-fixed page-footer-fixed page-header-fixed-mobile">
+        {% block header %}{% endblock %}
+        <div class="clearfix"></div>
+        {% block content %}{% endblock %}
+        {% block footer %}{% endblock %}
+        <!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
+        <!-- BEGIN CORE PLUGINS -->
+        <!--[if lt IE 9]>
+        <script src="assets/plugins/respond.min.js"></script>
+        <script src="assets/plugins/excanvas.min.js"></script>
+        <![endif]-->
+
+        {% javascripts filter='cssrewrite,?yui_js'
+        'bundles/evtintranet/assets/plugins/jquery-1.10.2.min.js'
+        'bundles/evtintranet/assets/plugins/jquery-migrate-1.2.1.min.js'
+        'bundles/evtintranet/assets/plugins/jquery-ui/jquery-ui-1.10.3.custom.min.js'
+        'bundles/evtintranet/assets/plugins/bootstrap/js/bootstrap.min.js'
+        'bundles/evtintranet/assets/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js'
+        'bundles/evtintranet/assets/plugins/jquery-slimscroll/jquery.slimscroll.min.js'
+        'bundles/evtintranet/assets/plugins/jquery.blockui.min.js'
+        'bundles/evtintranet/assets/plugins/jquery.cokie.min.js'
+        'bundles/evtintranet/assets/plugins/uniform/jquery.uniform.min.js'
+        'bundles/evtintranet/assets/plugins/flot/jquery.flot.min.js'
+        'bundles/evtintranet/assets/plugins/flot/jquery.flot.resize.min.js'
+        'bundles/evtintranet/assets/plugins/flot/jquery.flot.categories.min.js'
+        'bundles/evtintranet/assets/plugins/jquery.pulsate.min.js'
+        'bundles/evtintranet/assets/plugins/bootstrap-daterangepicker/moment.min.js'
+        'bundles/evtintranet/assets/plugins/bootstrap-daterangepicker/daterangepicker.js'
+        'bundles/evtintranet/assets/plugins/gritter/js/jquery.gritter.js'
+        'bundles/evtintranet/assets/plugins/fullcalendar/fullcalendar/fullcalendar.min.js'
+        'bundles/evtintranet/assets/plugins/jquery-easy-pie-chart/jquery.easy-pie-chart.js'
+        'bundles/evtintranet/assets/plugins/jquery.sparkline.min.js'
+        'bundles/evtintranet/assets/scripts/core/app.js'
+        'bundles/evtintranet/assets/scripts/custom/index.js'
+        'bundles/evtintranet/assets/scripts/custom/tasks.js'
+        output='js/evt.js'
+        %}
+        <script type="text/javascript" src="{{ asset_url }}"></script>
+        {% endjavascripts %}
+
+        <script>
+            jQuery(document).ready(function() {
+                App.init(); // initlayout and core plugins
+                Index.init();
+                Index.initJQVMAP(); // init index page's custom scripts
+                Index.initCalendar(); // init index page's custom scripts
+                Index.initCharts(); // init index page's custom scripts
+                Index.initChat();
+                Index.initMiniCharts();
+                Index.initDashboardDaterange();
+                Index.initIntro();
+                Tasks.initDashboardWidget();
+            });
+        </script>
+        <!-- END JAVASCRIPTS -->
         {% block javascripts %}{% endblock %}
     </body>
+<!-- END BODY -->
 </html>
