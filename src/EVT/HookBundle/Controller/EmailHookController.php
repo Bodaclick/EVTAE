@@ -73,7 +73,7 @@ class EmailHookController extends Controller
 
         $data['mailing']['subject'] = $this->get('translator')->trans('manager.lead.subject', [], 'email', 'es_ES');
         $data['mailing']['to'] = $data['showroom']['provider']['notification_emails'];
-        $data['mailing']['cc'] = 'clientes@'. $domain;
+        $data['mailing']['cc'] = 'support@'. $domain;
 
         $this->get('evt.mailer')->send($data, 'EVTEAEBundle:Email:Lead.Manager.html.twig');
         $response = new JsonResponse();

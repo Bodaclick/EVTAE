@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="es" datatype="plaintext" original="file.ext">
+    <body>
+      <trans-unit id="e8d22907628a82c06677e5b29ecb9f1e" resname="mail.do_not_respond">
+        <source>mail.do_not_respond</source>
+        <target>Este es un mail automatico, no conteste directamente.</target>
+      </trans-unit>
+      <trans-unit id="7af5b25d6bd2bc74cb7dd3adcbefb2e7" resname="title.new.lead.manager">
+        <source>title.new.lead.manager</source>
+        <target>__title.new.lead.manager</target>
+      </trans-unit>
+      <trans-unit id="44fcc3e3657df3aa5d6c6405b29bf9fa" resname="body.new.lead.manager">
+        <source>body.new.lead.manager</source>
+        <target>__body.new.lead.manager</target>
+      </trans-unit>
+      <trans-unit id="f2e7cce2412cc9f5aa9445320ecc850d" resname="lead.event.date">
+        <source>lead.event.date</source>
+        <target>Fecha del evento</target>
+      </trans-unit>
+      <trans-unit id="8da7fdc32929336b3a5326c83979a9f1" resname="lead.event.type">
+        <source>lead.event.type</source>
+        <target>Tipo evento</target>
+      </trans-unit>
+      <trans-unit id="ed74d9fce6c5bcefd851fc5e44aaa562" resname="lead.event.location">
+        <source>lead.event.location</source>
+        <target>Localización</target>
+      </trans-unit>
+      <trans-unit id="32243e02290718754c31f02046cefd4b" resname="lead.observations">
+        <source>lead.observations</source>
+        <target>Observationes</target>
+      </trans-unit>
+      <trans-unit id="841ca57b308b48f141b90b8b43e88030" resname="lead.date">
+        <source>lead.date</source>
+        <target>Fecha</target>
+      </trans-unit>
+      <trans-unit id="07d17b50644db4a1839f387953c1a48f" resname="title.new.lead.user">
+        <source>title.new.lead.user</source>
+        <target>__title.new.lead.user</target>
+      </trans-unit>
+      <trans-unit id="5f0f8c6bf02d796170290b0b6f7c3533" resname="title.welcome.user">
+        <source>title.welcome.user</source>
+        <target>__title.welcome.user</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
