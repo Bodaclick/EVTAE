@@ -1,6 +1,6 @@
 {% extends "EVTEAEBundle:Email:Base.Mail.twig" %}
 
-{% block title %}{% trans %}title.new.lead.manager{% endtrans %}{% endblock %}
+{% block title %}{% trans %}title.new.lead.manager{% endtrans %} {{ vertical.domain }}{% endblock %}
 
 {% block content %}
 <table class="container content" align="center">
@@ -18,17 +18,25 @@
                                 <td>{% trans %}lead.event.date{% endtrans %}</td>
                                 <td>{% trans %}lead.event.type{% endtrans %}</td>
                                 <td>{% trans %}lead.event.location{% endtrans %}</td>
-                                <td>{% trans %}lead.observations{% endtrans %}</td>
                                 <td>{% trans %}lead.date{% endtrans %}</td>
                             </tr>
                             <tr>
                                 <td>{{ event.date | date("d/m/Y") }}</td>
-                                <td>{{ event.type.type }}</td>
+                                <td>{{ event.type.name }}</td>
                                 <td>{{ event.location.admin_level1  }} - {{ event.location.admin_level2 }}</td>
-                                <td>{{ informatiion_bag.parameters.observations | default('') }}</td>
                                 <td>{{ created_at | date("d/m/Y") }}</td>
                             </tr>
                         </table>
+                        <span class="devider"></span>
+                        <table class="twelve columns" style="margin-bottom: 10px">
+                            <tr>
+                                <td>{% trans %}lead.observations{% endtrans %}</td>
+                            </tr>
+                            <tr>
+                                <td>{{ information_bag.parameters.observations | default('') }}</td>
+                            </tr>
+                        </table>
+                        <span class="devider"></span>
                         <!-- END: Note Panel -->
                     </td>
                     <td class="expander"></td>

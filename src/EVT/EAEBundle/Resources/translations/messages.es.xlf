@@ -8,11 +8,11 @@
       </trans-unit>
       <trans-unit id="7af5b25d6bd2bc74cb7dd3adcbefb2e7" resname="title.new.lead.manager">
         <source>title.new.lead.manager</source>
-        <target>__title.new.lead.manager</target>
+        <target>Nueva solicitud en</target>
       </trans-unit>
       <trans-unit id="44fcc3e3657df3aa5d6c6405b29bf9fa" resname="body.new.lead.manager">
         <source>body.new.lead.manager</source>
-        <target>__body.new.lead.manager</target>
+        <target>Has recibido una nueva solicitud</target>
       </trans-unit>
       <trans-unit id="f2e7cce2412cc9f5aa9445320ecc850d" resname="lead.event.date">
         <source>lead.event.date</source>
@@ -41,6 +41,10 @@
       <trans-unit id="5f0f8c6bf02d796170290b0b6f7c3533" resname="title.welcome.user">
         <source>title.welcome.user</source>
         <target>__title.welcome.user</target>
+      </trans-unit>
+      <trans-unit id="e5c465ea6e972409ebfd868b898924fb" resname="body.new.lead.user">
+        <source>body.new.lead.user</source>
+        <target>__body.new.lead.user</target>
       </trans-unit>
     </body>
   </file>
