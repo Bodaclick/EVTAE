@@ -10,6 +10,12 @@ security:
         api_key:
             id: evt.api_key.user_provider
 
+        in_memory:
+          memory:
+            users:
+                user:  { password: userpass, roles: 'ROLE_USER' }
+                admin: { password: kitten, roles: 'ROLE_ADMIN' }
+
     firewalls:
         dev:
             pattern:  ^/(_(profiler|wdt)|css|images|js)/
@@ -21,6 +27,23 @@ security:
             anonymous: false
             simple_preauth:
                 authenticator: evt.api_key.authenticator
+
+        login:
+            pattern:  ^/login$
+            security: false
+
+        admin_secured_area:
+            pattern:   ^/
+            anonymous: false
+            form_login:
+                login_path: login
+                check_path: login_check
+            provider: in_memory
+            remember_me:
+                key:      "%secret%"
+                lifetime: 84600 # 1 days in seconds
+                path:     /
+                domain:   ~ # Defaults to the current domain from $_SERVER
 
     access_control:
         #- { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY, requires_channel: https }
