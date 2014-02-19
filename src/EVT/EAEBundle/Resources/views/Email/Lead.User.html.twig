@@ -9,7 +9,7 @@
             <table class="row note">
                 <tr>
                     <td class="wrapper last">
-                        <h4>{% trans %}body.new.lead.manager{% endtrans %}</h4>
+                        <h4>{% trans %}body.new.lead.user{% endtrans %}</h4>
                         <span class="devider"></span>
                         <p>Hola {{ personal_info.name }}, bienvenido a {{ vertical.domain }}</p>
                         <span class="devider"></span>
@@ -19,17 +19,25 @@
                                 <td>{% trans %}lead.event.date{% endtrans %}</td>
                                 <td>{% trans %}lead.event.type{% endtrans %}</td>
                                 <td>{% trans %}lead.event.location{% endtrans %}</td>
-                                <td>{% trans %}lead.observations{% endtrans %}</td>
                                 <td>{% trans %}lead.date{% endtrans %}</td>
                             </tr>
                             <tr>
                                 <td>{{ event.date | date("d/m/Y") }}</td>
-                                <td>{{ event.type.type }}</td>
+                                <td>{{ event.type.name }}</td>
                                 <td>{{ event.location.admin_level1  }} - {{ event.location.admin_level2 }}</td>
-                                <td>{{ informatiion_bag.parameters.observations | default('') }}</td>
                                 <td>{{ created_at | date("d/m/Y") }}</td>
                             </tr>
                         </table>
+                        <span class="devider"></span>
+                        <table class="twelve columns" style="margin-bottom: 10px">
+                            <tr>
+                                <td>{% trans %}lead.observations{% endtrans %}</td>
+                            </tr>
+                            <tr>
+                                <td>{{ information_bag.parameters.observations | default('') }}</td>
+                            </tr>
+                        </table>
+                        <span class="devider"></span>
                         <p>En breve nos pondremos en contacto contigo.</p>
                         <!-- END: Note Panel -->
                     </td>
