@@ -1,0 +1,3 @@
+services:
+    evt_user_provider:
+        class: "%evt_user_provider.class%"
