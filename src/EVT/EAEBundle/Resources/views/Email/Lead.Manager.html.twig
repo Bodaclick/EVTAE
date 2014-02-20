@@ -15,6 +15,21 @@
                         <!-- BEGIN: Note Panel -->
                         <table class="twelve columns" style="margin-bottom: 10px">
                             <tr>
+                                <td>{% trans %}lead.user.name{% endtrans %}</td>
+                                <td>{% trans %}lead.user.surname{% endtrans %}</td>
+                                <td>{% trans %}lead.user.email{% endtrans %}</td>
+                                <td>{% trans %}lead.user.phone{% endtrans %}</td>
+                            </tr>
+                            <tr>
+                                <td>{{ personal_info.name  }}</td>
+                                <td>{{ personal_info.surnames }}</td>
+                                <td>{{ email.email }}</td>
+                                <td>{{ personal_info.phone }}</td>
+                            </tr>
+                        </table>
+                        <span class="devider"></span>
+                        <table class="twelve columns" style="margin-bottom: 10px">
+                            <tr>
                                 <td>{% trans %}lead.event.date{% endtrans %}</td>
                                 <td>{% trans %}lead.event.type{% endtrans %}</td>
                                 <td>{% trans %}lead.event.location{% endtrans %}</td>

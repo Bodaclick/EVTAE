@@ -36,15 +36,31 @@
       </trans-unit>
       <trans-unit id="07d17b50644db4a1839f387953c1a48f" resname="title.new.lead.user">
         <source>title.new.lead.user</source>
-        <target>__title.new.lead.user</target>
+        <target>Solicitud de informaciones</target>
       </trans-unit>
       <trans-unit id="5f0f8c6bf02d796170290b0b6f7c3533" resname="title.welcome.user">
         <source>title.welcome.user</source>
-        <target>__title.welcome.user</target>
+        <target>Bienvenid@</target>
       </trans-unit>
       <trans-unit id="e5c465ea6e972409ebfd868b898924fb" resname="body.new.lead.user">
         <source>body.new.lead.user</source>
         <target>__body.new.lead.user</target>
+      </trans-unit>
+      <trans-unit id="60cc00aae82fb1783a51fcaebfe652e9" resname="lead.user.name">
+        <source>lead.user.name</source>
+        <target>Nombre</target>
+      </trans-unit>
+      <trans-unit id="4fd99953bb6a15610b72266647b5568a" resname="lead.user.surname">
+        <source>lead.user.surname</source>
+        <target>Apellidos</target>
+      </trans-unit>
+      <trans-unit id="cecf5258aed13bf8b0e3bd25e7800aa3" resname="lead.user.email">
+        <source>lead.user.email</source>
+        <target>Email</target>
+      </trans-unit>
+      <trans-unit id="33916506cf34f9e9c324bd136cfda525" resname="lead.user.phone">
+        <source>lead.user.phone</source>
+        <target>Telefono</target>
       </trans-unit>
     </body>
   </file>

@@ -32,7 +32,5 @@ monolog:
 assetic:
     use_controller: true
 
-#swiftmailer:
-#    delivery_address: me@example.com
 swiftmailer:
-    disable_delivery:  true
+    delivery_address: it.desarrollo@bodaclick.com
