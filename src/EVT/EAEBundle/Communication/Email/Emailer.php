@@ -9,21 +9,26 @@ namespace EVT\EAEBundle\Communication\Email;
  */
 class Emailer
 {
-    private $twig;
     private $mailer;
+    private $converter;
 
-    public function __construct(\Swift_Mailer $mailer, \Twig_Environment $twig)
+    public function __construct(\Swift_Mailer $mailer, $converter)
     {
-        $this->twig = $twig;
         $this->mailer = $mailer;
+        $this->converter = $converter;
     }
 
     public function send(array $data, $template)
     {
+        $this->converter->setHTMLByView($template, $data);
+        $this->converter->setCSS('');
+        $this->converter->setUseInlineStylesBlock(true);
+        $this->converter->setStripOriginalStyleTags(true);
+
         $message = \Swift_Message::newInstance()
             ->setSubject($data['mailing']['subject'] . ' - ' . $data['vertical']['domain'])
             ->setFrom(['no-reply@' . $data['vertical']['domain']])
-            ->setBody($this->twig->render($template, $data), 'text/html');
+            ->setBody($this->converter->generateStyledHTML(), 'text/html');
 
         if (is_array($data['mailing']['to'])) {
             $message->setTo($data['mailing']['to']);

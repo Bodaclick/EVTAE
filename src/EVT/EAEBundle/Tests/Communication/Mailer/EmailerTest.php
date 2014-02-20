@@ -15,8 +15,11 @@ class EmailerTest extends \PHPUnit_Framework_TestCase
     {
         $mailer = $this->getMockBuilder('\Swift_Mailer')->disableOriginalConstructor()->getMock();
         $mailer->expects($this->once())->method('send')->will($this->returnValue(1));
-        $twig = $this->getMockBuilder('\Twig_Environment')->disableOriginalConstructor()->getMock();
-        $twig->expects($this->once())->method('render');
+        $converter = $this
+            ->getMockBuilder('\RobertoTru\ToInlineStyleEmailBundle\Converter\ToInlineStyleEmailConverter')
+            ->disableOriginalConstructor()->getMock();
+        $converter->expects($this->once())->method('setHTMLByView')->will($this->returnValue(1));
+
         $data = [
             'user' => [
                 'username' => 'testUsername',
@@ -35,7 +38,7 @@ class EmailerTest extends \PHPUnit_Framework_TestCase
         ];
         $template = 'string';
 
-        $mailer = new Emailer($mailer, $twig);
+        $mailer = new Emailer($mailer, $converter);
         $mailer->send($data, $template);
     }
 }
