@@ -30,7 +30,7 @@ class PostManagerLeadEmailTest extends WebTestCase
             ],
             'personal_info' => [
                 'name' => 'testUserName',
-                'surname' => 'testUserSurname',
+                'surnames' => 'testUserSurname',
                 'email' => 'valid@email.com',
                 'phone' => '+34 0123456789'
             ],
