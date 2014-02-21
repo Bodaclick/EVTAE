@@ -44,7 +44,7 @@
       </trans-unit>
       <trans-unit id="e5c465ea6e972409ebfd868b898924fb" resname="body.new.lead.user">
         <source>body.new.lead.user</source>
-        <target>__body.new.lead.user</target>
+        <target>Hemos recibido tu petición de informaciones</target>
       </trans-unit>
       <trans-unit id="60cc00aae82fb1783a51fcaebfe652e9" resname="lead.user.name">
         <source>lead.user.name</source>
