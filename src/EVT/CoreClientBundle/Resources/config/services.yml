@@ -1,0 +1,10 @@
+services:
+    evt.guzzle.client:
+          class: Guzzle\Http\Client
+
+    evt.core.client:
+        class: EVT\CoreClientBundle\Client\Client
+        arguments:
+          - @evt.guzzle.client
+          - %evt_core_api_key%
+          - %evt_core_domain%

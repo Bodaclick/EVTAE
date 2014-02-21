@@ -5,22 +5,28 @@ use Symfony\Component\Security\Core\User\UserProviderInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Security\Core\Exception\UsernameNotFoundException;
 use Symfony\Component\Security\Core\Exception\UnsupportedUserException;
-use Symfony\Component\Security\Core\User\User;
+use EVT\IntranetBundle\Security\EVTUser;
 
 class UserProvider implements UserProviderInterface
 {
+    private $client;
+
+    public function  __construct($client)
+    {
+        $this->client = $client;
+    }
+
     public function loadUserByUsername($username)
     {
-        // make a call to your webservice here
-        $userData = 'ss';
-        // pretend it returns an array on success, false if there is no user
+        $userData = $this->client->sendRequest('/users/' . $username);
 
+        $arrayUser = json_decode($userData,true);
         if ($userData) {
-            $password = 'userpass';
-            $roles = ['ROLE_USER'];
+            $password = $arrayUser['password'];
+            $roles = $arrayUser['roles'];
+            $salt = $arrayUser['salt'];
 
-            $obj = new User($username, $password, $roles);
-            return $obj;
+            return new EVTUser($username, $password, $salt, $roles);
         }
 
         throw new UsernameNotFoundException(
@@ -30,7 +36,7 @@ class UserProvider implements UserProviderInterface
 
     public function refreshUser(UserInterface $user)
     {
-        if (!$user instanceof User) {
+        if (!$user instanceof EVTUser) {
             throw new UnsupportedUserException(
                 sprintf('Instances of "%s" are not supported.', get_class($user))
             );
@@ -41,6 +47,6 @@ class UserProvider implements UserProviderInterface
 
     public function supportsClass($class)
     {
-        return $class === 'Symfony\Component\Security\Core\User\User';
+        return $class === 'EVT\IntranetBundle\Security\EVTUser';
     }
 }
