@@ -4,7 +4,7 @@ namespace EVT\IntranetBundle\Security;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Security\Core\User\EquatableInterface;
 
-class EVTUser implements UserInterface, EquatableInterface
+class EVTUser implements UserInterface, EquatableInterface, \Serializable
 {
     private $username;
     private $password;
@@ -17,6 +17,29 @@ class EVTUser implements UserInterface, EquatableInterface
         $this->password = $password;
         $this->salt = $salt;
         $this->roles = $roles;
+    }
+    /**
+     * @see \Serializable::serialize()
+     */
+    public function serialize()
+    {
+        return serialize(array(
+            $this->username,
+            $this->password,
+            $this->salt,
+        ));
+    }
+
+    /**
+     * @see \Serializable::unserialize()
+     */
+    public function unserialize($serialized)
+    {
+        list (
+            $this->username,
+            $this->password,
+            $this->salt
+            ) = unserialize($serialized);
     }
 
     public function getRoles()
@@ -45,7 +68,7 @@ class EVTUser implements UserInterface, EquatableInterface
 
     public function isEqualTo(UserInterface $user)
     {
-        if (!$user instanceof User) {
+        if (!$user instanceof EVTUser) {
             return false;
         }
 
@@ -60,7 +83,6 @@ class EVTUser implements UserInterface, EquatableInterface
         if ($this->username !== $user->getUsername()) {
             return false;
         }
-
         return true;
     }
 }

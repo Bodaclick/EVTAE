@@ -3,6 +3,7 @@
 namespace EVT\CoreClientBundle\Tests\Client;
 
 use EVT\CoreClientBundle\Client\Client;
+use EVT\CoreClientBundle\Client\Response as EVTResponse;
 
 /**
  * ClientTest
@@ -28,6 +29,8 @@ class ClientTest extends \PHPUnit_Framework_TestCase
      */
     protected $response;
 
+    protected $clientSecurityMock;
+
     /**
      * SetUp
      */
@@ -47,21 +50,30 @@ class ClientTest extends \PHPUnit_Framework_TestCase
             ->method('send')
             ->will($this->returnValue($this->response));
 
-        $this->response->expects($this->once())
-            ->method('json')
-            ->will($this->returnValue('{"nombre":"pepe"}'));
-
         $this->clientMock->expects($this->once())
             ->method('get')
-            ->with($this->equalTo('http://api.e-verticals.com/users/pepe?apikey=1234'))
+            ->with($this->equalTo('http://api.e-verticals.com/api/users/pepe?apikey=1234'))
             ->will($this->returnValue($this->request));
+
+        $this->clientSecurityMock = $this->getMockBuilder('EVT\CoreClientBundle\Security\ClientSecurity')
+            ->disableOriginalConstructor()
+            ->getMock();
+
+        $this->clientSecurityMock->expects($this->once())
+            ->method('securizeUrl')
+            ->will($this->returnValue('/api/users/pepe'));
+
+        $this->clientSecurityMock->expects($this->once())
+            ->method('securizeResponse')
+            ->will($this->returnValue(new EVTResponse('200',['nombre' => 'pepe'])));
+
     }
 
     public function testGet()
     {
-        $client = new Client($this->clientMock, '1234', 'http://api.e-verticals.com');
-        $response = $client->sendRequest('/users/pepe');
-        $this->assertEquals($response, '{"nombre":"pepe"}');
+        $client = new Client($this->clientMock, '1234', 'http://api.e-verticals.com', $this->clientSecurityMock);
+        $response = $client->sendRequest('/api/users/pepe');
+        $this->assertEquals($response->getBody(), ['nombre' => 'pepe']);
 
     }
 }

@@ -3,10 +3,6 @@
 namespace EVT\CoreClientBundle\Client;
 
 use Guzzle\Http\ClientInterface;
-use Guzzle\Http\Message\Request;
-use Guzzle\Http\Message\Response;
-use Guzzle\Http\Exception\ClientErrorResponseException;
-use Guzzle\Common\Exception\RuntimeException;
 
 /**
  * Client
@@ -15,29 +11,33 @@ use Guzzle\Common\Exception\RuntimeException;
  *
  * @copyright 2014 Bodaclick S.A.
  */
-class Client {
-
+class Client
+{
     private $guzzleClient;
     private $apikey;
     private $domain;
+    private $securityClient;
 
-    public function __construct(ClientInterface $guzzleClient, $apikey, $domain)
+    public function __construct(ClientInterface $guzzleClient, $apikey, $domain, $securityClient)
     {
         $this->guzzleClient = $guzzleClient;
         $this->apikey = $apikey;
         $this->domain = $domain;
+        $this->securityClient = $securityClient;
     }
 
     public function sendRequest($url)
     {
-        if (false !== strpos($url, '?')) {
-            $url .= '&';
-        } else {
-            $url .= '?';
-        }
-        $request = $this->guzzleClient->get($this->domain . $url . 'apikey=' . $this->apikey);
-        $response = $request->send();
+        $securedUrl = $this->securityClient->securizeUrl($url);
 
-        return $response->json();
+        if (false !== strpos($securedUrl, '?')) {
+            $securedUrl .= '&';
+        } else {
+            $securedUrl .= '?';
+        }
+
+        $request = $this->guzzleClient->get($this->domain . $securedUrl . 'apikey=' . $this->apikey);
+        $response = $request->send();
+        return $this->securityClient->securizeResponse($response);
     }
 }

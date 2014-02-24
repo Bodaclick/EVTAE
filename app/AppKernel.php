@@ -19,7 +19,7 @@ class AppKernel extends Kernel
             new EVT\HookBundle\EVTHookBundle(),
             new EVT\EAEBundle\EVTEAEBundle(),
             new EVT\IntranetBundle\EVTIntranetBundle(),
-            new EVT\CoreClientBundle\EVTCoreClientBundle(),
+            new EVT\CoreClientBundle\EVTCoreClientBundle()
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

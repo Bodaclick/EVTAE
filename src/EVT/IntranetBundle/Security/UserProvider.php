@@ -18,10 +18,10 @@ class UserProvider implements UserProviderInterface
 
     public function loadUserByUsername($username)
     {
-        $userData = $this->client->sendRequest('/users/' . $username);
+        $userData = $this->client->sendRequest('/api/users/' . $username);
 
-        $arrayUser = json_decode($userData,true);
-        if ($userData) {
+        $arrayUser = $userData->getBody();
+        if ('200' == $userData->getStatusCode()) {
             $password = $arrayUser['password'];
             $roles = $arrayUser['roles'];
             $salt = $arrayUser['salt'];

@@ -8,3 +8,7 @@ services:
           - @evt.guzzle.client
           - %evt_core_api_key%
           - %evt_core_domain%
+          - @evt.core.client_security
+
+    evt.core.client_security:
+        class: EVT\CoreClientBundle\Security\ClientSecurity

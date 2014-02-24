@@ -1,8 +1,3 @@
-evt_core_client:
-    resource: "@EVTCoreClientBundle/Controller/"
-    type:     annotation
-    prefix:   /
-
 evt_intranet:
     resource: "@EVTIntranetBundle/Controller/"
     type:     annotation
