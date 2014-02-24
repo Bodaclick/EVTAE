@@ -8,3 +8,5 @@ evt_hook:
     type:     annotation
     prefix:   /hooks/
 
+login_check:
+    path: /login_check

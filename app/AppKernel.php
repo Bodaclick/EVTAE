@@ -19,6 +19,7 @@ class AppKernel extends Kernel
             new EVT\HookBundle\EVTHookBundle(),
             new EVT\EAEBundle\EVTEAEBundle(),
             new EVT\IntranetBundle\EVTIntranetBundle(),
+            new EVT\CoreClientBundle\EVTCoreClientBundle(),
             new RobertoTru\ToInlineStyleEmailBundle\RobertoTruToInlineStyleEmailBundle(),
         );
 

@@ -2,7 +2,7 @@ parameters:
     database_driver:   pdo_mysql
     database_host:     127.0.0.1
     database_port:     ~
-    database_name:     symfony
+    database_name:     evt
     database_user:     root
     database_password: ~
 
@@ -18,3 +18,7 @@ parameters:
     aws_secret: aws_secret
     aws_region: region
     api_keys: [{key: '1234', name: local}]
+
+    evt_user_provider.class: EVT\IntranetBundle\Security\EVTUser
+    evt_core_api_key: 17664104WOv2a6N2wZI7169S5c5BBwqi65M57Z658L1n4Kzh9i80761Bi91z0WeQ
+    evt_core_domain: http://api.e-verticals.local

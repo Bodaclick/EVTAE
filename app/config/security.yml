@@ -1,6 +1,7 @@
 security:
     encoders:
         Symfony\Component\Security\Core\User\User: plaintext
+        EVT\IntranetBundle\Security\EVTUser: sha512
 
     role_hierarchy:
         ROLE_ADMIN:       ROLE_USER
@@ -9,6 +10,9 @@ security:
     providers:
         api_key:
             id: evt.api_key.user_provider
+
+        evt_core:
+            id: evt_user_provider
 
     firewalls:
         dev:
@@ -21,6 +25,23 @@ security:
             anonymous: false
             simple_preauth:
                 authenticator: evt.api_key.authenticator
+
+        login:
+            pattern:  ^/login$
+            security: false
+
+        admin_secured_area:
+            pattern:   ^/
+            anonymous: false
+            form_login:
+                login_path: login
+                check_path: login_check
+            provider: evt_core
+            remember_me:
+                key:      "%secret%"
+                lifetime: 84600 # 1 days in seconds
+                path:     /
+                domain:   ~ # Defaults to the current domain from $_SERVER
 
     access_control:
         #- { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY, requires_channel: https }
