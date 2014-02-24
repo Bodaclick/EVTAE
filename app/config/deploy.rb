@@ -66,8 +66,15 @@ namespace :evt do
 
 end
 
+namespace :php_fpm do
+  desc "Reload PHP5-FPM (requires sudo access to /usr/sbin/service php5-fpm reload)"
+  task :reload, :roles => :app do
+    run "sudo killall php5-fpm"
+  end
+end
+
 before "deploy:share_childs", "evt:parameters"
 before "symfony:composer:install","evt:vendors"
 before "symfony:composer:update", "evt:vendors"
-before "symfony:cache:warmup", "symfony:doctrine:schema:update", "symfony:doctrine:cache:clear_query"
+before "symfony:cache:warmup", "symfony:doctrine:schema:update", "symfony:doctrine:cache:clear_query", "php_fpm:reload"
 after "symfony:assets:install", "evt:assetic"

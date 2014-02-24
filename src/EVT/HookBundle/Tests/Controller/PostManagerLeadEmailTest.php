@@ -19,7 +19,7 @@ class PostManagerLeadEmailTest extends WebTestCase
         $params = [
             'event' => [
                 'date' => '2015-12-31T00:00:00+0000',
-                'type' => ['type' => 'type'],
+                'type' => ['type' => 1, 'name' => 'BIRTHDAY'],
                 'location' => [
                     "lat"=> 10,
                     "long" => 10,

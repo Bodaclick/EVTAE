@@ -1,6 +1,7 @@
 <?php
 
 namespace EVT\CoreClientBundle\Security;
+
 use EVT\CoreClientBundle\Client\Response;
 
 /**

@@ -4,7 +4,7 @@ parameters:
 services:
     evt.mailer:
         class: EVT\EAEBundle\Communication\Email\Emailer
-        arguments: [@mailer, @twig]
+        arguments: [@mailer, @css_to_inline_email_converter]
 
     evt.api_key.user_provider:
         class: EVT\EAEBundle\Security\ApiKeyUserProvider

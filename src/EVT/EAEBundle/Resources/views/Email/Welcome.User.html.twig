@@ -1,8 +1,23 @@
-<!DOCTYPE html>
-<html>
-<head>
-</head>
-<body>
-Hola {{ user.personal_info.name }}, bienvenido a {{ vertical.domain }}
-</body>
-</html>
+{% extends "EVTEAEBundle:Email:Base.Mail.twig" %}
+
+{% block title %}{% trans %}title.welcome.user{% endtrans %}{% endblock %}
+
+{% block content %}
+<table class="container content" align="center">
+    <tr>
+        <td>
+            <table class="row note">
+                <tr>
+                    <td class="wrapper last">
+                        <h4>{% trans %}body.new.lead.manager{% endtrans %}</h4>
+                        <span class="devider"></span>
+                        <p>Hola {{ user.personal_info.name }}, bienvenido a {{ vertical.domain }}</p>
+                        <span class="devider"></span>
+                    </td>
+                    <td class="expander"></td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+{% endblock %}

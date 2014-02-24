@@ -19,7 +19,7 @@ class PostManagerLeadEmailTest extends WebTestCase
         $params = [
             'event' => [
                 'date' => '2015-12-31T00:00:00+0000',
-                'type' => ['type' => 'type'],
+                'type' => ['type' => 1, 'name' => 'BIRTHDAY'],
                 'location' => [
                     "lat"=> 10,
                     "long" => 10,
@@ -30,7 +30,7 @@ class PostManagerLeadEmailTest extends WebTestCase
             ],
             'personal_info' => [
                 'name' => 'testUserName',
-                'surname' => 'testUserSurname',
+                'surnames' => 'testUserSurname',
                 'email' => 'valid@email.com',
                 'phone' => '+34 0123456789'
             ],

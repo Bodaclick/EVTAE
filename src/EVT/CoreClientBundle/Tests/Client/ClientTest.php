@@ -3,7 +3,7 @@
 namespace EVT\CoreClientBundle\Tests\Client;
 
 use EVT\CoreClientBundle\Client\Client;
-use EVT\CoreClientBundle\Client\Response as EVTResponse;
+use EVT\CoreClientBundle\Client\Response;
 
 /**
  * ClientTest
@@ -65,7 +65,7 @@ class ClientTest extends \PHPUnit_Framework_TestCase
 
         $this->clientSecurityMock->expects($this->once())
             ->method('securizeResponse')
-            ->will($this->returnValue(new EVTResponse('200',['nombre' => 'pepe'])));
+            ->will($this->returnValue(new Response('200',['nombre' => 'pepe'])));
 
     }
 
