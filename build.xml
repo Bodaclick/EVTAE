@@ -18,28 +18,10 @@
     <mkdir dir="${basedir}/build/pdepend"/>
   </target>
 
-  <target name="cache" description="Hard deletes cache directory contents" depends="clear-database-cache">
+  <target name="cache" description="Hard deletes cache directory contents">
     <delete includeemptydirs="true">
       <fileset dir="${basedir}/app/cache" includes="**/*"/>
     </delete>
-  </target>
-
-  <target name="clear-database-cache" description="Clear the database cache">
-      <exec executable="php" failonerror="true">
-	  <arg line="app/console doctrine:cache:clear-query"/>
-      </exec>
-  </target>
-
-  <target name="database" description="Recreates the database">
-    <exec executable="php" failonerror="true">
-      <arg line="app/console doctrine:database:drop --force"/>
-    </exec>
-    <exec executable="php" failonerror="true">
-      <arg line="app/console doctrine:database:create"/>
-    </exec>
-    <exec executable="php" failonerror="true">
-      <arg line="app/console doctrine:schema:update --force"/>
-    </exec>
   </target>
 
   <target name="assets" description="Installs bundle assets in web directory">
@@ -162,9 +144,9 @@
     </exec>
   </target>
 
-  <target name="build" depends="clean,shared-files,installdeps,clear-database-cache,cache,phpunit"
+  <target name="build" depends="clean,shared-files,installdeps,cache,phpunit"
           description="Automatic build. All dependencies installed from composer.lock."/>
-  <target name="nightly-build" depends="clean,shared-files,installdeps,parallelTasks,clear-database-cache,cache,phpunit-with-coverage,phpcb"
+  <target name="nightly-build" depends="clean,shared-files,installdeps,parallelTasks,cache,phpunit-with-coverage,phpcb"
           description="Automatic build. All dependencies installed from composer.lock."/>
   <target name="hourly-build" depends="clean,installdeps,parallelTasks,phpunit,phpcb"
           description="Automatic build. All dependencies installed from composer.lock."/>
