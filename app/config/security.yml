@@ -39,7 +39,7 @@ security:
             provider: evt_core
             remember_me:
                 key:      "%secret%"
-                lifetime: 84600 # 1 days in seconds
+                lifetime: %cookie_lifetime%
                 path:     /
                 domain:   ~ # Defaults to the current domain from $_SERVER
 
