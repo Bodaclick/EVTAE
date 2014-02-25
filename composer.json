@@ -20,7 +20,9 @@
         "sensio/generator-bundle": "~2.3",
         "incenteev/composer-parameter-handler": "~2.0",
         "guzzle/guzzle": "3.8.*",
-        "robertotru/to-inline-style-email-bundle": "dev-master"
+        "robertotru/to-inline-style-email-bundle": "dev-master",
+        "snc/redis-bundle": "1.1.x-dev",
+        "predis/predis": "0.8.x-dev"
     },
 
     "scripts": {

@@ -1,11 +1,4 @@
 parameters:
-    database_driver:   pdo_mysql
-    database_host:     127.0.0.1
-    database_port:     ~
-    database_name:     evt
-    database_user:     root
-    database_password: ~
-
     mailer_transport:  smtp
     mailer_host:       127.0.0.1
     mailer_user:       ~
@@ -20,5 +13,9 @@ parameters:
     api_keys: [{key: '1234', name: local}]
 
     evt_user_provider.class: EVT\IntranetBundle\Security\UserProvider
-    evt_core_api_key: 17664104WOv2a6N2wZI7169S5c5BBwqi65M57Z658L1n4Kzh9i80761Bi91z0WeQ
+    evt_core_api_key: 1766
     evt_core_domain: http://api.e-verticals.local
+    session_name: evt_session
+    cookie_lifetime: 84600 # 1 days in seconds
+    redis_default: redis://localhost
+    redis_session: redis://localhost
