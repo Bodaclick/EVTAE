@@ -76,5 +76,5 @@ end
 before "deploy:share_childs", "evt:parameters"
 before "symfony:composer:install","evt:vendors"
 before "symfony:composer:update", "evt:vendors"
-before "symfony:cache:warmup", "symfony:doctrine:schema:update", "symfony:doctrine:cache:clear_query", "php_fpm:reload"
+before "symfony:cache:warmup", "php_fpm:reload"
 after "symfony:assets:install", "evt:assetic"
