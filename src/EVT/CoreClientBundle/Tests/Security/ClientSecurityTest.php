@@ -52,6 +52,21 @@ class ClientSecurityTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals(['data'=>'test', 'obj' => ['persist' => 'noRemove']], $sResponse->getBody());
     }
 
+    public function testSecurizeUrlWithNoTocken()
+    {
+        $secContainerMock = $this->getMockBuilder('Symfony\Component\Security\Core\SecurityContextInterface')
+            ->disableOriginalConstructor()->getMock();
+        $secContainerMock->expects($this->any())->method('getToken')->will($this->returnValue(null));
+
+        $containerMock = $this->getMockBuilder('Symfony\Component\DependencyInjection\ContainerInterface')
+            ->disableOriginalConstructor()->getMock();
+        $containerMock->expects($this->any())->method('get')->will($this->returnValue($secContainerMock));
+        $sClient = new ClientSecurity($containerMock);
+    
+        $this->assertEquals('', $sClient->securizeUrl(''));
+        $this->assertEquals('/api/test', $sClient->securizeUrl('/api/test'));
+    }
+
     private function getContainer()
     {
 
