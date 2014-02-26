@@ -28,7 +28,12 @@ class ClientSecurity
     {
         $this->context = $this->container->get('security.context');
         $securizedUrl = $url;
-        $username = $this->context->getToken()->getUsername();
+        $token = $this->context->getToken();
+        if (null === $token) {
+            return $url;
+        }
+        
+        $username = $token->getUsername();
 
         if (false !== strpos($securizedUrl, '?')) {
             $securizedUrl .= '&canView='. $username;
