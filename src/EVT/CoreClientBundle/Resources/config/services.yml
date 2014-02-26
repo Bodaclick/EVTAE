@@ -12,3 +12,5 @@ services:
 
     evt.core.client_security:
         class: EVT\CoreClientBundle\Security\ClientSecurity
+        arguments:
+          - @service_container
