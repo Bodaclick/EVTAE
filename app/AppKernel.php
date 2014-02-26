@@ -21,6 +21,7 @@ class AppKernel extends Kernel
             new EVT\IntranetBundle\EVTIntranetBundle(),
             new EVT\CoreClientBundle\EVTCoreClientBundle(),
             new RobertoTru\ToInlineStyleEmailBundle\RobertoTruToInlineStyleEmailBundle(),
+            new Snc\RedisBundle\SncRedisBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
