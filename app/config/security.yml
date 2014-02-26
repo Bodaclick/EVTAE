@@ -25,7 +25,6 @@ security:
             anonymous: false
             simple_preauth:
                 authenticator: evt.api_key.authenticator
-
         login:
             pattern:  ^/login$
             security: false
@@ -42,6 +41,8 @@ security:
                 lifetime: %cookie_lifetime%
                 path:     /
                 domain:   ~ # Defaults to the current domain from $_SERVER
+            logout:
+                path:    /logout
 
     access_control:
         #- { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY, requires_channel: https }
