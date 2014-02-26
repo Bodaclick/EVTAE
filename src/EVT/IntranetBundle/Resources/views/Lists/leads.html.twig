@@ -1,0 +1,86 @@
+{% extends 'EVTIntranetBundle::layout.html.twig' %}
+{% block content %}
+    <!-- BEGIN CONTAINER -->
+    <div class="page-container">
+    <!-- BEGIN SIDEBAR -->
+    <div class="page-sidebar-wrapper">
+    <div class="page-sidebar navbar-collapse collapse">
+    <!-- BEGIN SIDEBAR MENU -->
+{{ knp_menu_render('EVTIntranetBundle:Builder:mainMenu', {'currentClass': 'active', 'template': 'EVTIntranetBundle:Menu:metronic_menu.html.twig'}) }}
+    <!-- END SIDEBAR MENU -->
+    </div>
+    </div>
+    <!-- END SIDEBAR -->
+    <!-- BEGIN CONTENT -->
+    <div class="page-content-wrapper">
+        <div class="page-content">
+            <!-- BEGIN PAGE HEADER-->
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- BEGIN PAGE TITLE & BREADCRUMB-->
+                    <h3 class="page-title">Leads</h3>
+                    <ul class="page-breadcrumb breadcrumb">
+                        <li>
+                            <i class="fa fa-exchange"></i>
+                            <a href="/">Leads</a>
+                        </li>
+                    </ul>
+                    <!-- END PAGE TITLE & BREADCRUMB-->
+                </div>
+            </div>
+            <!-- END PAGE HEADER-->
+            <!-- BEGIN PAGE CONTENT-->
+            <div class="row">
+                <div class="col-md-12">
+					<!-- BEGIN SAMPLE TABLE PORTLET-->
+					<div class="portlet box grey">
+						<div class="portlet-title">
+							<div class="caption">Leads</div>
+						</div>
+						<div class="portlet-body flip-scroll">
+							<table class="table table-bordered table-striped table-condensed flip-content">
+							<thead class="flip-content">
+							<tr>
+								<th>Name</th>
+								<th>Email</th>
+						        <th>Provider</th>
+								<th>Vertical</th>
+								<th>Event Type</th>
+								<th>Event Date</th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+                                <td class="highlight">
+									<a href="/leads/1"  class="btn default btn-xs green-stripe">Lorena</a>
+								</td>
+								<td>lorena@test.com</td>
+							    <td>Casa Mia</td>
+								<td>fiesta.com</td>
+								<td>PARTY</td>
+								<td>12/10/2014</td>
+							</tr>
+							<tr>
+                                <td class="highlight">
+									<a href="/leads/1"  class="btn default btn-xs green-stripe">Lorena</a>
+								</td>
+								<td>lorena@test.com</td>
+							    <td>Casa Mia</td>
+								<td>fiesta.com</td>
+								<td>PARTY</td>
+								<td>12/10/2014</td>
+							</tr>
+							</tbody>
+							</table>
+						</div>
+					</div>
+					<!-- END SAMPLE TABLE PORTLET-->
+                </div>
+            </div>
+            <!-- END PAGE CONTENT-->
+        </div>
+    </div>
+    <!-- END CONTENT -->
+    </div>
+    <!-- END CONTAINER -->
+{% endblock %}

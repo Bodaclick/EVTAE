@@ -6,14 +6,14 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Response;
 
-class HomeController extends Controller
+class LeadController extends Controller
 {
     /**
-     * @Route("/")
+     * @Route("/leads")
      */
-    public function indexAction()
+    public function listAction()
     {
-        $content = $this->renderView('EVTIntranetBundle:Lists:index.html.twig');
+        $content = $this->renderView('EVTIntranetBundle:Lists:leads.html.twig');
 
         return new Response($content);
     }
