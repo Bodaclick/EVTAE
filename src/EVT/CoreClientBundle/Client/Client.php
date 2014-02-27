@@ -8,7 +8,7 @@ use Guzzle\Http\ClientInterface;
  * Client
  *
  * @author    Quique Torras <etorras@bodaclick.com>
- *
+ * @author    Marco Ferrari <marco.ferrari@bodaclick.com>
  * @copyright 2014 Bodaclick S.A.
  */
 class Client
@@ -37,7 +37,11 @@ class Client
         }
 
         $request = $this->guzzleClient->get($this->domain . $securedUrl . 'apikey=' . $this->apikey);
-        $response = $request->send();
+        try {
+            $response = $request->send();
+        } catch (\Exception $e) {
+            return new Response(404, []);
+        }
         return $this->securityClient->securizeResponse($response);
     }
 }
