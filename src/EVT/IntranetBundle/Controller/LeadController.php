@@ -13,11 +13,14 @@ class LeadController extends Controller
      */
     public function listAction()
     {
-        $leads = $this->container->get('evt.core.client')->sendRequest('/api/leads');
-        $content = $this->renderView(
-            'EVTIntranetBundle:Lists:leads.html.twig',
-            ["leads" => $leads->getBody()['items']]
-        );
+        $leadsResponse = $this->container->get('evt.core.client')->sendRequest('/api/leads');
+
+        $leads = [];
+        if (isset($leadsResponse->getBody()['items'])) {
+            $leads = $leadsResponse->getBody()['items'];
+        }
+
+        $content = $this->renderView('EVTIntranetBundle:Lists:leads.html.twig', ["leads" => $leads]);
 
         return new Response($content);
     }
