@@ -55,7 +55,7 @@
 							</thead>
 							<tbody>
 							{% for lead in leads %}
-							<tr>
+							<tr {% if lead.read_at is not defined  %}class="success"{% endif %}>
 								<td>{{ lead.showroom.vertical.domain }}</td>
 							    <td>{{ lead.showroom.provider.name }}</td>
 								<td>{{ lead.personal_info.name }}</td>
@@ -65,7 +65,13 @@
 								<td>{{ lead.event.date }}</td>
 							    <td>{{ lead.event.location.admin_level1 }} ({{ lead.event.location.admin_level2 }})</td>
                                 <td class="highlight">
-									<a href="/leads/{{ lead.id }}"  class="btn default btn-xs green-stripe">details</a>
+									<a href="/leads/{{ lead.id }}"  class="btn default btn-xs green-stripe">
+									{% if lead.read_at is not defined  %}
+									read
+									{% else %}
+									details
+									{% endif %}
+									</a>
 								</td>
 						    </tr>
 							{% endfor %}
