@@ -24,4 +24,17 @@ class LeadController extends Controller
 
         return new Response($content);
     }
+
+    /**
+     * @Route("/leads/{id}", requirements={"id" = "\d+"})
+     */
+    public function showLeadAction($id)
+    {
+        $leadResponse = $this->container->get('evt.core.client')->sendRequest('/api/leads/'.$id);
+        $lead = $leadResponse->getBody();
+
+        $content = $this->renderView('EVTIntranetBundle:Lists:lead.html.twig', ["lead" => $lead]);
+
+        return new Response($content);
+    }
 }

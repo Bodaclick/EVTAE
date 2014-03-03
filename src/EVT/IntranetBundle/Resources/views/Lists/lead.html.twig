@@ -1,0 +1,84 @@
+{% extends 'EVTIntranetBundle::layout.html.twig' %}
+{% block pageContent %}
+    <!-- BEGIN CONTENT -->
+    <div class="page-content-wrapper">
+        <div class="page-content">
+            <!-- BEGIN PAGE HEADER-->
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- BEGIN PAGE TITLE & BREADCRUMB-->
+                    <h3 class="page-title">Lead Detail</h3>
+                    <ul class="page-breadcrumb breadcrumb">
+                        <li>
+                            <i class="fa fa-exchange"></i>
+                            <a href="/leads">Leads</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-angle-right"></i>
+                            <a href="/leads/{{ lead.id }}">Lead detail</a>
+                        </li>
+                    </ul>
+                    <!-- END PAGE TITLE & BREADCRUMB-->
+                </div>
+            </div>
+            <!-- END PAGE HEADER-->
+            <!-- BEGIN PAGE CONTENT-->
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- BEGIN SAMPLE TABLE PORTLET-->
+                    <div class="portlet box grey">
+                        <div class="portlet-title">
+                            <div class="caption">Lead data detail</div>
+                        </div>
+                        <div class="portlet-body flip-scroll">
+                            <table class="table table-bordered table-hover">
+                                <tr>
+                                    <td>Vertical</td>
+                                    <td class="success">{{ lead.showroom.vertical.domain }}</td>
+                                </tr>
+                                <tr>
+                                    <td>Provider</td>
+                                    <td class="success">{{ lead.showroom.provider.name }}</td>
+                                </tr>
+                                <tr>
+                                    <td>Name</td>
+                                    <td class="success">{{ lead.personal_info.name }}
+                                        {{ lead.personal_info.surnames }}</td>
+                                </tr>
+                                <tr>
+                                    <td>Email</td>
+                                    <td class="success">{{ lead.email.email }}</td>
+                                </tr>
+                                <tr>
+                                    <td>Phone</td>
+                                    <td class="success">{{ lead.personal_info.phone }}</td>
+                                </tr>
+                                <tr>
+                                    <td>Event Type</td>
+                                    <td class="success">{{ lead.event.type.name }}</td>
+                                </tr>
+                                <tr>
+                                    <td>Event Date</td>
+                                    <td class="success">{{ lead.event.date }}</td>
+                                </tr>
+                                <tr>
+                                    <td>Event Location</td>
+                                    <td class="success">{{ lead.event.location.admin_level1 }}
+                                        ({{ lead.event.location.admin_level2 }})
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Comments</td>
+                                    <td class="success">{{ lead.information_bag.parameters.observations }}</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- END SAMPLE TABLE PORTLET-->
+                </div>
+            </div>
+            <!-- END PAGE CONTENT-->
+        </div>
+    </div>
+    <!-- END CONTENT -->
+{% endblock %}
