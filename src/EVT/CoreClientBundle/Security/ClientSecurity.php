@@ -18,30 +18,31 @@ class ClientSecurity
 
     protected $container;
     protected $context;
+    protected $apikey;
 
-    public function __construct(ContainerInterface $container)
+    public function __construct(ContainerInterface $container, $apikey)
     {
         $this->container = $container;
+        $this->apikey = $apikey;
     }
 
     public function securizeUrl($url)
     {
         $this->context = $this->container->get('security.context');
         $securizedUrl = $url;
-        $token = $this->context->getToken();
-        if (null === $token) {
-            return $url;
-        }
-        
-        $username = $token->getUsername();
 
         if (false !== strpos($securizedUrl, '?')) {
-            $securizedUrl .= '&canView='. $username;
+            $securizedUrl .= '&apikey='. $this->apikey;
         } else {
-            $securizedUrl .= '?canView='. $username;
+            $securizedUrl .= '?apikey='. $this->apikey;
         }
 
-        return $securizedUrl;
+        $token = $this->context->getToken();
+        if (null === $token) {
+            return $securizedUrl;
+        } else {
+            return $securizedUrl .'&canView=' .$token->getUsername();
+        }
     }
 
     public function securizeResponse(GuzzleResponse $response)

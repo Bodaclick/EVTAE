@@ -40,7 +40,7 @@ class UserProviderTest extends \PHPUnit_Framework_TestCase
         $client = $this->getMockBuilder('EVT\CoreClientBundle\Client\Client')->disableOriginalConstructor()->getMock();
 
         $client->expects($this->once())
-            ->method('sendRequest')
+            ->method('get')
             ->with($this->equalTo('/api/users/usernameManager'))
             ->will($this->returnValue($response));
 
@@ -70,7 +70,7 @@ class UserProviderTest extends \PHPUnit_Framework_TestCase
         $client = $this->getMockBuilder('EVT\CoreClientBundle\Client\Client')->disableOriginalConstructor()->getMock();
 
         $client->expects($this->once())
-            ->method('sendRequest')
+            ->method('get')
             ->with($this->equalTo('/api/users/usernameManager'))
             ->will($this->returnValue($response));
 
