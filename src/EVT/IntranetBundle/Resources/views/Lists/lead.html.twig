@@ -34,42 +34,48 @@
                             <table class="table table-bordered table-hover">
                                 <tr>
                                     <td>Vertical</td>
-                                    <td class="success">{{ lead.showroom.vertical.domain }}</td>
+                                    <td class="active">{{ lead.showroom.vertical.domain }}</td>
                                 </tr>
                                 <tr>
                                     <td>Provider</td>
-                                    <td class="success">{{ lead.showroom.provider.name }}</td>
+                                    <td class="active">{{ lead.showroom.provider.name }}</td>
                                 </tr>
                                 <tr>
                                     <td>Name</td>
-                                    <td class="success">{{ lead.personal_info.name }}
+                                    <td class="active">{{ lead.personal_info.name }}
                                         {{ lead.personal_info.surnames }}</td>
                                 </tr>
                                 <tr>
                                     <td>Email</td>
-                                    <td class="success">{{ lead.email.email }}</td>
+                                    <td class="active">
+                                        <a href=mailto:{{ lead.email.email }}"
+                                           target="_blank">{{ lead.email.email }}</a>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>Phone</td>
-                                    <td class="success">{{ lead.personal_info.phone }}</td>
+                                    <td class="active">
+                                        <a href="tel:{{ lead.personal_info.phone }}"
+                                           target="_blank">{{ lead.personal_info.phone }}</a>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>Event Type</td>
-                                    <td class="success">{{ lead.event.type.name }}</td>
+                                    <td class="active">{{ lead.event.type.name }}</td>
                                 </tr>
                                 <tr>
                                     <td>Event Date</td>
-                                    <td class="success">{{ lead.event.date }}</td>
+                                    <td class="active">{{ lead.event.date|date("d/m/Y") }}</td>
                                 </tr>
                                 <tr>
                                     <td>Event Location</td>
-                                    <td class="success">{{ lead.event.location.admin_level1 }}
+                                    <td class="active">{{ lead.event.location.admin_level1 }}
                                         ({{ lead.event.location.admin_level2 }})
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>Comments</td>
-                                    <td class="success">{{ lead.information_bag.parameters.observations }}</td>
+                                    <td class="active">{{ lead.information_bag.parameters.observations }}</td>
                                 </tr>
                             </table>
                         </div>
