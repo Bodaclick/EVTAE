@@ -48,10 +48,10 @@
 								<td>{{ lead.showroom.vertical.domain }}</td>
 							    <td>{{ lead.showroom.provider.name }}</td>
 								<td>{{ lead.personal_info.name }}</td>
-								<td>{{ lead.email.email }}</td>
-								<td>{{ lead.personal_info.phone }}</td>
+								<td><a href=mailto:{{ lead.email.email }}" target="_blank">{{ lead.email.email }}</a></td>
+								<td><a href="tel:{{ lead.personal_info.phone }}" target="_blank">{{ lead.personal_info.phone }}</a></td>
 								<td>{{ lead.event.type.name }}</td>
-								<td>{{ lead.event.date }}</td>
+								<td>{{ lead.event.date|date("d/m/Y") }}</td>
 							    <td>{{ lead.event.location.admin_level1 }} ({{ lead.event.location.admin_level2 }})</td>
                                 <td class="highlight">
 									<a href="/leads/{{ lead.id }}"  class="btn default btn-xs green-stripe">
