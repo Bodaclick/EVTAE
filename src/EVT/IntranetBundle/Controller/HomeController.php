@@ -13,8 +13,11 @@ class HomeController extends Controller
      */
     public function indexAction()
     {
-        $content = $this->renderView('EVTIntranetBundle:Lists:index.html.twig');
-
-        return new Response($content);
+        return $this->redirect($this->generateUrl('evt_intranet_lead_list'));
+        /*
+         * Activate only when usable
+         * $content = $this->renderView('EVTIntranetBundle:Lists:index.html.twig');
+         * return new Response($content);
+         */
     }
 }
