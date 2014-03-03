@@ -2,6 +2,14 @@
 {% block header %}
     {{ include ('EVTIntranetBundle::header.html.twig') }}
 {% endblock %}
+{% block content %}
+    <!-- BEGIN CONTAINER -->
+    <div class="page-container">
+        {{ include ('EVTIntranetBundle::sidebar.html.twig') }}
+        {% block pageContent %}{% endblock %}
+    </div>
+    <!-- END CONTAINER -->
+{% endblock %}
 {% block footer %}
     {{ include ('EVTIntranetBundle::footer.html.twig') }}
 {% endblock %}

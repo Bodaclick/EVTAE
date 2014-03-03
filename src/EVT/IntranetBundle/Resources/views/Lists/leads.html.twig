@@ -1,16 +1,5 @@
 {% extends 'EVTIntranetBundle::layout.html.twig' %}
-{% block content %}
-    <!-- BEGIN CONTAINER -->
-    <div class="page-container">
-    <!-- BEGIN SIDEBAR -->
-    <div class="page-sidebar-wrapper">
-    <div class="page-sidebar navbar-collapse collapse">
-    <!-- BEGIN SIDEBAR MENU -->
-{{ knp_menu_render('EVTIntranetBundle:Builder:mainMenu', {'currentClass': 'active', 'template': 'EVTIntranetBundle:Menu:metronic_menu.html.twig'}) }}
-    <!-- END SIDEBAR MENU -->
-    </div>
-    </div>
-    <!-- END SIDEBAR -->
+{% block pageContent %}
     <!-- BEGIN CONTENT -->
     <div class="page-content-wrapper">
         <div class="page-content">
@@ -92,6 +81,4 @@
         </div>
     </div>
     <!-- END CONTENT -->
-    </div>
-    <!-- END CONTAINER -->
 {% endblock %}
