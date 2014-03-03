@@ -11,7 +11,7 @@ class UserProvider implements UserProviderInterface
 {
     private $client;
 
-    public function  __construct($client)
+    public function __construct($client)
     {
         $this->client = $client;
     }

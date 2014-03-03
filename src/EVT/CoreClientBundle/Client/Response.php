@@ -14,7 +14,7 @@ class Response
     private $statusCode;
     private $body;
 
-    function __construct($statusCode, $body)
+    public function __construct($statusCode, $body)
     {
         $this->statusCode = $statusCode;
         $this->body = $body;

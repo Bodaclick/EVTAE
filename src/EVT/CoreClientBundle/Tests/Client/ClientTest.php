@@ -65,7 +65,7 @@ class ClientTest extends \PHPUnit_Framework_TestCase
 
         $this->clientSecurityMock->expects($this->once())
             ->method('securizeResponse')
-            ->will($this->returnValue(new Response('200',['nombre' => 'pepe'])));
+            ->will($this->returnValue(new Response('200', ['nombre' => 'pepe'])));
 
     }
 
