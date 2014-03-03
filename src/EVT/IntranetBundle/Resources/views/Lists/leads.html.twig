@@ -21,60 +21,65 @@
             <!-- BEGIN PAGE CONTENT-->
             <div class="row">
                 <div class="col-md-12">
-					<!-- BEGIN SAMPLE TABLE PORTLET-->
-					<div class="portlet box grey">
-						<div class="portlet-title">
-							<div class="caption">Leads</div>
-						</div>
-						<div class="portlet-body flip-scroll">
-						{% if leads|length > 0 %}
-							<table class="table table-bordered table-striped table-condensed flip-content">
-							<thead class="flip-content">
-							<tr>
-							    <th>Vertical</th>    
-						        <th>Provider</th>
-								<th>Name</th>
-								<th>Email</th>
-								<th>Phone</th>
-								<th>Event Type</th>
-								<th>Event Date</th>
-								<th>Event Location</th>
-								<th>&nbsp;</th>
-							</tr>
-							</thead>
-							<tbody>
-							{% for lead in leads %}
-							<tr {% if lead.read_at is not defined  %}class="success"{% endif %}>
-								<td>{{ lead.showroom.vertical.domain }}</td>
-							    <td>{{ lead.showroom.provider.name }}</td>
-								<td>{{ lead.personal_info.name }}</td>
-								<td><a href=mailto:{{ lead.email.email }}" target="_blank">{{ lead.email.email }}</a></td>
-								<td><a href="tel:{{ lead.personal_info.phone }}" target="_blank">{{ lead.personal_info.phone }}</a></td>
-								<td>{{ lead.event.type.name }}</td>
-								<td>{{ lead.event.date|date("d/m/Y") }}</td>
-							    <td>{{ lead.event.location.admin_level1 }} ({{ lead.event.location.admin_level2 }})</td>
-                                <td class="highlight">
-									<a href="/leads/{{ lead.id }}"  class="btn default btn-xs green-stripe">
-									{% if lead.read_at is not defined  %}
-									read
-									{% else %}
-									details
-									{% endif %}
-									</a>
-								</td>
-						    </tr>
-							{% endfor %}
-							</tbody>
-							</table>
-						{% else %}
-						<div class="note note-info">
-							<h4 class="block">No leads</h4>
-							<p>There are no leads for this user.</p>
-						</div>
-						{% endif %}
-						</div>
-					</div>
-					<!-- END SAMPLE TABLE PORTLET-->
+                    <!-- BEGIN SAMPLE TABLE PORTLET-->
+                    <div class="portlet box grey">
+                        <div class="portlet-title">
+                            <div class="caption">Leads</div>
+                        </div>
+                        <div class="portlet-body flip-scroll">
+                            {% if leads|length > 0 %}
+                                <table class="table table-bordered table-striped table-condensed flip-content">
+                                    <thead class="flip-content">
+                                    <tr>
+                                        <th>Vertical</th>
+                                        <th>Provider</th>
+                                        <th>Name</th>
+                                        <th>Email</th>
+                                        <th>Phone</th>
+                                        <th>Event Type</th>
+                                        <th>Event Date</th>
+                                        <th>Event Location</th>
+                                        <th>&nbsp;</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% for lead in leads %}
+                                        <tr {% if lead.read_at is not defined %}class="success"{% endif %}>
+                                            <td>{{ lead.showroom.vertical.domain }}</td>
+                                            <td>{{ lead.showroom.provider.name }}</td>
+                                            <td>{{ lead.personal_info.name }}</td>
+                                            <td><a href=mailto:{{ lead.email.email }}"
+                                                   target="_blank">{{ lead.email.email }}</a></td>
+                                            <td><a href="tel:{{ lead.personal_info.phone }}"
+                                                   target="_blank">{{ lead.personal_info.phone }}</a></td>
+                                            <td>{{ lead.event.type.name }}</td>
+                                            <td>{{ lead.event.date|date("d/m/Y") }}</td>
+                                            <td>{{ lead.event.location.admin_level1 }}
+                                                ({{ lead.event.location.admin_level2 }})
+                                            </td>
+                                            <td class="highlight">
+                                                <a href="/leads/{{ lead.id }}" class="btn default btn-xs green-stripe">
+                                                    {% if lead.read_at is not defined %}
+                                                        read
+                                                    {% else %}
+                                                        details
+                                                    {% endif %}
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    {% endfor %}
+                                    </tbody>
+                                </table>
+                            {% else %}
+                                <div class="note note-info">
+                                    <h4 class="block">No leads</h4>
+
+                                    <p>There are no leads for this user.</p>
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                    <!-- END SAMPLE TABLE PORTLET-->
                 </div>
             </div>
             <!-- END PAGE CONTENT-->
