@@ -15,15 +15,15 @@ class ClientSecurityTest extends \PHPUnit_Framework_TestCase
 {
     public function testSecurizeUrl()
     {
-        $sClient = new ClientSecurity($this->getContainer());
+        $sClient = new ClientSecurity($this->getContainer(), 'apikeyValue');
 
-        $this->assertEquals('?canView=test@test.com', $sClient->securizeUrl(''));
-        $this->assertEquals('/api/test?canView=test@test.com', $sClient->securizeUrl('/api/test'));
+        $this->assertEquals('?apikey=apikeyValue&canView=test@test.com', $sClient->securizeUrl(''));
+        $this->assertEquals('/api/test?apikey=apikeyValue&canView=test@test.com', $sClient->securizeUrl('/api/test'));
     }
 
     public function testSecurizeResponse()
     {
-        $sClient = new ClientSecurity($this->getContainer());
+        $sClient = new ClientSecurity($this->getContainer(), 'apikeyValue');
 
         $response = new Response(200, null, '{"data":"test"}');
         $sResponse = $sClient->securizeResponse($response);
@@ -43,7 +43,7 @@ class ClientSecurityTest extends \PHPUnit_Framework_TestCase
 
     public function testSecurizeResponseRemoveFields()
     {
-        $sClient = new ClientSecurity($this->getContainer());
+        $sClient = new ClientSecurity($this->getContainer(), 'apikeyValue');
 
         $response = new Response(200, null, '{"data":"test", "obj":{ "persist":"noRemove", "removeMe":"toRemove" }}');
         $sResponse = $sClient->securizeResponse($response);
@@ -61,16 +61,14 @@ class ClientSecurityTest extends \PHPUnit_Framework_TestCase
         $containerMock = $this->getMockBuilder('Symfony\Component\DependencyInjection\ContainerInterface')
             ->disableOriginalConstructor()->getMock();
         $containerMock->expects($this->any())->method('get')->will($this->returnValue($secContainerMock));
-        $sClient = new ClientSecurity($containerMock);
-    
-        $this->assertEquals('', $sClient->securizeUrl(''));
-        $this->assertEquals('/api/test', $sClient->securizeUrl('/api/test'));
+        $sClient = new ClientSecurity($containerMock, 'apikeyValue');
+
+        $this->assertEquals('?apikey=apikeyValue', $sClient->securizeUrl(''));
+        $this->assertEquals('/api/test?apikey=apikeyValue', $sClient->securizeUrl('/api/test'));
     }
 
     private function getContainer()
     {
-
-
         $secTokenMock = $this->getMockBuilder('Symfony\Component\Security\Core\Authentication\Token\TokenInterface')
             ->disableOriginalConstructor()->getMock();
         $secTokenMock->expects($this->any())->method('getUsername')->will($this->returnValue('test@test.com'));

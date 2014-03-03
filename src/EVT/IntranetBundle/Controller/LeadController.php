@@ -13,7 +13,7 @@ class LeadController extends Controller
      */
     public function listAction()
     {
-        $leadsResponse = $this->container->get('evt.core.client')->sendRequest('/api/leads');
+        $leadsResponse = $this->container->get('evt.core.client')->get('/api/leads');
 
         $leads = [];
         if (isset($leadsResponse->getBody()['items'])) {
@@ -30,10 +30,13 @@ class LeadController extends Controller
      */
     public function showLeadAction($id)
     {
-        $leadResponse = $this->container->get('evt.core.client')->sendRequest('/api/leads/'.$id);
+        $leadResponse = $this->container->get('evt.core.client')->get('/api/leads/'.$id);
         $lead = $leadResponse->getBody();
 
         $content = $this->renderView('EVTIntranetBundle:Lists:lead.html.twig', ["lead" => $lead]);
+        if (!isset($lead['read_at'])) {
+            $leadResponse = $this->container->get('evt.core.client')->patch('/api/leads/'.$id.'/read');
+        }
 
         return new Response($content);
     }
