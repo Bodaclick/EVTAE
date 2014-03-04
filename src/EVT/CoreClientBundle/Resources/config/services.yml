@@ -6,7 +6,6 @@ services:
         class: EVT\CoreClientBundle\Client\Client
         arguments:
           - @evt.guzzle.client
-          - %evt_core_api_key%
           - %evt_core_domain%
           - @evt.core.client_security
 
@@ -14,3 +13,4 @@ services:
         class: EVT\CoreClientBundle\Security\ClientSecurity
         arguments:
           - @service_container
+          - %evt_core_api_key%

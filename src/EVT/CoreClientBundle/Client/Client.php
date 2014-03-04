@@ -14,29 +14,30 @@ use Guzzle\Http\ClientInterface;
 class Client
 {
     private $guzzleClient;
-    private $apikey;
     private $domain;
     private $securityClient;
 
-    public function __construct(ClientInterface $guzzleClient, $apikey, $domain, $securityClient)
+    public function __construct(ClientInterface $guzzleClient, $domain, $securityClient)
     {
         $this->guzzleClient = $guzzleClient;
-        $this->apikey = $apikey;
         $this->domain = $domain;
         $this->securityClient = $securityClient;
     }
 
-    public function sendRequest($url)
+    public function get($url)
     {
-        $securedUrl = $this->securityClient->securizeUrl($url);
-
-        if (false !== strpos($securedUrl, '?')) {
-            $securedUrl .= '&';
-        } else {
-            $securedUrl .= '?';
+        $request = $this->guzzleClient->get($this->domain .$this->securityClient->securizeUrl($url));
+        try {
+            $response = $request->send();
+        } catch (\Exception $e) {
+            return new Response(404, []);
         }
+        return $this->securityClient->securizeResponse($response);
+    }
 
-        $request = $this->guzzleClient->get($this->domain . $securedUrl . 'apikey=' . $this->apikey);
+    public function patch($url, $body = null)
+    {
+        $request = $this->guzzleClient->patch($this->domain .$this->securityClient->securizeUrl($url), [], $body);
         try {
             $response = $request->send();
         } catch (\Exception $e) {

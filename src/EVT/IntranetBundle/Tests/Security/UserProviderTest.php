@@ -1,6 +1,7 @@
 <?php
 
 namespace EVT\IntranetBundle\Test\Security;
+
 use EVT\CoreClientBundle\Client\Response;
 use EVT\IntranetBundle\Security\EVTUser;
 use EVT\IntranetBundle\Security\UserProvider;
@@ -24,7 +25,7 @@ class UserProviderTest extends \PHPUnit_Framework_TestCase
 
     public function testLoadUserByUsername()
     {
-        $response = new Response('200',json_decode(
+        $response = new Response('200', json_decode(
             '{
             "id":1,
             "username":"usernameManager",
@@ -32,14 +33,14 @@ class UserProviderTest extends \PHPUnit_Framework_TestCase
             "salt":"sywh",
             "password":"KKOhKzmyHK",
             "personal_info":{"name":"nameManager","surnames":"surnamesManager","phone":"0132465987"},
-            "roles":["ROLE_MANAGER","ROLE_USER"]
-        }', true
+            "roles":["ROLE_MANAGER","ROLE_USER"]}',
+            true
         )) ;
 
         $client = $this->getMockBuilder('EVT\CoreClientBundle\Client\Client')->disableOriginalConstructor()->getMock();
 
         $client->expects($this->once())
-            ->method('sendRequest')
+            ->method('get')
             ->with($this->equalTo('/api/users/usernameManager'))
             ->will($this->returnValue($response));
 
@@ -54,7 +55,7 @@ class UserProviderTest extends \PHPUnit_Framework_TestCase
 
     public function testRefreshUser()
     {
-        $response = new Response('200',json_decode(
+        $response = new Response('200', json_decode(
             '{
             "id":1,
             "username":"usernameManager",
@@ -62,19 +63,21 @@ class UserProviderTest extends \PHPUnit_Framework_TestCase
             "salt":"sywh",
             "password":"KKOhKzmyHK",
             "personal_info":{"name":"nameManager","surnames":"surnamesManager","phone":"0132465987"},
-            "roles":["ROLE_MANAGER","ROLE_USER"]
-        }', true
+            "roles":["ROLE_MANAGER","ROLE_USER"]}',
+            true
         )) ;
 
         $client = $this->getMockBuilder('EVT\CoreClientBundle\Client\Client')->disableOriginalConstructor()->getMock();
 
         $client->expects($this->once())
-            ->method('sendRequest')
+            ->method('get')
             ->with($this->equalTo('/api/users/usernameManager'))
             ->will($this->returnValue($response));
 
         $customProvider = new UserProvider($client);
-        $user = $customProvider->refreshUser(new EVTUser('usernameManager', 'KKOhKzmyHK', 'sywh', ["ROLE_MANAGER","ROLE_USER"]));
+        $user = $customProvider->refreshUser(
+            new EVTUser('usernameManager', 'KKOhKzmyHK', 'sywh', ["ROLE_MANAGER", "ROLE_USER"])
+        );
 
         $this->assertInstanceOf('EVT\IntranetBundle\Security\EVTUser', $user);
         $this->assertEquals('usernameManager', $user->getUsername());

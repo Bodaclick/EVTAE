@@ -11,14 +11,14 @@ class UserProvider implements UserProviderInterface
 {
     private $client;
 
-    public function  __construct($client)
+    public function __construct($client)
     {
         $this->client = $client;
     }
 
     public function loadUserByUsername($username)
     {
-        $userData = $this->client->sendRequest('/api/users/' . $username);
+        $userData = $this->client->get('/api/users/' . $username);
 
         $arrayUser = $userData->getBody();
         if ('200' == $userData->getStatusCode()) {
