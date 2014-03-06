@@ -62,6 +62,18 @@
         <source>lead.user.phone</source>
         <target>Telefono</target>
       </trans-unit>
+      <trans-unit id="57d11c55a29abe439df7f79485bf99ed" resname="title.resetPassword.user">
+        <source>title.resetPassword.user</source>
+        <target>Nueva Contraseña</target>
+      </trans-unit>
+      <trans-unit id="75853781e9c55582bf1a7c3be2405821" resname="new.password.text">
+        <source>new.password.text</source>
+        <target>Estimado cliente, esta es tu nueva contraseña para acceder a la area de empresas.</target>
+      </trans-unit>
+      <trans-unit id="1bc6dca02c0f7e7f698e4af7c35fdb34" resname="new.password">
+        <source>new.password</source>
+        <target>Contraseña</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>
