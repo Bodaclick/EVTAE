@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" datatype="plaintext" original="file.ext">
+    <body>
+      <trans-unit id="e8d22907628a82c06677e5b29ecb9f1e" resname="mail.do_not_respond">
+        <source>mail.do_not_respond</source>
+        <target>__mail.do_not_respond</target>
+      </trans-unit>
+      <trans-unit id="7af5b25d6bd2bc74cb7dd3adcbefb2e7" resname="title.new.lead.manager">
+        <source>title.new.lead.manager</source>
+        <target>__title.new.lead.manager</target>
+      </trans-unit>
+      <trans-unit id="44fcc3e3657df3aa5d6c6405b29bf9fa" resname="body.new.lead.manager">
+        <source>body.new.lead.manager</source>
+        <target>__body.new.lead.manager</target>
+      </trans-unit>
+      <trans-unit id="60cc00aae82fb1783a51fcaebfe652e9" resname="lead.user.name">
+        <source>lead.user.name</source>
+        <target>__lead.user.name</target>
+      </trans-unit>
+      <trans-unit id="4fd99953bb6a15610b72266647b5568a" resname="lead.user.surname">
+        <source>lead.user.surname</source>
+        <target>__lead.user.surname</target>
+      </trans-unit>
+      <trans-unit id="cecf5258aed13bf8b0e3bd25e7800aa3" resname="lead.user.email">
+        <source>lead.user.email</source>
+        <target>__lead.user.email</target>
+      </trans-unit>
+      <trans-unit id="33916506cf34f9e9c324bd136cfda525" resname="lead.user.phone">
+        <source>lead.user.phone</source>
+        <target>__lead.user.phone</target>
+      </trans-unit>
+      <trans-unit id="f2e7cce2412cc9f5aa9445320ecc850d" resname="lead.event.date">
+        <source>lead.event.date</source>
+        <target>__lead.event.date</target>
+      </trans-unit>
+      <trans-unit id="8da7fdc32929336b3a5326c83979a9f1" resname="lead.event.type">
+        <source>lead.event.type</source>
+        <target>__lead.event.type</target>
+      </trans-unit>
+      <trans-unit id="ed74d9fce6c5bcefd851fc5e44aaa562" resname="lead.event.location">
+        <source>lead.event.location</source>
+        <target>__lead.event.location</target>
+      </trans-unit>
+      <trans-unit id="841ca57b308b48f141b90b8b43e88030" resname="lead.date">
+        <source>lead.date</source>
+        <target>__lead.date</target>
+      </trans-unit>
+      <trans-unit id="32243e02290718754c31f02046cefd4b" resname="lead.observations">
+        <source>lead.observations</source>
+        <target>__lead.observations</target>
+      </trans-unit>
+      <trans-unit id="07d17b50644db4a1839f387953c1a48f" resname="title.new.lead.user">
+        <source>title.new.lead.user</source>
+        <target>__title.new.lead.user</target>
+      </trans-unit>
+      <trans-unit id="e5c465ea6e972409ebfd868b898924fb" resname="body.new.lead.user">
+        <source>body.new.lead.user</source>
+        <target>__body.new.lead.user</target>
+      </trans-unit>
+      <trans-unit id="57d11c55a29abe439df7f79485bf99ed" resname="title.resetPassword.user">
+        <source>title.resetPassword.user</source>
+        <target>__title.resetPassword.user</target>
+      </trans-unit>
+      <trans-unit id="75853781e9c55582bf1a7c3be2405821" resname="new.password.text">
+        <source>new.password.text</source>
+        <target>__new.password.text</target>
+      </trans-unit>
+      <trans-unit id="1bc6dca02c0f7e7f698e4af7c35fdb34" resname="new.password">
+        <source>new.password</source>
+        <target>__new.password</target>
+      </trans-unit>
+      <trans-unit id="5f0f8c6bf02d796170290b0b6f7c3533" resname="title.welcome.user">
+        <source>title.welcome.user</source>
+        <target>__title.welcome.user</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
