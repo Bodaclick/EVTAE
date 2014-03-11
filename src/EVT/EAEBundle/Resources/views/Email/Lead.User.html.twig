@@ -16,10 +16,10 @@
                         <!-- BEGIN: Note Panel -->
                         <table class="twelve columns" style="margin-bottom: 10px">
                             <tr>
-                                <td>{% trans %}lead.event.date{% endtrans %}</td>
-                                <td>{% trans %}lead.event.type{% endtrans %}</td>
-                                <td>{% trans %}lead.event.location{% endtrans %}</td>
-                                <td>{% trans %}lead.date{% endtrans %}</td>
+                                <th>{% trans %}lead.event.date{% endtrans %}</th>
+                                <th>{% trans %}lead.event.type{% endtrans %}</th>
+                                <th>{% trans %}lead.event.location{% endtrans %}</th>
+                                <th>{% trans %}lead.date{% endtrans %}</th>
                             </tr>
                             <tr>
                                 <td>{{ event.date | date("d/m/Y") }}</td>
@@ -31,7 +31,7 @@
                         <span class="devider"></span>
                         <table class="twelve columns" style="margin-bottom: 10px">
                             <tr>
-                                <td>{% trans %}lead.observations{% endtrans %}</td>
+                                <th>{% trans %}lead.observations{% endtrans %}</th>
                             </tr>
                             <tr>
                                 <td>{{ information_bag.parameters.observations | default('') }}</td>
