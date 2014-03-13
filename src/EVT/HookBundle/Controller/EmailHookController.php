@@ -27,7 +27,7 @@ class EmailHookController extends Controller
         if (!empty($content)) {
             $data = json_decode($content, true);
         }
-        $data['mailing']['subject'] = $this->get('translator')->trans('user.welcome.subject', [], 'email', 'es_ES');
+        $data['mailing']['subject'] = $this->get('translator')->trans('title.welcome.user', [], 'messages', 'es_ES');
         $data['mailing']['to'] = $data['user']['email']['email'];
 
         $domain = $data['vertical']['domain'];
@@ -47,7 +47,7 @@ class EmailHookController extends Controller
         if (!empty($content)) {
             $data = json_decode($content, true);
         }
-        $data['mailing']['subject'] = $this->get('translator')->trans('user.lead.subject', [], 'email', 'es_ES');
+        $data['mailing']['subject'] = $this->get('translator')->trans('title.new.lead.user', [], 'messages', 'es_ES');
         $data['vertical'] = $data['showroom']['vertical'];
         $data['mailing']['to'] = $data['email']['email'];
 
@@ -71,7 +71,8 @@ class EmailHookController extends Controller
         $data['vertical'] = $data['showroom']['vertical'];
         $domain = $data['vertical']['domain'];
 
-        $data['mailing']['subject'] = $this->get('translator')->trans('manager.lead.subject', [], 'email', 'es_ES');
+        $data['mailing']['subject'] = $this->get('translator')
+            ->trans('title.new.lead.manager', [], 'messages', 'es_ES');
         $data['mailing']['to'] = $data['showroom']['provider']['notification_emails'];
         $data['mailing']['cc'] = 'support@'. $domain;
 
