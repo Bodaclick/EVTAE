@@ -31,6 +31,7 @@
                                 <table class="table table-bordered table-striped table-condensed flip-content">
                                     <thead class="flip-content">
                                     <tr>
+                                        <th>Created at</th> 
                                         <th>Vertical</th>
                                         <th>Provider</th>
                                         <th>Name</th>
@@ -45,10 +46,11 @@
                                     <tbody>
                                     {% for lead in leads %}
                                         <tr {% if lead.read_at is not defined %}class="success"{% endif %}>
+                                            <td>{{ lead.created_at|date("d/m/Y H:i") }}</td>
                                             <td>{{ lead.showroom.vertical.domain }}</td>
                                             <td>{{ lead.showroom.provider.name }}</td>
                                             <td>{{ lead.personal_info.name }}</td>
-                                            <td><a href=mailto:{{ lead.email.email }}"
+                                            <td><a href="mailto:{{ lead.email.email }}"
                                                    target="_blank">{{ lead.email.email }}</a></td>
                                             <td><a href="tel:{{ lead.personal_info.phone }}"
                                                    target="_blank">{{ lead.personal_info.phone }}</a></td>
