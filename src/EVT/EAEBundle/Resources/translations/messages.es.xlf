@@ -3,7 +3,7 @@
     <body>
       <trans-unit id="e8d22907628a82c06677e5b29ecb9f1e" resname="mail.do_not_respond">
         <source>mail.do_not_respond</source>
-        <target>Este es un mail automatico, no conteste directamente.</target>
+        <target>Este es un mail automatico, no conteste directamente. ¡Gracias!</target>
         
       </trans-unit>
       <trans-unit id="7af5b25d6bd2bc74cb7dd3adcbefb2e7" resname="title.new.lead.manager">
@@ -94,6 +94,34 @@ Estamos aquí para ayudarle, no dude en contactar con nuestro servicio técnico 
       <trans-unit id="5f0f8c6bf02d796170290b0b6f7c3533" resname="title.welcome.user">
         <source>title.welcome.user</source>
         <target>Bienvenid@</target>
+        
+      </trans-unit>
+      <trans-unit id="6096d7a4784a96af2eca47f23463278b" resname="body.new.lead.user.previo.mostrar.datos">
+        <source>body.new.lead.user.previo.mostrar.datos</source>
+        <target>Estos son tus datos:</target>
+        
+      </trans-unit>
+      <trans-unit id="a4917b70e2e51ed9cc81f7e51b200ad0" resname="body.welcome.user">
+        <source>body.welcome.user</source>
+        
+      </trans-unit>
+      <trans-unit id="8256d684692099c61abae9a90f67a7d5" resname="body.welcome.user.hi">
+        <source>body.welcome.user.hi</source>
+        <target>Hola</target>
+        
+      </trans-unit>
+      <trans-unit id="c4676aae7c2af879ceaf97dcedb0da46" resname="body.welcome.user.to">
+        <source>body.welcome.user.to</source>
+        <target>Bienvenid@ a </target>
+        
+      </trans-unit>
+      <trans-unit id="2be87cf45a375b58b3d70ef7a5d6fab7" resname="body.welcome.user.restomail">
+        <source>body.welcome.user.restomail</source>
+        <target>Gracias por registrarte. Todo lo que necesitas para celebrar tu evento podrás encontrarlo aquí.
+
+¡Esperamos que disfrutes mucho de tu celebración!
+
+Que tengas buen día..</target>
         
       </trans-unit>
     </body>

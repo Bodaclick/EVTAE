@@ -9,9 +9,9 @@
             <table class="row note">
                 <tr>
                     <td class="wrapper last">
-                        <h4>{% trans %}body.new.lead.manager{% endtrans %}</h4>
+                        <p>{% trans %}body.welcome.user.hi{% endtrans %} {{ user.personal_info.name }} {% trans %}body.welcome.user.to{% endtrans %} {{ vertical.domain }}</p>
                         <span class="devider"></span>
-                        <p>Hola {{ user.personal_info.name }}, bienvenido a {{ vertical.domain }}</p>
+                        <p>{% trans %}body.welcome.user.restomail{% endtrans %}</p>
                         <span class="devider"></span>
                     </td>
                     <td class="expander"></td>
