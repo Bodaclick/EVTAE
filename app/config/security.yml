@@ -29,6 +29,10 @@ security:
             pattern:  ^/login$
             security: false
 
+        resetpassword:
+            pattern:  ^/resetpassword$
+            security: false
+
         admin_secured_area:
             pattern:   ^/
             anonymous: false

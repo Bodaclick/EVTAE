@@ -33,6 +33,10 @@
                         <div class="portlet-body flip-scroll">
                             <table class="table table-bordered table-hover">
                                 <tr>
+                                    <td>Created at</td>
+                                    <td class="success">{{ lead.created_at|date("d/m/Y H:i") }}</td>
+                                </tr>
+                                <tr>
                                     <td>Vertical</td>
                                     <td class="active">{{ lead.showroom.vertical.domain }}</td>
                                 </tr>
@@ -47,17 +51,15 @@
                                 </tr>
                                 <tr>
                                     <td>Email</td>
-                                    <td class="active">
-                                        <a href=mailto:{{ lead.email.email }}"
-                                           target="_blank">{{ lead.email.email }}</a>
-                                    </td>
+                                    <td class="success"><a href="mailto:{{ lead.email.email }}" target="_blank">
+                                        {{ lead.email.email }}
+                                    </a></td>
                                 </tr>
                                 <tr>
                                     <td>Phone</td>
-                                    <td class="active">
-                                        <a href="tel:{{ lead.personal_info.phone }}"
-                                           target="_blank">{{ lead.personal_info.phone }}</a>
-                                    </td>
+                                    <td class="success"><a href="tel:{{ lead.personal_info.phone }}" target="_blank">
+                                        {{ lead.personal_info.phone }}
+                                    </a></td>
                                 </tr>
                                 <tr>
                                     <td>Event Type</td>
@@ -65,7 +67,7 @@
                                 </tr>
                                 <tr>
                                     <td>Event Date</td>
-                                    <td class="active">{{ lead.event.date|date("d/m/Y") }}</td>
+                                    <td class="success">{{ lead.event.date|date("d/m/Y") }}</td>
                                 </tr>
                                 <tr>
                                     <td>Event Location</td>

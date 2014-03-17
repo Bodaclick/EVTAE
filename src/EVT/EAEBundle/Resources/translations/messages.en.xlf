@@ -1,128 +1,98 @@
-<?xml version="1.0" ?><xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-  <file datatype="plaintext" original="file.ext" source-language="en">
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" datatype="plaintext" original="file.ext">
     <body>
       <trans-unit id="e8d22907628a82c06677e5b29ecb9f1e" resname="mail.do_not_respond">
         <source>mail.do_not_respond</source>
-        <target>Este es un mail automatico, no conteste directamente. ¡Gracias!</target>
-        
+        <target>__mail.do_not_respond</target>
       </trans-unit>
       <trans-unit id="7af5b25d6bd2bc74cb7dd3adcbefb2e7" resname="title.new.lead.manager">
         <source>title.new.lead.manager</source>
-        <target>Nueva solicitud de información</target>
-        
+        <target>__title.new.lead.manager</target>
       </trans-unit>
       <trans-unit id="44fcc3e3657df3aa5d6c6405b29bf9fa" resname="body.new.lead.manager">
         <source>body.new.lead.manager</source>
-        <target>Estimado cliente, ha recibido una nueva solicitud de información</target>
-        
+        <target>__body.new.lead.manager</target>
       </trans-unit>
       <trans-unit id="60cc00aae82fb1783a51fcaebfe652e9" resname="lead.user.name">
         <source>lead.user.name</source>
-        <target>Nombre</target>
-        
+        <target>__lead.user.name</target>
       </trans-unit>
       <trans-unit id="4fd99953bb6a15610b72266647b5568a" resname="lead.user.surname">
         <source>lead.user.surname</source>
-        <target>Apellidos</target>
-        
+        <target>__lead.user.surname</target>
       </trans-unit>
       <trans-unit id="cecf5258aed13bf8b0e3bd25e7800aa3" resname="lead.user.email">
         <source>lead.user.email</source>
-        <target>Email</target>
-        
+        <target>__lead.user.email</target>
       </trans-unit>
       <trans-unit id="33916506cf34f9e9c324bd136cfda525" resname="lead.user.phone">
         <source>lead.user.phone</source>
-        <target>Teléfono</target>
-        
+        <target>__lead.user.phone</target>
       </trans-unit>
       <trans-unit id="f2e7cce2412cc9f5aa9445320ecc850d" resname="lead.event.date">
         <source>lead.event.date</source>
-        <target>Fecha del evento</target>
-        
+        <target>__lead.event.date</target>
       </trans-unit>
       <trans-unit id="8da7fdc32929336b3a5326c83979a9f1" resname="lead.event.type">
         <source>lead.event.type</source>
-        <target>Tipo evento</target>
-        
+        <target>__lead.event.type</target>
       </trans-unit>
       <trans-unit id="ed74d9fce6c5bcefd851fc5e44aaa562" resname="lead.event.location">
         <source>lead.event.location</source>
-        <target>Localización</target>
-        
+        <target>__lead.event.location</target>
       </trans-unit>
       <trans-unit id="841ca57b308b48f141b90b8b43e88030" resname="lead.date">
         <source>lead.date</source>
-        <target>Fecha</target>
-        
+        <target>__lead.date</target>
       </trans-unit>
       <trans-unit id="32243e02290718754c31f02046cefd4b" resname="lead.observations">
         <source>lead.observations</source>
-        <target>Observaciones</target>
-        
+        <target>__lead.observations</target>
       </trans-unit>
       <trans-unit id="07d17b50644db4a1839f387953c1a48f" resname="title.new.lead.user">
         <source>title.new.lead.user</source>
-        <target>Tu solicitud ha sido enviada </target>
-        
+        <target>__title.new.lead.user</target>
       </trans-unit>
       <trans-unit id="e5c465ea6e972409ebfd868b898924fb" resname="body.new.lead.user">
         <source>body.new.lead.user</source>
-        <target>Muchas gracias, pronto se pondrán en contacto contigo.. 
-¡Esperamos que tengas una feliz celebración!</target>
-        
+        <target>__body.new.lead.user</target>
       </trans-unit>
       <trans-unit id="57d11c55a29abe439df7f79485bf99ed" resname="title.resetPassword.user">
         <source>title.resetPassword.user</source>
-        <target>Solicitud de nueva contraseña</target>
-        
+        <target>__title.resetPassword.user</target>
       </trans-unit>
       <trans-unit id="75853781e9c55582bf1a7c3be2405821" resname="new.password.text">
         <source>new.password.text</source>
-        <target>Estimado cliente, esta es su nueva contraseña
-
-Estamos aquí para ayudarle, no dude en contactar con nuestro servicio técnico para cualquier otra duda o incidencia.
-
-¡Que tenga un buen día!</target>
-        
+        <target>__new.password.text</target>
       </trans-unit>
       <trans-unit id="1bc6dca02c0f7e7f698e4af7c35fdb34" resname="new.password">
         <source>new.password</source>
-        <target>Contraseña</target>
-        
+        <target>__new.password</target>
       </trans-unit>
       <trans-unit id="5f0f8c6bf02d796170290b0b6f7c3533" resname="title.welcome.user">
         <source>title.welcome.user</source>
-        <target>Bienvenid@</target>
-        
+        <target>__title.welcome.user</target>
       </trans-unit>
       <trans-unit id="6096d7a4784a96af2eca47f23463278b" resname="body.new.lead.user.previo.mostrar.datos">
         <source>body.new.lead.user.previo.mostrar.datos</source>
-        <target>Estos son tus datos:</target>
-        
+        <target>__body.new.lead.user.previo.mostrar.datos</target>
       </trans-unit>
       <trans-unit id="a4917b70e2e51ed9cc81f7e51b200ad0" resname="body.welcome.user">
         <source>body.welcome.user</source>
-        
+        <target>__body.welcome.user</target>
       </trans-unit>
       <trans-unit id="8256d684692099c61abae9a90f67a7d5" resname="body.welcome.user.hi">
         <source>body.welcome.user.hi</source>
-        <target>Hola</target>
-        
+        <target>__body.welcome.user.hi</target>
       </trans-unit>
       <trans-unit id="c4676aae7c2af879ceaf97dcedb0da46" resname="body.welcome.user.to">
         <source>body.welcome.user.to</source>
-        <target>Bienvenid@ a </target>
-        
+        <target>__body.welcome.user.to</target>
       </trans-unit>
       <trans-unit id="2be87cf45a375b58b3d70ef7a5d6fab7" resname="body.welcome.user.restomail">
         <source>body.welcome.user.restomail</source>
-        <target>Gracias por registrarte. Todo lo que necesitas para celebrar tu evento podrás encontrarlo aquí.
-
-¡Esperamos que disfrutes mucho de tu celebración!
-
-Que tengas buen día..</target>
-        
+        <target>__body.welcome.user.restomail</target>
       </trans-unit>
     </body>
   </file>

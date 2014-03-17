@@ -10,16 +10,15 @@
                 <tr>
                     <td class="wrapper last">
                         <h4>{% trans %}body.new.lead.user{% endtrans %}</h4>
-                        <span class="devider"></span>
-                        <p>Hola {{ personal_info.name }}, bienvenido a {{ vertical.domain }}</p>
+                        <p>{% trans %}body.new.lead.user.previo.mostrar.datos{% endtrans %}</p>
                         <span class="devider"></span>
                         <!-- BEGIN: Note Panel -->
                         <table class="twelve columns" style="margin-bottom: 10px">
                             <tr>
-                                <td>{% trans %}lead.event.date{% endtrans %}</td>
-                                <td>{% trans %}lead.event.type{% endtrans %}</td>
-                                <td>{% trans %}lead.event.location{% endtrans %}</td>
-                                <td>{% trans %}lead.date{% endtrans %}</td>
+                                <th>{% trans %}lead.event.date{% endtrans %}</th>
+                                <th>{% trans %}lead.event.type{% endtrans %}</th>
+                                <th>{% trans %}lead.event.location{% endtrans %}</th>
+                                <th>{% trans %}lead.date{% endtrans %}</th>
                             </tr>
                             <tr>
                                 <td>{{ event.date | date("d/m/Y") }}</td>
@@ -31,14 +30,13 @@
                         <span class="devider"></span>
                         <table class="twelve columns" style="margin-bottom: 10px">
                             <tr>
-                                <td>{% trans %}lead.observations{% endtrans %}</td>
+                                <th>{% trans %}lead.observations{% endtrans %}</th>
                             </tr>
                             <tr>
                                 <td>{{ information_bag.parameters.observations | default('') }}</td>
                             </tr>
                         </table>
                         <span class="devider"></span>
-                        <p>En breve nos pondremos en contacto contigo.</p>
                         <!-- END: Note Panel -->
                     </td>
                     <td class="expander"></td>
