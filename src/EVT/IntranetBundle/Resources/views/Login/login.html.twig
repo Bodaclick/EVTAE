@@ -11,7 +11,7 @@
 <div class="content">
 <!-- BEGIN LOGIN FORM -->
 <form class="login-form" action="{{ path('login_check') }}" method="post">
-    <h3 class="form-title">{{ "Login to your account"|trans }}</h3>
+    <h3 class="form-title">{{ "login.account"|trans }}</h3>
     {% if error %}
     <div class="alert alert-danger">
         <button class="close" data-close="alert"></button>
@@ -22,14 +22,14 @@
     {% endif %}
     <div class="form-group">
         <!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
-        <label class="control-label visible-ie8 visible-ie9">{{ "Username"|trans }}</label>
+        <label class="control-label visible-ie8 visible-ie9">{{ "username"|trans }}</label>
         <div class="input-icon">
             <i class="fa fa-user"></i>
             <input class="form-control placeholder-no-fix" type="text" autocomplete="off" placeholder="Username" id="username" name="_username" value="{{ last_username }}" />
         </div>
     </div>
     <div class="form-group">
-        <label class="control-label visible-ie8 visible-ie9">{{ "Password"|trans }}</label>
+        <label class="control-label visible-ie8 visible-ie9">{{ "password"|trans }}</label>
         <div class="input-icon">
             <i class="fa fa-lock"></i>
             <input class="form-control placeholder-no-fix" type="password" autocomplete="off" placeholder="Password"  id="password" name="_password" />
@@ -37,28 +37,28 @@
     </div>
     <div class="form-actions">
         <label class="checkbox">
-            <input type="checkbox" name="remember" id="remember_me" name="_remember_me" /> {{ "Remember me"|trans }} </label>
+            <input type="checkbox" name="remember" id="remember_me" name="_remember_me" /> {{ "remember.me"|trans }} </label>
         <button type="submit" class="btn green pull-right">
-            {{ "Login"|trans }} <i class="m-icon-swapright m-icon-white"></i>
+            {{ "login"|trans }} <i class="m-icon-swapright m-icon-white"></i>
         </button>
     </div>
     <div class="forget-password">
-        <h4>{{ "Forgot your password ?"|trans }}</h4>
+        <h4>{{ "forgot.password"|trans }}</h4>
         <p>
-            {{ "no worries, click"|trans }}
+            {{ "no.worries"|trans }}
             <a href="javascript:;" id="forget-password">
                 {{ "here"|trans }}
             </a>
-            {{ "to reset your password"|trans }}.
+            {{ "to.reset.password"|trans }}.
         </p>
     </div>
 </form>
 <!-- END LOGIN FORM -->
 <!-- BEGIN FORGOT PASSWORD FORM -->
 <form class="forget-form" action="{{ path('resetpassword') }}" method="post">
-    <h3>{{ "Forget Password ?"|trans }}</h3>
+    <h3>{{ "forget.password"|trans }}</h3>
     <p>
-        {{ "Enter your e-mail address below to reset your password"|trans }}.
+        {{ "Enter.email.address.reset.password"|trans }}.
     </p>
     <div class="form-group">
         <div class="input-icon">
@@ -68,9 +68,9 @@
     </div>
     <div class="form-actions">
         <button type="button" id="back-btn" class="btn">
-            <i class="m-icon-swapleft"></i> {{ "Back"|trans }} </button>
+            <i class="m-icon-swapleft"></i> {{ "back"|trans }} </button>
         <button type="submit" class="btn green pull-right">
-            {{ "Submit"|trans }} <i class="m-icon-swapright m-icon-white"></i>
+            {{ "submit"|trans }} <i class="m-icon-swapright m-icon-white"></i>
         </button>
     </div>
 </form>

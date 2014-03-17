@@ -7,15 +7,15 @@
             <div class="row">
                 <div class="col-md-12">
                     <!-- BEGIN PAGE TITLE & BREADCRUMB-->
-                    <h3 class="page-title">{{ "Lead Detail"|trans }}</h3>
+                    <h3 class="page-title">{{ "lead.detail"|trans }}</h3>
                     <ul class="page-breadcrumb breadcrumb">
                         <li>
                             <i class="fa fa-exchange"></i>
-                            <a href="/leads">{{ "Leads"|trans }}</a>
+                            <a href="/leads">{{ "leads"|trans }}</a>
                         </li>
                         <li>
                             <i class="fa fa-angle-right"></i>
-                            <a href="/leads/{{ lead.id }}">{{ "Lead detail"|trans }}</a>
+                            <a href="/leads/{{ lead.id }}">{{ "lead.detail"|trans }}</a>
                         </li>
                     </ul>
                     <!-- END PAGE TITLE & BREADCRUMB-->
@@ -28,55 +28,55 @@
                     <!-- BEGIN SAMPLE TABLE PORTLET-->
                     <div class="portlet box grey">
                         <div class="portlet-title">
-                            <div class="caption">{{ "Lead data detail"|trans }}</div>
+                            <div class="caption">{{ "lead.data.detail"|trans }}</div>
                         </div>
                         <div class="portlet-body flip-scroll">
                             <table class="table table-bordered table-hover">
                                 <tr>
-                                    <td>{{ "Created at"|trans }}</td>
+                                    <td>{{ "created.at"|trans }}</td>
                                     <td class="success">{{ lead.created_at|date("d/m/Y H:i") }}</td>
                                 </tr>
                                 <tr>
-                                    <td>{{ "Vertical"|trans }}</td>
+                                    <td>{{ "vertical"|trans }}</td>
                                     <td class="active">{{ lead.showroom.vertical.domain }}</td>
                                 </tr>
                                 <tr>
-                                    <td>{{ "Provider"|trans }}</td>
+                                    <td>{{ "provider"|trans }}</td>
                                     <td class="active">{{ lead.showroom.provider.name }}</td>
                                 </tr>
                                 <tr>
-                                    <td>{{ "Name"|trans }}</td>
+                                    <td>{{ "name"|trans }}</td>
                                     <td class="active">{{ lead.personal_info.name }}
                                         {{ lead.personal_info.surnames }}</td>
                                 </tr>
                                 <tr>
-                                    <td>{{ "Email"|trans }}</td>
+                                    <td>{{ "email"|trans }}</td>
                                     <td class="success"><a href="mailto:{{ lead.email.email }}" target="_blank">
                                         {{ lead.email.email }}
                                     </a></td>
                                 </tr>
                                 <tr>
-                                    <td>{{ "Phone"|trans }}</td>
+                                    <td>{{ "phone"|trans }}</td>
                                     <td class="success"><a href="tel:{{ lead.personal_info.phone }}" target="_blank">
                                         {{ lead.personal_info.phone }}
                                     </a></td>
                                 </tr>
                                 <tr>
-                                    <td>{{ "Event Type"|trans }}</td>
+                                    <td>{{ "event.type"|trans }}</td>
                                     <td class="active">{{ lead.event.type.name }}</td>
                                 </tr>
                                 <tr>
-                                    <td>{{ "Event Date"|trans }}</td>
+                                    <td>{{ "event.date"|trans }}</td>
                                     <td class="success">{{ lead.event.date|date("d/m/Y") }}</td>
                                 </tr>
                                 <tr>
-                                    <td>{{ "Event Location"|trans }}</td>
+                                    <td>{{ "event.location"|trans }}</td>
                                     <td class="active">{{ lead.event.location.admin_level1 }}
                                         ({{ lead.event.location.admin_level2 }})
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>{{ "Comments"|trans }}</td>
+                                    <td>{{ "comments"|trans }}</td>
                                     <td class="active">{{ lead.information_bag.parameters.observations }}</td>
                                 </tr>
                             </table>
