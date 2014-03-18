@@ -41,7 +41,7 @@
                         "id": 1,
                         "slug": "nombre",
                         "score": 1,
-                        "type": "2",
+                        "type": "1",
                         "provider": {
                             "id": "1",
                             "name": "nombre",

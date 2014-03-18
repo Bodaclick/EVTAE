@@ -57,13 +57,21 @@
                                 </tr>
                                 <tr>
                                     <td>{{ "phone"|trans }}</td>
-                                    <td class="active"><a href="tel:{{ lead.personal_info.phone }}" target="_blank">
+                                    <td class="active">
+                                    {% if lead.showroom.type > 1 %}
+                                    <a href="tel:{{ lead.personal_info.phone }}" target="_blank">
                                         {{ lead.personal_info.phone }}
-                                    </a></td>
+                                    </a>
+                                    {% else %}{% include 'EVTIntranetBundle::viewMore.html.twig' %}{% endif %}
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>{{ "event.type"|trans }}</td>
-                                    <td class="active">{{ lead.event.type.name }}</td>
+                                    <td class="active">
+                                    {% if lead.showroom.type > 1 %}
+                                    {{ lead.event.type.name }}
+                                    {% else %}{% include 'EVTIntranetBundle::viewMore.html.twig' %}{% endif %}
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>{{ "event.date"|trans }}</td>
@@ -77,7 +85,11 @@
                                 </tr>
                                 <tr>
                                     <td>{{ "comments"|trans }}</td>
-                                    <td class="active">{{ lead.information_bag.parameters.observations }}</td>
+                                    <td class="active">
+                                    {% if lead.showroom.type > 1 %}
+                                    {{ lead.information_bag.parameters.observations }}
+                                    {% else %}{% include 'EVTIntranetBundle::viewMore.html.twig' %}{% endif %}
+                                    </td>
                                 </tr>
                             </table>
                         </div>

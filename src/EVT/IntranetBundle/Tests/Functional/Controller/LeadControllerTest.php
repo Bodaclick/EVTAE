@@ -59,6 +59,23 @@ class LeadControllerTest extends WebTestCase
         $this->assertEquals(1, $crawler->filter('h3.page-title')->count());
         $this->assertEquals('Lead Detail', $crawler->filter('h3.page-title')->html());
         $this->assertEquals(1, $crawler->filter('table.table')->count());
+        $this->assertEquals(0, $crawler->filter('a.badge-warning')->count());
+    }
+
+    /**
+     * @vcr apiLeadFree.yml
+     */
+    public function testLeadFree()
+    {
+        $this->logIn();
+
+        $crawler = $this->client->request('GET', '/leads/1');
+
+        $this->assertEquals(200, $this->client->getResponse()->getStatusCode());
+        $this->assertEquals(1, $crawler->filter('h3.page-title')->count());
+        $this->assertEquals('Lead Detail', $crawler->filter('h3.page-title')->html());
+        $this->assertEquals(1, $crawler->filter('table.table')->count());
+        $this->assertEquals(3, $crawler->filter('a.badge-warning')->count());
     }
 
     private function logIn()
