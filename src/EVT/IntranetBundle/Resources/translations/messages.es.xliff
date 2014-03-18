@@ -137,6 +137,10 @@
             <source>logout</source>
             <target>Salir</target>
         </trans-unit>
+        <trans-unit id="35">
+          <source>viewmore</source>
+          <target>ver más</target>
+        </trans-unit>
     </body>
   </file>
 </xliff>

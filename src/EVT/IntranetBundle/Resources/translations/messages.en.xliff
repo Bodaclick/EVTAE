@@ -138,6 +138,10 @@
           <source>logout</source>
           <target>Log Out</target>
         </trans-unit>
+        <trans-unit id="35">
+          <source>viewmore</source>
+          <target>view more</target>
+        </trans-unit>
     </body>
   </file>
 </xliff>
