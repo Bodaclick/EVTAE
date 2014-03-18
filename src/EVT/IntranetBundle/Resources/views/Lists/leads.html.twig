@@ -52,9 +52,17 @@
                                             <td>{{ lead.personal_info.name }}</td>
                                             <td><a href="mailto:{{ lead.email.email }}"
                                                    target="_blank">{{ lead.email.email }}</a></td>
-                                            <td><a href="tel:{{ lead.personal_info.phone }}"
-                                                   target="_blank">{{ lead.personal_info.phone }}</a></td>
-                                            <td>{{ lead.event.type.name }}</td>
+                                            <td>
+                                            {% if lead.showroom.type > 1 %}
+                                            <a href="tel:{{ lead.personal_info.phone }}"
+                                                   target="_blank">{{ lead.personal_info.phone }}</a>
+                                            {% else %}{% include 'EVTIntranetBundle::viewMore.html.twig' %}{% endif %}
+                                            </td>
+                                            <td>
+                                            {% if lead.showroom.type > 1 %}
+                                            {{ lead.event.type.name }}
+                                            {% else %}{% include 'EVTIntranetBundle::viewMore.html.twig' %}{% endif %}
+                                            </td>
                                             <td>{{ lead.event.date|date("d/m/Y") }}</td>
                                             <td>{{ lead.event.location.admin_level1 }}
                                                 ({{ lead.event.location.admin_level2 }})

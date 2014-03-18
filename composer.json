@@ -26,6 +26,10 @@
         "knplabs/knp-menu-bundle": "dev-master",
         "knplabs/knp-menu": "2.0.*@dev"
     },
+    "require-dev": {
+        "liip/functional-test-bundle": "dev-master",
+        "php-vcr/phpunit-testlistener-vcr": "*"
+    },
 
     "scripts": {
         "post-install-cmd": [
