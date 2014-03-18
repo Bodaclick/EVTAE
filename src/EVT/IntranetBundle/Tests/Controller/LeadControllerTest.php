@@ -29,83 +29,6 @@ class LeadControllerTest extends WebTestCase
         $this->client = static::createClient();
     }
 
-    public function testLeads()
-    {
-        $this->logIn();
-
-        $responseJson = '
-        {
-            "items": [
-                {
-                "event": {
-                    "date": "October 15, 2014 00:00",
-                    "type": {
-                        "type": 1,
-                        "name": "BIRTHDAY"
-                    },
-                    "location": {
-                        "lat": 10,
-                        "long": 10,
-                        "admin_level1": "Parla",
-                        "admin_level2": "Madrid",
-                        "country": "Spain"
-                    }
-                },
-                "personal_info": {
-                    "name": "name",
-                    "surnames": "surname",
-                    "phone": "0132456789"
-                },
-                "showroom": {
-                    "slug": "nombre",
-                    "score": 1,
-                    "provider": {
-                        "id": "1",
-                        "name": "nombre",
-                        "slug": "nombre",
-                        "phone": "0123546 as"
-                    },
-                    "vertical": {
-                        "domain": "test.com"
-                    },
-                    "id": 1
-                },
-                "information_bag": {
-                    "parameters": {
-                        "observations": ""
-                    }
-                },
-                "created_at": "February 27, 2014 13:07",
-                "email": {
-                    "email": "email@email.com"
-                },
-                "id": "1"
-            }
-        ],
-        "pagination": {
-            "total_pages": 1,
-            "current_page": 1,
-            "items_per_page":1,
-            "total_items": 1
-        }
-        }';
-
-        $response = new Response(200, json_decode($responseJson, true));
-
-        $coreClientMock = $this->getMockBuilder('EVT\CoreClientBundle\Client\Client')
-            ->disableOriginalConstructor()->getMock();
-
-        $coreClientMock->expects($this->once())
-            ->method('get')
-            ->will($this->returnValue($response));
-
-        $this->client->getContainer()->set('evt.core.client', $coreClientMock);
-        $this->client->request('GET', '/leads');
-
-        $this->assertEquals(200, $this->client->getResponse()->getStatusCode());
-    }
-
-
     public function testLead()
     {
         $this->logIn();
@@ -134,6 +57,7 @@ class LeadControllerTest extends WebTestCase
             "showroom": {
                 "slug": "nombre",
                 "score": 1,
+                "type": 2,
                 "provider": {
                     "id": "1",
                     "name": "nombre",

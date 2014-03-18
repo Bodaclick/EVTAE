@@ -1,0 +1,85 @@
+
+-
+    request:
+        method: GET
+        url: 'http://api.e-verticals.local/api/leads/1?apikey=1234&canView=manager'
+        headers:
+            host: api.e-verticals.local
+            user-agent: 'Guzzle/3.8.1 curl/7.22.0 PHP/5.5.9-1+sury.org~precise+1'
+            content-length: 0
+    response:
+        status: 200
+        headers:
+            Date: 'Tue, 18 Mar 2014 13:31:17 GMT'
+            Server: 'Apache/2.4.7 (Ubuntu)'
+            X-Powered-By: PHP/5.5.9-1+sury.org~precise+1
+            Cache-Control: no-cache
+            Transfer-Encoding: chunked
+            Content-Type: application/json
+        body: | 
+                {
+                    "event": {
+                        "date": "2014-10-15CEST00:00:00+0200",
+                        "type": {
+                            "type": 1,
+                            "name": "BIRTHDAY"
+                        },
+                        "location": {
+                            "lat": 10,
+                            "long": 10,
+                            "admin_level1": "Parla",
+                            "admin_level2": "Madrid",
+                            "country": "Spain"
+                        }
+                    },
+                    "personal_info": {
+                        "name": "name",
+                        "surnames": "surname",
+                        "phone": "0132456789"
+                    },
+                    "showroom": {
+                        "id": 1,
+                        "slug": "nombre",
+                        "score": 1,
+                        "type": "2",
+                        "provider": {
+                            "id": "1",
+                            "name": "nombre",
+                            "slug": "nombre",
+                            "phone": "0123546 as"
+                        },
+                        "vertical": {
+                            "domain": "test.com"
+                        }
+                    },
+                    "information_bag": {
+                        "parameters": {
+                            "observations": "This is great"
+                        }
+                    },
+                    "created_at": "2014-03-17CET09:20:09+0100",
+                    "email": {
+                        "email": "email@email.com"
+                    },
+                    "id": "1"
+                }
+       
+-
+    request:
+        method: PATCH
+        url: 'http://api.e-verticals.local/api/leads/1/read?apikey=1234&canView=manager'
+        headers:
+            host: api.e-verticals.local
+            user-agent: 'Guzzle/3.8.1 curl/7.22.0 PHP/5.5.9-1+sury.org~precise+1'
+            content-length: 0
+    response:
+        status: 404
+        headers:
+            Date: 'Tue, 18 Mar 2014 15:17:45 GMT'
+            Server: 'Apache/2.4.7 (Ubuntu)'
+            X-Powered-By: PHP/5.5.9-1+sury.org~precise+1
+            Cache-Control: no-cache
+            X-Debug-Token: 60681d
+            X-Debug-Token-Link: /_profiler/60681d
+            Transfer-Encoding: chunked
+            Content-Type: application/json
