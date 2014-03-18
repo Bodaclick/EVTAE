@@ -128,6 +128,7 @@ class LeadControllerTest extends WebTestCase
             "showroom": {
                 "slug": "nombre",
                 "score": 1,
+                "type": 2,
                 "provider": {
                     "id": "1",
                     "name": "nombre",
