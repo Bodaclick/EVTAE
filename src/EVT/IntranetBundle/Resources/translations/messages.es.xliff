@@ -114,7 +114,7 @@
             <target>¿Olvidaste tu contraseña?</target>
         </trans-unit>
         <trans-unit id="29">
-            <source>Enter.email.address.reset.password</source>
+            <source>enter.email.address.reset.password</source>
             <target>Introduce tu email aquí para resetear tu contraseña</target>
         </trans-unit>
         <trans-unit id="30">

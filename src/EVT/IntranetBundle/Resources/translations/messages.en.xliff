@@ -115,7 +115,7 @@
           <target>Forget Password?</target>
         </trans-unit>
         <trans-unit id="29">
-          <source>Enter.email.address.reset.password</source>
+          <source>enter.email.address.reset.password</source>
           <target>Enter your e-mail address below to reset your password</target>
         </trans-unit>
         <trans-unit id="30">

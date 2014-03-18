@@ -34,7 +34,7 @@
                             <table class="table table-bordered table-hover">
                                 <tr>
                                     <td>{{ "created.at"|trans }}</td>
-                                    <td class="success">{{ lead.created_at|date("d/m/Y H:i") }}</td>
+                                    <td class="active">{{ lead.created_at|date("d/m/Y H:i") }}</td>
                                 </tr>
                                 <tr>
                                     <td>{{ "vertical"|trans }}</td>
@@ -51,13 +51,13 @@
                                 </tr>
                                 <tr>
                                     <td>{{ "email"|trans }}</td>
-                                    <td class="success"><a href="mailto:{{ lead.email.email }}" target="_blank">
+                                    <td class="active"><a href="mailto:{{ lead.email.email }}" target="_blank">
                                         {{ lead.email.email }}
                                     </a></td>
                                 </tr>
                                 <tr>
                                     <td>{{ "phone"|trans }}</td>
-                                    <td class="success"><a href="tel:{{ lead.personal_info.phone }}" target="_blank">
+                                    <td class="active"><a href="tel:{{ lead.personal_info.phone }}" target="_blank">
                                         {{ lead.personal_info.phone }}
                                     </a></td>
                                 </tr>
@@ -67,7 +67,7 @@
                                 </tr>
                                 <tr>
                                     <td>{{ "event.date"|trans }}</td>
-                                    <td class="success">{{ lead.event.date|date("d/m/Y") }}</td>
+                                    <td class="active">{{ lead.event.date|date("d/m/Y") }}</td>
                                 </tr>
                                 <tr>
                                     <td>{{ "event.location"|trans }}</td>
