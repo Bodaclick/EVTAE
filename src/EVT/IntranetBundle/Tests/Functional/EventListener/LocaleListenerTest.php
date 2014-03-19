@@ -1,18 +1,18 @@
 <?php
 
-namespace EVT\IntranetBundle\Test\Functional\Controller;
+namespace EVT\IntranetBundle\Tests\Functional\EventListener;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 use Symfony\Component\BrowserKit\Cookie;
 use Symfony\Component\Security\Core\Authentication\Token\UsernamePasswordToken;
 
  /**
- * LocaleControllerTest
+ * LocaleListenerTest
  *
  * @author    Alvaro Prudencio <aprudencio@bodaclick.com>
  * @copyright 2014 Bodaclick S.A.
  */
-class LocaleControllerTest extends WebTestCase
+class LocaleListenerTest extends WebTestCase
 {
     /**
      * @var \Symfony\Bundle\FrameworkBundle\Client
