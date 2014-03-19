@@ -34,11 +34,11 @@ security:
             security: false
 
         admin_secured_area:
-            pattern:   ^/
+            pattern:   ^/manager
             anonymous: false
             form_login:
                 login_path: login
-                check_path: login_check
+                check_path: /manager/login_check
             provider: evt_core
             remember_me:
                 key:      "%secret%"
@@ -46,7 +46,7 @@ security:
                 path:     /
                 domain:   ~ # Defaults to the current domain from $_SERVER
             logout:
-                path:    /logout
+                path:    /manager/logout
 
     access_control:
         #- { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY, requires_channel: https }

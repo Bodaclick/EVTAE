@@ -38,7 +38,7 @@ class LeadControllerTest extends WebTestCase
     {
         $this->logIn();
 
-        $crawler = $this->client->request('GET', '/leads');
+        $crawler = $this->client->request('GET', '/manager/leads');
 
         $this->assertEquals(200, $this->client->getResponse()->getStatusCode());
         $this->assertEquals(1, $crawler->filter('h3.page-title')->count());
@@ -55,7 +55,7 @@ class LeadControllerTest extends WebTestCase
     {
         $this->logIn();
 
-        $crawler = $this->client->request('GET', '/leads/1');
+        $crawler = $this->client->request('GET', '/manager/leads/1');
 
         $this->assertEquals(200, $this->client->getResponse()->getStatusCode());
         $this->assertEquals(1, $crawler->filter('h3.page-title')->count());
@@ -71,7 +71,7 @@ class LeadControllerTest extends WebTestCase
     {
         $this->logIn();
 
-        $crawler = $this->client->request('GET', '/leads/1');
+        $crawler = $this->client->request('GET', '/manager/leads/1');
 
         $this->assertEquals(200, $this->client->getResponse()->getStatusCode());
         $this->assertEquals(1, $crawler->filter('h3.page-title')->count());

@@ -68,7 +68,7 @@
                                                 ({{ lead.event.location.admin_level2 }})
                                             </td>
                                             <td class="highlight">
-                                                <a href="/leads/{{ lead.id }}" class="btn default btn-xs green-stripe">
+                                                <a href="{{ path('evt_intranet_lead_showlead', {'id': lead.id}) }}" class="btn default btn-xs green-stripe">
                                                     {% if lead.read_at is not defined %}
                                                         {{ "read"|trans }}
                                                     {% else %}
