@@ -3,8 +3,6 @@
 namespace EVT\IntranetBundle\Tests\Functional\EventListener;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
-use Symfony\Component\BrowserKit\Cookie;
-use Symfony\Component\Security\Core\Authentication\Token\UsernamePasswordToken;
 
  /**
  * LocaleListenerTest
@@ -19,6 +17,7 @@ class LocaleListenerTest extends WebTestCase
      */
     protected $client;
     protected $session;
+    use \EVT\IntranetBundle\Tests\Functional\LoginTrait;
 
     /**
      * Create a client to test request and mock services
@@ -62,18 +61,5 @@ class LocaleListenerTest extends WebTestCase
 
         $this->assertEquals(200, $this->client->getResponse()->getStatusCode());
         $this->assertEquals("Leads", $crawler->filter('h3.page-title')->html());
-    }
-
-    private function logIn()
-    {
-        $this->session = $this->client->getContainer()->get('session');
-
-        $firewall = 'admin_secured_area';
-        $token = new UsernamePasswordToken('manager', null, $firewall, array('ROLE_MANAGER'));
-        $this->session->set('_security_'.$firewall, serialize($token));
-        $this->session->save();
-
-        $cookie = new Cookie($this->session->getName(), $this->session->getId());
-        $this->client->getCookieJar()->set($cookie);
     }
 }

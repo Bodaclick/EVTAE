@@ -4,8 +4,6 @@ namespace EVT\IntranetBundle\Test\Controller;
 
 use EVT\CoreClientBundle\Client\Response;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
-use Symfony\Component\BrowserKit\Cookie;
-use Symfony\Component\Security\Core\Authentication\Token\UsernamePasswordToken;
 
  /**
  * LeadControllerTest
@@ -20,6 +18,8 @@ class LeadControllerTest extends WebTestCase
      * @var \Symfony\Bundle\FrameworkBundle\Client
      */
     protected $client;
+
+    use \EVT\IntranetBundle\Tests\Functional\LoginTrait;
 
     /**
      * Create a client to test request and mock services
@@ -170,18 +170,5 @@ class LeadControllerTest extends WebTestCase
         $this->client->request('GET', '/leads/1');
 
         $this->assertEquals(200, $this->client->getResponse()->getStatusCode());
-    }
-
-    private function logIn()
-    {
-        $session = $this->client->getContainer()->get('session');
-
-        $firewall = 'admin_secured_area';
-        $token = new UsernamePasswordToken('manager', null, $firewall, array('ROLE_MANAGER'));
-        $session->set('_security_'.$firewall, serialize($token));
-        $session->save();
-
-        $cookie = new Cookie($session->getName(), $session->getId());
-        $this->client->getCookieJar()->set($cookie);
     }
 }
