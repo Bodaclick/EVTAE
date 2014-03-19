@@ -1,0 +1,7 @@
+services:
+
+    kernel.listener.locale_listener:
+        class: EVT\IntranetBundle\EventListener\LocaleListener
+        arguments: [%locale%]
+        tags:
+            - { name: kernel.event_listener, event: kernel.request, method: onKernelRequest, priority: 6 }
