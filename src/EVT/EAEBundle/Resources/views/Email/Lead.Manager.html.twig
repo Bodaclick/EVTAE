@@ -24,7 +24,11 @@
                                 <td>{{ personal_info.name  }}</td>
                                 <td>{{ personal_info.surnames }}</td>
                                 <td>{{ email.email }}</td>
-                                <td>{{ personal_info.phone }}</td>
+                                <td>
+                                {% if showroom.type.type > 1 %}
+                                {{ personal_info.phone }}
+                                {% else %}{% include 'EVTEAEBundle:Email:freeLabel.html.twig' %}{% endif %}
+                                </td>
                             </tr>
                         </table>
                         <span class="devider"></span>
@@ -37,7 +41,11 @@
                             </tr>
                             <tr>
                                 <td>{{ event.date | date("d/m/Y") }}</td>
-                                <td>{{ event.type.name }}</td>
+                                <td>
+                                {% if showroom.type.type > 1 %}
+                                {{ event.type.name }}
+                                {% else %}{% include 'EVTEAEBundle:Email:freeLabel.html.twig' %}{% endif %}
+                                </td>
                                 <td>{{ event.location.admin_level1  }} - {{ event.location.admin_level2 }}</td>
                                 <td>{{ created_at | date("d/m/Y") }}</td>
                             </tr>
@@ -48,7 +56,11 @@
                                 <th>{% trans %}lead.observations{% endtrans %}</th>
                             </tr>
                             <tr>
-                                <td>{{ information_bag.parameters.observations | default('') }}</td>
+                                <td>
+                                {% if showroom.type.type > 1 %}
+                                {{ information_bag.parameters.observations | default('') }}
+                                {% else %}{% include 'EVTEAEBundle:Email:freeLabel.html.twig' %}{% endif %}
+                                </td>
                             </tr>
                         </table>
                         <span class="devider"></span>
