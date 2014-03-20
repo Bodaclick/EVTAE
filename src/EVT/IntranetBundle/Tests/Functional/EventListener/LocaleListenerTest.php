@@ -35,7 +35,7 @@ class LocaleListenerTest extends WebTestCase
         $this->logIn();
         $crawler = $this->client->request(
             'GET',
-            '/leads',
+            '/manager/leads',
             [],
             [],
             array('HTTP_ACCEPT_LANGUAGE' => 'es')
@@ -53,7 +53,7 @@ class LocaleListenerTest extends WebTestCase
         $this->logIn();
         $crawler = $this->client->request(
             'GET',
-            '/leads',
+            '/manager/leads',
             [],
             [],
             array('HTTP_ACCEPT_LANGUAGE' => 'fr')
