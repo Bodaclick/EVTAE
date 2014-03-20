@@ -21,6 +21,8 @@ class LeadControllerTest extends WebTestCase
      */
     protected $client;
 
+    use \EVT\IntranetBundle\Tests\Functional\LoginTrait;
+
     /**
      * Create a client to test request and mock services
      */
@@ -76,18 +78,5 @@ class LeadControllerTest extends WebTestCase
         $this->assertEquals('Lead Detail', $crawler->filter('h3.page-title')->html());
         $this->assertEquals(1, $crawler->filter('table.table')->count());
         $this->assertEquals(3, $crawler->filter('a.badge-warning')->count());
-    }
-
-    private function logIn()
-    {
-        $session = $this->client->getContainer()->get('session');
-
-        $firewall = 'admin_secured_area';
-        $token = new UsernamePasswordToken('manager', null, $firewall, array('ROLE_MANAGER'));
-        $session->set('_security_'.$firewall, serialize($token));
-        $session->save();
-
-        $cookie = new Cookie($session->getName(), $session->getId());
-        $this->client->getCookieJar()->set($cookie);
     }
 }
