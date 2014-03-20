@@ -95,7 +95,7 @@ class LeadControllerTest extends WebTestCase
             ->will($this->returnValue($response));
 
         $this->client->getContainer()->set('evt.core.client', $coreClientMock);
-        $this->client->request('GET', '/leads/1');
+        $this->client->request('GET', '/manager/leads/1');
 
         $this->assertEquals(200, $this->client->getResponse()->getStatusCode());
     }
@@ -167,7 +167,7 @@ class LeadControllerTest extends WebTestCase
             ->will($this->returnValue($response));
 
         $this->client->getContainer()->set('evt.core.client', $coreClientMock);
-        $this->client->request('GET', '/leads/1');
+        $this->client->request('GET', '/manager/leads/1');
 
         $this->assertEquals(200, $this->client->getResponse()->getStatusCode());
     }

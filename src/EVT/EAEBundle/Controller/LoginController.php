@@ -1,6 +1,6 @@
 <?php
 
-namespace EVT\IntranetBundle\Controller;
+namespace EVT\EAEBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;

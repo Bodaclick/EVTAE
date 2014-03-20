@@ -200,6 +200,6 @@ class PostManagerLeadEmailTest extends WebTestCase
         $this->assertNotContains('+34 0123456789', $message->getBody());
         $this->assertNotContains('BIRTHDAY', $message->getBody());
         $this->assertNotContains('This is great', $message->getBody());
-        $this->assertContains('http://localhost/login', $message->getBody());
+        $this->assertContains('http://localhost/products', $message->getBody());
     }
 }

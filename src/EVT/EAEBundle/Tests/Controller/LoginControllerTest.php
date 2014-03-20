@@ -1,6 +1,6 @@
 <?php
 
-namespace EVT\IntranetBundle\Test\Controller;
+namespace EVT\EAEBundle\Test\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 

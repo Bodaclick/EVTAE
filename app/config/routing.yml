@@ -1,7 +1,12 @@
+evt_ae:
+    resource: "@EVTEAEBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
 evt_intranet:
     resource: "@EVTIntranetBundle/Controller/"
     type:     annotation
-    prefix:   /
+    prefix:   /manager/
 
 evt_hook:
     resource: "@EVTHookBundle/Controller/"
@@ -9,7 +14,7 @@ evt_hook:
     prefix:   /hooks/
 
 login_check:
-    path: /login_check
+    path: /manager/login_check
 
 logout:
-    path: /logout
+    path: /manager/logout
