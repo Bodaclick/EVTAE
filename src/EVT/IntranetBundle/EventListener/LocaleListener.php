@@ -31,9 +31,9 @@ class LocaleListener implements EventSubscriberInterface
         $request = $event->getRequest();
 
         $acceptLanguage = $request->headers->get('accept-language');
-        $groupsAcceptLanguages = explode (';', $acceptLanguage);
-        $firstLanguage = explode (',', $groupsAcceptLanguages[0]);
-        $lang = explode ('-', $firstLanguage[0])[0];
+        $groupsAcceptLanguages = explode(';', $acceptLanguage);
+        $firstLanguage = explode(',', $groupsAcceptLanguages[0]);
+        $lang = explode('-', $firstLanguage[0])[0];
 
         $request->getSession()->set('_locale', $lang);
         $request->setLocale($lang);
