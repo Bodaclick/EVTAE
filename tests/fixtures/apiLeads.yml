@@ -2,7 +2,7 @@
 -
     request:
         method: GET
-        url: 'http://api.e-verticals.test/api/leads?apikey=1234&canView=manager'
+        url: 'http://api.e-verticals.test/api/leads?page=1&apikey=1234&canView=manager'
         headers:
             host: api.e-verticals.test
             user-agent: 'Guzzle/3.8.1 curl/7.22.0 PHP/5.5.9-1+sury.org~precise+1'
@@ -351,4 +351,3 @@
                 "total_items": 1
             }
           }
-        

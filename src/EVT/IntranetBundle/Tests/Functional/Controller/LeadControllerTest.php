@@ -49,6 +49,33 @@ class LeadControllerTest extends WebTestCase
     }
 
     /**
+     * @vcr apiLeadsPagination.yml
+     */
+    public function testLeadsPagination()
+    {
+        $this->logIn();
+
+        $crawler = $this->client->request('GET', '/manager/leads?page=2');
+        $this->assertEquals(200, $this->client->getResponse()->getStatusCode());
+        $this->assertEquals(1, $crawler->filter('h3.page-title')->count());
+        $this->assertEquals('Leads', $crawler->filter('h3.page-title')->html());
+        $this->assertEquals(1, $crawler->filter('table.table')->count());
+        $this->assertEquals(10, $crawler->filter('a.green-stripe')->count());
+        $this->assertEquals(2, trim($crawler->filter('li.disabled a')->html()));
+    }
+
+    /**
+     * @vcr apiLeadsPaginationKo.yml
+     */
+    public function testLeadsPaginationKo()
+    {
+        $this->logIn();
+
+        $this->client->request('GET', '/manager/leads?page=3');
+        $this->assertEquals(404, $this->client->getResponse()->getStatusCode());
+    }
+
+    /**
      * @vcr apiLead1.yml
      */
     public function testLead()
