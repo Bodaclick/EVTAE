@@ -9,6 +9,8 @@ set :app_path,    "app"
 set :shared_files,      ["app/config/parameters.yml", "web/.htaccess", "web/check.txt"]
 set :shared_children,     [app_path + "/logs"]
 
+set :composer_options,  "--dev --verbose --prefer-dist --optimize-autoloader --no-interaction"
+
 set :use_composer, true
 set :vendors_mode, "install"
 
