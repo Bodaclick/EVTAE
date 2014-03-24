@@ -1,0 +1,182 @@
+
+-
+    request:
+        method: GET
+        url: 'http://api.e-verticals.test/api/showrooms?apikey=1234&canView=manager'
+        headers:
+            host: api.e-verticals.test
+            user-agent: 'Guzzle/3.8.1 curl/7.22.0 PHP/5.5.9-1+sury.org~precise+1'
+            content-length: 0
+    response:
+        status: 200
+        headers:
+            Date: 'Tue, 24 Mar 2014 11:59:17 GMT'
+            Server: 'Apache/2.4.7 (Ubuntu)'
+            X-Powered-By: PHP/5.5.9-1+sury.org~precise+1
+            Cache-Control: no-cache
+            Transfer-Encoding: chunked
+            Content-Type: application/json
+        body: |
+          {
+            "items": [
+                {
+                    "id": 1,
+                    "slug": "casa-terrans",
+                    "name": "Casa Terrans",
+                    "phone": "915558855",
+                    "score": 0,
+                    "type": {
+                        "type": 1,
+                        "name": "FREE"
+                    },
+                    "provider": {
+                        "id": 1,
+                        "name": "Casa Terrans",
+                        "slug": "casa-terrans",
+                        "phone": "915558855",
+                        "notification_emails": "info@casaterrans.com",
+                        "managers": {},
+                        "location": {
+                            "lat": 10,
+                            "long": 10,
+                            "admin_level1": "locationAdminLevel1",
+                            "admin_level2": "locationAdminLevel2",
+                            "country": "Spain"
+                        }
+                    },
+                    "vertical": {
+                        "domain": "test.com",
+                        "showrooms": {}
+                    },
+                    "information_bag": {
+                        "parameters": {
+                            "name": "Casa Terrans",
+                            "slug": "casa-terrans",
+                            "phone": "915558855"
+                        }
+                    },
+                    "extra_data": ""
+                },
+                {
+                    "id": 2,
+                    "slug": "casa-phillip",
+                    "name": "Casa Phillip",
+                    "phone": "915558877",
+                    "score": 0,
+                    "type": {
+                        "type": 1,
+                        "name": "FREE"
+                    },
+                    "provider": {
+                        "id": 1,
+                        "name": "Casa Phillip",
+                        "slug": "casa-phillip",
+                        "phone": "915558877",
+                        "notification_emails": "info@casaphillip.com",
+                        "managers": {},
+                        "location": {
+                            "lat": 10,
+                            "long": 10,
+                            "admin_level1": "locationAdminLevel1",
+                            "admin_level2": "locationAdminLevel2",
+                            "country": "Spain"
+                        }
+                    },
+                    "vertical": {
+                        "domain": "test.com",
+                        "showrooms": {}
+                    },
+                    "information_bag": {
+                        "parameters": {
+                            "name": "Casa Phillip",
+                            "slug": "casa-phillip",
+                            "phone": "915558877"
+                        }
+                    },
+                    "extra_data": ""
+                },
+                {
+                    "id": 3,
+                    "slug": "casa-keny",
+                    "name": "Casa Keny",
+                    "phone": "915558899",
+                    "score": 0,
+                    "type": {
+                        "type": 1,
+                        "name": "FREE"
+                    },
+                    "provider": {
+                        "id": 1,
+                        "name": "Casa Keny",
+                        "slug": "casa-keny",
+                        "phone": "915558899",
+                        "notification_emails": "info@casakeny.com",
+                        "managers": {},
+                        "location": {
+                            "lat": 10,
+                            "long": 10,
+                            "admin_level1": "locationAdminLevel1",
+                            "admin_level2": "locationAdminLevel2",
+                            "country": "Spain"
+                        }
+                    },
+                    "vertical": {
+                        "domain": "test.com",
+                        "showrooms": {}
+                    },
+                    "information_bag": {
+                        "parameters": {
+                            "name": "Casa Keny",
+                            "slug": "casa-keny",
+                            "phone": "915558899"
+                        }
+                    },
+                    "extra_data": ""
+                },
+                {
+                    "id": 4,
+                    "slug": "casa-cartman",
+                    "name": "Casa Cartman",
+                    "phone": "915558800",
+                    "score": 0,
+                    "type": {
+                        "type": 1,
+                        "name": "FREE"
+                    },
+                    "provider": {
+                        "id": 1,
+                        "name": "Casa Cartman",
+                        "slug": "casa-cartman",
+                        "phone": "915558800",
+                        "notification_emails": "info@casacartman.com",
+                        "managers": {},
+                        "location": {
+                            "lat": 10,
+                            "long": 10,
+                            "admin_level1": "locationAdminLevel1",
+                            "admin_level2": "locationAdminLevel2",
+                            "country": "Spain"
+                        }
+                    },
+                    "vertical": {
+                        "domain": "test.com",
+                        "showrooms": {}
+                    },
+                    "information_bag": {
+                        "parameters": {
+                            "name": "Casa Cartman",
+                            "slug": "casa-cartman",
+                            "phone": "915558800"
+                        }
+                    },
+                    "extra_data": ""
+                }
+            ],
+            "pagination": {
+                "total_pages": 1,
+                "current_page": 1,
+                "items_per_page": 10,
+                "total_items": 4
+            }
+          }
+

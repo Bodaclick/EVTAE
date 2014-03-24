@@ -142,6 +142,30 @@
           <source>viewmore</source>
           <target>view more</target>
         </trans-unit>
+        <trans-unit id="36">
+          <source>showrooms</source>
+          <target>Showrooms</target>
+        </trans-unit>
+        <trans-unit id="37">
+          <source>slug</source>
+          <target>Url</target>
+        </trans-unit>
+        <trans-unit id="38">
+          <source>type</source>
+          <target>Type</target>
+        </trans-unit>
+        <trans-unit id="39">
+          <source>publish.in</source>
+          <target>Publish in</target>
+        </trans-unit>
+        <trans-unit id="40">
+          <source>phone.contact</source>
+          <target>Contact phone</target>
+        </trans-unit>
+        <trans-unit id="41">
+          <source>email.contact</source>
+          <target>Contact email</target>
+        </trans-unit>
     </body>
   </file>
 </xliff>

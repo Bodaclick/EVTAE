@@ -28,7 +28,8 @@
     },
     "require-dev": {
         "liip/functional-test-bundle": "dev-master",
-        "php-vcr/phpunit-testlistener-vcr": "*"
+        "php-vcr/phpunit-testlistener-vcr": "*",
+        "raulfraile/ladybug-bundle": "~1.0"
     },
 
     "scripts": {
