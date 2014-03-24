@@ -81,6 +81,7 @@
                                     {% endfor %}
                                     </tbody>
                                 </table>
+                                {% include 'EVTIntranetBundle::pagination.html.twig' %}
                             {% else %}
                                 <div class="note note-info">
                                     <h4 class="block">{{ "no.leads"|trans }}</h4>

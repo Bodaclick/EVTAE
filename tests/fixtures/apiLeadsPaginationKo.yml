@@ -1,0 +1,19 @@
+
+-
+    request:
+        method: GET
+        url: 'http://api.e-verticals.test/api/leads?page=3&apikey=1234&canView=manager'
+        headers:
+            host: api.e-verticals.test
+            user-agent: 'Guzzle/3.8.1 curl/7.22.0 PHP/5.5.9-1+sury.org~precise+1'
+            content-length: 0
+    response:
+        status: 400
+        headers:
+            Date: 'Tue, 18 Mar 2014 13:31:17 GMT'
+            Server: 'Apache/2.4.7 (Ubuntu)'
+            X-Powered-By: PHP/5.5.9-1+sury.org~precise+1
+            Cache-Control: no-cache
+            Transfer-Encoding: chunked
+            Content-Type: application/json
+        body: { }
