@@ -16,9 +16,14 @@ class Builder extends ContainerAware
          * Activate only when usable
          * $menu->addChild('Dashboard', array('route' => 'evt_intranet_home_index'))->setAttribute('icon', 'fa-home');
          */
-        $menu->addChild($this->container->get('translator')->trans('leads'), array(
-            'route' => 'evt_intranet_lead_list'
-        ))->setAttribute('icon', 'fa-exchange');
+        $menu->addChild(
+            $this->container->get('translator')->trans('leads'),
+            ['route' => 'evt_intranet_lead_list']
+        )->setAttribute('icon', 'fa-exchange');
+        $menu->addChild(
+            $this->container->get('translator')->trans('showrooms'),
+            ['route' => 'evt_intranet_showroom_list']
+        )->setAttribute('icon', 'fa-ticket');
 
         return $menu;
     }
