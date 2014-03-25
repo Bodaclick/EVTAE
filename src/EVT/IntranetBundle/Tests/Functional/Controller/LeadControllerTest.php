@@ -15,13 +15,12 @@ use Symfony\Component\Security\Core\Authentication\Token\UsernamePasswordToken;
  */
 class LeadControllerTest extends WebTestCase
 {
+    use \EVT\IntranetBundle\Tests\Functional\LoginTrait;
 
     /**
      * @var \Symfony\Bundle\FrameworkBundle\Client
      */
     protected $client;
-
-    use \EVT\IntranetBundle\Tests\Functional\LoginTrait;
 
     /**
      * Create a client to test request and mock services

@@ -1,0 +1,353 @@
+
+-
+    request:
+        method: GET
+        url: 'http://api.e-verticals.test/api/leads?page=1&apikey=1234&canView=employee'
+        headers:
+            host: api.e-verticals.test
+            user-agent: 'Guzzle/3.8.1 curl/7.22.0 PHP/5.5.9-1+sury.org~precise+1'
+            content-length: 0
+    response:
+        status: 200
+        headers:
+            Date: 'Tue, 18 Mar 2014 13:31:17 GMT'
+            Server: 'Apache/2.4.7 (Ubuntu)'
+            X-Powered-By: PHP/5.5.9-1+sury.org~precise+1
+            Cache-Control: no-cache
+            Transfer-Encoding: chunked
+            Content-Type: application/json
+        body: | 
+          {
+            "items": [
+                {
+                    "event": {
+                        "date": "2014-10-15CEST00:00:00+0200",
+                        "type": {
+                            "type": 1,
+                            "name": "BIRTHDAY"
+                        },
+                        "location": {
+                            "lat": 10,
+                            "long": 10,
+                            "admin_level1": "Parla",
+                            "admin_level2": "Madrid",
+                            "country": "Spain"
+                        }
+                    },
+                    "personal_info": {
+                        "name": "name",
+                        "surnames": "surname",
+                        "phone": "0132456789"
+                    },
+                    "showroom": {
+                        "id": 1,
+                        "slug": "nombre",
+                        "score": 1,
+                        "type": "2",
+                        "provider": {
+                            "id": "1",
+                            "name": "nombre",
+                            "slug": "nombre",
+                            "phone": "0123546 as"
+                        },
+                        "vertical": {
+                            "domain": "test.com"
+                        }
+                    },
+                    "information_bag": {
+                        "parameters": {
+                            "observations": "This is great"
+                        }
+                    },
+                    "created_at": "2014-03-17CET09:20:09+0100",
+                    "email": {
+                        "email": "email@email.com"
+                    },
+                    "id": "7"
+                },
+                {
+                    "event": {
+                        "date": "2014-10-15CEST00:00:00+0200",
+                        "type": {
+                            "type": 1,
+                            "name": "BIRTHDAY"
+                        },
+                        "location": {
+                            "lat": 10,
+                            "long": 10,
+                            "admin_level1": "Parla",
+                            "admin_level2": "Madrid",
+                            "country": "Spain"
+                        }
+                    },
+                    "personal_info": {
+                        "name": "name",
+                        "surnames": "surname",
+                        "phone": "0132456789"
+                    },
+                    "showroom": {
+                        "id": 1,
+                        "slug": "nombre",
+                        "score": 1,
+                        "type": "2",
+                        "provider": {
+                            "id": "1",
+                            "name": "nombre",
+                            "slug": "nombre",
+                            "phone": "0123546 as"
+                        },
+                        "vertical": {
+                            "domain": "test.com"
+                        }
+                    },
+                    "information_bag": {
+                        "parameters": {
+                            "observations": "This is great"
+                        }
+                    },
+                    "created_at": "2014-03-13CET15:31:26+0100",
+                    "email": {
+                        "email": "email9@email.com"
+                    },
+                    "id": "6"
+                },
+                {
+                    "event": {
+                        "date": "2014-10-15CEST00:00:00+0200",
+                        "type": {
+                            "type": 1,
+                            "name": "BIRTHDAY"
+                        },
+                        "location": {
+                            "lat": 10,
+                            "long": 10,
+                            "admin_level1": "Parla",
+                            "admin_level2": "Madrid",
+                            "country": "Spain"
+                        }
+                    },
+                    "personal_info": {
+                        "name": "name",
+                        "surnames": "surname",
+                        "phone": "0132456789"
+                    },
+                    "showroom": {
+                        "id": 1,
+                        "slug": "nombre",
+                        "score": 1,
+                        "type": "2",
+                        "provider": {
+                            "id": "1",
+                            "name": "nombre",
+                            "slug": "nombre",
+                            "phone": "0123546 as"
+                        },
+                        "vertical": {
+                            "domain": "test.com"
+                        }
+                    },
+                    "information_bag": {
+                        "parameters": {
+                            "observations": "This is great"
+                        }
+                    },
+                    "created_at": "2014-03-13CET14:33:53+0100",
+                    "email": {
+                        "email": "email7@email.com"
+                    },
+                    "id": "5"
+                },
+                {
+                    "event": {
+                        "date": "2014-10-15CEST00:00:00+0200",
+                        "type": {
+                            "type": 1,
+                            "name": "BIRTHDAY"
+                        },
+                        "location": {
+                            "lat": 10,
+                            "long": 10,
+                            "admin_level1": "Parla",
+                            "admin_level2": "Madrid",
+                            "country": "Spain"
+                        }
+                    },
+                    "personal_info": {
+                        "name": "name",
+                        "surnames": "surname",
+                        "phone": "0132456789"
+                    },
+                    "showroom": {
+                        "id": 1,
+                        "slug": "nombre",
+                        "score": 1,
+                        "type": "2",
+                        "provider": {
+                            "id": "1",
+                            "name": "nombre",
+                            "slug": "nombre",
+                            "phone": "0123546 as"
+                        },
+                        "vertical": {
+                            "domain": "test.com"
+                        }
+                    },
+                    "information_bag": {
+                        "parameters": {
+                            "observations": "This is great"
+                        }
+                    },
+                    "created_at": "2014-03-13CET14:29:29+0100",
+                    "email": {
+                        "email": "email6@email.com"
+                    },
+                    "id": "4"
+                },
+                {
+                    "event": {
+                        "date": "2014-10-15CEST00:00:00+0200",
+                        "type": {
+                            "type": 1,
+                            "name": "BIRTHDAY"
+                        },
+                        "location": {
+                            "lat": 10,
+                            "long": 10,
+                            "admin_level1": "Parla",
+                            "admin_level2": "Madrid",
+                            "country": "Spain"
+                        }
+                    },
+                    "personal_info": {
+                        "name": "name",
+                        "surnames": "surname",
+                        "phone": "0132456789"
+                    },
+                    "showroom": {
+                        "id": 1,
+                        "slug": "nombre",
+                        "score": 1,
+                        "type": "2",
+                        "provider": {
+                            "id": "1",
+                            "name": "nombre",
+                            "slug": "nombre",
+                            "phone": "0123546 as"
+                        },
+                        "vertical": {
+                            "domain": "test.com"
+                        }
+                    },
+                    "information_bag": {
+                        "parameters": {
+                            "observations": "This is great"
+                        }
+                    },
+                    "created_at": "2014-03-13CET14:15:00+0100",
+                    "read_at": "2014-03-15CET18:30:25+0100",
+                    "email": {
+                        "email": "email5@email.com"
+                    },
+                    "id": "3"
+                },
+                {
+                    "event": {
+                        "date": "2014-10-15CEST00:00:00+0200",
+                        "type": {
+                            "type": 1,
+                            "name": "BIRTHDAY"
+                        },
+                        "location": {
+                            "lat": 10,
+                            "long": 10,
+                            "admin_level1": "Parla",
+                            "admin_level2": "Madrid",
+                            "country": "Spain"
+                        }
+                    },
+                    "personal_info": {
+                        "name": "name",
+                        "surnames": "surname",
+                        "phone": "0132456789"
+                    },
+                    "showroom": {
+                        "id": 118,
+                        "slug": "nombre",
+                        "score": 1,
+                        "type": "1",
+                        "provider": {
+                            "id": "1",
+                            "name": "nombre",
+                            "slug": "nombre",
+                            "phone": "0123546 as"
+                        },
+                        "vertical": {
+                            "domain": "aniversarioclick.com.br"
+                        }
+                    },
+                    "information_bag": {
+                        "parameters": {
+                            "observations": "This is great"
+                        }
+                    },
+                    "created_at": "2014-03-13CET14:12:10+0100",
+                    "read_at": "2014-03-18CET11:32:14+0100",
+                    "email": {
+                        "email": "email1@email.com"
+                    },
+                    "id": "2"
+                },
+                {
+                    "event": {
+                        "date": "2014-10-15CEST00:00:00+0200",
+                        "type": {
+                            "type": 1,
+                            "name": "BIRTHDAY"
+                        },
+                        "location": {
+                            "lat": 10,
+                            "long": 10,
+                            "admin_level1": "Parla",
+                            "admin_level2": "Madrid",
+                            "country": "Spain"
+                        }
+                    },
+                    "personal_info": {
+                        "name": "name",
+                        "surnames": "surname",
+                        "phone": "0132456789"
+                    },
+                    "showroom": {
+                        "id": 1,
+                        "slug": "nombre",
+                        "score": 1,
+                        "type": "2",
+                        "provider": {
+                            "id": "1",
+                            "name": "nombre",
+                            "slug": "nombre",
+                            "phone": "0123546 as"
+                        },
+                        "vertical": {
+                            "domain": "test.com"
+                        }
+                    },
+                    "information_bag": {
+                        "parameters": {
+                            "observations": "This is great"
+                        }
+                    },
+                    "created_at": "2014-03-13CET14:11:44+0100",
+                    "email": {
+                        "email": "email@email.com"
+                    },
+                    "id": "1"
+                }
+            ],
+            "pagination": {
+                "total_pages": 1,
+                "current_page": 1,
+                "items_per_page": 1,
+                "total_items": 1
+            }
+          }
