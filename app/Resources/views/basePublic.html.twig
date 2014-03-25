@@ -47,7 +47,7 @@
 		<!-- BEGIN TOP NAVIGATION MENU -->
 		<div class="navbar-collapse collapse">
 			<ul class="nav navbar-nav">
-    			<li><a href="{{ path('evt_intranet_home_index') }}" >Manager Admin</a></li>
+    			<li><a href="{{ path('evt_intranet_home_index', { '_role': app.session.get('_role') }) }}" >Manager Admin</a></li>
 			</ul>                           
 		</div>
 		<!-- BEGIN TOP NAVIGATION MENU -->

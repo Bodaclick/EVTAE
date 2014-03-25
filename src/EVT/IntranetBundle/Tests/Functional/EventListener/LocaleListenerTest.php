@@ -62,4 +62,22 @@ class LocaleListenerTest extends WebTestCase
         $this->assertEquals(200, $this->client->getResponse()->getStatusCode());
         $this->assertEquals("Leads", $crawler->filter('h3.page-title')->html());
     }
+
+    /**
+     * @vcr apiLeads.yml
+     */
+    public function testRoleExist()
+    {
+        $this->logIn();
+        $this->client->request(
+            'GET',
+            '/employee/leads',
+            [],
+            [],
+            array('HTTP_ACCEPT_LANGUAGE' => 'es')
+        );
+
+        $this->assertEquals(200, $this->client->getResponse()->getStatusCode());
+        $this->assertEquals("manager", $this->client->getContainer()->get('session')->get('_role'));
+    }
 }

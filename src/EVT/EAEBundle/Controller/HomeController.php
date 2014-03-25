@@ -13,6 +13,10 @@ class HomeController extends Controller
      */
     public function indexAction()
     {
-        return $this->redirect($this->generateUrl('evt_intranet_home_index'));
+        return $this->redirect($this->generateUrl(
+                'evt_intranet_home_index',
+                ['_role' => $this->get('session')->get('_role') ]
+            )
+        );
     }
 }

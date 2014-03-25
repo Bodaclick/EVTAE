@@ -11,7 +11,7 @@
                     <ul class="page-breadcrumb breadcrumb">
                         <li>
                             <i class="fa fa-ticket"></i>
-                            <a href="{{ path('evt_intranet_showroom_list') }}">{{ "showrooms" |trans}}</a>
+                            <a href="{{ path('evt_intranet_showroom_list', { '_role': app.session.get('_role') }) }}">{{ "showrooms" |trans}}</a>
                         </li>
                     </ul>
                     <!-- END PAGE TITLE & BREADCRUMB-->

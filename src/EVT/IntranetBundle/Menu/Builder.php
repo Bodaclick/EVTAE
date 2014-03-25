@@ -18,11 +18,17 @@ class Builder extends ContainerAware
          */
         $menu->addChild(
             $this->container->get('translator')->trans('leads'),
-            ['route' => 'evt_intranet_lead_list']
+            [
+                'route' => 'evt_intranet_lead_list',
+                'routeParameters' => ['_role' => $this->container->get('session')->get('_role')]
+            ]
         )->setAttribute('icon', 'fa-exchange');
         $menu->addChild(
             $this->container->get('translator')->trans('showrooms'),
-            ['route' => 'evt_intranet_showroom_list']
+            [
+                'route' => 'evt_intranet_showroom_list',
+                'routeParameters' => ['_role' => $this->container->get('session')->get('_role')]
+            ]
         )->setAttribute('icon', 'fa-ticket');
 
         return $menu;
