@@ -16,7 +16,7 @@
             Cache-Control: no-cache
             Transfer-Encoding: chunked
             Content-Type: application/json
-        body: | 
+        body: |
           {
             "items": [
                 {

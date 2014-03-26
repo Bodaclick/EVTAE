@@ -37,8 +37,7 @@ class LeadControllerEmployeeTest extends WebTestCase
     {
         $this->logInEmployee();
 
-        $crawler = $this->client->request('GET', '/manager/leads');
-
+        $crawler = $this->client->request('GET', '/employee/leads');
         $this->assertEquals(200, $this->client->getResponse()->getStatusCode());
         $this->assertEquals(1, $crawler->filter('h3.page-title')->count());
         $this->assertEquals('Leads', $crawler->filter('h3.page-title')->html());
