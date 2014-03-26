@@ -94,6 +94,70 @@
         <source>body.welcome.user.restomail</source>
         <target>__body.welcome.user.restomail</target>
       </trans-unit>
+      <trans-unit id="7c6ced792395bde648fdc4a81f1b0371" resname="viewmore">
+        <source>viewmore</source>
+        <target>__viewmore</target>
+      </trans-unit>
+      <trans-unit id="7d49d6ff7d16a2bdffbe2e925c6bbcbe" resname="login.account">
+        <source>login.account</source>
+        <target>__login.account</target>
+      </trans-unit>
+      <trans-unit id="14c4b06b824ec593239362517f538b29" resname="username">
+        <source>username</source>
+        <target>__username</target>
+      </trans-unit>
+      <trans-unit id="5f4dcc3b5aa765d61d8327deb882cf99" resname="password">
+        <source>password</source>
+        <target>__password</target>
+      </trans-unit>
+      <trans-unit id="eaa964aea1d0e8c3c481b7e78dde166e" resname="remember.me">
+        <source>remember.me</source>
+        <target>__remember.me</target>
+      </trans-unit>
+      <trans-unit id="d56b699830e77ba53855679cb1d252da" resname="login">
+        <source>login</source>
+        <target>__login</target>
+      </trans-unit>
+      <trans-unit id="ede8ba59a459b794433b054730f6bebd" resname="forgot.password">
+        <source>forgot.password</source>
+        <target>__forgot.password</target>
+      </trans-unit>
+      <trans-unit id="20b0b785d57d0932e336cf4fbea1fa6a" resname="no.worries">
+        <source>no.worries</source>
+        <target>__no.worries</target>
+      </trans-unit>
+      <trans-unit id="6c92285fa6d3e827b198d120ea3ac674" resname="here">
+        <source>here</source>
+        <target>__here</target>
+      </trans-unit>
+      <trans-unit id="6113fcf531e09cf5265da6bb6963d50b" resname="to.reset.password">
+        <source>to.reset.password</source>
+        <target>__to.reset.password</target>
+      </trans-unit>
+      <trans-unit id="16ff5c62feadf52d81dc8a3dee51f0c6" resname="forget.password">
+        <source>forget.password</source>
+        <target>__forget.password</target>
+      </trans-unit>
+      <trans-unit id="a64cc9c6b71d7d1e248ea3464b183124" resname="enter.email.address.reset.password">
+        <source>enter.email.address.reset.password</source>
+        <target>__enter.email.address.reset.password</target>
+      </trans-unit>
+      <trans-unit id="469bba0a564235dfceede42db14f17b0" resname="back">
+        <source>back</source>
+        <target>__back</target>
+      </trans-unit>
+      <trans-unit id="c79bdf421714f5087fc34b7c538b6807" resname="submit">
+        <source>submit</source>
+        <target>__submit</target>
+      </trans-unit>
+      <trans-unit id="59408631f424a664be9e996e438aed40" resname="email.sent.by.email">
+        <source>email.sent.by.email</source>
+        <target>__email.sent.by.email</target>
+      </trans-unit>
+      <trans-unit id="106a6c241b8797f52e1e77317b96a201" resname="home">
+        <source>home</source>
+        <target>__home</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>
