@@ -11,11 +11,11 @@
                     <ul class="page-breadcrumb breadcrumb">
                         <li>
                             <i class="fa fa-exchange"></i>
-                            <a href="{{ path('evt_intranet_lead_list') }}">{{ "leads"|trans }}</a>
+                            <a href="{{ path('evt_intranet_lead_list', { '_role': app.session.get('_role') }) }}">{{ "leads"|trans }}</a>
                         </li>
                         <li>
                             <i class="fa fa-angle-right"></i>
-                            <a href="{{ path('evt_intranet_lead_showlead', { 'id': lead.id }) }}">
+                            <a href="{{ path('evt_intranet_lead_showlead', { 'id': lead.id, '_role': app.session.get('_role') }) }}">
                                 {{ "lead.detail"|trans }}
                             </a>
                         </li>

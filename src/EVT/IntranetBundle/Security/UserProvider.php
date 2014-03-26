@@ -10,10 +10,12 @@ use EVT\IntranetBundle\Security\EVTUser;
 class UserProvider implements UserProviderInterface
 {
     private $client;
+    private $session;
 
-    public function __construct($client)
+    public function __construct($client, $session)
     {
         $this->client = $client;
+        $this->session = $session;
     }
 
     public function loadUserByUsername($username)
@@ -25,6 +27,8 @@ class UserProvider implements UserProviderInterface
             $password = $arrayUser['password'];
             $roles = $arrayUser['roles'];
             $salt = $arrayUser['salt'];
+
+            $this->session->set('_role', strtolower(str_replace('ROLE_', '', $roles[0])));
 
             return new EVTUser($username, $password, $salt, $roles);
         }

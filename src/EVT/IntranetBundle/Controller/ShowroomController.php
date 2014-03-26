@@ -23,4 +23,4 @@ class ShowroomController extends Controller
         $content = $this->renderView('EVTIntranetBundle:Lists:showrooms.html.twig', ["showrooms" => $showrooms]);
         return new Response($content);
     }
-} 
+}

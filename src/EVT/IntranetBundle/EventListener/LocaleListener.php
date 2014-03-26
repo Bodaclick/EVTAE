@@ -37,6 +37,10 @@ class LocaleListener implements EventSubscriberInterface
 
         $request->getSession()->set('_locale', $lang);
         $request->setLocale($lang);
+
+        if (empty($request->getSession()->get('_role'))) {
+            $request->getSession()->set('_role', 'manager');
+        }
     }
 
     /**
