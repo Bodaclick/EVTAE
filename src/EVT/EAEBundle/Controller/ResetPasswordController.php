@@ -32,7 +32,7 @@ class ResetPasswordController extends Controller
             $this->mailSend($arrPass["passwd"], $email);
         }
 
-        $content = $this->renderView('EVTIntranetBundle:Login:reset_password.html.twig', array('email' => $email));
+        $content = $this->renderView('EVTEAEBundle:Login:reset_password.html.twig', array('email' => $email));
 
         return new Response($content);
     }
