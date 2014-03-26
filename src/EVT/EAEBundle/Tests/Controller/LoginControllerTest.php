@@ -10,12 +10,14 @@ use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
  * @author    Quique Torras <etorras@bodaclick.com>
  * @copyright 2014 Bodaclick S.A.
  */
-class LoginControllerTest
+class LoginControllerTest extends WebTestCase
 {
     public function testLoginPage()
     {
-        $this->client->request('GET', '/leads');
+        $client = static::createClient();
+        
+        $crawler = $client->request('GET', '/leads');
 
-        $this->assertEquals(200, $this->client->getResponse()->getStatusCode());
+        $this->assertEquals(200, $client->getResponse()->getStatusCode());
     }
 }
