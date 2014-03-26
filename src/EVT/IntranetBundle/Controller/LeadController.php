@@ -52,8 +52,8 @@ class LeadController extends Controller
         $lead = $leadResponse->getBody();
 
         $content = $this->renderView('EVTIntranetBundle:Lists:lead.html.twig', ["lead" => $lead]);
-        if (!isset($lead['read_at'])) {
-            $leadResponse = $this->container->get('evt.core.client')->patch('/api/leads/'.$id.'/read');
+        if ($this->getRoles()[0] == 'ROLE_MANAGER' && !isset($lead['read_at'])) {
+            $this->container->get('evt.core.client')->patch('/api/leads/'.$id.'/read');
         }
 
         return new Response($content);
