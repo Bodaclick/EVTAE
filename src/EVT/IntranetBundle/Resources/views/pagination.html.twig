@@ -1,0 +1,23 @@
+{% if pagination.total_pages > 1 %}
+<div>
+    <ul class="pagination">
+        <li {% if pagination.current_page == 1 %} class="disabled" {% endif %}>
+            <a href="{% if not (pagination.current_page == 1) %} {{ path('evt_intranet_lead_list', {page: pagination.current_page-1, '_role': app.session.get('_role')}) }} {% else %}#{% endif %}">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        </li>
+        {% for i in 1.. pagination.total_pages %}
+        <li {% if pagination.current_page == i %} class="disabled" {% endif %}>
+            <a href="{% if not (pagination.current_page == i) %} {{ path('evt_intranet_lead_list', {page: i, '_role': app.session.get('_role')}) }} {% else %}#{% endif %}">
+                {{ i }}
+            </a>
+        </li>
+        {% endfor %}
+        <li {% if pagination.current_page == pagination.total_pages %} class="disabled" {% endif %}>
+            <a href="{% if not (pagination.current_page == pagination.total_pages) %} {{ path('evt_intranet_lead_list', {page: pagination.current_page+1, '_role': app.session.get('_role')}) }} {% else %}#{% endif %}">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+{% endif %}

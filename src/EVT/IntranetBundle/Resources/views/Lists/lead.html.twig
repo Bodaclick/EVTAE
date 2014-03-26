@@ -11,11 +11,13 @@
                     <ul class="page-breadcrumb breadcrumb">
                         <li>
                             <i class="fa fa-exchange"></i>
-                            <a href="/leads">{{ "leads"|trans }}</a>
+                            <a href="{{ path('evt_intranet_lead_list', { '_role': app.session.get('_role') }) }}">{{ "leads"|trans }}</a>
                         </li>
                         <li>
                             <i class="fa fa-angle-right"></i>
-                            <a href="/leads/{{ lead.id }}">{{ "lead.detail"|trans }}</a>
+                            <a href="{{ path('evt_intranet_lead_showlead', { 'id': lead.id, '_role': app.session.get('_role') }) }}">
+                                {{ "lead.detail"|trans }}
+                            </a>
                         </li>
                     </ul>
                     <!-- END PAGE TITLE & BREADCRUMB-->
@@ -92,6 +94,7 @@
                                     </td>
                                 </tr>
                             </table>
+                            <a href="javascript:history.back()" class="btn"><i class="fa fa-chevron-left"></i> Back</a>
                         </div>
                     </div>
                     <!-- END SAMPLE TABLE PORTLET-->

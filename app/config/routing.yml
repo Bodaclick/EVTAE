@@ -6,7 +6,10 @@ evt_ae:
 evt_intranet:
     resource: "@EVTIntranetBundle/Controller/"
     type:     annotation
-    prefix:   /manager/
+    prefix:   /{_role}/
+    defaults: { _role: manager }
+    requirements:
+        _role: manager|employee
 
 evt_hook:
     resource: "@EVTHookBundle/Controller/"

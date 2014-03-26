@@ -1,0 +1,71 @@
+{% extends 'EVTIntranetBundle::layout.html.twig' %}
+{% block pageContent %}
+    <!-- BEGIN CONTENT -->
+    <div class="page-content-wrapper">
+        <div class="page-content">
+            <!-- BEGIN PAGE HEADER-->
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- BEGIN PAGE TITLE & BREADCRUMB-->
+                    <h3 class="page-title">{{ "showrooms" |trans}}</h3>
+                    <ul class="page-breadcrumb breadcrumb">
+                        <li>
+                            <i class="fa fa-ticket"></i>
+                            <a href="{{ path('evt_intranet_showroom_list', { '_role': app.session.get('_role') }) }}">{{ "showrooms" |trans}}</a>
+                        </li>
+                    </ul>
+                    <!-- END PAGE TITLE & BREADCRUMB-->
+                </div>
+            </div>
+            <!-- END PAGE HEADER-->
+            <!-- BEGIN PAGE CONTENT-->
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- BEGIN SAMPLE TABLE PORTLET-->
+                    <div class="portlet box grey">
+                        <div class="portlet-title">
+                            <div class="caption">{{ "showrooms"|trans }}</div>
+                        </div>
+                        <div class="portlet-body flip-scroll">
+                            {% if showrooms|length > 0 %}
+                                <table class="table table-bordered table-striped table-condensed flip-content">
+                                    <thead class="flip-content">
+                                    <tr>
+                                        <th>{{ "name"|trans }}</th>
+                                        <th>{{ "slug"|trans }}</th>
+                                        <th>{{ "publish.in"|trans }}</th>
+                                        <th>{{ "type"|trans }}</th>
+                                        <th>{{ "phone.contact"|trans }}</th>
+                                        <th>{{ "email.contact"|trans }}</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% for showroom in showrooms %}
+                                        <tr>
+                                            <td>{{ showroom.name }}</td>
+                                            <td>{{ showroom.slug }}</td>
+                                            <td>{{ showroom.vertical.domain }}</td>
+                                            <td>{{ showroom.type.name }}</td>
+                                            <td>{{ showroom.provider.phone }}</td>
+                                            <td>{{ showroom.provider.notification_emails }}</td>
+                                        </tr>
+                                    {% endfor %}
+                                    </tbody>
+                                </table>
+                            {% else %}
+                                <div class="note note-info">
+                                    <h4 class="block">{{ "no.leads"|trans }}</h4>
+
+                                    <p>{{ "no.leads.for.user"|trans }}.</p>
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                    <!-- END SAMPLE TABLE PORTLET-->
+                </div>
+            </div>
+            <!-- END PAGE CONTENT-->
+        </div>
+    </div>
+    <!-- END CONTENT -->
+{% endblock %}

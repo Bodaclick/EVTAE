@@ -11,7 +11,7 @@
                     <ul class="page-breadcrumb breadcrumb">
                         <li>
                             <i class="fa fa-exchange"></i>
-                            <a href="/">{{ "leads" |trans}}</a>
+                            <a href="{{ path('evt_intranet_lead_list', { '_role': app.session.get('_role') }) }}">{{ "leads" |trans}}</a>
                         </li>
                     </ul>
                     <!-- END PAGE TITLE & BREADCRUMB-->
@@ -68,7 +68,8 @@
                                                 ({{ lead.event.location.admin_level2 }})
                                             </td>
                                             <td class="highlight">
-                                                <a href="{{ path('evt_intranet_lead_showlead', {'id': lead.id}) }}" class="btn default btn-xs green-stripe">
+                                                <a href="{{ path('evt_intranet_lead_showlead', {'id': lead.id, '_role': app.session.get('_role')}) }}"
+                                                   class="btn default btn-xs green-stripe">
                                                     {% if lead.read_at is not defined %}
                                                         {{ "read"|trans }}
                                                     {% else %}
@@ -80,6 +81,7 @@
                                     {% endfor %}
                                     </tbody>
                                 </table>
+                                {% include 'EVTIntranetBundle::pagination.html.twig' %}
                             {% else %}
                                 <div class="note note-info">
                                     <h4 class="block">{{ "no.leads"|trans }}</h4>

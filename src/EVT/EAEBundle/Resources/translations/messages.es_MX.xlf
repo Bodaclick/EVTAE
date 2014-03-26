@@ -56,7 +56,7 @@
       </trans-unit>
       <trans-unit id="e5c465ea6e972409ebfd868b898924fb" resname="body.new.lead.user">
         <source>body.new.lead.user</source>
-        <target>Muchas gracias, pronto se pondrán en contacto contigo.. 
+        <target>Muchas gracias, pronto se pondrán en contacto contigo..
 ¡Esperamos que tengas una feliz celebración!</target>
       </trans-unit>
       <trans-unit id="57d11c55a29abe439df7f79485bf99ed" resname="title.resetPassword.user">

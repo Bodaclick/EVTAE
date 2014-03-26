@@ -1,4 +1,4 @@
 services:
     evt_user_provider:
         class: "%evt_user_provider.class%"
-        arguments: [@evt.core.client]
+        arguments: [@evt.core.client, @session]

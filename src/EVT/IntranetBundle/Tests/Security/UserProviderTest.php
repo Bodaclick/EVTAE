@@ -5,6 +5,8 @@ namespace EVT\IntranetBundle\Test\Security;
 use EVT\CoreClientBundle\Client\Response;
 use EVT\IntranetBundle\Security\EVTUser;
 use EVT\IntranetBundle\Security\UserProvider;
+use Symfony\Component\HttpFoundation\Session\Storage\MockArraySessionStorage;
+use Symfony\Component\HttpFoundation\Session\Session;
 
 /**
  * UserProviderTest
@@ -18,8 +20,9 @@ class UserProviderTest extends \PHPUnit_Framework_TestCase
     public function testSupportClass()
     {
         $client = $this->getMockBuilder('EVT\CoreClientBundle\Client\Client')->disableOriginalConstructor()->getMock();
+        $session = new Session(new MockArraySessionStorage());
 
-        $customProvider = new UserProvider($client);
+        $customProvider = new UserProvider($client, $session);
         $this->assertTrue($customProvider->supportsClass('EVT\IntranetBundle\Security\EVTUser'));
     }
 
@@ -38,13 +41,19 @@ class UserProviderTest extends \PHPUnit_Framework_TestCase
         )) ;
 
         $client = $this->getMockBuilder('EVT\CoreClientBundle\Client\Client')->disableOriginalConstructor()->getMock();
+        $session = $this->getMockBuilder('Symfony\Component\HttpFoundation\Session\Session')
+            ->disableOriginalConstructor()->getMock();
+
+        $session->expects($this->once())
+            ->method('set')
+            ->with($this->equalTo('_role'), $this->equalTo('manager'));
 
         $client->expects($this->once())
             ->method('get')
             ->with($this->equalTo('/api/users/usernameManager'))
             ->will($this->returnValue($response));
 
-        $customProvider = new UserProvider($client);
+        $customProvider = new UserProvider($client, $session);
         $user = $customProvider->loadUserByUsername('usernameManager');
         $this->assertInstanceOf('EVT\IntranetBundle\Security\EVTUser', $user);
         $this->assertEquals('usernameManager', $user->getUsername());
@@ -68,13 +77,14 @@ class UserProviderTest extends \PHPUnit_Framework_TestCase
         )) ;
 
         $client = $this->getMockBuilder('EVT\CoreClientBundle\Client\Client')->disableOriginalConstructor()->getMock();
+        $session = new Session(new MockArraySessionStorage());
 
         $client->expects($this->once())
             ->method('get')
             ->with($this->equalTo('/api/users/usernameManager'))
             ->will($this->returnValue($response));
 
-        $customProvider = new UserProvider($client);
+        $customProvider = new UserProvider($client, $session);
         $user = $customProvider->refreshUser(
             new EVTUser('usernameManager', 'KKOhKzmyHK', 'sywh', ["ROLE_MANAGER", "ROLE_USER"])
         );
