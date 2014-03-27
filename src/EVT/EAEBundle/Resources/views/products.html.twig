@@ -1,85 +1,95 @@
 {%  extends '::basePublic.html.twig' %}
-
+{% block title %}{{ "products.title"|trans }}{% endblock %}
 {% block content %}
-
-
 <div class="container min-hight">
-	<!-- BEGIN PRICING OPTION1 -->
-	<div class="row margin-bottom-40 margin-top-20">
+	<div class="row margin-bottom-20 margin-top-20">
+    	<div class="col-md-12 text-center">
+    			<h3>{{ "products.intro.title"|trans }}</h3>
+    	</div>
+	</div>
+	<div class="row margin-bottom-40">
+    	<div class="col-md-12 text-center">
+    			<h4>{{ "products.intro"|trans }}</h4>
+    	</div>
+	</div>
+	<div class="row margin-bottom-40">
 		<div class="col-md-3">
 			<div class="pricing pricing-active">
 				<div class="pricing-head pricing-head-active">
-					<h3>Begginer <span>Officia deserunt mollitia</span></h3>
+					<h3>{{ "products.free.name"|trans }}</h3>
 				</div>
 				<ul class="pricing-content list-unstyled">
-					<li><i class="icon-tags"></i> At vero eos</li>
-					<li><i class="icon-asterisk"></i> No Support</li>
-					<li><i class="icon-heart"></i> Fusce condimentum</li>
-					<li><i class="icon-star"></i> Ut non libero</li>
-					<li><i class="icon-shopping-cart"></i> Consecte adiping elit</li>
+					<li>&nbsp;</li>
+					<li><i class="fa fa-ticket icon-tags"></i>{{ "products.free.1"|trans }}</li>
+					<li><i class="fa fa-file-text-o icon-tags"></i>{{ "products.free.2"|trans }}</li>
+					<li><i class="fa fa-file-o icon-tags"></i>{{ "products.free.3"|trans }}</li>
+					<li>&nbsp;</li>
+					<li>&nbsp;</li>
+					<li>&nbsp;</li>
 				</ul>
 				<div class="pricing-footer">
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero magna psum olor .</p>
-					<a href="#" class="btn theme-btn">Sign Up</a>  
+					<a href="mailto:{{ "products.mail"|trans }}" target="_blank" class="btn theme-btn">{{ "products.free.add"|trans }}</a>  
 				</div>
 			</div>
 		</div>
 		<div class="col-md-3">
 			<div class="pricing">
 				<div class="pricing-head">
-					<h3>Pro<span>Officia deserunt mollitia</span></h3>
+					<h3>{{ "products.silver.name"|trans }}</h3>
 				</div>
 				<ul class="pricing-content list-unstyled">
-					<li><i class="icon-tags"></i> At vero eos</li>
-					<li><i class="icon-asterisk"></i> No Support</li>
-					<li><i class="icon-heart"></i> Fusce condimentum</li>
-					<li><i class="icon-star"></i> Ut non libero</li>
-					<li><i class="icon-shopping-cart"></i> Consecte adiping elit</li>
+					<li>&nbsp;</li>
+					<li><i class="fa fa-ticket icon-tags"></i>{{ "products.silver.1"|trans }}</li>
+					<li><i class="fa fa-file-text icon-tags"></i>{{ "products.silver.2"|trans({'%bold%': '<span class="text-success">', '%_bold%': '</span>'})|raw }}</li>
+					<li><i class="fa fa-file icon-tags"></i>{{ "products.silver.3"|trans({'%bold%': '<span class="text-success">', '%_bold%': '</span>'})|raw }}</li>
+					<li><i class="fa fa-globe icon-tags"></i>{{ "products.silver.4"|trans }}</li>
+					<li>&nbsp;</li>
+					<li>&nbsp;</li>
 				</ul>
 				<div class="pricing-footer">
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero magna psum olor .</p>
-					<a href="#" class="btn theme-btn">Sign Up</a>  
+					<a href="mailto:{{ "products.mail"|trans }}" target="_blank" class="btn theme-btn">{{ "products.upgrade"|trans }}</a>  
 				</div>
 			</div>
 		</div>
 		<div class="col-md-3">
 			<div class="pricing">
 				<div class="pricing-head">
-					<h3>Expert <span>Officia deserunt mollitia</span></h3>
+					<h3>{{ "products.gold.name"|trans }}</h3>
 				</div>
 				<ul class="pricing-content list-unstyled">
-					<li><i class="icon-tags"></i> At vero eos</li>
-					<li><i class="icon-asterisk"></i> No Support</li>
-					<li><i class="icon-heart"></i> Fusce condimentum</li>
-					<li><i class="icon-star"></i> Ut non libero</li>
-					<li><i class="icon-shopping-cart"></i> Consecte adiping elit</li>
+					<li>&nbsp;</li>
+					<li><i class="fa fa-ticket icon-tags"></i>{{ "products.gold.1"|trans({'%bold%': '<span class="text-success">', '%_bold%': '</span>'})|raw }}</li>
+					<li><i class="fa fa-file-text icon-tags"></i>{{ "products.gold.2"|trans({'%bold%': '<span class="text-success">', '%_bold%': '</span>'})|raw }}</li>
+					<li><i class="fa fa-file icon-tags"></i>{{ "products.gold.3"|trans({'%bold%': '<span class="text-success">', '%_bold%': '</span>'})|raw }}</li>
+					<li><i class="fa fa-globe icon-tags"></i>{{ "products.gold.4"|trans }}</li>
+					<li><i class="fa fa-star-half-o icon-tags"></i>{{ "products.gold.5"|trans }}</li>
+					<li>&nbsp;</li>
 				</ul>
 				<div class="pricing-footer">
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero magna psum olor .</p>
-					<a href="#" class="btn theme-btn">Sign Up</a>  
+					<a href="mailto:{{ "products.mail"|trans }}" target="_blank" class="btn theme-btn">{{ "products.upgrade"|trans }}</a>  
 				</div>
 			</div>
 		</div>
 		<div class="col-md-3">
 			<div class="pricing">
 				<div class="pricing-head">
-					<h3>Hi-Tech<span>Officia deserunt mollitia</span></h3>
+					<h3>{{ "products.platinum.name"|trans }}</h3>
 				</div>
 				<ul class="pricing-content list-unstyled">
-					<li><i class="icon-tags"></i> At vero eos</li>
-					<li><i class="icon-asterisk"></i> No Support</li>
-					<li><i class="icon-heart"></i> Fusce condimentum</li>
-					<li><i class="icon-star"></i> Ut non libero</li>
-					<li><i class="icon-shopping-cart"></i> Consecte adiping elit</li>
+					<li>&nbsp;</li>
+					<li><i class="fa fa-ticket icon-tags"></i>{{ "products.platinum.1"|trans({'%bold%': '<span class="text-success">', '%_bold%': '</span>'})|raw }}</li>
+					<li><i class="fa fa-file-text icon-tags"></i>{{ "products.platinum.2"|trans({'%bold%': '<span class="text-success">', '%_bold%': '</span>'})|raw }}</li>
+					<li><i class="fa fa-file icon-tags"></i>{{ "products.platinum.3"|trans({'%bold%': '<span class="text-success">', '%_bold%': '</span>'})|raw }}</li>
+					<li><i class="fa fa-globe icon-tags"></i>{{ "products.platinum.4"|trans }}</li>
+					<li><i class="fa fa-star icon-tags"></i>{{ "products.platinum.5"|trans({'%bold%': '<span class="text-success">', '%_bold%': '</span>'})|raw }}</li>
+					<li>&nbsp;</li>
 				</ul>
 				<div class="pricing-footer">
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero magna psum olor .</p>
-					<a href="#" class="btn theme-btn">Sign Up</a>  
+					<a href="mailto:{{ "products.mail"|trans }}" target="_blank" class="btn theme-btn">{{ "products.upgrade"|trans }}</a>  
 				</div>
 			</div>
 		</div>
 	</div>
 	<!-- END PRICING OPTION1 -->
 </div>
-
 {% endblock %}
