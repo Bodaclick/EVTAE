@@ -14,10 +14,9 @@ class HomeController extends Controller
     public function indexAction()
     {
         return $this->redirect($this->generateUrl(
-                'evt_intranet_lead_list',
-                ['_role' => $this->get('session')->get('_role')]
-            )
-        );
+            'evt_intranet_lead_list',
+            ['_role' => $this->get('session')->get('_role')]
+        ));
         /*
          * Activate only when usable
          * $content = $this->renderView('EVTIntranetBundle:Lists:index.html.twig');

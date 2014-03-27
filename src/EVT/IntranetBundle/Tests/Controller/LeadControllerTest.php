@@ -217,5 +217,4 @@ class LeadControllerTest extends WebTestCase
             ]
         ];
     }
-
 }
