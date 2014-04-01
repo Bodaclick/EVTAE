@@ -51,7 +51,8 @@ class PostManagerLeadEmailTest extends WebTestCase
                         "admin_level1"=> "test",
                         "admin_level2"=> "test",
                         "country"=> "Spain"
-                    ]
+                    ],
+                    "lang" => "es_ES"
                 ],
                 "vertical"=> [
                     "domain"=> "test.com",
