@@ -54,7 +54,8 @@ class PostManagerLeadEmailTest extends WebTestCase
                         "admin_level1"=> "test",
                         "admin_level2"=> "test",
                         "country"=> "Spain"
-                    ]
+                    ],
+                    "lang" => "es_ES"
                 ],
                 "vertical"=> [
                     "domain"=> "test.com",
@@ -105,6 +106,7 @@ class PostManagerLeadEmailTest extends WebTestCase
         $this->assertContains('+34 0123456789', $message->getBody());
         $this->assertContains('BIRTHDAY', $message->getBody());
         $this->assertContains('This is great', $message->getBody());
+        $this->assertContains('Fecha del evento', $message->getBody());
     }
 
     public function testReceiveHookMailFree()
@@ -147,7 +149,8 @@ class PostManagerLeadEmailTest extends WebTestCase
                         "admin_level1"=> "test",
                         "admin_level2"=> "test",
                         "country"=> "Spain"
-                    ]
+                    ],
+                    "lang" => "es_ES"
                 ],
                 "vertical"=> [
                     "domain"=> "test.com",
@@ -201,5 +204,6 @@ class PostManagerLeadEmailTest extends WebTestCase
         $this->assertNotContains('BIRTHDAY', $message->getBody());
         $this->assertNotContains('This is great', $message->getBody());
         $this->assertContains('http://localhost/products', $message->getBody());
+        $this->assertContains('Fecha del evento', $message->getBody());
     }
 }

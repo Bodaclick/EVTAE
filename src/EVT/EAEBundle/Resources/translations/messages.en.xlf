@@ -4,23 +4,23 @@
     <body>
       <trans-unit id="e8d22907628a82c06677e5b29ecb9f1e" resname="mail.do_not_respond">
         <source>mail.do_not_respond</source>
-        <target>Este es un mail automatico, no conteste directamente. ¡Gracias!</target>
+        <target>This is an automatic mail, do not answer it.Thank you!</target>
       </trans-unit>
       <trans-unit id="7af5b25d6bd2bc74cb7dd3adcbefb2e7" resname="title.new.lead.manager">
         <source>title.new.lead.manager</source>
-        <target>Nueva solicitud de información</target>
+        <target>New request for information</target>
       </trans-unit>
       <trans-unit id="44fcc3e3657df3aa5d6c6405b29bf9fa" resname="body.new.lead.manager">
         <source>body.new.lead.manager</source>
-        <target>Estimado cliente, ha recibido una nueva solicitud de información</target>
+        <target>Dear guest, you have received a new request for information</target>
       </trans-unit>
       <trans-unit id="60cc00aae82fb1783a51fcaebfe652e9" resname="lead.user.name">
         <source>lead.user.name</source>
-        <target>Nombre</target>
+        <target>Name</target>
       </trans-unit>
       <trans-unit id="4fd99953bb6a15610b72266647b5568a" resname="lead.user.surname">
         <source>lead.user.surname</source>
-        <target>Apellidos</target>
+        <target>Surname</target>
       </trans-unit>
       <trans-unit id="cecf5258aed13bf8b0e3bd25e7800aa3" resname="lead.user.email">
         <source>lead.user.email</source>
@@ -28,76 +28,76 @@
       </trans-unit>
       <trans-unit id="33916506cf34f9e9c324bd136cfda525" resname="lead.user.phone">
         <source>lead.user.phone</source>
-        <target>Teléfono</target>
+        <target>Phone</target>
       </trans-unit>
       <trans-unit id="f2e7cce2412cc9f5aa9445320ecc850d" resname="lead.event.date">
         <source>lead.event.date</source>
-        <target>Fecha del evento</target>
+        <target>Event date</target>
       </trans-unit>
       <trans-unit id="8da7fdc32929336b3a5326c83979a9f1" resname="lead.event.type">
         <source>lead.event.type</source>
-        <target>Tipo evento</target>
+        <target>Event type</target>
       </trans-unit>
       <trans-unit id="ed74d9fce6c5bcefd851fc5e44aaa562" resname="lead.event.location">
         <source>lead.event.location</source>
-        <target>Localización</target>
+        <target>Location</target>
       </trans-unit>
       <trans-unit id="841ca57b308b48f141b90b8b43e88030" resname="lead.date">
         <source>lead.date</source>
-        <target>Fecha</target>
+        <target>Date</target>
       </trans-unit>
       <trans-unit id="32243e02290718754c31f02046cefd4b" resname="lead.observations">
         <source>lead.observations</source>
-        <target>Observaciones</target>
+        <target>Comments</target>
       </trans-unit>
       <trans-unit id="07d17b50644db4a1839f387953c1a48f" resname="title.new.lead.user">
         <source>title.new.lead.user</source>
-        <target>Tu solicitud ha sido enviada </target>
+        <target>Your request has been sent </target>
       </trans-unit>
       <trans-unit id="e5c465ea6e972409ebfd868b898924fb" resname="body.new.lead.user">
         <source>body.new.lead.user</source>
-        <target>Muchas gracias, pronto se pondrán en contacto contigo.. 
-¡Esperamos que tengas una feliz celebración!</target>
+        <target>Thank you very much, they will contact you soon ...
+Hope you have a happy celebration!</target>
       </trans-unit>
       <trans-unit id="57d11c55a29abe439df7f79485bf99ed" resname="title.resetPassword.user">
         <source>title.resetPassword.user</source>
-        <target>Solicitud de nueva contraseña</target>
+        <target>Request for new password</target>
       </trans-unit>
       <trans-unit id="75853781e9c55582bf1a7c3be2405821" resname="new.password.text">
         <source>new.password.text</source>
-        <target>Estimado cliente, esta es su nueva contraseña
+        <target>Dear Customer, This is your new password
 
-Estamos aquí para ayudarle, no dude en contactar con nuestro servicio técnico para cualquier otra duda o incidencia.
+We're here to help you, please contact our technical service for any question or issue.
 
-¡Que tenga un buen día!</target>
+Have a nice day!</target>
       </trans-unit>
       <trans-unit id="1bc6dca02c0f7e7f698e4af7c35fdb34" resname="new.password">
         <source>new.password</source>
-        <target>Contraseña</target>
+        <target>Password</target>
       </trans-unit>
       <trans-unit id="5f0f8c6bf02d796170290b0b6f7c3533" resname="title.welcome.user">
         <source>title.welcome.user</source>
-        <target>Bienvenid@</target>
+        <target>Welcome</target>
       </trans-unit>
       <trans-unit id="6096d7a4784a96af2eca47f23463278b" resname="body.new.lead.user.previo.mostrar.datos">
         <source>body.new.lead.user.previo.mostrar.datos</source>
-        <target>Estos son tus datos:</target>
+        <target>These are your data:</target>
       </trans-unit>
       <trans-unit id="8256d684692099c61abae9a90f67a7d5" resname="body.welcome.user.hi">
         <source>body.welcome.user.hi</source>
-        <target>Hola</target>
+        <target>Hello</target>
       </trans-unit>
       <trans-unit id="c4676aae7c2af879ceaf97dcedb0da46" resname="body.welcome.user.to">
         <source>body.welcome.user.to</source>
-        <target>Bienvenid@ a </target>
+        <target>Welcome to </target>
       </trans-unit>
       <trans-unit id="2be87cf45a375b58b3d70ef7a5d6fab7" resname="body.welcome.user.restomail">
         <source>body.welcome.user.restomail</source>
-        <target>Gracias por registrarte. Todo lo que necesitas para celebrar tu evento podrás encontrarlo aquí.
+        <target>Thanks you. Everything you need to celebrate your event can be found here.
 
-¡Esperamos que disfrutes mucho de tu celebración!
+We hope you enjoy a lot of your celebration!
 
-Que tengas buen día..</target>
+Have a nice day ...</target>
       </trans-unit>
       <trans-unit id="7c6ced792395bde648fdc4a81f1b0371" resname="viewmore">
         <source>viewmore</source>
@@ -165,35 +165,35 @@ Que tengas buen día..</target>
       </trans-unit>
       <trans-unit id="51d982feb4f8ff2ed3f2404f1fa33de8" resname="products.title">
         <source>products.title</source>
-        <target>Productos</target>
+        <target>Products</target>
       </trans-unit>
       <trans-unit id="246834bcac42d2f8f002b53c1a71df3c" resname="products.intro.title">
         <source>products.intro.title</source>
-        <target>¡HAZ CRECER TU NEGOCIO!</target>
+        <target>IMPROVE YOUR BUSINESS!</target>
       </trans-unit>
       <trans-unit id="872f644cb114b69a5e6f6b7488692f1d" resname="products.intro">
         <source>products.intro</source>
-        <target>Te presentamos los beneficios de cada uno de nuestros productos. Elige el que más se adapte a tus necesidades y consigue más clientes</target>
+        <target>We present you the benefits of each of our products. Choose the best suit for your business and get more customers</target>
       </trans-unit>
       <trans-unit id="4ace1c17ee023177fdf3e8dee80aadbf" resname="products.free.name">
         <source>products.free.name</source>
-        <target>Gratis</target>
+        <target>Free</target>
       </trans-unit>
       <trans-unit id="1e656b77e8a8a6b2640b5712673689fd" resname="products.free.1">
         <source>products.free.1</source>
-        <target>presencia en 1 web social</target>
+        <target>1 social media presence</target>
       </trans-unit>
       <trans-unit id="466993cd0595d75936471867451987ea" resname="products.free.2">
         <source>products.free.2</source>
-        <target>contenido limitado</target>
+        <target>limit content</target>
       </trans-unit>
       <trans-unit id="0d047982e1d88adc699f50a162b26433" resname="products.free.3">
         <source>products.free.3</source>
-        <target>información limitada de los leads</target>
+        <target>limited information leads</target>
       </trans-unit>
       <trans-unit id="f03aa4b85629fe29c3f3295a6866b0f2" resname="products.free.add">
         <source>products.free.add</source>
-        <target>AÑADIR TU EMPRESA GRATIS</target>
+        <target>ADD YOUR BUSINESS FOR FREE</target>
       </trans-unit>
       <trans-unit id="f77ada3c7674e4dd93b12a961083ceb1" resname="products.silver.name">
         <source>products.silver.name</source>
@@ -201,23 +201,23 @@ Que tengas buen día..</target>
       </trans-unit>
       <trans-unit id="e115e3aae042d7f381038d3edb9fd736" resname="products.silver.1">
         <source>products.silver.1</source>
-        <target>presencia en 1 web social</target>
+        <target>1 social media presence</target>
       </trans-unit>
       <trans-unit id="1998763daa17593886144cdc6235e866" resname="products.silver.2">
         <source>products.silver.2</source>
-        <target>contenido %bold%personalizado%_bold%</target>
+        <target>%bold%custom%_bold% content</target>
       </trans-unit>
       <trans-unit id="150592e96abb248374f375c63d030ce1" resname="products.silver.3">
         <source>products.silver.3</source>
-        <target>información %bold%completa%_bold% de los leads</target>
+        <target>%bold%complete%_bold% information leads</target>
       </trans-unit>
       <trans-unit id="3f6e0f16b491aee09b862258ae96b621" resname="products.silver.4">
         <source>products.silver.4</source>
-        <target>optimización SEO</target>
+        <target>Search Engine Optimization</target>
       </trans-unit>
       <trans-unit id="a176da3ff235942491f2eda208d40fe8" resname="products.upgrade">
         <source>products.upgrade</source>
-        <target>CONTRATAR PAQUETE</target>
+        <target>GET PACK</target>
       </trans-unit>
       <trans-unit id="7f2618211f6ae3b6df68547a87fd695d" resname="products.gold.name">
         <source>products.gold.name</source>
@@ -225,23 +225,23 @@ Que tengas buen día..</target>
       </trans-unit>
       <trans-unit id="1a53a181ea560bdfad8559c2445c6f9c" resname="products.gold.1">
         <source>products.gold.1</source>
-        <target>presencia en %bold%4%_bold% web sociales</target>
+        <target>%bold%4%_bold% social media presence</target>
       </trans-unit>
       <trans-unit id="4833ddb198ce3f8cf24b0891aecd39ef" resname="products.gold.2">
         <source>products.gold.2</source>
-        <target>contenido %bold%personalizado%_bold%</target>
+        <target>%bold%custom%_bold% content</target>
       </trans-unit>
       <trans-unit id="e5477495d6da9c733fe2483182a24c54" resname="products.gold.3">
         <source>products.gold.3</source>
-        <target>información %bold%completa%_bold% de los leads</target>
+        <target>%bold%complete%_bold% information leads</target>
       </trans-unit>
       <trans-unit id="d17d95c10e5b42871cbe36e92238a885" resname="products.gold.4">
         <source>products.gold.4</source>
-        <target>optimización SEO</target>
+        <target>Search Engine Optimization</target>
       </trans-unit>
       <trans-unit id="52ed2f0a8625eda7483530fa18465a5a" resname="products.gold.5">
         <source>products.gold.5</source>
-        <target>Premium en 1 web social</target>
+        <target>1 social media premium presence</target>
       </trans-unit>
       <trans-unit id="2734b8ca0b72603c106c8f2b20c854df" resname="products.platinum.name">
         <source>products.platinum.name</source>
@@ -249,23 +249,23 @@ Que tengas buen día..</target>
       </trans-unit>
       <trans-unit id="8f73fffbf36392ab9b29056cfae6e53f" resname="products.platinum.1">
         <source>products.platinum.1</source>
-        <target>presencia en %bold%5%_bold% web sociales</target>
+        <target>%bold%5%_bold% social media presence</target>
       </trans-unit>
       <trans-unit id="bcb7d43ae0fc5ec6407e1e985a766215" resname="products.platinum.2">
         <source>products.platinum.2</source>
-        <target>contenido %bold%personalizado%_bold%</target>
+        <target>%bold%custom%_bold% content</target>
       </trans-unit>
       <trans-unit id="cd07219b0de575ed0d3cba0e06b75bb2" resname="products.platinum.3">
         <source>products.platinum.3</source>
-        <target>información %bold%completa%_bold% de los leads</target>
+        <target>%bold%complete%_bold% information leads</target>
       </trans-unit>
       <trans-unit id="3deaa6abc5602482c0a315a1efa14b06" resname="products.platinum.4">
         <source>products.platinum.4</source>
-        <target>optimización SEO</target>
+        <target>Search Engine Optimization</target>
       </trans-unit>
       <trans-unit id="763c1c653432ee2388c0ca8c41154c43" resname="products.platinum.5">
         <source>products.platinum.5</source>
-        <target>Premium en %bold%5%_bold% web sociales</target>
+        <target>%bold%5%_bold% social media presence</target>
       </trans-unit>
       <trans-unit id="e1796b3c87e100001fda44ddd80ccf92" resname="products.mail">
         <source>products.mail</source>
