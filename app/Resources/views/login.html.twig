@@ -27,15 +27,15 @@
     'bundles/evtintranet/assets/css/style-responsive.css'
     'bundles/evtintranet/assets/css/plugins.css'
     %}
-    <link href="{{ asset_url }}" type="text/css" rel="stylesheet" />
+    <link href="{{ media_domain }}{{ asset_url }}" type="text/css" rel="stylesheet" />
     {% endstylesheets %}
 
-    <link href="{{ asset('bundles/evtintranet/assets/css/themes/default.css') }}" rel="stylesheet" type="text/css" id="style_color"/>
-    <link href="{{ asset('bundles/evtintranet/assets/css/pages/login.css') }}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('bundles/evtintranet/assets/css/custom.css') }}" rel="stylesheet" type="text/css"/>
+    <link href="{{ media_domain }}{{ asset('bundles/evtintranet/assets/css/themes/default.css') }}" rel="stylesheet" type="text/css" id="style_color"/>
+    <link href="{{ media_domain }}{{ asset('bundles/evtintranet/assets/css/pages/login.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ media_domain }}{{ asset('bundles/evtintranet/assets/css/custom.css') }}" rel="stylesheet" type="text/css"/>
     <!-- END THEME STYLES -->
     {% block stylesheets %}{% endblock %}
-    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    <link rel="shortcut icon" type="image/x-icon" href="{{ media_domain }}{{ asset('favicon.ico') }}" />
 </head>
 <!-- END HEAD -->
 <!-- BEGIN BODY -->
@@ -62,7 +62,7 @@
 'bundles/evtintranet/assets/scripts/core/app.js'
 'bundles/evtintranet/assets/scripts/custom/login.js'
 %}
-<script type="text/javascript" src="{{ asset_url }}"></script>
+<script type="text/javascript" src="{{ media_domain }}{{ asset_url }}"></script>
 {% endjavascripts %}
 
 <script>

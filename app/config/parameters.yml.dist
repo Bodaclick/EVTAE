@@ -19,3 +19,4 @@ parameters:
     cookie_lifetime: 84600 # 1 days in seconds
     redis_default: redis://localhost
     redis_session: redis://localhost
+    media_domain: ''

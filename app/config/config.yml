@@ -29,6 +29,8 @@ framework:
 twig:
     debug:            "%kernel.debug%"
     strict_variables: "%kernel.debug%"
+    globals:
+        media_domain: %media_domain%
 
 # Assetic Configuration
 assetic:
@@ -75,3 +77,4 @@ snc_redis:
     session:
         client: session
         prefix: evt_session
+

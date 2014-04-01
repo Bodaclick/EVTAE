@@ -68,7 +68,7 @@
       </trans-unit>
       <trans-unit id="d745415de7dbe78a88c1cd077b8a798c" resname="leads">
         <source>leads</source>
-        <target>Altas</target>
+        <target>Solicitudes</target>
         
       </trans-unit>
       <trans-unit id="ecae13117d6f0584c25a9da6c8f8415e" resname="read">
@@ -83,12 +83,12 @@
       </trans-unit>
       <trans-unit id="c5b852bd85fc0f11a87b884fe1d28475" resname="no.leads">
         <source>no.leads</source>
-        <target>Sin altas</target>
+        <target>Sin solicitudes</target>
         
       </trans-unit>
       <trans-unit id="4c4ba18475fde9d71cee7c431c015eba" resname="no.leads.for.user">
         <source>no.leads.for.user</source>
-        <target>No hay altas para este usuario</target>
+        <target>No hay solicitudes para este usuario</target>
         
       </trans-unit>
       <trans-unit id="7d49d6ff7d16a2bdffbe2e925c6bbcbe" resname="login.account">
