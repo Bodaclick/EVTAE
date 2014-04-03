@@ -56,6 +56,7 @@ class PostUserLeadEmailTest extends WebTestCase
                 ],
                 "vertical"=> [
                     "domain"=> "test.com",
+                    "lang"=> "es_ES",
                     "showrooms"=> []
                 ],
                 "information_bag"=> [

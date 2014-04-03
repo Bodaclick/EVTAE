@@ -27,7 +27,10 @@ class EmailHookController extends Controller
         if (!empty($content)) {
             $data = json_decode($content, true);
         }
-        $data['mailing']['subject'] = $this->get('translator')->trans('title.welcome.user', [], 'messages', 'es_ES');
+        $request->setLocale($data['vertical']['lang']);
+
+        $data['mailing']['subject'] = $this->get('translator')
+            ->trans('title.welcome.user', [], 'messages', $data['vertical']['lang']);
         $data['mailing']['to'] = $data['user']['email']['email'];
 
         $domain = $data['vertical']['domain'];
@@ -47,10 +50,10 @@ class EmailHookController extends Controller
         if (!empty($content)) {
             $data = json_decode($content, true);
         }
-        $request->setLocale($data['showroom']['provider']['lang']);
+        $request->setLocale($data['showroom']['vertical']['lang']);
 
         $data['mailing']['subject'] = $this->get('translator')
-            ->trans('title.new.lead.user', [], 'messages', 'es_ES');
+            ->trans('title.new.lead.user', [], 'messages', $data['showroom']['vertical']['lang']);
         $data['vertical'] = $data['showroom']['vertical'];
         $data['mailing']['to'] = $data['email']['email'];
 
@@ -75,7 +78,6 @@ class EmailHookController extends Controller
 
         $data['vertical'] = $data['showroom']['vertical'];
         $domain = $data['vertical']['domain'];
-        $data['lang'] = $data['showroom']['provider']['lang'];
 
         $data['mailing']['subject'] = $this->get('translator')
             ->trans('title.new.lead.manager', [], 'messages', $data['showroom']['provider']['lang']);

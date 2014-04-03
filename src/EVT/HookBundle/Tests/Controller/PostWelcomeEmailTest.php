@@ -32,9 +32,15 @@ class PostWelcomeEmailTest extends WebTestCase
                 ]
             ],
             'vertical' => [
-                'domain' => 'test.com'
+                'domain' => 'test.com',
+                'lang' => 'es_ES'
             ]
         ];
+        $mailerMock = $this->getMockBuilder('EVT\EAEBundle\Communication\Email\Emailer')
+            ->disableOriginalConstructor()->getMock();
+        $mailerMock->expects($this->once())->method('send');
+
+        $this->client->getContainer()->set('evt.mailer', $mailerMock);
 
         $this->client->request(
             'POST',
