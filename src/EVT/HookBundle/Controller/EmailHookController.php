@@ -27,7 +27,10 @@ class EmailHookController extends Controller
         if (!empty($content)) {
             $data = json_decode($content, true);
         }
-        $data['mailing']['subject'] = $this->get('translator')->trans('title.welcome.user', [], 'messages', 'es_ES');
+        $request->setLocale($data['vertical']['lang']);
+
+        $data['mailing']['subject'] = $this->get('translator')
+            ->trans('title.welcome.user', [], 'messages', $data['vertical']['lang']);
         $data['mailing']['to'] = $data['user']['email']['email'];
 
         $domain = $data['vertical']['domain'];
