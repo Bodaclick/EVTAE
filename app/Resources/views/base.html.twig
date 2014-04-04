@@ -27,6 +27,10 @@
         'bundles/evtintranet/assets/plugins/fullcalendar/fullcalendar/fullcalendar.css'
         'bundles/evtintranet/assets/plugins/jqvmap/jqvmap/jqvmap.css'
         'bundles/evtintranet/assets/plugins/jquery-easy-pie-chart/jquery.easy-pie-chart.css'
+        'bundles/evtintranet/assets/plugins/bootstrap-select/bootstrap-select.min.css'
+        'bundles/evtintranet/assets/plugins/select2/select2.css'
+        'bundles/evtintranet/assets/plugins/select2/select2-metronic.css'
+        'bundles/evtintranet/assets/plugins/bootstrap-daterangepicker/daterangepicker-bs3.css'
         'bundles/evtintranet/assets/css/style-metronic.css'
         'bundles/evtintranet/assets/css/style.css'
         'bundles/evtintranet/assets/css/style-responsive.css'
@@ -62,6 +66,7 @@
         'bundles/evtintranet/assets/plugins/jquery-migrate-1.2.1.min.js'
         'bundles/evtintranet/assets/plugins/jquery-ui/jquery-ui-1.10.3.custom.min.js'
         'bundles/evtintranet/assets/plugins/bootstrap/js/bootstrap.min.js'
+        'bundles/evtintranet/assets/plugins/bootstrap/js/bootstrap2-typeahead.min.js'
         'bundles/evtintranet/assets/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js'
         'bundles/evtintranet/assets/plugins/jquery-slimscroll/jquery.slimscroll.min.js'
         'bundles/evtintranet/assets/plugins/jquery.blockui.min.js'
@@ -79,25 +84,30 @@
         'bundles/evtintranet/assets/plugins/jquery.sparkline.min.js'
         'bundles/evtintranet/assets/plugins/flot/jquery.flot.min.js'
         'bundles/evtintranet/assets/plugins/flot/jquery.flot.stack.min.js'
-        'bundles/evtintranet/assets/scripts_custom/hide-address-bar.js'
+        'bundles/evtintranet/assets/plugins/bootstrap-select/bootstrap-select.min.js'
+        'bundles/evtintranet/assets/plugins/select2/select2.min.js'
+        'bundles/evtintranet/assets/plugins/bootstrap-daterangepicker/daterangepicker.js'
+        'bundles/evtintranet/assets/plugins/bootstrap-daterangepicker/moment.min.js'
         'bundles/evtintranet/assets/scripts/core/app.js'
         'bundles/evtintranet/assets/scripts/custom/index.js'
         'bundles/evtintranet/assets/scripts/custom/tasks.js'
         'bundles/evtintranet/assets/scripts/custom/charts.js'
+        'bundles/evtintranet/assets/scripts/custom/components-dropdowns.js'
+        'bundles/evtintranet/assets/scripts/custom/components-pickers.js'
+        'bundles/evtintranet/assets/scripts_custom/hide-address-bar.js'
+
         %}
         <script type="text/javascript" src="{{ media_domain }}{{ asset_url }}"></script>
         {% endjavascripts %}
 
         <script>
-            jQuery(document).ready(function() {
+            jQuery(window).load(function() {
                 App.init(); // initlayout and core plugins
                 Index.init();
-                Index.initCharts(); // init index page's custom scripts
-                Index.initMiniCharts();
-                Index.initDashboardDaterange();
-                Index.initIntro();
-                Tasks.initDashboardWidget();
                 Charts.initCharts();
+                Tasks.initDashboardWidget();
+                ComponentsDropdowns.init();
+                ComponentsPickers.init();
             });
         </script>
         <!-- END JAVASCRIPTS -->

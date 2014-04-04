@@ -1,0 +1,128 @@
+<div class="portlet box green">
+    <div class="portlet-title">
+        <div class="caption">
+            {{ "search"|trans }}
+        </div>
+        <div class="tools">
+            <a href="javascript:;" class="collapse">
+            </a>
+        </div>
+    </div>
+    <div class="portlet-body form">
+        <!-- BEGIN FORM-->
+        <form action="/employee/leads" method="get" class="form-horizontal">
+            <div class="form-body">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label class="control-label col-md-4">{{ "vertical"|trans }}</label>
+                            <div class="col-md-8">
+                                <select name="vertical" id="select2_sample4" class="form-control select2">
+                                    <option data-flag="ww" value="">{{ "all"|trans }}</option>
+                                    {% for vertical in verticals %}
+                                    <option data-flag="{{ vertical.lang[3:] | lower }}" value="{{ vertical.domain }}">{{ vertical.domain }}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label class="control-label col-md-4">{{ "event.location.level2"|trans }}</label>
+                            <div class="col-md-8">
+                                <input name="location_level2" type="text" class="form-control" placeholder="El Escorial">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-2">
+                        <div class="form-group">
+                            <label class="control-label col-md-4">{{ "event.type"|trans }}</label>
+                            <div class="col-md-8">
+                                <select name="event_type" class="form-control input-small select2me" data-placeholder="Select...">
+                                    <option value=""></option>
+                                    <option value="AL">Alabama</option>
+                                    <option value="WY">Wyoming</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label class="control-label col-md-4">{{ "created.at"|trans }}</label>
+                            <div class="col-md-8">
+                                <div id="reportrange_create" class="btn default">
+                                    <input type="hidden" name="create_start" id="reportrange_create_start">
+                                    <input type="hidden" name="create_end" id="reportrange_create_end">
+                                    <i class="fa fa-calendar"></i>
+                                    &nbsp;
+                                                    <span>
+                                                    </span>
+                                    <b class="fa fa-angle-down"></b>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label class="control-label col-md-4">{{ "provider"|trans }}</label>
+                            <div class="col-md-8">
+                                <input name='provider' type="text" class="form-control" placeholder="Chee Kin">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label class="control-label col-md-4">{{ "event.location.level1"|trans }}</label>
+                            <div class="col-md-8">
+                                <input name="location_level1" type="text" class="form-control" placeholder="Madrid">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="form-group">
+                            <label class="control-label col-md-4">{{ "lead.status"|trans }}</label>
+                            <div class="col-md-8">
+                                <select name='lead_status' class="form-control input-small select2me" data-placeholder="Select...">
+                                    <option value="">{{ "all"|trans }}</option>
+                                    <option value="leidos">{{ "lead.status.read"|trans }}</option>
+                                    <option value="noleidos">{{ "lead.status.unread"|trans }}</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label class="control-label col-md-4">{{ "event.at"|trans }}</label>
+                            <div class="col-md-8">
+                                <div id="reportrange" class="btn default">
+                                    <input type="hidden" name="event_start" id="reportrange_start">
+                                    <input type="hidden" name="event_end" id="reportrange_end">
+                                    <i class="fa fa-calendar"></i>
+                                    &nbsp;
+                                                    <span>
+                                                    </span>
+                                    <b class="fa fa-angle-down"></b>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-actions fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="col-md-offset-8 col-md-4">
+                            <button type="submit" class="btn green">Submit</button>
+                            <button type="button" class="btn default">Reset</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <!-- END FORM-->
+    </div>
+</div>
