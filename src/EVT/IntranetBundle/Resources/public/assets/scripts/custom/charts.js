@@ -30,6 +30,7 @@ var Charts = function () {
             }
 
             function chart5() {
+                if (typeof statsLeadRawData == 'undefined') return;
                 var leads = [];
                 var leadsLabel = [];
                 var leadsPorDate = [];
