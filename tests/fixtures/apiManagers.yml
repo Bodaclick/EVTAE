@@ -1,0 +1,101 @@
+
+-
+    request:
+        method: GET
+        url: 'http://api.e-verticals.test/api/managers?page=1&apikey=1234&canView=employee'
+        headers:
+            host: api.e-verticals.test
+            user-agent: 'Guzzle/3.8.1 curl/7.22.0 PHP/5.5.9-1+sury.org~precise+1'
+            content-length: 0
+    response:
+        status: 200
+        headers:
+            Date: 'Tue, 24 Mar 2014 11:59:17 GMT'
+            Server: 'Apache/2.4.7 (Ubuntu)'
+            X-Powered-By: PHP/5.5.9-1+sury.org~precise+1
+            Cache-Control: no-cache
+            Transfer-Encoding: chunked
+            Content-Type: application/json
+        body: |
+          {
+            "items": [
+                {
+                    "id": 1,
+                    "username": "rober",
+                    "email": {
+                        "email": "roberto@rete.es"
+                    },
+                    "salt": "dg96dcuob34kcwg00gg0go8k48owgo8",
+                    "password": "75O0nU8ga5BTXVjgUTqjqwquVHL0+ApGx7Wz/ywVtyeJFcDVQryMW+rhDXOgcv6cw+yNFLniKHhOPHTdzZNTmA==",
+                    "personal_info": {
+                        "name": "Roberto",
+                        "surnames": "Gonzalez",
+                        "phone": "0132456789"
+                    },
+                    "roles": [
+                        "ROLE_MANAGER",
+                        "ROLE_USER"
+                        ]
+                },
+                {
+                    "id": 2,
+                    "username": "marcos",
+                    "email": {
+                        "email": "marcos@padeless.ers"
+                    },
+                    "salt": "kendczglk28cwwsw4o8wcwgwcog4o0w",
+                    "password": "sah1SA+9m8Eufg2rHoaWmnUPfcYfXAcHrSaNy7LQa4B8VK/K1Fk6Ix2n4K3TaqOCjKSuDIkSOWzspvcxb17jkQ==",
+                    "personal_info": {
+                        "name": "Marcos",
+                        "surnames": "padel",
+                        "phone": "0132456789"
+                    },
+                    "roles": [
+                        "ROLE_MANAGER",
+                        "ROLE_USER"
+                    ]
+                },
+                {
+                    "id": 3,
+                    "username": "jan",
+                    "email": {
+                        "email": "juanma@ingen.rdd"
+                    },
+                    "salt": "mz4w6agvucgkockckwsos4ok8ko0088",
+                    "password": "6xhZw+xPs8Sxa+UBaRv/pzV78aseUVodop0BBh5AEKY859gcjPwdl/Y1goDs9gnEyleZOEoWH5rOR3IKaCilbA==",
+                    "personal_info": {
+                        "name": "Juanma",
+                        "surnames": "Martinez",
+                        "phone": "0132456789"
+                    },
+                    "roles": [
+                        "ROLE_MANAGER",
+                        "ROLE_USER"
+                    ]
+                },
+                {
+                    "id": 4,
+                    "username": "romeo",
+                    "email": {
+                        "email": "romeo@urra.ces"
+                    },
+                    "salt": "beuepdu6xpcgsgkow04o8484c484ws8",
+                    "password": "z2c4GTNEk9kxHpHsv7KLajZ2fXLm2bpssar8+0tmGSDcS1ghtvCrXo4OyDIhyngmKWV7l9Me446KaQI915uqEg==",
+                    "personal_info": {
+                        "name": "Romeo",
+                        "surnames": "Urra",
+                        "phone": "9874546565"
+                    },
+                    "roles": [
+                        "ROLE_MANAGER",
+                        "ROLE_USER"
+                    ]
+                }
+            ],
+            "pagination": {
+                "total_pages": 1,
+                "current_page": 1,
+                "items_per_page": 10,
+                "total_items": 4
+            }
+          }

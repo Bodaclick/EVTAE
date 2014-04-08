@@ -36,6 +36,15 @@ class Builder extends ContainerAware
                 'routeParameters' => ['_role' => $this->container->get('session')->get('_role')]
             ]
         )->setAttribute('icon', 'fa-bar-chart-o');
+        if ($this->container->get('security.context')->isGranted(['ROLE_EMPLOYEE'])){
+            $menu->addChild(
+                $this->container->get('translator')->trans('managers'),
+                [
+                    'route' => 'evt_intranet_managers_list',
+                    'routeParameters' => ['_role' => $this->container->get('session')->get('_role')]
+                ]
+            )->setAttribute('icon', 'fa-group');
+        }
 
         return $menu;
     }
