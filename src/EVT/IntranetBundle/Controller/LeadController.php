@@ -15,8 +15,13 @@ class LeadController extends Controller
      */
     public function listAction(Request $request)
     {
+        $filter = '';
+        foreach ($request->query as $key => $param) {
+            if ($param != '') $filter .= '&' . $key . '=' . $param;
+        }
+
         $leadsResponse = $this->container->get('evt.core.client')
-            ->get('/api/leads?page=' . $request->query->get('page', 1));
+            ->get('/api/leads?' . $filter);
 
         if (404 == $leadsResponse->getStatusCode() && $request->query->get('page', 1)>1) {
             throw new NotFoundHttpException();
@@ -32,12 +37,16 @@ class LeadController extends Controller
             $pagination = $leadsResponse->getBody()['pagination'];
         }
 
+        $verticalsResponse = $this->container->get('evt.core.client')
+            ->get('/api/verticals');
+
         $content = $this->renderView(
             'EVTIntranetBundle:Lists:leads.html.twig',
             [
                 "leads" => $leads,
                 "pagination" => $pagination,
-                "routeController" => "evt_intranet_lead_list"
+                "routeController" => "evt_intranet_lead_list",
+                "verticals" => $verticalsResponse->getBody()
             ]
         );
 
