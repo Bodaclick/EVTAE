@@ -15,7 +15,7 @@ class ManagersController extends Controller
     public function listAction(Request $request)
     {
         $managersResponse = $this->container->get('evt.core.client')
-            ->get('/api/managers?canView='.$request->get('canView').'&page='.$request->get('page', 1));
+            ->get('/api/managers?canView='.$request->query->get('canView').'&page='.$request->query->get('page', 1));
 
         if (404 == $managersResponse->getStatusCode() && $request->query->get('page', 1)>1) {
             throw new NotFoundHttpException();

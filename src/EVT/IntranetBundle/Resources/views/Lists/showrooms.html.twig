@@ -52,11 +52,12 @@
                                     {% endfor %}
                                     </tbody>
                                 </table>
+                                {% include 'EVTIntranetBundle::pagination.html.twig' %}
                             {% else %}
                                 <div class="note note-info">
-                                    <h4 class="block">{{ "no.leads"|trans }}</h4>
+                                    <h4 class="block">{{ "no.showrooms"|trans }}</h4>
 
-                                    <p>{{ "no.leads.for.user"|trans }}.</p>
+                                    <p>{{ "no.showrooms.for.user"|trans }}.</p>
                                 </div>
                             {% endif %}
                         </div>
