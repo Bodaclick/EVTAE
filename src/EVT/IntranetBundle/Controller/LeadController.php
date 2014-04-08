@@ -36,7 +36,8 @@ class LeadController extends Controller
             'EVTIntranetBundle:Lists:leads.html.twig',
             [
                 "leads" => $leads,
-                "pagination" => $pagination
+                "pagination" => $pagination,
+                "routeController" => "evt_intranet_lead_list"
             ]
         );
 
