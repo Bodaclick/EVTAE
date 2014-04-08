@@ -77,10 +77,13 @@
         'bundles/evtintranet/assets/plugins/fullcalendar/fullcalendar/fullcalendar.min.js'
         'bundles/evtintranet/assets/plugins/jquery-easy-pie-chart/jquery.easy-pie-chart.js'
         'bundles/evtintranet/assets/plugins/jquery.sparkline.min.js'
+        'bundles/evtintranet/assets/plugins/flot/jquery.flot.min.js'
+        'bundles/evtintranet/assets/plugins/flot/jquery.flot.stack.min.js'
+        'bundles/evtintranet/assets/scripts_custom/hide-address-bar.js'
         'bundles/evtintranet/assets/scripts/core/app.js'
         'bundles/evtintranet/assets/scripts/custom/index.js'
         'bundles/evtintranet/assets/scripts/custom/tasks.js'
-        'bundles/evtintranet/assets/scripts_custom/hide-address-bar.js'
+        'bundles/evtintranet/assets/scripts/custom/charts.js'
         %}
         <script type="text/javascript" src="{{ media_domain }}{{ asset_url }}"></script>
         {% endjavascripts %}
@@ -89,14 +92,12 @@
             jQuery(document).ready(function() {
                 App.init(); // initlayout and core plugins
                 Index.init();
-                Index.initJQVMAP(); // init index page's custom scripts
-                Index.initCalendar(); // init index page's custom scripts
                 Index.initCharts(); // init index page's custom scripts
-                Index.initChat();
                 Index.initMiniCharts();
                 Index.initDashboardDaterange();
                 Index.initIntro();
                 Tasks.initDashboardWidget();
+                Charts.initCharts();
             });
         </script>
         <!-- END JAVASCRIPTS -->

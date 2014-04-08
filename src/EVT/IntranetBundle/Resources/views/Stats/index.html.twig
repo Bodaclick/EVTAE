@@ -1,0 +1,52 @@
+{% extends 'EVTIntranetBundle::layout.html.twig' %}
+{% block content %}
+    <!-- BEGIN CONTAINER -->
+    <div class="page-container">
+    <!-- BEGIN SIDEBAR -->
+    <div class="page-sidebar-wrapper">
+    <div class="page-sidebar navbar-collapse collapse">
+    <!-- BEGIN SIDEBAR MENU -->
+{{ knp_menu_render('EVTIntranetBundle:Builder:mainMenu', {'currentClass': 'active', 'template': 'EVTIntranetBundle:Menu:metronic_menu.html.twig'}) }}
+    <!-- END SIDEBAR MENU -->
+    </div>
+    </div>
+    <!-- END SIDEBAR -->
+    <!-- BEGIN CONTENT -->
+    <div class="page-content-wrapper">
+        <div class="page-content">
+            <!-- BEGIN PAGE HEADER-->
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- BEGIN PAGE TITLE & BREADCRUMB-->
+                    <h3 class="page-title">{{ "stats"|trans }}</h3>
+                    <ul class="page-breadcrumb breadcrumb">
+                        <li>
+                            <i class="fa fa-bar-chart-o"></i>
+                            <a href="/">{{ "stats"|trans }}</a>
+                        </li>
+                    </ul>
+                    <!-- END PAGE TITLE & BREADCRUMB-->
+                </div>
+            </div>
+            <h2>Datas from {{ statsLeads.from_date }} to {{ statsLeads.to_date }}</h2>
+            <!-- END PAGE HEADER-->
+            <div class="portlet box grey">
+                <div class="portlet-title">
+                    <div class="caption">
+                        <i class="fa fa-reorder"></i>Leads
+                    </div>
+                </div>
+                <div class="portlet-body">
+                    <div id="chart_5" style="height:350px;">
+                    </div>
+                </div>
+                <script>var statsLeadRawData = {{ statsLeads.data|raw }};</script>
+            </div>
+
+            <!-- END PAGE CONTENT-->
+        </div>
+    </div>
+    <!-- END CONTENT -->
+    </div>
+    <!-- END CONTAINER -->
+{% endblock %}
