@@ -12,10 +12,7 @@ class Builder extends ContainerAware
         $menu = $factory->createItem('root');
         $menu->setChildrenAttribute('class', 'page-sidebar-menu');
 
-        /*
-         * Activate only when usable
-         * $menu->addChild('Dashboard', array('route' => 'evt_intranet_home_index'))->setAttribute('icon', 'fa-home');
-         */
+        $menu->addChild('Dashboard', array('route' => 'evt_intranet_home_index'))->setAttribute('icon', 'fa-home');
         $menu->addChild(
             $this->container->get('translator')->trans('leads'),
             [
