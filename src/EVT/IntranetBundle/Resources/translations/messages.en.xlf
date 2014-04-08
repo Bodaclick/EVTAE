@@ -166,6 +166,22 @@
         <source>email.contact</source>
         <target>Contact email</target>
       </trans-unit>
+      <trans-unit id="8b0de315a0005347a1b72938c8eab5f8" resname="managers">
+        <source>managers</source>
+        <target>Managers</target>
+      </trans-unit>
+      <trans-unit id="620c8c6e564e545c317a50cbec6fd47b" resname="surnames">
+        <source>surnames</source>
+        <target>Surnames</target>
+      </trans-unit>
+      <trans-unit id="26840c3f87d7123d6b31074708e6213f" resname="no.user.managers">
+        <source>no.user.managers</source>
+        <target>There are no manager users</target>
+      </trans-unit>
+      <trans-unit id="5428fed0778d2a2ca00db96f8b53e6fe" resname="no.users">
+        <source>no.users</source>
+        <target>There are no users</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>
