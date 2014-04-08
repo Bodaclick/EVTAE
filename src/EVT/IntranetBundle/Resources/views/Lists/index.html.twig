@@ -29,10 +29,44 @@
                 </div>
             </div>
             <!-- END PAGE HEADER-->
+            <h2>Datas from {{ statsLeads.from_date }} to {{ statsLeads.to_date }}</h2>
             <!-- BEGIN PAGE CONTENT-->
             <div class="row">
-                <div class="col-md-12">
-                asdf
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="dashboard-stat green">
+                        <div class="visual">
+                            <i class="fa fa-exchange"></i>
+                        </div>
+                        <div class="details">
+                            <div class="number">
+                                {{ statsLeads.tot }}
+                            </div>
+                            <div class="desc">
+                                Leads
+                            </div>
+                        </div>
+                        <a class="more" href="#">
+                            View more <i class="m-icon-swapright m-icon-white"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="dashboard-stat green">
+                        <div class="visual">
+                            <i class="fa fa-user"></i>
+                        </div>
+                        <div class="details">
+                            <div class="number">
+                                ???
+                            </div>
+                            <div class="desc">
+                                New Users
+                            </div>
+                        </div>
+                        <a class="more" href="#">
+                            View more <i class="m-icon-swapright m-icon-white"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
             <!-- END PAGE CONTENT-->
