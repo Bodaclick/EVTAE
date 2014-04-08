@@ -28,6 +28,15 @@ class Builder extends ContainerAware
             ]
         )->setAttribute('icon', 'fa-ticket');
 
+        // if ($this->container->get('security.context')->isGranted(['ROLE_EMPLOYEE'])) {}
+        $menu->addChild(
+            $this->container->get('translator')->trans('stats'),
+            [
+                'route' => 'evt_intranet_stats_index',
+                'routeParameters' => ['_role' => $this->container->get('session')->get('_role')]
+            ]
+        )->setAttribute('icon', 'fa-bar-chart-o');
+
         return $menu;
     }
 }
