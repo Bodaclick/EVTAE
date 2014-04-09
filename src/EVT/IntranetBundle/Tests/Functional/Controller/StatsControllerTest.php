@@ -42,7 +42,7 @@ class StatsControllerTest extends WebTestCase
 
         $this->assertEquals(200, $this->client->getResponse()->getStatusCode());
         $this->assertEquals(1, $crawler->filter('h3.page-title')->count());
-        $this->assertEquals('stats', $crawler->filter('h3.page-title')->html());
+        $this->assertEquals('Stats', $crawler->filter('h3.page-title')->html());
         $this->assertEquals(1, $crawler->filter('#chart_5')->count());
     }
 }
