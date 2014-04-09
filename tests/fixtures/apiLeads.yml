@@ -351,3 +351,27 @@
                 "total_items": 1
             }
           }
+
+-
+    request:
+        method: GET
+        url: 'http://api.e-verticals.test/api/verticals?apikey=1234&canView=manager'
+        headers:
+            host: api.e-verticals.test
+            user-agent: 'Guzzle/3.8.1 curl/7.22.0 PHP/5.5.3-1+debphp.org~precise+2'
+            content-length: 0
+    response:
+        status: 200
+        headers:
+            Date: 'Wed, 09 Apr 2014 12:14:41 GMT'
+            Server: 'Apache/2.4.6 (Ubuntu)'
+            X-Powered-By: PHP/5.5.3-1+debphp.org~precise+2
+            Cache-Control: no-cache
+            X-Debug-Token: '214814'
+            X-Debug-Token-Link: /_profiler/214814
+            Transfer-Encoding: chunked
+            Content-Type: application/json
+        body: |
+                {
+                    "0":{"domain":"15anos.com.br","lang":"pt_BR","timezone":"","showrooms":{}},"1":{"domain":"15anosclick.com.br","lang":"pt_BR","timezone":"","showrooms":{}},"2":{"domain":"aniversarioclick.com","lang":"es_ES","timezone":"","showrooms":{}},"3":{"domain":"aniversarioclick.com.br","lang":"pt_BR","timezone":"","showrooms":{}},"4":{"domain":"batessimoecomunioneclick.it","lang":"it_IT","timezone":"","showrooms":{}},"5":{"domain":"batizadoclick.com","lang":"pt_BR","timezone":"","showrooms":{}},"6":{"domain":"battesimoecomunioneclick.it","lang":"it_IT","timezone":"","showrooms":{}},"7":{"domain":"buffetclick.com.br","lang":"pt_BR","timezone":"","showrooms":{}},"8":{"domain":"celebracionclick.com","lang":"es_ES","timezone":"","showrooms":{}},"9":{"domain":"compleannoclick.it","lang":"it_IT","timezone":"","showrooms":{}},"10":{"domain":"cumpleclick.com","lang":"es_ES","timezone":"","showrooms":{}},"11":{"domain":"cumpleclick.com.mx","lang":"es_MX","timezone":"","showrooms":{}},"12":{"domain":"espacioclick.com","lang":"es_ES","timezone":"","showrooms":{}},"13":{"domain":"espacioclick.com.mx","lang":"es_MX","timezone":"","showrooms":{}},"14":{"domain":"espacioclick.es","lang":"es_ES","timezone":"","showrooms":{}},"15":{"domain":"espacoclick.pt","lang":"pt_PT","timezone":"","showrooms":{}},"16":{"domain":"espacoeventoclick.com.br","lang":"pt_BR","timezone":"","showrooms":{}},"17":{"domain":"eventoclick.com","lang":"es_ES","timezone":"","showrooms":{}},"18":{"domain":"eventoclick.com.br","lang":"pt_BR","timezone":"","showrooms":{}},"19":{"domain":"eventoclick.com.mx","lang":"es_MX","timezone":"","showrooms":{}},"20":{"domain":"eventoclick.it","lang":"it_IT","timezone":"","showrooms":{}},"21":{"domain":"eventoclick.pt","lang":"pt_PT","timezone":"","showrooms":{}},"22":{"domain":"festaclick.com.br","lang":"pt_BR","timezone":"","showrooms":{}},"23":{"domain":"festaclick.it","lang":"it_IT","timezone":"","showrooms":{}},"24":{"domain":"festaclick.pt","lang":"pt_PT","timezone":"","showrooms":{}},"25":{"domain":"festasclick.com.br","lang":"pt_BR","timezone":"","showrooms":{}},"26":{"domain":"fiestaclick.com.mx","lang":"es_MX","timezone":"","showrooms":{}},"27":{"domain":"fiestaclick.es","lang":"es_ES","timezone":"","showrooms":{}},"28":{"domain":"fiestaclick.mx","lang":"es_MX","timezone":"","showrooms":{}},"29":{"domain":"formaturaclick.com.br","lang":"pt_BR","timezone":"","showrooms":{}},"30":{"domain":"graduacionesclick.mx","lang":"es_MX","timezone":"","showrooms":{}},"31":{"domain":"laureaclick.it","lang":"it_IT","timezone":"","showrooms":{}},"32":{"domain":"migraduacionclick.com.mx","lang":"es_MX","timezone":"","showrooms":{}},"33":{"domain":"quinceclick.mx","lang":"es_MX","timezone":"","showrooms":{}},"34":{"domain":"spazieventiclick.it","lang":"it_IT","timezone":"","showrooms":{}},"35":{"domain":"test.com","lang":"es_ES","timezone":"","showrooms":{}},"36":{"domain":"xvclick.com.mx","lang":"es_MX","timezone":"","showrooms":{}}
+                }

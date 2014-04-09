@@ -107,6 +107,25 @@ class LeadControllerTest extends WebTestCase
         $this->assertEquals(200, $this->client->getResponse()->getStatusCode());
     }
 
+    public function testLeads()
+    {
+        $this->logInEmployee();
+
+        $response = new Response(200, json_decode('{}', true));
+
+        $coreClientMock = $this->getMockBuilder('EVT\CoreClientBundle\Client\Client')
+            ->disableOriginalConstructor()->getMock();
+
+        $coreClientMock->expects($this->exactly(2))
+            ->method('get')
+            ->will($this->returnValue($response));
+
+        $this->client->getContainer()->set('evt.core.client', $coreClientMock);
+        $this->client->request('GET', '/employee/leads');
+
+        $this->assertEquals(200, $this->client->getResponse()->getStatusCode());
+    }
+
     public function getDataAlreadyRead()
     {
         return [
