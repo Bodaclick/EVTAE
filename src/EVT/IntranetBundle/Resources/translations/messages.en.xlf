@@ -182,6 +182,82 @@
         <source>no.users</source>
         <target>There are no users</target>
       </trans-unit>
+      <trans-unit id="a181a603769c1f98ad927e7367c7aa51" resname="all">
+        <source>all</source>
+        <target>all</target>
+      </trans-unit>
+      <trans-unit id="ae5361473c0038d7f8c4b4236c50b2da" resname="Leads">
+        <source>Leads</source>
+        <target>Leads</target>
+      </trans-unit>
+      <trans-unit id="98bd1c45684cf587ac2347a92dd7bb51" resname="last">
+        <source>last</source>
+        <target>last</target>
+      </trans-unit>
+      <trans-unit id="44fdec47036f482b68b748f9d786801b" resname="days">
+        <source>days</source>
+        <target>days</target>
+      </trans-unit>
+      <trans-unit id="b24344b6a2c4a94c9b0d0ebd4602aeca" resname="View more">
+        <source>View more</source>
+        <target>View more</target>
+      </trans-unit>
+      <trans-unit id="06a943c59f33a34bb5924aaf72cd2995" resname="search">
+        <source>search</source>
+        <target>search</target>
+      </trans-unit>
+      <trans-unit id="131c0bdb923cbaef74b70a70b8c434f5" resname="event.location.level2">
+        <source>event.location.level2</source>
+        <target>Province</target>
+      </trans-unit>
+      <trans-unit id="f40e898d709b1697ea21a91fc778941b" resname="event.location.level1">
+        <source>event.location.level1</source>
+        <target>City</target>
+      </trans-unit>
+      <trans-unit id="a0cf2b148d7f6d537136bf7a031d7c41" resname="lead.status">
+        <source>lead.status</source>
+        <target>status</target>
+      </trans-unit>
+      <trans-unit id="252cc8c4c9bff93c5f4eece6fdc318f8" resname="lead.status.read">
+        <source>lead.status.read</source>
+        <target>read</target>
+      </trans-unit>
+      <trans-unit id="b38a1c3e35c288c42fa5bc30a3b94912" resname="lead.status.unread">
+        <source>lead.status.unread</source>
+        <target>unread</target>
+      </trans-unit>
+      <trans-unit id="0378b30f90450d995b395d16744dd63c" resname="event.at">
+        <source>event.at</source>
+        <target>Event at</target>
+      </trans-unit>
+      <trans-unit id="0abdb5aece51fa113658cb5c0e7ce9fd" resname="no.showrooms">
+        <source>no.showrooms</source>
+        <target>no showrooms</target>
+      </trans-unit>
+      <trans-unit id="d779084634ef00013112467a4ae36418" resname="no.showrooms.for.user">
+        <source>no.showrooms.for.user</source>
+        <target>There are no showrooms for this user</target>
+      </trans-unit>
+      <trans-unit id="446501053769c06c565094b26d26e8ef" resname="stats">
+        <source>stats</source>
+        <target>Stats</target>
+      </trans-unit>
+      <trans-unit id="a4d3b161ce1309df1c4e25df28694b7b" resname="Submit">
+        <source>Submit</source>
+        <target>Submit</target>
+      </trans-unit>
+      <trans-unit id="526d688f37a86d3c3f27d0c5016eb71d" resname="Reset">
+        <source>Reset</source>
+        <target>Reset</target>
+      </trans-unit>
+      <trans-unit id="d98a07f84921b24ee30f86fd8cd85c3c" resname="from">
+        <source>from</source>
+        <target>from</target>
+      </trans-unit>
+      <trans-unit id="01b6e20344b68835c5ed1ddedf20d531" resname="to">
+        <source>to</source>
+        <target>to</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>
