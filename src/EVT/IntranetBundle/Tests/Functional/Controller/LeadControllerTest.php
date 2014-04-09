@@ -105,4 +105,21 @@ class LeadControllerTest extends WebTestCase
         $this->assertEquals(1, $crawler->filter('table.table')->count());
         $this->assertEquals(3, $crawler->filter('a.badge-warning')->count());
     }
+
+    /**
+     * @vcr apiLeadsFilter.yml
+     */
+    public function testLeadsFilter()
+    {
+        $this->logIn();
+
+        $crawler = $this->client->request(
+            'GET',
+            '/manager/leads?vertical=test.com&location_level2=Madrid&event_type=1&create_start=2014-03-11&create_end=2014-04-09&provider=comercial+name&location_level1=Parla&lead_status=read&event_start=2014-03-11&event_end=2014-04-09'
+        );
+
+        $this->assertEquals(200, $this->client->getResponse()->getStatusCode());
+        $this->assertEquals(0, $crawler->filter('tr.success')->count());
+        $this->assertEquals(4, $crawler->filter('a.green-stripe')->count());
+    }
 }

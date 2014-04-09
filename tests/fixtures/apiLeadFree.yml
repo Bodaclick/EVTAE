@@ -83,3 +83,42 @@
             X-Debug-Token-Link: /_profiler/60681d
             Transfer-Encoding: chunked
             Content-Type: application/json
+-
+    request:
+        method: GET
+        url: 'http://api.e-verticals.local/api/leads/1?apikey=1234&canView=manager'
+        headers:
+            host: api.e-verticals.local
+            user-agent: 'Guzzle/3.8.1 curl/7.22.0 PHP/5.5.3-1+debphp.org~precise+2'
+            content-length: 0
+    response:
+        status: 401
+        headers:
+            Date: 'Wed, 09 Apr 2014 12:14:07 GMT'
+            Server: 'Apache/2.4.6 (Ubuntu)'
+            X-Powered-By: PHP/5.5.3-1+debphp.org~precise+2
+            Cache-Control: no-cache
+            X-Debug-Token: e3c1c3
+            X-Debug-Token-Link: /_profiler/e3c1c3
+            Transfer-Encoding: chunked
+            Content-Type: 'text/json; charset=UTF-8'
+        body: '{''error'':''API Key "1234" does not exist.''}'
+-
+    request:
+        method: GET
+        url: 'http://api.e-verticals.local/api/leads/1?apikey=1766&canView=manager'
+        headers:
+            host: api.e-verticals.local
+            user-agent: 'Guzzle/3.8.1 curl/7.22.0 PHP/5.5.3-1+debphp.org~precise+2'
+            content-length: 0
+    response:
+        status: 404
+        headers:
+            Date: 'Wed, 09 Apr 2014 12:14:41 GMT'
+            Server: 'Apache/2.4.6 (Ubuntu)'
+            X-Powered-By: PHP/5.5.3-1+debphp.org~precise+2
+            Cache-Control: no-cache
+            X-Debug-Token: '3e7933'
+            X-Debug-Token-Link: /_profiler/3e7933
+            Transfer-Encoding: chunked
+            Content-Type: application/json

@@ -1,4 +1,3 @@
-
 -
     request:
         method: GET
@@ -17,476 +16,499 @@
             Transfer-Encoding: chunked
             Content-Type: application/json
         body: |
-            {
-            "items":[
-            {
-            "event":{
-            "date":"2014-10-15CEST00:00:00+0200",
-            "type":{
-            "type":1,
-            "name":"BIRTHDAY"
-            },
-            "location":{
-            "lat":10,
-            "long":10,
-            "admin_level1":"Parla",
-            "admin_level2":"Madrid",
-            "country":"Spain"
-            }
-            },
-            "personal_info":{
-            "name":"Pepe1",
-            "surnames":"Potamo",
-            "phone":"0132456789"
-            },
-            "showroom":{
-            "id":2,
-            "slug":"name",
-            "score":1,
-            "type":"2",
-            "provider":{
-            "id":"1",
-            "name":"name",
-            "slug":"name",
-            "phone":"915555555"
-            },
-            "vertical":{
-            "domain":"test.com"
-            }
-            },
-            "information_bag":{
-            "parameters":{
-            "observations":"This is great"
-            }
-            },
-            "created_at":"2014-03-17CET13:47:33+0100",
-            "email":{
-            "email":"emailtest@email.com"
-            },
-            "id":"11"
-            },
-            {
-            "event":{
-            "date":"2014-10-15CEST00:00:00+0200",
-            "type":{
-            "type":1,
-            "name":"BIRTHDAY"
-            },
-            "location":{
-            "lat":10,
-            "long":10,
-            "admin_level1":"Parla",
-            "admin_level2":"Madrid",
-            "country":"Spain"
-            }
-            },
-            "personal_info":{
-            "name":"Pepe1",
-            "surnames":"Potamo",
-            "phone":"0132456789"
-            },
-            "showroom":{
-            "id":2,
-            "slug":"name",
-            "score":1,
-            "type":"2",
-            "provider":{
-            "id":"1",
-            "name":"name",
-            "slug":"name",
-            "phone":"915555555"
-            },
-            "vertical":{
-            "domain":"test.com"
-            }
-            },
-            "information_bag":{
-            "parameters":{
-            "observations":"This is great"
-            }
-            },
-            "created_at":"2014-03-17CET13:47:25+0100",
-            "email":{
-            "email":"emailtest@email.com"
-            },
-            "id":"10"
-            },
-            {
-            "event":{
-            "date":"2014-10-15CEST00:00:00+0200",
-            "type":{
-            "type":1,
-            "name":"BIRTHDAY"
-            },
-            "location":{
-            "lat":10,
-            "long":10,
-            "admin_level1":"Parla",
-            "admin_level2":"Madrid",
-            "country":"Spain"
-            }
-            },
-            "personal_info":{
-            "name":"Pepe1",
-            "surnames":"Potamo",
-            "phone":"0132456789"
-            },
-            "showroom":{
-            "id":2,
-            "slug":"name",
-            "score":1,
-            "type":"2",
-            "provider":{
-            "id":"1",
-            "name":"name",
-            "slug":"name",
-            "phone":"915555555"
-            },
-            "vertical":{
-            "domain":"test.com"
-            }
-            },
-            "information_bag":{
-            "parameters":{
-            "observations":"This is great"
-            }
-            },
-            "created_at":"2014-03-17CET13:47:18+0100",
-            "email":{
-            "email":"emailtest@email.com"
-            },
-            "id":"9"
-            },
-            {
-            "event":{
-            "date":"2014-10-15CEST00:00:00+0200",
-            "type":{
-            "type":1,
-            "name":"BIRTHDAY"
-            },
-            "location":{
-            "lat":10,
-            "long":10,
-            "admin_level1":"Parla",
-            "admin_level2":"Madrid",
-            "country":"Spain"
-            }
-            },
-            "personal_info":{
-            "name":"Pepe1",
-            "surnames":"Potamo",
-            "phone":"0132456789"
-            },
-            "showroom":{
-            "id":2,
-            "slug":"name",
-            "score":1,
-            "type":"2",
-            "provider":{
-            "id":"1",
-            "name":"name",
-            "slug":"name",
-            "phone":"915555555"
-            },
-            "vertical":{
-            "domain":"test.com"
-            }
-            },
-            "information_bag":{
-            "parameters":{
-            "observations":"This is great"
-            }
-            },
-            "created_at":"2014-03-17CET13:47:10+0100",
-            "email":{
-            "email":"emailtest@email.com"
-            },
-            "id":"8"
-            },
-            {
-            "event":{
-            "date":"2014-10-15CEST00:00:00+0200",
-            "type":{
-            "type":1,
-            "name":"BIRTHDAY"
-            },
-            "location":{
-            "lat":10,
-            "long":10,
-            "admin_level1":"Parla",
-            "admin_level2":"Madrid",
-            "country":"Spain"
-            }
-            },
-            "personal_info":{
-            "name":"Pepe1",
-            "surnames":"Potamo",
-            "phone":"0132456789"
-            },
-            "showroom":{
-            "id":2,
-            "slug":"name",
-            "score":1,
-            "type":"2",
-            "provider":{
-            "id":"1",
-            "name":"name",
-            "slug":"name",
-            "phone":"915555555"
-            },
-            "vertical":{
-            "domain":"test.com"
-            }
-            },
-            "information_bag":{
-            "parameters":{
-            "observations":"This is great"
-            }
-            },
-            "created_at":"2014-03-17CET13:47:02+0100",
-            "email":{
-            "email":"emailtest@email.com"
-            },
-            "id":"7"
-            },
-            {
-            "event":{
-            "date":"2014-10-15CEST00:00:00+0200",
-            "type":{
-            "type":1,
-            "name":"BIRTHDAY"
-            },
-            "location":{
-            "lat":10,
-            "long":10,
-            "admin_level1":"Parla",
-            "admin_level2":"Madrid",
-            "country":"Spain"
-            }
-            },
-            "personal_info":{
-            "name":"Pepe1",
-            "surnames":"Potamo",
-            "phone":"0132456789"
-            },
-            "showroom":{
-            "id":2,
-            "slug":"name",
-            "score":1,
-            "type":"2",
-            "provider":{
-            "id":"1",
-            "name":"name",
-            "slug":"name",
-            "phone":"915555555"
-            },
-            "vertical":{
-            "domain":"test.com"
-            }
-            },
-            "information_bag":{
-            "parameters":{
-            "observations":"This is great"
-            }
-            },
-            "created_at":"2014-03-17CET13:46:56+0100",
-            "email":{
-            "email":"emailtest@email.com"
-            },
-            "id":"6"
-            },
-            {
-            "event":{
-            "date":"2014-10-15CEST00:00:00+0200",
-            "type":{
-            "type":1,
-            "name":"BIRTHDAY"
-            },
-            "location":{
-            "lat":10,
-            "long":10,
-            "admin_level1":"Parla",
-            "admin_level2":"Madrid",
-            "country":"Spain"
-            }
-            },
-            "personal_info":{
-            "name":"Pepe1",
-            "surnames":"Potamo",
-            "phone":"0132456789"
-            },
-            "showroom":{
-            "id":2,
-            "slug":"name",
-            "score":1,
-            "type":"2",
-            "provider":{
-            "id":"1",
-            "name":"name",
-            "slug":"name",
-            "phone":"915555555"
-            },
-            "vertical":{
-            "domain":"test.com"
-            }
-            },
-            "information_bag":{
-            "parameters":{
-            "observations":"This is great"
-            }
-            },
-            "created_at":"2014-03-17CET13:46:48+0100",
-            "read_at":"2014-03-20CET12:16:10+0100",
-            "email":{
-            "email":"emailtest@email.com"
-            },
-            "id":"5"
-            },
-            {
-            "event":{
-            "date":"2014-10-15CEST00:00:00+0200",
-            "type":{
-            "type":1,
-            "name":"BIRTHDAY"
-            },
-            "location":{
-            "lat":10,
-            "long":10,
-            "admin_level1":"Parla",
-            "admin_level2":"Madrid",
-            "country":"Spain"
-            }
-            },
-            "personal_info":{
-            "name":"Pepe1",
-            "surnames":"Potamo",
-            "phone":"0132456789"
-            },
-            "showroom":{
-            "id":2,
-            "slug":"name",
-            "score":1,
-            "type":"2",
-            "provider":{
-            "id":"1",
-            "name":"name",
-            "slug":"name",
-            "phone":"915555555"
-            },
-            "vertical":{
-            "domain":"test.com"
-            }
-            },
-            "information_bag":{
-            "parameters":{
-            "observations":"This is great"
-            }
-            },
-            "created_at":"2014-03-17CET13:46:42+0100",
-            "read_at":"2014-03-20CET12:26:02+0100",
-            "email":{
-            "email":"emailtest@email.com"
-            },
-            "id":"4"
-            },
-            {
-            "event":{
-            "date":"2014-10-15CEST00:00:00+0200",
-            "type":{
-            "type":1,
-            "name":"BIRTHDAY"
-            },
-            "location":{
-            "lat":10,
-            "long":10,
-            "admin_level1":"Parla",
-            "admin_level2":"Madrid",
-            "country":"Spain"
-            }
-            },
-            "personal_info":{
-            "name":"Pepe1",
-            "surnames":"Potamo",
-            "phone":"0132456789"
-            },
-            "showroom":{
-            "id":2,
-            "slug":"name",
-            "score":1,
-            "type":"2",
-            "provider":{
-            "id":"1",
-            "name":"name",
-            "slug":"name",
-            "phone":"915555555"
-            },
-            "vertical":{
-            "domain":"test.com"
-            }
-            },
-            "information_bag":{
-            "parameters":{
-            "observations":"This is great"
-            }
-            },
-            "created_at":"2014-03-17CET13:46:34+0100",
-            "email":{
-            "email":"emailtest@email.com"
-            },
-            "id":"3"
-            },
-            {
-            "event":{
-            "date":"2014-10-15CEST00:00:00+0200",
-            "type":{
-            "type":1,
-            "name":"BIRTHDAY"
-            },
-            "location":{
-            "lat":10,
-            "long":10,
-            "admin_level1":"Parla",
-            "admin_level2":"Madrid",
-            "country":"Spain"
-            }
-            },
-            "personal_info":{
-            "name":"Pepe1",
-            "surnames":"Potamo",
-            "phone":"0132456789"
-            },
-            "showroom":{
-            "id":2,
-            "slug":"name",
-            "score":1,
-            "type":"2",
-            "provider":{
-            "id":"1",
-            "name":"name",
-            "slug":"name",
-            "phone":"915555555"
-            },
-            "vertical":{
-            "domain":"test.com"
-            }
-            },
-            "information_bag":{
-            "parameters":{
-            "observations":"This is great"
-            }
-            },
-            "created_at":"2014-03-17CET13:46:27+0100",
-            "email":{
-            "email":"emailtest@email.com"
-            },
-            "id":"2"
-            }
-            ],
-            "pagination":{
-            "total_pages":2,
-            "current_page":2,
-            "items_per_page":10,
-            "total_items":11
+                {
+                    "items": [
+                        {
+                            "event": {
+                                "date": "2014-10-15CEST00:00:00+0200",
+                                "type": {
+                                    "type": 1,
+                                    "name": "BIRTHDAY"
+                                },
+                                "location": {
+                                    "lat": 10,
+                                    "long": 10,
+                                    "admin_level1": "Parla",
+                                    "admin_level2": "Madrid",
+                                    "country": "Spain"
+                                }
+                            },
+                            "personal_info": {
+                                "name": "Pepe1",
+                                "surnames": "Potamo",
+                                "phone": "0132456789"
+                            },
+                            "showroom": {
+                                "id": 2,
+                                "slug": "name",
+                                "score": 1,
+                                "type": "2",
+                                "provider": {
+                                    "id": "1",
+                                    "name": "name",
+                                    "slug": "name",
+                                    "phone": "915555555"
+                                },
+                                "vertical": {
+                                    "domain": "test.com"
+                                }
+                            },
+                            "information_bag": {
+                                "parameters": {
+                                    "observations": "This is great"
+                                }
+                            },
+                            "created_at": "2014-03-17CET13:47:33+0100",
+                            "email": {
+                                "email": "emailtest@email.com"
+                            },
+                            "id": "11"
+                        },
+                        {
+                            "event": {
+                                "date": "2014-10-15CEST00:00:00+0200",
+                                "type": {
+                                    "type": 1,
+                                    "name": "BIRTHDAY"
+                                },
+                                "location": {
+                                    "lat": 10,
+                                    "long": 10,
+                                    "admin_level1": "Parla",
+                                    "admin_level2": "Madrid",
+                                    "country": "Spain"
+                                }
+                            },
+                            "personal_info": {
+                                "name": "Pepe1",
+                                "surnames": "Potamo",
+                                "phone": "0132456789"
+                            },
+                            "showroom": {
+                                "id": 2,
+                                "slug": "name",
+                                "score": 1,
+                                "type": "2",
+                                "provider": {
+                                    "id": "1",
+                                    "name": "name",
+                                    "slug": "name",
+                                    "phone": "915555555"
+                                },
+                                "vertical": {
+                                    "domain": "test.com"
+                                }
+                            },
+                            "information_bag": {
+                                "parameters": {
+                                    "observations": "This is great"
+                                }
+                            },
+                            "created_at": "2014-03-17CET13:47:25+0100",
+                            "email": {
+                                "email": "emailtest@email.com"
+                            },
+                            "id": "10"
+                        },
+                        {
+                            "event": {
+                                "date": "2014-10-15CEST00:00:00+0200",
+                                "type": {
+                                    "type": 1,
+                                    "name": "BIRTHDAY"
+                                },
+                                "location": {
+                                    "lat": 10,
+                                    "long": 10,
+                                    "admin_level1": "Parla",
+                                    "admin_level2": "Madrid",
+                                    "country": "Spain"
+                                }
+                            },
+                            "personal_info": {
+                                "name": "Pepe1",
+                                "surnames": "Potamo",
+                                "phone": "0132456789"
+                            },
+                            "showroom": {
+                                "id": 2,
+                                "slug": "name",
+                                "score": 1,
+                                "type": "2",
+                                "provider": {
+                                    "id": "1",
+                                    "name": "name",
+                                    "slug": "name",
+                                    "phone": "915555555"
+                                },
+                                "vertical": {
+                                    "domain": "test.com"
+                                }
+                            },
+                            "information_bag": {
+                                "parameters": {
+                                    "observations": "This is great"
+                                }
+                            },
+                            "created_at": "2014-03-17CET13:47:18+0100",
+                            "email": {
+                                "email": "emailtest@email.com"
+                            },
+                            "id": "9"
+                        },
+                        {
+                            "event": {
+                                "date": "2014-10-15CEST00:00:00+0200",
+                                "type": {
+                                    "type": 1,
+                                    "name": "BIRTHDAY"
+                                },
+                                "location": {
+                                    "lat": 10,
+                                    "long": 10,
+                                    "admin_level1": "Parla",
+                                    "admin_level2": "Madrid",
+                                    "country": "Spain"
+                                }
+                            },
+                            "personal_info": {
+                                "name": "Pepe1",
+                                "surnames": "Potamo",
+                                "phone": "0132456789"
+                            },
+                            "showroom": {
+                                "id": 2,
+                                "slug": "name",
+                                "score": 1,
+                                "type": "2",
+                                "provider": {
+                                    "id": "1",
+                                    "name": "name",
+                                    "slug": "name",
+                                    "phone": "915555555"
+                                },
+                                "vertical": {
+                                    "domain": "test.com"
+                                }
+                            },
+                            "information_bag": {
+                                "parameters": {
+                                    "observations": "This is great"
+                                }
+                            },
+                            "created_at": "2014-03-17CET13:47:10+0100",
+                            "email": {
+                                "email": "emailtest@email.com"
+                            },
+                            "id": "8"
+                        },
+                        {
+                            "event": {
+                                "date": "2014-10-15CEST00:00:00+0200",
+                                "type": {
+                                    "type": 1,
+                                    "name": "BIRTHDAY"
+                                },
+                                "location": {
+                                    "lat": 10,
+                                    "long": 10,
+                                    "admin_level1": "Parla",
+                                    "admin_level2": "Madrid",
+                                    "country": "Spain"
+                                }
+                            },
+                            "personal_info": {
+                                "name": "Pepe1",
+                                "surnames": "Potamo",
+                                "phone": "0132456789"
+                            },
+                            "showroom": {
+                                "id": 2,
+                                "slug": "name",
+                                "score": 1,
+                                "type": "2",
+                                "provider": {
+                                    "id": "1",
+                                    "name": "name",
+                                    "slug": "name",
+                                    "phone": "915555555"
+                                },
+                                "vertical": {
+                                    "domain": "test.com"
+                                }
+                            },
+                            "information_bag": {
+                                "parameters": {
+                                    "observations": "This is great"
+                                }
+                            },
+                            "created_at": "2014-03-17CET13:47:02+0100",
+                            "email": {
+                                "email": "emailtest@email.com"
+                            },
+                            "id": "7"
+                        },
+                        {
+                            "event": {
+                                "date": "2014-10-15CEST00:00:00+0200",
+                                "type": {
+                                    "type": 1,
+                                    "name": "BIRTHDAY"
+                                },
+                                "location": {
+                                    "lat": 10,
+                                    "long": 10,
+                                    "admin_level1": "Parla",
+                                    "admin_level2": "Madrid",
+                                    "country": "Spain"
+                                }
+                            },
+                            "personal_info": {
+                                "name": "Pepe1",
+                                "surnames": "Potamo",
+                                "phone": "0132456789"
+                            },
+                            "showroom": {
+                                "id": 2,
+                                "slug": "name",
+                                "score": 1,
+                                "type": "2",
+                                "provider": {
+                                    "id": "1",
+                                    "name": "name",
+                                    "slug": "name",
+                                    "phone": "915555555"
+                                },
+                                "vertical": {
+                                    "domain": "test.com"
+                                }
+                            },
+                            "information_bag": {
+                                "parameters": {
+                                    "observations": "This is great"
+                                }
+                            },
+                            "created_at": "2014-03-17CET13:46:56+0100",
+                            "email": {
+                                "email": "emailtest@email.com"
+                            },
+                            "id": "6"
+                        },
+                        {
+                            "event": {
+                                "date": "2014-10-15CEST00:00:00+0200",
+                                "type": {
+                                    "type": 1,
+                                    "name": "BIRTHDAY"
+                                },
+                                "location": {
+                                    "lat": 10,
+                                    "long": 10,
+                                    "admin_level1": "Parla",
+                                    "admin_level2": "Madrid",
+                                    "country": "Spain"
+                                }
+                            },
+                            "personal_info": {
+                                "name": "Pepe1",
+                                "surnames": "Potamo",
+                                "phone": "0132456789"
+                            },
+                            "showroom": {
+                                "id": 2,
+                                "slug": "name",
+                                "score": 1,
+                                "type": "2",
+                                "provider": {
+                                    "id": "1",
+                                    "name": "name",
+                                    "slug": "name",
+                                    "phone": "915555555"
+                                },
+                                "vertical": {
+                                    "domain": "test.com"
+                                }
+                            },
+                            "information_bag": {
+                                "parameters": {
+                                    "observations": "This is great"
+                                }
+                            },
+                            "created_at": "2014-03-17CET13:46:48+0100",
+                            "read_at": "2014-03-20CET12:16:10+0100",
+                            "email": {
+                                "email": "emailtest@email.com"
+                            },
+                            "id": "5"
+                        },
+                        {
+                            "event": {
+                                "date": "2014-10-15CEST00:00:00+0200",
+                                "type": {
+                                    "type": 1,
+                                    "name": "BIRTHDAY"
+                                },
+                                "location": {
+                                    "lat": 10,
+                                    "long": 10,
+                                    "admin_level1": "Parla",
+                                    "admin_level2": "Madrid",
+                                    "country": "Spain"
+                                }
+                            },
+                            "personal_info": {
+                                "name": "Pepe1",
+                                "surnames": "Potamo",
+                                "phone": "0132456789"
+                            },
+                            "showroom": {
+                                "id": 2,
+                                "slug": "name",
+                                "score": 1,
+                                "type": "2",
+                                "provider": {
+                                    "id": "1",
+                                    "name": "name",
+                                    "slug": "name",
+                                    "phone": "915555555"
+                                },
+                                "vertical": {
+                                    "domain": "test.com"
+                                }
+                            },
+                            "information_bag": {
+                                "parameters": {
+                                    "observations": "This is great"
+                                }
+                            },
+                            "created_at": "2014-03-17CET13:46:42+0100",
+                            "read_at": "2014-03-20CET12:26:02+0100",
+                            "email": {
+                                "email": "emailtest@email.com"
+                            },
+                            "id": "4"
+                        },
+                        {
+                            "event": {
+                                "date": "2014-10-15CEST00:00:00+0200",
+                                "type": {
+                                    "type": 1,
+                                    "name": "BIRTHDAY"
+                                },
+                                "location": {
+                                    "lat": 10,
+                                    "long": 10,
+                                    "admin_level1": "Parla",
+                                    "admin_level2": "Madrid",
+                                    "country": "Spain"
+                                }
+                            },
+                            "personal_info": {
+                                "name": "Pepe1",
+                                "surnames": "Potamo",
+                                "phone": "0132456789"
+                            },
+                            "showroom": {
+                                "id": 2,
+                                "slug": "name",
+                                "score": 1,
+                                "type": "2",
+                                "provider": {
+                                    "id": "1",
+                                    "name": "name",
+                                    "slug": "name",
+                                    "phone": "915555555"
+                                },
+                                "vertical": {
+                                    "domain": "test.com"
+                                }
+                            },
+                            "information_bag": {
+                                "parameters": {
+                                    "observations": "This is great"
+                                }
+                            },
+                            "created_at": "2014-03-17CET13:46:34+0100",
+                            "email": {
+                                "email": "emailtest@email.com"
+                            },
+                            "id": "3"
+                        },
+                        {
+                            "event": {
+                                "date": "2014-10-15CEST00:00:00+0200",
+                                "type": {
+                                    "type": 1,
+                                    "name": "BIRTHDAY"
+                                },
+                                "location": {
+                                    "lat": 10,
+                                    "long": 10,
+                                    "admin_level1": "Parla",
+                                    "admin_level2": "Madrid",
+                                    "country": "Spain"
+                                }
+                            },
+                            "personal_info": {
+                                "name": "Pepe1",
+                                "surnames": "Potamo",
+                                "phone": "0132456789"
+                            },
+                            "showroom": {
+                                "id": 2,
+                                "slug": "name",
+                                "score": 1,
+                                "type": "2",
+                                "provider": {
+                                    "id": "1",
+                                    "name": "name",
+                                    "slug": "name",
+                                    "phone": "915555555"
+                                },
+                                "vertical": {
+                                    "domain": "test.com"
+                                }
+                            },
+                            "information_bag": {
+                                "parameters": {
+                                    "observations": "This is great"
+                                }
+                            },
+                            "created_at": "2014-03-17CET13:46:27+0100",
+                            "email": {
+                                "email": "emailtest@email.com"
+                            },
+                            "id": "2"
+                        }
+                    ],
+                    "pagination": {
+                        "total_pages": 2,
+                        "current_page": 2,
+                        "items_per_page": 10,
+                        "total_items": 11
+                    }
+                }
 
-            }
-            }
+-
+    request:
+        method: GET
+        url: 'http://api.e-verticals.test/api/verticals?apikey=1234&canView=manager'
+        headers:
+            host: api.e-verticals.test
+            user-agent: 'Guzzle/3.8.1 curl/7.22.0 PHP/5.5.3-1+debphp.org~precise+2'
+            content-length: 0
+    response:
+        status: 200
+        headers:
+            Date: 'Wed, 09 Apr 2014 12:14:41 GMT'
+            Server: 'Apache/2.4.6 (Ubuntu)'
+            X-Powered-By: PHP/5.5.3-1+debphp.org~precise+2
+            Cache-Control: no-cache
+            X-Debug-Token: '214814'
+            X-Debug-Token-Link: /_profiler/214814
+            Transfer-Encoding: chunked
+            Content-Type: application/json
+        body: |
+                {
+                    "0":{"domain":"15anos.com.br","lang":"pt_BR","timezone":"","showrooms":{}},"1":{"domain":"15anosclick.com.br","lang":"pt_BR","timezone":"","showrooms":{}},"2":{"domain":"aniversarioclick.com","lang":"es_ES","timezone":"","showrooms":{}},"3":{"domain":"aniversarioclick.com.br","lang":"pt_BR","timezone":"","showrooms":{}},"4":{"domain":"batessimoecomunioneclick.it","lang":"it_IT","timezone":"","showrooms":{}},"5":{"domain":"batizadoclick.com","lang":"pt_BR","timezone":"","showrooms":{}},"6":{"domain":"battesimoecomunioneclick.it","lang":"it_IT","timezone":"","showrooms":{}},"7":{"domain":"buffetclick.com.br","lang":"pt_BR","timezone":"","showrooms":{}},"8":{"domain":"celebracionclick.com","lang":"es_ES","timezone":"","showrooms":{}},"9":{"domain":"compleannoclick.it","lang":"it_IT","timezone":"","showrooms":{}},"10":{"domain":"cumpleclick.com","lang":"es_ES","timezone":"","showrooms":{}},"11":{"domain":"cumpleclick.com.mx","lang":"es_MX","timezone":"","showrooms":{}},"12":{"domain":"espacioclick.com","lang":"es_ES","timezone":"","showrooms":{}},"13":{"domain":"espacioclick.com.mx","lang":"es_MX","timezone":"","showrooms":{}},"14":{"domain":"espacioclick.es","lang":"es_ES","timezone":"","showrooms":{}},"15":{"domain":"espacoclick.pt","lang":"pt_PT","timezone":"","showrooms":{}},"16":{"domain":"espacoeventoclick.com.br","lang":"pt_BR","timezone":"","showrooms":{}},"17":{"domain":"eventoclick.com","lang":"es_ES","timezone":"","showrooms":{}},"18":{"domain":"eventoclick.com.br","lang":"pt_BR","timezone":"","showrooms":{}},"19":{"domain":"eventoclick.com.mx","lang":"es_MX","timezone":"","showrooms":{}},"20":{"domain":"eventoclick.it","lang":"it_IT","timezone":"","showrooms":{}},"21":{"domain":"eventoclick.pt","lang":"pt_PT","timezone":"","showrooms":{}},"22":{"domain":"festaclick.com.br","lang":"pt_BR","timezone":"","showrooms":{}},"23":{"domain":"festaclick.it","lang":"it_IT","timezone":"","showrooms":{}},"24":{"domain":"festaclick.pt","lang":"pt_PT","timezone":"","showrooms":{}},"25":{"domain":"festasclick.com.br","lang":"pt_BR","timezone":"","showrooms":{}},"26":{"domain":"fiestaclick.com.mx","lang":"es_MX","timezone":"","showrooms":{}},"27":{"domain":"fiestaclick.es","lang":"es_ES","timezone":"","showrooms":{}},"28":{"domain":"fiestaclick.mx","lang":"es_MX","timezone":"","showrooms":{}},"29":{"domain":"formaturaclick.com.br","lang":"pt_BR","timezone":"","showrooms":{}},"30":{"domain":"graduacionesclick.mx","lang":"es_MX","timezone":"","showrooms":{}},"31":{"domain":"laureaclick.it","lang":"it_IT","timezone":"","showrooms":{}},"32":{"domain":"migraduacionclick.com.mx","lang":"es_MX","timezone":"","showrooms":{}},"33":{"domain":"quinceclick.mx","lang":"es_MX","timezone":"","showrooms":{}},"34":{"domain":"spazieventiclick.it","lang":"it_IT","timezone":"","showrooms":{}},"35":{"domain":"test.com","lang":"es_ES","timezone":"","showrooms":{}},"36":{"domain":"xvclick.com.mx","lang":"es_MX","timezone":"","showrooms":{}}
+                }
