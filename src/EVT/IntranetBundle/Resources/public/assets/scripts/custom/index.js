@@ -1,3 +1,4 @@
+var genericDateFormat = 'DD/MM/YYYY';
 var Index = function () {
 
 
