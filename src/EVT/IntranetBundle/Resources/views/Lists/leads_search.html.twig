@@ -10,19 +10,14 @@
     </div>
     <div class="portlet-body form">
         <!-- BEGIN FORM-->
-        <form action="/employee/leads" method="get" class="form-horizontal">
+        <form action="" method="get" class="form-horizontal">
             <div class="form-body">
                 <div class="row">
                     <div class="col-md-3">
                         <div class="form-group">
                             <label class="control-label col-md-4">{{ "vertical"|trans }}</label>
                             <div class="col-md-8">
-                                <select name="vertical" id="select2_sample4" class="form-control select2">
-                                    <option data-flag="ww" value="">{{ "all"|trans }}</option>
-                                    {% for vertical in verticals %}
-                                    <option data-flag="{{ vertical.lang[3:] | lower }}" value="{{ vertical.domain }}">{{ vertical.domain }}</option>
-                                    {% endfor %}
-                                </select>
+                                {% include 'EVTIntranetBundle:Filters:vertical.html.twig' %}
                             </div>
                         </div>
                     </div>
@@ -30,7 +25,7 @@
                         <div class="form-group">
                             <label class="control-label col-md-4">{{ "event.location.level2"|trans }}</label>
                             <div class="col-md-8">
-                                <input name="location_level2" type="text" class="form-control" placeholder="El Escorial">
+                                <input name="location_level2" type="text" class="form-control" placeholder="Madrid" value="{{ app.request.get('location_level2') }}">
                             </div>
                         </div>
                     </div>
@@ -39,30 +34,35 @@
                         <div class="form-group">
                             <label class="control-label col-md-4">{{ "event.type"|trans }}</label>
                             <div class="col-md-8">
+                                {% set eventsType = {
+                                    1:'BIRTHDAY',
+                                    2:'ANNIVERSARY',
+                                    3:'CHRISTENING',
+                                    4:'COMMUNION',
+                                    5:'FAMILY_CELEBRATION',
+                                    6:'DEBS',
+                                    7:'XV_YEARS',
+                                    8:'CORPORATE',
+                                    9:'GRADUATION',
+                                    10:'MEMORIAL',
+                                    11:'RETIREMENT',
+                                    12:'ENGAGEMENT_PARTY',
+                                    13:'PARTY',
+                                    14:'CHRISTMAS',
+                                    15:'WEDDING',
+                                    16:'DIVORCE',
+                                    17:'CATERING',
+                                    18:'BUFFET',
+                                    19:'BAR_MITZVAH',
+                                    20:'GENERIC_SPACE',
+                                    21:'UNKNOWN'
+                                } %}
                                 <select name="event_type" class="form-control input-small select2me" data-placeholder="Select...">
                                     <option value="">{{ "all"|trans }}</option>
-                                    <option value="1">BIRTHDAY</option>
-                                    <option value="2">ANNIVERSARY</option>
-                                    <option value="3">CHRISTENING</option>
-                                    <option value="4">COMMUNION</option>
-                                    <option value="5">FAMILY_CELEBRATION</option>
-                                    <option value="6">DEBS</option>
-                                    <option value="7">XV_YEARS</option>
-                                    <option value="8">CORPORATE</option>
-                                    <option value="9">GRADUATION</option>
-                                    <option value="10">MEMORIAL</option>
-                                    <option value="11">RETIREMENT</option>
-                                    <option value="12">ENGAGEMENT_PARTY</option>
-                                    <option value="13">PARTY</option>
-                                    <option value="14">CHRISTMAS</option>
-                                    <option value="15">WEDDING</option>
-                                    <option value="16">DIVORCE</option>
-                                    <option value="17">CATERING</option>
-                                    <option value="18">BUFFET</option>
-                                    <option value="19">BAR_MITZVAH</option>
-                                    <option value="20">GENERIC_SPACE</option>
-                                    <option value="21">UNKNOWN</option>
-                                </select>
+                                    {% for key, eventType in eventsType %}
+                                        <option value="{{ key }}" {% if app.request.get('event_type')==key %}selected{% endif %}>{{ eventType }}</option>
+                                    {% endfor %}
+                                  </select>
                             </div>
                         </div>
                     </div>
@@ -70,15 +70,7 @@
                         <div class="form-group">
                             <label class="control-label col-md-4">{{ "created.at"|trans }}</label>
                             <div class="col-md-8">
-                                <div id="reportrange_create" class="btn default">
-                                    <input type="hidden" name="create_start" id="reportrange_create_start">
-                                    <input type="hidden" name="create_end" id="reportrange_create_end">
-                                    <i class="fa fa-calendar"></i>
-                                    &nbsp;
-                                                    <span>
-                                                    </span>
-                                    <b class="fa fa-angle-down"></b>
-                                </div>
+                                {% include 'EVTIntranetBundle:Filters:dateCreateLead.html.twig' %}
                             </div>
                         </div>
                     </div>
@@ -89,7 +81,7 @@
                         <div class="form-group">
                             <label class="control-label col-md-4">{{ "provider"|trans }}</label>
                             <div class="col-md-8">
-                                <input name='provider' type="text" class="form-control" placeholder="Chee Kin">
+                                {% include 'EVTIntranetBundle:Filters:provider.html.twig' %}
                             </div>
                         </div>
                     </div>
@@ -97,7 +89,7 @@
                         <div class="form-group">
                             <label class="control-label col-md-4">{{ "event.location.level1"|trans }}</label>
                             <div class="col-md-8">
-                                <input name="location_level1" type="text" class="form-control" placeholder="Madrid">
+                                <input name="location_level1" type="text" class="form-control" placeholder="City" value="{{ app.request.get('location_level1') }}">
                             </div>
                         </div>
                     </div>
@@ -107,8 +99,8 @@
                             <div class="col-md-8">
                                 <select name='lead_status' class="form-control input-small select2me" data-placeholder="Select...">
                                     <option value="">{{ "all"|trans }}</option>
-                                    <option value="read">{{ "lead.status.read"|trans }}</option>
-                                    <option value="unread">{{ "lead.status.unread"|trans }}</option>
+                                    <option value="read" {% if app.request.get('lead_status') == 'read' %}selected{% endif %}>{{ "lead.status.read"|trans }}</option>
+                                    <option value="unread" {% if app.request.get('lead_status') == 'unread' %}selected{% endif %}>{{ "lead.status.unread"|trans }}</option>
                                 </select>
                             </div>
                         </div>
@@ -117,15 +109,7 @@
                         <div class="form-group">
                             <label class="control-label col-md-4">{{ "event.at"|trans }}</label>
                             <div class="col-md-8">
-                                <div id="reportrange" class="btn default">
-                                    <input type="hidden" name="event_start" id="reportrange_start">
-                                    <input type="hidden" name="event_end" id="reportrange_end">
-                                    <i class="fa fa-calendar"></i>
-                                    &nbsp;
-                                                    <span>
-                                                    </span>
-                                    <b class="fa fa-angle-down"></b>
-                                </div>
+                                {% include 'EVTIntranetBundle:Filters:dateEvent.html.twig' %}
                             </div>
                         </div>
                     </div>

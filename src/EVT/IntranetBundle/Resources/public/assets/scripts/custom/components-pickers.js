@@ -6,10 +6,13 @@ var ComponentsPickers = function () {
             return;
         }
 
+        var startDateEvent = ($('#reportrange_start').val() != '' ? moment($('#reportrange_start').val()) : moment().subtract('days', 29));
+        var endDateEvent = ($('#reportrange_end').val() != '' ? moment($('#reportrange_end').val()) : moment());
+
         $('#reportrange').daterangepicker({
                 opens: (App.isRTL() ? 'left' : 'right'),
-                startDate: moment().subtract('days', 29),
-                endDate: moment(),
+                startDate: startDateEvent,
+                endDate: endDateEvent,
                 minDate: '01/01/2014',
                 maxDate: '31/12/2020',
                 dateLimit: {
@@ -45,21 +48,24 @@ var ComponentsPickers = function () {
             },
             function (start, end) {
                 console.log("Callback has been called!");
-                $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+                $('#reportrange span').html(start.format(genericDateFormat) + ' - ' + end.format(genericDateFormat));
             }
         );
         //Set the initial state of the picker label
-        $('#reportrange span').html(moment().subtract('days', 29).format('MMMM D, YYYY') + ' - ' + moment().format('MMMM D, YYYY'));
+        $('#reportrange span').html( startDateEvent.format(genericDateFormat)+ ' - ' + endDateEvent.format(genericDateFormat));
 
         $('#reportrange').on('apply.daterangepicker', function(ev, picker) {
             $('#reportrange_start').val(picker.startDate.format('YYYY-MM-DD'));
             $('#reportrange_end').val(picker.endDate.format('YYYY-MM-DD'));
         });
 
+        var startDateCreate = ($('#reportrange_create_start').val() != '' ? moment($('#reportrange_create_start').val()) : moment().subtract('days', 29));
+        var endDateCreate = ($('#reportrange_create_end').val() != '' ? moment($('#reportrange_create_end').val()) : moment());
+
         $('#reportrange_create').daterangepicker({
                 opens: (App.isRTL() ? 'left' : 'right'),
-                startDate: moment().subtract('days', 29),
-                endDate: moment(),
+                startDate: startDateCreate,
+                endDate: endDateCreate,
                 minDate: '01/01/2014',
                 maxDate: '31/12/2020',
                 dateLimit: {
@@ -95,11 +101,11 @@ var ComponentsPickers = function () {
             },
             function (start, end) {
                 console.log("Callback has been called!");
-                $('#reportrange_create span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+                $('#reportrange_create span').html(start.format(genericDateFormat) + ' - ' + end.format(genericDateFormat));
             }
         );
         //Set the initial state of the picker label
-        $('#reportrange_create span').html(moment().subtract('days', 29).format('MMMM D, YYYY') + ' - ' + moment().format('MMMM D, YYYY'));
+        $('#reportrange_create span').html(startDateCreate.subtract('days', 29).format(genericDateFormat) + ' - ' + endDateCreate.format(genericDateFormat));
 
         $('#reportrange_create').on('apply.daterangepicker', function(ev, picker) {
             $('#reportrange_create_start').val(picker.startDate.format('YYYY-MM-DD'));

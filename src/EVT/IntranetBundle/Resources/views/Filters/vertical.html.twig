@@ -1,0 +1,6 @@
+<select name="vertical" id="select2_sample4" class="form-control select2">
+    <option data-flag="ww" value="">{{ "all"|trans }}</option>
+    {% for vertical in verticals %}
+        <option data-flag="{{ vertical.lang[3:] | lower }}" value="{{ vertical.domain }}" {% if vertical.domain==app.request.get('vertical') %}selected{% endif %}>{{ vertical.domain }}</option>
+    {% endfor %}
+</select>
