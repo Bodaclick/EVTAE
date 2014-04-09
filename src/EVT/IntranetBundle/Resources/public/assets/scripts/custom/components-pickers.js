@@ -105,7 +105,7 @@ var ComponentsPickers = function () {
             }
         );
         //Set the initial state of the picker label
-        $('#reportrange_create span').html(startDateCreate.subtract('days', 29).format(genericDateFormat) + ' - ' + endDateCreate.format(genericDateFormat));
+        $('#reportrange_create span').html(startDateCreate.format(genericDateFormat) + ' - ' + endDateCreate.format(genericDateFormat));
 
         $('#reportrange_create').on('apply.daterangepicker', function(ev, picker) {
             $('#reportrange_create_start').val(picker.startDate.format('YYYY-MM-DD'));

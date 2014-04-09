@@ -14,8 +14,19 @@ class StatsController extends Controller
      */
     public function indexAction(Request $request)
     {
-        $from_date = '2010-01-01';
-        $to_date = '2020-01-01';
+        $from_date = $request->query->get('create_start');
+        $to_date = $request->query->get('create_end');
+
+        if (empty($from_date)) {
+            $from_date = date('Y-m-d', strtotime("-30 days"));
+        }
+
+        if (empty($to_date)) {
+            $to_date = date('Y-m-d');
+        }
+
+        $verticalsResponse = $this->container->get('evt.core.client')
+            ->get('/api/verticals');
 
         $leadsResponse = $this->container->get('evt.core.client')
             ->get('/stats/leads?from_date='.$from_date.'&to_date='.$to_date);
@@ -25,7 +36,10 @@ class StatsController extends Controller
         $statsLeads['data'] = json_encode($leadsResponse->getBody());
         $content = $this->renderView(
             'EVTIntranetBundle:Stats:index.html.twig',
-            ['statsLeads' => $statsLeads]
+            [
+                'statsLeads' => $statsLeads,
+                'verticals' => $verticalsResponse->getBody()
+            ]
         );
         return new Response($content);
     }
