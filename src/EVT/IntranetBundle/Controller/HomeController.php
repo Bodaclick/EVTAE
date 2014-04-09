@@ -14,8 +14,8 @@ class HomeController extends Controller
      */
     public function indexAction(Request $request)
     {
-        $from_date = '2010-01-01';
-        $to_date = '2020-01-01';
+        $from_date = date('Y-m-d', strtotime("-30 days"));
+        $to_date = date('Y-m-d');
 
         $leadsResponse = $this->container->get('evt.core.client')
             ->get('/stats/leads?from_date='.$from_date.'&to_date='.$to_date);

@@ -75,12 +75,11 @@
                     <!-- END FORM-->
                 </div>
             </div>
-            <h3>Datas from {{ statsLeads.from_date }} to {{ statsLeads.to_date }}</h3>
             <!-- END PAGE HEADER-->
             <div class="portlet box grey">
                 <div class="portlet-title">
                     <div class="caption">
-                        <i class="fa fa-reorder"></i>Leads
+                        <i class="fa fa-reorder"></i>Leads from {{ statsLeads.from_date|date("d/m/Y") }} to {{ statsLeads.to_date|date("d/m/Y") }}
                     </div>
                 </div>
                 <div class="portlet-body">
