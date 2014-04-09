@@ -29,7 +29,6 @@
                 </div>
             </div>
             <!-- END PAGE HEADER-->
-            <h2>Datas from {{ statsLeads.from_date }} to {{ statsLeads.to_date }}</h2>
             <!-- BEGIN PAGE CONTENT-->
             <div class="row">
                 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
@@ -42,7 +41,7 @@
                                 {{ statsLeads.tot }}
                             </div>
                             <div class="desc">
-                                Leads
+                                Leads last 30 days
                             </div>
                         </div>
                         <a class="more" href="{{ path('evt_intranet_stats_index', { '_role': app.session.get('_role') }) }}">
