@@ -12,7 +12,14 @@ class Builder extends ContainerAware
         $menu = $factory->createItem('root');
         $menu->setChildrenAttribute('class', 'page-sidebar-menu');
 
-        $menu->addChild('Dashboard', array('route' => 'evt_intranet_home_index'))->setAttribute('icon', 'fa-home');
+        $menu->addChild(
+            $this->container->get('translator')->trans('dashboard'),
+            [
+                'route' => 'evt_intranet_home_index',
+                'routeParameters' => ['_role' => $this->container->get('session')->get('_role')]
+            ]
+        )->setAttribute('icon', 'fa-home');
+
         $menu->addChild(
             $this->container->get('translator')->trans('leads'),
             [
@@ -20,6 +27,7 @@ class Builder extends ContainerAware
                 'routeParameters' => ['_role' => $this->container->get('session')->get('_role')]
             ]
         )->setAttribute('icon', 'fa-exchange');
+
         $menu->addChild(
             $this->container->get('translator')->trans('showrooms'),
             [
@@ -28,7 +36,6 @@ class Builder extends ContainerAware
             ]
         )->setAttribute('icon', 'fa-ticket');
 
-        // if ($this->container->get('security.context')->isGranted(['ROLE_EMPLOYEE'])) {}
         $menu->addChild(
             $this->container->get('translator')->trans('stats'),
             [
@@ -36,7 +43,8 @@ class Builder extends ContainerAware
                 'routeParameters' => ['_role' => $this->container->get('session')->get('_role')]
             ]
         )->setAttribute('icon', 'fa-bar-chart-o');
-        if ($this->container->get('security.context')->isGranted(['ROLE_EMPLOYEE'])){
+
+        if ($this->container->get('security.context')->isGranted(['ROLE_EMPLOYEE'])) {
             $menu->addChild(
                 $this->container->get('translator')->trans('managers'),
                 [

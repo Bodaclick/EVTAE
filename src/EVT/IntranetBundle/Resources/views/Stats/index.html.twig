@@ -28,7 +28,54 @@
                     <!-- END PAGE TITLE & BREADCRUMB-->
                 </div>
             </div>
-            <h2>Datas from {{ statsLeads.from_date }} to {{ statsLeads.to_date }}</h2>
+            <div class="portlet box green">
+                <div class="portlet-title">
+                    <div class="caption">
+                        {{ "search"|trans }}
+                    </div>
+                    <div class="tools">
+                        <a href="javascript:;" class="collapse">
+                        </a>
+                    </div>
+                </div>
+                <div class="portlet-body form">
+                    <!-- BEGIN FORM-->
+                    <form action="" method="get" class="form-horizontal">
+                        <div class="form-body">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-4">{{ "vertical"|trans }}</label>
+                                        <div class="col-md-8">
+                                            {% include 'EVTIntranetBundle:Filters:vertical.html.twig' %}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-4">{{ "created.at"|trans }}</label>
+                                        <div class="col-md-8">
+                                            {% include 'EVTIntranetBundle:Filters:dateCreateLead.html.twig' %}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-actions fluid">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="col-md-offset-8 col-md-4">
+                                        <button type="submit" class="btn green">Submit</button>
+                                        <button type="button" class="btn default">Reset</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <!-- END FORM-->
+                </div>
+            </div>
+            <h3>Datas from {{ statsLeads.from_date }} to {{ statsLeads.to_date }}</h3>
             <!-- END PAGE HEADER-->
             <div class="portlet box grey">
                 <div class="portlet-title">

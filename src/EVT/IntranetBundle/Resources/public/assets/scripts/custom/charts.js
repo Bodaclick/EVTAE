@@ -8,27 +8,6 @@ var Charts = function () {
                 return;
             }
 
-            var data = [];
-            var totalPoints = 250;
-
-            // random data generator for plot charts
-
-            function getRandomData() {
-                if (data.length > 0) data = data.slice(1);
-                // do a random walk
-                while (data.length < totalPoints) {
-                    var prev = data.length > 0 ? data[data.length - 1] : 50;
-                    var y = prev + Math.random() * 10 - 5;
-                    if (y < 0) y = 0;
-                    if (y > 100) y = 100;
-                    data.push(y);
-                }
-                // zip the generated y values with the x values
-                var res = [];
-                for (var i = 0; i < data.length; ++i) res.push([i, data[i]])
-                return res;
-            }
-
             function chart5() {
                 if (typeof statsLeadRawData == 'undefined') return;
                 var leads = [];
@@ -36,10 +15,12 @@ var Charts = function () {
                 var leadsPorDate = [];
 
                 for (var i = 0; i < statsLeadRawData.length; i += 1) {
-                    if (leadsPorDate[statsLeadRawData[i].date] != undefined) {
-                        leadsPorDate[statsLeadRawData[i].date] += statsLeadRawData[i].number;
-                    } else {
-                        leadsPorDate[statsLeadRawData[i].date] = statsLeadRawData[i].number;
+                    if ($('#select2_sample4').val() == '' || ($('#select2_sample4').val() == statsLeadRawData[i].vertical)) {
+                        if (leadsPorDate[statsLeadRawData[i].date] != undefined) {
+                            leadsPorDate[statsLeadRawData[i].date] += statsLeadRawData[i].number;
+                        } else {
+                            leadsPorDate[statsLeadRawData[i].date] = statsLeadRawData[i].number;
+                        }
                     }
                 }
 
