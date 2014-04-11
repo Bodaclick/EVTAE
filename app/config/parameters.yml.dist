@@ -20,3 +20,4 @@ parameters:
     redis_default: redis://localhost
     redis_session: redis://localhost
     media_domain: ''
+    google_analytics_code: ''
