@@ -17,7 +17,9 @@ class LeadController extends Controller
     {
         $filter = '';
         foreach ($request->query as $key => $param) {
-            if ($param != '') $filter .= '&' . $key . '=' . $param;
+            if ($param != '') {
+                $filter .= '&' . $key . '=' . $param;
+            }
         }
 
         $leadsResponse = $this->container->get('evt.core.client')

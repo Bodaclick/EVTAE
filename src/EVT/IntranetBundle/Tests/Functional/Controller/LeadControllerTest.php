@@ -115,7 +115,9 @@ class LeadControllerTest extends WebTestCase
 
         $crawler = $this->client->request(
             'GET',
-            '/manager/leads?vertical=test.com&location_level2=Madrid&event_type=1&create_start=2014-03-11&create_end=2014-04-09&provider=comercial+name&location_level1=Parla&lead_status=read&event_start=2014-03-11&event_end=2014-04-09'
+            '/manager/leads?vertical=test.com&location_level2=Madrid&event_type=1&create_start=2014-03-11'.
+            '&create_end=2014-04-09&provider=comercial+name&location_level1=Parla&lead_status=read&'.
+            'event_start=2014-03-11&event_end=2014-04-09'
         );
 
         $this->assertEquals(200, $this->client->getResponse()->getStatusCode());
