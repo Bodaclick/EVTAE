@@ -1,275 +1,360 @@
-<?xml version="1.0" encoding="utf-8"?>
-<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
-  <file source-language="es" datatype="plaintext" original="file.ext">
+<?xml version="1.0" ?><xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file datatype="plaintext" original="file.ext" source-language="en">
     <body>
       <trans-unit id="e8d22907628a82c06677e5b29ecb9f1e" resname="mail.do_not_respond">
         <source>mail.do_not_respond</source>
-        <target>Este es un mail automatico, no conteste directamente. ¡Gracias!</target>
+        <target>Este es un email automático, por favor no responda</target>
+        
       </trans-unit>
       <trans-unit id="7af5b25d6bd2bc74cb7dd3adcbefb2e7" resname="title.new.lead.manager">
         <source>title.new.lead.manager</source>
-        <target>Nueva solicitud de información</target>
+        <target>No hay solicitud de información</target>
+        
       </trans-unit>
       <trans-unit id="44fcc3e3657df3aa5d6c6405b29bf9fa" resname="body.new.lead.manager">
         <source>body.new.lead.manager</source>
-        <target>Estimado cliente, ha recibido una nueva solicitud de información</target>
+        <target>Estimado cliente, ha recibido una solicitud de información</target>
+        
       </trans-unit>
       <trans-unit id="60cc00aae82fb1783a51fcaebfe652e9" resname="lead.user.name">
         <source>lead.user.name</source>
         <target>Nombre</target>
+        
       </trans-unit>
       <trans-unit id="4fd99953bb6a15610b72266647b5568a" resname="lead.user.surname">
         <source>lead.user.surname</source>
-        <target>Apellidos</target>
+        <target>Apellido</target>
+        
       </trans-unit>
       <trans-unit id="cecf5258aed13bf8b0e3bd25e7800aa3" resname="lead.user.email">
         <source>lead.user.email</source>
         <target>Email</target>
+        
       </trans-unit>
       <trans-unit id="33916506cf34f9e9c324bd136cfda525" resname="lead.user.phone">
         <source>lead.user.phone</source>
         <target>Teléfono</target>
+        
       </trans-unit>
       <trans-unit id="f2e7cce2412cc9f5aa9445320ecc850d" resname="lead.event.date">
         <source>lead.event.date</source>
         <target>Fecha del evento</target>
+        
       </trans-unit>
       <trans-unit id="8da7fdc32929336b3a5326c83979a9f1" resname="lead.event.type">
         <source>lead.event.type</source>
-        <target>Tipo evento</target>
+        <target>Tipo de evento</target>
+        
       </trans-unit>
       <trans-unit id="ed74d9fce6c5bcefd851fc5e44aaa562" resname="lead.event.location">
         <source>lead.event.location</source>
         <target>Localización</target>
+        
       </trans-unit>
       <trans-unit id="841ca57b308b48f141b90b8b43e88030" resname="lead.date">
         <source>lead.date</source>
         <target>Fecha</target>
+        
       </trans-unit>
       <trans-unit id="32243e02290718754c31f02046cefd4b" resname="lead.observations">
         <source>lead.observations</source>
-        <target>Observaciones</target>
+        <target>Comentarios</target>
+        
       </trans-unit>
       <trans-unit id="07d17b50644db4a1839f387953c1a48f" resname="title.new.lead.user">
         <source>title.new.lead.user</source>
-        <target>Tu solicitud ha sido enviada </target>
+        <target>Tu solicitud ha sido enviada</target>
+        
       </trans-unit>
       <trans-unit id="e5c465ea6e972409ebfd868b898924fb" resname="body.new.lead.user">
         <source>body.new.lead.user</source>
-        <target>Muchas gracias, pronto se pondrán en contacto contigo.. 
-¡Esperamos que tengas una feliz celebración!</target>
+        <target>Muchas gracias, pronto contactaremos contigo
+
+¡Esperamos que disfrutes de tu evento!</target>
+        
       </trans-unit>
       <trans-unit id="57d11c55a29abe439df7f79485bf99ed" resname="title.resetPassword.user">
         <source>title.resetPassword.user</source>
-        <target>Solicitud de nueva contraseña</target>
+        <target>Solicite una nueva contraseña</target>
+        
       </trans-unit>
       <trans-unit id="75853781e9c55582bf1a7c3be2405821" resname="new.password.text">
         <source>new.password.text</source>
-        <target>Estimado cliente, esta es su nueva contraseña
+        <target>Estimado cliente,
+Esta es su nueva contraseña.
 
-Estamos aquí para ayudarle, no dude en contactar con nuestro servicio técnico para cualquier otra duda o incidencia.
+Estamos aquí para ayudarle, por favor contacte con nuestro servicio técnico para cualquier duda o problema.
 
 ¡Que tenga un buen día!</target>
+        
       </trans-unit>
       <trans-unit id="1bc6dca02c0f7e7f698e4af7c35fdb34" resname="new.password">
         <source>new.password</source>
         <target>Contraseña</target>
+        
       </trans-unit>
       <trans-unit id="5f0f8c6bf02d796170290b0b6f7c3533" resname="title.welcome.user">
         <source>title.welcome.user</source>
         <target>Bienvenid@</target>
+        
       </trans-unit>
       <trans-unit id="6096d7a4784a96af2eca47f23463278b" resname="body.new.lead.user.previo.mostrar.datos">
         <source>body.new.lead.user.previo.mostrar.datos</source>
         <target>Estos son tus datos:</target>
+        
       </trans-unit>
       <trans-unit id="8256d684692099c61abae9a90f67a7d5" resname="body.welcome.user.hi">
         <source>body.welcome.user.hi</source>
         <target>Hola</target>
+        
       </trans-unit>
       <trans-unit id="c4676aae7c2af879ceaf97dcedb0da46" resname="body.welcome.user.to">
         <source>body.welcome.user.to</source>
-        <target>Bienvenid@ a </target>
+        <target>Bienvenido a </target>
+        
       </trans-unit>
       <trans-unit id="2be87cf45a375b58b3d70ef7a5d6fab7" resname="body.welcome.user.restomail">
         <source>body.welcome.user.restomail</source>
-        <target>Gracias por registrarte. Todo lo que necesitas para celebrar tu evento podrás encontrarlo aquí.
-
-¡Esperamos que disfrutes mucho de tu celebración!
+        <target>Muchas gracias. Aquí encontrarás todo lo que necesitas para tu evento. 
+¡Esperamos que disfrute de su evento!
 
 Que tengas buen día..</target>
+        
       </trans-unit>
       <trans-unit id="7c6ced792395bde648fdc4a81f1b0371" resname="viewmore">
         <source>viewmore</source>
-        <target>__viewmore</target>
+        <target>__Ver más</target>
+        
       </trans-unit>
       <trans-unit id="7d49d6ff7d16a2bdffbe2e925c6bbcbe" resname="login.account">
         <source>login.account</source>
-        <target>__login.account</target>
+        <target>__Entre en su cuenta</target>
+        
       </trans-unit>
       <trans-unit id="14c4b06b824ec593239362517f538b29" resname="username">
         <source>username</source>
-        <target>__username</target>
+        <target>__Nombre de usuario</target>
+        
       </trans-unit>
       <trans-unit id="5f4dcc3b5aa765d61d8327deb882cf99" resname="password">
         <source>password</source>
-        <target>__password</target>
+        <target>__Contraseña</target>
+        
       </trans-unit>
       <trans-unit id="eaa964aea1d0e8c3c481b7e78dde166e" resname="remember.me">
         <source>remember.me</source>
-        <target>__remember.me</target>
+        <target>__Recuérdame</target>
+        
       </trans-unit>
       <trans-unit id="d56b699830e77ba53855679cb1d252da" resname="login">
         <source>login</source>
         <target>__login</target>
+        
       </trans-unit>
       <trans-unit id="ede8ba59a459b794433b054730f6bebd" resname="forgot.password">
         <source>forgot.password</source>
-        <target>__forgot.password</target>
+        <target>__Olvidó su contraseña</target>
+        
       </trans-unit>
       <trans-unit id="20b0b785d57d0932e336cf4fbea1fa6a" resname="no.worries">
         <source>no.worries</source>
-        <target>__no.worries</target>
+        <target>__No se preocupe</target>
+        
       </trans-unit>
       <trans-unit id="6c92285fa6d3e827b198d120ea3ac674" resname="here">
         <source>here</source>
-        <target>__here</target>
+        <target>__aquí</target>
+        
       </trans-unit>
       <trans-unit id="6113fcf531e09cf5265da6bb6963d50b" resname="to.reset.password">
         <source>to.reset.password</source>
-        <target>__to.reset.password</target>
+        <target>__puede cambiar su contraseña</target>
+        
       </trans-unit>
       <trans-unit id="16ff5c62feadf52d81dc8a3dee51f0c6" resname="forget.password">
         <source>forget.password</source>
-        <target>__forget.password</target>
+        <target>__olvidó su contraseña</target>
+        
       </trans-unit>
       <trans-unit id="a64cc9c6b71d7d1e248ea3464b183124" resname="enter.email.address.reset.password">
         <source>enter.email.address.reset.password</source>
-        <target>__enter.email.address.reset.password</target>
+        <target>__escriba aquí su email para resetear su contraseña</target>
+        
       </trans-unit>
       <trans-unit id="469bba0a564235dfceede42db14f17b0" resname="back">
         <source>back</source>
-        <target>__back</target>
+        <target>__volver</target>
+        
       </trans-unit>
       <trans-unit id="c79bdf421714f5087fc34b7c538b6807" resname="submit">
         <source>submit</source>
-        <target>__submit</target>
+        <target>__enviar</target>
+        
       </trans-unit>
       <trans-unit id="59408631f424a664be9e996e438aed40" resname="email.sent.by.email">
         <source>email.sent.by.email</source>
-        <target>__email.sent.by.email</target>
+        <target>__enviado por email</target>
+        
       </trans-unit>
       <trans-unit id="106a6c241b8797f52e1e77317b96a201" resname="home">
         <source>home</source>
         <target>__home</target>
+        
       </trans-unit>
       <trans-unit id="51d982feb4f8ff2ed3f2404f1fa33de8" resname="products.title">
         <source>products.title</source>
         <target>Productos</target>
+        
       </trans-unit>
       <trans-unit id="246834bcac42d2f8f002b53c1a71df3c" resname="products.intro.title">
         <source>products.intro.title</source>
-        <target>¡HAZ CRECER TU NEGOCIO!</target>
+        <target>INCREMENTE SU NEGOCIO</target>
+        
       </trans-unit>
       <trans-unit id="872f644cb114b69a5e6f6b7488692f1d" resname="products.intro">
         <source>products.intro</source>
-        <target>Te presentamos los beneficios de cada uno de nuestros productos. Elige el que más se adapte a tus necesidades y consigue más clientes</target>
+        <target>Le presentamos los beneficios de cada uno de nuestros productos. Elija el que más se adapte a sus necesidades y consiga más clientes</target>
+        
       </trans-unit>
       <trans-unit id="4ace1c17ee023177fdf3e8dee80aadbf" resname="products.free.name">
         <source>products.free.name</source>
-        <target>Gratis</target>
+        <target>GRATIS</target>
+        
       </trans-unit>
       <trans-unit id="1e656b77e8a8a6b2640b5712673689fd" resname="products.free.1">
         <source>products.free.1</source>
-        <target>presencia en 1 web social</target>
+        <target>Presencia en 1 web de eventos sociales</target>
+        
       </trans-unit>
       <trans-unit id="466993cd0595d75936471867451987ea" resname="products.free.2">
         <source>products.free.2</source>
-        <target>contenido limitado</target>
+        <target>Contenido limitado</target>
+        
       </trans-unit>
       <trans-unit id="0d047982e1d88adc699f50a162b26433" resname="products.free.3">
         <source>products.free.3</source>
-        <target>información limitada de los leads</target>
+        <target>Información limitada de la solicitud</target>
+        
       </trans-unit>
       <trans-unit id="f03aa4b85629fe29c3f3295a6866b0f2" resname="products.free.add">
         <source>products.free.add</source>
-        <target>AÑADIR TU EMPRESA GRATIS</target>
+        <target>AÑADA SU EMPRESA GRATIS</target>
+        
       </trans-unit>
       <trans-unit id="f77ada3c7674e4dd93b12a961083ceb1" resname="products.silver.name">
         <source>products.silver.name</source>
-        <target>Silver</target>
+        <target>PLATA</target>
+        
       </trans-unit>
       <trans-unit id="e115e3aae042d7f381038d3edb9fd736" resname="products.silver.1">
         <source>products.silver.1</source>
-        <target>presencia en 1 web social</target>
+        <target>Presencia en 1 web de eventos sociales</target>
+        
       </trans-unit>
       <trans-unit id="1998763daa17593886144cdc6235e866" resname="products.silver.2">
         <source>products.silver.2</source>
-        <target>contenido %bold%personalizado%_bold%</target>
+        <target>Contenido personalizado</target>
+        
       </trans-unit>
       <trans-unit id="150592e96abb248374f375c63d030ce1" resname="products.silver.3">
         <source>products.silver.3</source>
-        <target>información %bold%completa%_bold% de los leads</target>
+        <target>Información completa de las solicitudes</target>
+        
       </trans-unit>
       <trans-unit id="3f6e0f16b491aee09b862258ae96b621" resname="products.silver.4">
         <source>products.silver.4</source>
-        <target>optimización SEO</target>
+        <target>Optimización SEO</target>
+        
       </trans-unit>
       <trans-unit id="a176da3ff235942491f2eda208d40fe8" resname="products.upgrade">
         <source>products.upgrade</source>
-        <target>CONTRATAR PAQUETE</target>
+        <target>CONTRATE PAQUETE</target>
+        
       </trans-unit>
       <trans-unit id="7f2618211f6ae3b6df68547a87fd695d" resname="products.gold.name">
         <source>products.gold.name</source>
-        <target>Gold</target>
+        <target>ORO</target>
+        
       </trans-unit>
       <trans-unit id="1a53a181ea560bdfad8559c2445c6f9c" resname="products.gold.1">
         <source>products.gold.1</source>
-        <target>presencia en %bold%4%_bold% web sociales</target>
+        <target>Presencia en 4 web de eventos sociales</target>
+        
       </trans-unit>
       <trans-unit id="4833ddb198ce3f8cf24b0891aecd39ef" resname="products.gold.2">
         <source>products.gold.2</source>
-        <target>contenido %bold%personalizado%_bold%</target>
+        <target>Contenido personalizado</target>
+        
       </trans-unit>
       <trans-unit id="e5477495d6da9c733fe2483182a24c54" resname="products.gold.3">
         <source>products.gold.3</source>
-        <target>información %bold%completa%_bold% de los leads</target>
+        <target>Información completa de los leads</target>
+        
       </trans-unit>
       <trans-unit id="d17d95c10e5b42871cbe36e92238a885" resname="products.gold.4">
         <source>products.gold.4</source>
-        <target>optimización SEO</target>
+        <target>Optimización SEO</target>
+        
       </trans-unit>
       <trans-unit id="52ed2f0a8625eda7483530fa18465a5a" resname="products.gold.5">
         <source>products.gold.5</source>
-        <target>Premium en 1 web social</target>
+        <target>Presencia Premium en 1 web de eventos sociales</target>
+        
       </trans-unit>
       <trans-unit id="2734b8ca0b72603c106c8f2b20c854df" resname="products.platinum.name">
         <source>products.platinum.name</source>
-        <target>Platinum</target>
+        <target>PLATINO</target>
+        
       </trans-unit>
       <trans-unit id="8f73fffbf36392ab9b29056cfae6e53f" resname="products.platinum.1">
         <source>products.platinum.1</source>
-        <target>presencia en %bold%5%_bold% web sociales</target>
+        <target>Presencia en 5 web de eventos sociales</target>
+        
       </trans-unit>
       <trans-unit id="bcb7d43ae0fc5ec6407e1e985a766215" resname="products.platinum.2">
         <source>products.platinum.2</source>
-        <target>contenido %bold%personalizado%_bold%</target>
+        <target>Contenido personalizado</target>
+        
       </trans-unit>
       <trans-unit id="cd07219b0de575ed0d3cba0e06b75bb2" resname="products.platinum.3">
         <source>products.platinum.3</source>
-        <target>información %bold%completa%_bold% de los leads</target>
+        <target>Información completa de las solicitudes</target>
+        
       </trans-unit>
       <trans-unit id="3deaa6abc5602482c0a315a1efa14b06" resname="products.platinum.4">
         <source>products.platinum.4</source>
-        <target>optimización SEO</target>
+        <target>Optimización SEO</target>
+        
       </trans-unit>
       <trans-unit id="763c1c653432ee2388c0ca8c41154c43" resname="products.platinum.5">
         <source>products.platinum.5</source>
-        <target>Premium en %bold%5%_bold% web sociales</target>
+        <target>Presencia en 5 web de eventos sociales</target>
+        
       </trans-unit>
       <trans-unit id="e1796b3c87e100001fda44ddd80ccf92" resname="products.mail">
         <source>products.mail</source>
-        <target>clients@e-verticals.com</target>
+        <target>support_sp@e-verticals.com</target>
+        
+      </trans-unit>
+      <trans-unit id="8585c845c302b51e8f2aba79ff05a637" resname="products.free.subject">
+        <source>products.free.subject</source>
+        <target>[PLAN-FREE] - Petición de información</target>
+        
+      </trans-unit>
+      <trans-unit id="145051b297898462a08a04a05a752777" resname="products.silver.subject">
+        <source>products.silver.subject</source>
+        <target>[PLAN-SILVER] - Petición de información</target>
+        
+      </trans-unit>
+      <trans-unit id="dea822fbfa9b59725a93fac9b21f95b6" resname="products.gold.subject">
+        <source>products.gold.subject</source>
+        <target>[PLAN-GOLD] - Petición de información</target>
+        
+      </trans-unit>
+      <trans-unit id="1c0b0a2d45ee85b4b359394323110e22" resname="products.planinum.subject">
+        <source>products.planinum.subject</source>
+        <target>[PLAN-PLATINUM] - Petición de información</target>
+        
       </trans-unit>
     </body>
   </file>

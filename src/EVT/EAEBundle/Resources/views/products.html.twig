@@ -1,4 +1,4 @@
-{%  extends '::basePublic.html.twig' %}
+{% extends '::basePublic.html.twig' %}
 {% block title %}{{ "products.title"|trans }}{% endblock %}
 {% block content %}
 <div class="container min-hight">
@@ -28,7 +28,7 @@
 					<li>&nbsp;</li>
 				</ul>
 				<div class="pricing-footer">
-					<a href="mailto:{{ "products.mail"|trans }}" target="_blank" class="btn theme-btn">{{ "products.free.add"|trans }}</a>  
+					<a href="mailto:{{ "products.mail"|trans }}?Subject={{ "products.free.subject" |trans | url_encode(true) }}" target="_blank" class="btn theme-btn">{{ "products.free.add"|trans }}</a>
 				</div>
 			</div>
 		</div>
@@ -47,7 +47,7 @@
 					<li>&nbsp;</li>
 				</ul>
 				<div class="pricing-footer">
-					<a href="mailto:{{ "products.mail"|trans }}" target="_blank" class="btn theme-btn">{{ "products.upgrade"|trans }}</a>  
+					<a href="mailto:{{ "products.mail"|trans }}?Subject={{ "products.silver.subject" |trans | url_encode(true) }}" target="_blank" class="btn theme-btn">{{ "products.upgrade"|trans }}</a>
 				</div>
 			</div>
 		</div>
@@ -66,7 +66,7 @@
 					<li>&nbsp;</li>
 				</ul>
 				<div class="pricing-footer">
-					<a href="mailto:{{ "products.mail"|trans }}" target="_blank" class="btn theme-btn">{{ "products.upgrade"|trans }}</a>  
+					<a href="mailto:{{ "products.mail"|trans }}?Subject={{ "products.gold.subject" |trans | url_encode(true) }}" target="_blank" class="btn theme-btn">{{ "products.upgrade"|trans }}</a>
 				</div>
 			</div>
 		</div>
@@ -85,7 +85,7 @@
 					<li>&nbsp;</li>
 				</ul>
 				<div class="pricing-footer">
-					<a href="mailto:{{ "products.mail"|trans }}" target="_blank" class="btn theme-btn">{{ "products.upgrade"|trans }}</a>  
+					<a href="mailto:{{ "products.mail"|trans }}?Subject={{ "products.planinum.subject" |trans | url_encode(true) }}" target="_blank" class="btn theme-btn">{{ "products.upgrade"|trans }}</a>
 				</div>
 			</div>
 		</div>
