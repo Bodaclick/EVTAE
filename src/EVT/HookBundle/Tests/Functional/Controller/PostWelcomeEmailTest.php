@@ -65,6 +65,6 @@ class PostWelcomeEmailTest extends WebTestCase
         $this->assertEquals('valid@email.com', key($message->getTo()));
         $this->assertContains('testUserName', $message->getBody());
         $this->assertContains('support@test.com', $message->getBody());
-        $this->assertContains('Gracias por registrarte', $message->getBody());
+        $this->assertContains('Hola testUserName Bienvenido a', $message->getBody());
     }
 }

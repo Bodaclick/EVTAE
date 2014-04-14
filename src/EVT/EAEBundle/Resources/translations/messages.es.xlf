@@ -8,7 +8,7 @@
       </trans-unit>
       <trans-unit id="7af5b25d6bd2bc74cb7dd3adcbefb2e7" resname="title.new.lead.manager">
         <source>title.new.lead.manager</source>
-        <target>No hay solicitud de información</target>
+        <target>Nueva solicitud de información</target>
         
       </trans-unit>
       <trans-unit id="44fcc3e3657df3aa5d6c6405b29bf9fa" resname="body.new.lead.manager">

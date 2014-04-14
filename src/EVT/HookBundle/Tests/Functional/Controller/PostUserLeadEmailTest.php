@@ -97,7 +97,7 @@ class PostUserLeadEmailTest extends WebTestCase
 
         // Asserting e-mail data
         $this->assertInstanceOf('Swift_Message', $message);
-        $this->assertEquals('Tu solicitud ha sido enviada  - test.com', $message->getSubject());
+        $this->assertEquals('Tu solicitud ha sido enviada - test.com', $message->getSubject());
         $this->assertEquals('no-reply@test.com', key($message->getFrom()));
         $this->assertEquals('valid@email.com', key($message->getTo()));
         $this->assertContains('support@test.com', $message->getBody());
