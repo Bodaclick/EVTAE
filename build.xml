@@ -22,6 +22,15 @@
     <delete includeemptydirs="true">
       <fileset dir="${basedir}/app/cache" includes="**/*"/>
     </delete>
+      <exec executable="php" failonerror="true">
+          <arg line="app/console doctrine:cache:clear-query"/>
+      </exec>
+      <exec executable="php" failonerror="true">
+          <arg line="app/console doctrine:cache:clear-metadata"/>
+      </exec>
+      <exec executable="php" failonerror="true">
+          <arg line="app/console cache:warmup"/>
+      </exec>
   </target>
 
   <target name="assets" description="Installs bundle assets in web directory">

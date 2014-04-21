@@ -3,6 +3,7 @@
 namespace EVT\IntranetBundle\Tests\Functional\Controller;
 
 use EVT\CoreClientBundle\Client\Response;
+use Predis\Client;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 use Symfony\Component\BrowserKit\Cookie;
 use Symfony\Component\Security\Core\Authentication\Token\UsernamePasswordToken;
@@ -28,7 +29,17 @@ class ManagerControllerTest extends WebTestCase
      */
     public function setUp()
     {
+        $predisClient = $this->getMockBuilder('Predis\Client')
+            ->disableOriginalConstructor()
+            ->setMethods(['get'])
+            ->getMock();
+
+        $predisClient->expects($this->atLeastOnce())
+            ->method('get')
+            ->will($this->returnValue('1'));
+
         $this->client = static::createClient();
+        $this->client->getContainer()->set('snc_redis.auth', $predisClient);
     }
 
     /**

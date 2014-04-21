@@ -44,14 +44,26 @@ class Builder extends ContainerAware
             ]
         )->setAttribute('icon', 'fa-bar-chart-o');
 
-        if ($this->container->get('security.context')->isGranted(['ROLE_EMPLOYEE'])) {
+        $routeName = 'evt_intranet_managers_list';
+        if ($this->container->get('security.context')->isGranted('view', $routeName)) {
             $menu->addChild(
                 $this->container->get('translator')->trans('managers'),
                 [
-                    'route' => 'evt_intranet_managers_list',
+                    'route' => $routeName,
                     'routeParameters' => ['_role' => $this->container->get('session')->get('_role')]
                 ]
             )->setAttribute('icon', 'fa-group');
+        }
+
+        $routeName = 'evt_intranet_employees_new';
+        if ($this->container->get('security.context')->isGranted('view', $routeName)) {
+            $menu->addChild(
+                $this->container->get('translator')->trans('employees'),
+                [
+                    'route' => $routeName,
+                    'routeParameters' => ['_role' => $this->container->get('session')->get('_role')]
+                ]
+            )->setAttribute('icon', 'fa-gears');
         }
 
         return $menu;

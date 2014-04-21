@@ -2,3 +2,12 @@ services:
     evt_user_provider:
         class: "%evt_user_provider.class%"
         arguments: [@evt.core.client, @session]
+    evt_url_voter:
+        class: EVT\IntranetBundle\Security\Authorization\Voter\UrlVoter
+        arguments: [@snc_redis.auth]
+        public:     false
+        tags:
+            - { name: security.voter }
+    evt_auth_manager:
+        class: EVT\IntranetBundle\Model\Manager\AuthBlender
+        arguments: [@doctrine.orm.entity_manager, @snc_redis.default]

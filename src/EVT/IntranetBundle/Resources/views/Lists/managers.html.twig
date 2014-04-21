@@ -8,6 +8,9 @@
                 <div class="col-md-12">
                     <!-- BEGIN PAGE TITLE & BREADCRUMB-->
                     <h3 class="page-title">{{ "managers" |trans}}</h3>
+                    {% if is_granted('edit', app.request.attributes.get('_route')) %}
+                        can edit
+                    {% endif %}
                     <ul class="page-breadcrumb breadcrumb">
                         <li>
                             <i class="fa fa-group"></i>
