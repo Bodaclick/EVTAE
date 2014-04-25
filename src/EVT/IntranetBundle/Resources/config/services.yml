@@ -10,4 +10,4 @@ services:
             - { name: security.voter }
     evt_auth_manager:
         class: EVT\IntranetBundle\Model\Manager\AuthBlender
-        arguments: [@doctrine.orm.entity_manager, @snc_redis.default]
+        arguments: [@doctrine.orm.entity_manager, @snc_redis.auth]

@@ -41,17 +41,6 @@ class ClientSecurityTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals([], $sResponse->getBody());
     }
 
-    public function testSecurizeResponseRemoveFields()
-    {
-        $sClient = new ClientSecurity($this->getContainer(), 'apikeyValue');
-
-        $response = new Response(200, null, '{"data":"test", "obj":{ "persist":"noRemove", "removeMe":"toRemove" }}');
-        $sResponse = $sClient->securizeResponse($response);
-        $this->assertEquals(200, $sResponse->getStatusCode());
-        $this->markTestIncomplete('Not to implements yet');
-        $this->assertEquals(['data'=>'test', 'obj' => ['persist' => 'noRemove']], $sResponse->getBody());
-    }
-
     public function testSecurizeUrlWithNoTocken()
     {
         $secContainerMock = $this->getMockBuilder('Symfony\Component\Security\Core\SecurityContextInterface')
