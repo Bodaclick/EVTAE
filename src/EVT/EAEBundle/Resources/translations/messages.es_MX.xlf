@@ -354,6 +354,31 @@ Que tengas un lindo día</target>
         <target>[PLAN-PLATINUM] - Petición de información</target>
         
       </trans-unit>
+      <trans-unit id="785fa5247813fd6effd9d1986eac1444" resname="home.title">
+        <source>home.title</source>
+        <target>Home</target>
+        
+      </trans-unit>
+      <trans-unit id="db667a8e02445ccb0a1fc3ed7a90d8b2" resname="home.slider.1.title">
+        <source>home.slider.1.title</source>
+        <target>¡Posiciona tu negocio en fiestas!</target>
+        
+      </trans-unit>
+      <trans-unit id="e5071b2d94fb99f8c4d0db6b73c16a06" resname="home.slider.1.subtitle">
+        <source>home.slider.1.subtitle</source>
+        <target>Haz crecer tu negocio</target>
+        
+      </trans-unit>
+      <trans-unit id="562541361180b61cd2b18fd303af9835" resname="home.slider.1.description">
+        <source>home.slider.1.description</source>
+        <target>En México existen más de 29 millones de internautas que celebran al menos una fiesta al año.</target>
+        
+      </trans-unit>
+      <trans-unit id="4d42e2b38984e9f46e1b8b00941aa70e" resname="home.slider.1.button">
+        <source>home.slider.1.button</source>
+        <target>INFÓRMESE AHORA</target>
+        
+      </trans-unit>
     </body>
   </file>
 </xliff>

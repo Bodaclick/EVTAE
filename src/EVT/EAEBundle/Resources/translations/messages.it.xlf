@@ -353,6 +353,31 @@ Buona giornata</target>
         <target>[PLAN-PLATINUM] - Richiesta di informazioni</target>
         
       </trans-unit>
+      <trans-unit id="785fa5247813fd6effd9d1986eac1444" resname="home.title">
+        <source>home.title</source>
+        <target>Home</target>
+        
+      </trans-unit>
+      <trans-unit id="db667a8e02445ccb0a1fc3ed7a90d8b2" resname="home.slider.1.title">
+        <source>home.slider.1.title</source>
+        <target>Posiziona la tua attivitá per le Feste!</target>
+        
+      </trans-unit>
+      <trans-unit id="e5071b2d94fb99f8c4d0db6b73c16a06" resname="home.slider.1.subtitle">
+        <source>home.slider.1.subtitle</source>
+        <target>Fai crescere il tuo business</target>
+        
+      </trans-unit>
+      <trans-unit id="562541361180b61cd2b18fd303af9835" resname="home.slider.1.description">
+        <source>home.slider.1.description</source>
+        <target>In Italia ci sono 38 milioni di persone che usano internet e organizzano almeno una festa all’anno.</target>
+        
+      </trans-unit>
+      <trans-unit id="4d42e2b38984e9f46e1b8b00941aa70e" resname="home.slider.1.button">
+        <source>home.slider.1.button</source>
+        <target>INFORMATI ADESSO</target>
+        
+      </trans-unit>
     </body>
   </file>
 </xliff>
