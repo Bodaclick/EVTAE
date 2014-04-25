@@ -6,6 +6,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Security\Core\Exception\AccessDeniedException;
 
 class ManagersController extends Controller
 {
@@ -14,6 +15,10 @@ class ManagersController extends Controller
      */
     public function listAction(Request $request)
     {
+        if (!$this->container->get('security.context')->isGranted('view', $request->get('_route'))) {
+            throw new AccessDeniedException();
+        }
+
         $managersResponse = $this->container->get('evt.core.client')
             ->get('/api/managers?page='.$request->query->get('page', 1));
 

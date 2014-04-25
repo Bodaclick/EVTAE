@@ -1,0 +1,82 @@
+{% extends 'EVTIntranetBundle::layout.html.twig' %}
+{% block content %}
+    <!-- BEGIN CONTAINER -->
+    <div class="page-container">
+    <!-- BEGIN SIDEBAR -->
+    <div class="page-sidebar-wrapper">
+    <div class="page-sidebar navbar-collapse collapse">
+    <!-- BEGIN SIDEBAR MENU -->
+{{ knp_menu_render('EVTIntranetBundle:Builder:mainMenu', {'currentClass': 'active', 'template': 'EVTIntranetBundle:Menu:metronic_menu.html.twig'}) }}
+    <!-- END SIDEBAR MENU -->
+    </div>
+    </div>
+    <!-- END SIDEBAR -->
+    <!-- BEGIN CONTENT -->
+    <div class="page-content-wrapper">
+        <div class="page-content">
+            <!-- BEGIN PAGE HEADER-->
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- BEGIN PAGE TITLE & BREADCRUMB-->
+                    <h3 class="page-title">{{ "new employee"|trans }}</h3>
+                    <ul class="page-breadcrumb breadcrumb">
+                        <li>
+                            <i class="fa fa-home"></i>
+                            <a href="/">{{ "new employee"|trans }}</a>
+                        </li>
+                    </ul>
+                    <!-- END PAGE TITLE & BREADCRUMB-->
+                </div>
+            </div>
+            <!-- END PAGE HEADER-->
+            {% if errors is not empty %}
+            <div class="note note-danger">
+                <h4 class="block">Error!</h4>
+                <p>
+                    {{ errors }}
+                </p>
+            </div>
+            {% endif %}
+            <!-- BEGIN PAGE CONTENT-->
+            <form role="form" method="post">
+                <div class="form-body">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">User</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control input-inline input-medium" id="employee_user_name" name="user[name]" placeholder="Name" value="{% if req.user is defined %}{{ req.user.name }}{% endif %}">
+                            <input type="text" class="form-control input-inline input-medium" id="employee_user_surnames" name="user[surnames]" placeholder="Surname" value="{% if req.user is defined %}{{ req.user.surnames }}{% endif %}">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Username</label>
+                        <input type="text" class="form-control input-xlarge" id="employee_user_username" name="user[username]" placeholder="Username" value="{% if req.user is defined %}{{ req.user.username }}{% endif %}">
+                    </div>
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <div class="input-group input-xlarge">
+											<span class="input-group-addon">
+												<i class="fa fa-envelope"></i>
+											</span>
+                            <input type="email" class="form-control input-xlarge" id="employee_user_email" name="user[email]" placeholder="Email Address" value="{% if req.user is defined %}{{ req.user.email }}{% endif %}">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Password</label>
+                        <div class="input-group">
+                            <input type="password" class="form-control input-inline input-medium" name="user[plainPassword][first]" placeholder="Password">
+                            <input type="password" class="form-control input-inline input-medium" name="user[plainPassword][second]" placeholder="Repeat Password">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn blue">Submit</button>
+                    <button type="button" class="btn default">Cancel</button>
+                </div>
+            </form>
+            <!-- END PAGE CONTENT-->
+        </div>
+    </div>
+    <!-- END CONTENT -->
+    </div>
+    <!-- END CONTAINER -->
+{% endblock %}
