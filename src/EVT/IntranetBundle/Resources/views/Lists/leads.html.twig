@@ -40,7 +40,6 @@
                                         <th>{{ "name"|trans }}</th>
                                         <th>{{ "email"|trans }}</th>
                                         <th>{{ "phone"|trans }}</th>
-                                        <th>{{ "event.type"|trans }}</th>
                                         <th>{{ "event.date"|trans }}</th>
                                         <th>{{ "event.location"|trans }}</th>
                                         <th>&nbsp;</th>
@@ -59,11 +58,6 @@
                                             {% if lead.showroom.type > 1 %}
                                             <a href="tel:{{ lead.personal_info.phone }}"
                                                    target="_blank">{{ lead.personal_info.phone }}</a>
-                                            {% else %}{% include 'EVTIntranetBundle::viewMore.html.twig' %}{% endif %}
-                                            </td>
-                                            <td>
-                                            {% if lead.showroom.type > 1 %}
-                                            {{ lead.event.type.name }}
                                             {% else %}{% include 'EVTIntranetBundle::viewMore.html.twig' %}{% endif %}
                                             </td>
                                             <td>{{ lead.event.date|date("d/m/Y") }}</td>
