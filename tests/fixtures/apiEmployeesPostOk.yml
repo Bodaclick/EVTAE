@@ -1,0 +1,22 @@
+-
+    request:
+        method: POST
+        url: 'http://api.e-verticals.test/api/employees?apikey=1234&canView=employee'
+        headers:
+            host: api.e-verticals.test
+            content-type: 'application/x-www-form-urlencoded; charset=utf-8'
+            user-agent: 'Guzzle/3.8.1 curl/7.22.0 PHP/5.5.11-3+deb.sury.org~precise+1'
+            content-length: 196
+        body: 'user%5Bname%5D=Name&user%5Bsurnames%5D=Surnames&user%5Busername%5D=newUsername&user%5Bemail%5D=newEmail%40email.com&user%5BplainPassword%5D%5Bfirst%5D=pass&user%5BplainPassword%5D%5Bsecond%5D=pass'
+    response:
+        status: 201
+        headers:
+            Date: 'Tue, 29 Apr 2014 18:21:29 GMT'
+            Server: 'Apache/2.4.9 (Ubuntu)'
+            X-Powered-By: PHP/5.5.11-3+deb.sury.org~precise+1
+            Cache-Control: no-cache
+            X-Debug-Token: 2f1fe8
+            X-Debug-Token-Link: /_profiler/2f1fe8
+            Transfer-Encoding: chunked
+            Content-Type: application/json
+        body: '{"user":"\/api\/employee\/123"}'

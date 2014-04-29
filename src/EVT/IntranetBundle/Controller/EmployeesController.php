@@ -33,6 +33,9 @@ class EmployeesController extends Controller
                     );
                     return new Response($content);
                     break;
+                case 404:
+                    $errors = 'An error occurred';
+                    break;
                 case 400:
                     $errors = 'Wrong parameters';
                     break;
@@ -40,8 +43,6 @@ class EmployeesController extends Controller
                     $errors = 'Email or username already in use';
                     break;
             }
-
-
         }
 
         $content = $this->renderView(
