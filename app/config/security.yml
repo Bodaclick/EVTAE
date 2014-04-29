@@ -38,6 +38,7 @@ security:
             anonymous: false
             form_login:
                 login_path: login
+                default_target_path: /manager
                 check_path: /manager/login_check
             provider: evt_core
             remember_me:
@@ -47,6 +48,7 @@ security:
                 domain:   ~ # Defaults to the current domain from $_SERVER
             logout:
                 path:    /manager/logout
+                target:  /login
 
     access_control:
         #- { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY, requires_channel: https }
