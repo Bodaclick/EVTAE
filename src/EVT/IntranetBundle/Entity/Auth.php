@@ -51,28 +51,46 @@ class Auth
     protected $username;
 
     /**
-     * @ORM\Column(name="view", type="boolean", nullable=false)
+     * @ORM\Column(name="can_view", type="boolean", nullable=false)
      * @var $view
      */
     protected $view;
 
     /**
-     * @ORM\Column(name="crete", type="boolean", nullable=false)
+     * @ORM\Column(name="can_create", type="boolean", nullable=false)
      * @var $create
      */
     protected $create;
 
     /**
-     * @ORM\Column(name="update", type="boolean", nullable=false)
+     * @ORM\Column(name="can_update", type="boolean", nullable=false)
      * @var $update
      */
     protected $update;
 
     /**
-     * @ORM\Column(name="delete", type="boolean", nullable=false)
+     * @ORM\Column(name="can_delete", type="boolean", nullable=false)
      * @var $delete
      */
     protected $delete;
+
+    public function __construct(
+        $route,
+        $role = null,
+        $username = null,
+        $view = false,
+        $create = false,
+        $update = false,
+        $delete = false
+    ) {
+        $this->route = $route;
+        $this->role = $role;
+        $this->username = $username;
+        $this->view = $view;
+        $this->create = $create;
+        $this->update = $update;
+        $this->delete = $delete;
+    }
 
     /**
      * @return boolean
