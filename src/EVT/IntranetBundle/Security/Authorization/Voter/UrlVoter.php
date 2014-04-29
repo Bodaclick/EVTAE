@@ -30,7 +30,7 @@ class UrlVoter implements VoterInterface
 
     public function supportsAttribute($attribute)
     {
-        return in_array($attribute, [self::VIEW, self::EDIT, self::DELETE]);
+        return in_array($attribute, [self::VIEW, self::CREATE, self::EDIT, self::DELETE]);
     }
 
     public function supportsClass($class)
@@ -65,7 +65,6 @@ class UrlVoter implements VoterInterface
         // get current logged in user
         $user = $token->getUser();
 
-        $username = '';
         // make sure there is a user object (i.e. that the user is logged in)
         if ($user instanceof UserInterface) {
             $username = $user->getUsername();
