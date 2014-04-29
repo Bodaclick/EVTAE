@@ -44,7 +44,7 @@ class LeadControllerTest extends WebTestCase
         $this->assertEquals('Leads', $crawler->filter('h3.page-title')->html());
         $this->assertEquals(1, $crawler->filter('table.table')->count());
         $this->assertEquals(7, $crawler->filter('a.green-stripe')->count());
-        $this->assertEquals(2, $crawler->filter('a.badge-warning')->count());
+        $this->assertEquals(1, $crawler->filter('a.badge-warning')->count());
     }
 
     /**
@@ -103,7 +103,7 @@ class LeadControllerTest extends WebTestCase
         $this->assertEquals(1, $crawler->filter('h3.page-title')->count());
         $this->assertEquals('Lead Detail', $crawler->filter('h3.page-title')->html());
         $this->assertEquals(1, $crawler->filter('table.table')->count());
-        $this->assertEquals(3, $crawler->filter('a.badge-warning')->count());
+        $this->assertEquals(2, $crawler->filter('a.badge-warning')->count());
     }
 
     /**
