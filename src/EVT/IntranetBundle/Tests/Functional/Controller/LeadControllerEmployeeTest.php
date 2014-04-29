@@ -43,6 +43,6 @@ class LeadControllerEmployeeTest extends WebTestCase
         $this->assertEquals('Leads', $crawler->filter('h3.page-title')->html());
         $this->assertEquals(1, $crawler->filter('table.table')->count());
         $this->assertEquals(7, $crawler->filter('a.green-stripe')->count());
-        $this->assertEquals(2, $crawler->filter('a.badge-warning')->count());
+        $this->assertEquals(1, $crawler->filter('a.badge-warning')->count());
     }
 }
