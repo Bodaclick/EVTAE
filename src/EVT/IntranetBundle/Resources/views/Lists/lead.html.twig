@@ -68,14 +68,6 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>{{ "event.type"|trans }}</td>
-                                    <td class="active">
-                                    {% if lead.showroom.type > 1 %}
-                                    {{ lead.event.type.name }}
-                                    {% else %}{% include 'EVTIntranetBundle::viewMore.html.twig' %}{% endif %}
-                                    </td>
-                                </tr>
-                                <tr>
                                     <td>{{ "event.date"|trans }}</td>
                                     <td class="active">{{ lead.event.date|date("d/m/Y") }}</td>
                                 </tr>
