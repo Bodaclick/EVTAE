@@ -28,3 +28,5 @@ parameters:
     redis_session: redis://localhost
     media_domain: ''
     google_analytics_code: ''
+
+    email_domain: e-verticals.com

@@ -41,7 +41,7 @@ class ResetPasswordController extends Controller
     {
         $data['mailing']['subject'] = 'Change Password';
         $data['mailing']['to'] = $email;
-        $data['vertical']['domain'] = 'bodaclick.com';
+        $data['vertical']['domain'] = $this->get('email_domain');
         $data['mailing']['password'] = $newPassword;
 
         $this->get('evt.mailer')->send($data, 'EVTEAEBundle:Email:ResetPassword.User.html.twig');
