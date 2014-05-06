@@ -24,7 +24,10 @@
         "snc/redis-bundle": "1.1.x-dev",
         "predis/predis": "0.8.x-dev",
         "knplabs/knp-menu-bundle": "dev-master",
-        "knplabs/knp-menu": "2.0.*@dev"
+        "knplabs/knp-menu": "2.0.*@dev",
+        "jms/serializer-bundle": "0.13.*@dev",
+        "jms/di-extra-bundle": "1.4.*@dev",
+        "friendsofsymfony/rest-bundle": "1.1.*"
     },
     "require-dev": {
         "liip/functional-test-bundle": "dev-master",

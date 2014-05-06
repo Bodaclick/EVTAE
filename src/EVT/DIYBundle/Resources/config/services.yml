@@ -1,0 +1,6 @@
+parameters:
+#    evtdiy.example.class: EVT\DIYBundle\Example
+
+services:
+    evt.diy.showroom.manager:
+        class: EVT\DIYBundle\Model\Manager\ShowroomManager
