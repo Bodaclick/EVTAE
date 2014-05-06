@@ -34,7 +34,7 @@ security:
             security: false
 
         admin_secured_area:
-            pattern:   ^/(manager|employee)
+            pattern:   ^/(manager|employee|api)
             anonymous: false
             form_login:
                 login_path: login

@@ -4,3 +4,9 @@ parameters:
 services:
     evt.diy.showroom.manager:
         class: EVT\DIYBundle\Model\Manager\ShowroomManager
+        arguments:
+          - @evt.emd.client.showroom
+          - @evt.diy.showroom.mapper
+
+    evt.diy.showroom.mapper:
+        class: EVT\DIYBundle\Model\Mapper\ShowroomMapper

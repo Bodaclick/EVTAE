@@ -16,8 +16,8 @@ class ShowroomController extends Controller
     /**
      * @FOS\View()
      */
-    public function getShowroomAction()
+    public function getShowroomAction($id)
     {
-        return [];
+        return $this->get('evt.diy.showroom.manager')->get($id);
     }
 }
