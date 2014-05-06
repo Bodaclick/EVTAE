@@ -3,7 +3,7 @@
 namespace EVT\DIYBundle\Tests\Functional\Controller;
 
 use EVT\DIYBundle\Model\Showroom;
-use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
+use Liip\FunctionalTestBundle\Test\WebTestCase;
 
 /**
  * Class ShowroomControllerTest
@@ -23,6 +23,10 @@ class ShowroomControllerTest extends WebTestCase
      */
     public function setUp()
     {
+        $classes = [
+        ];
+        $this->loadFixtures($classes);
+
         $this->client = static::createClient();
         $this->header = ['HTTP_Accept' => 'application/json'];
     }

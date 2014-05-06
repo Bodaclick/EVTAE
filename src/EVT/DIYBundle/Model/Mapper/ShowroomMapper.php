@@ -25,4 +25,14 @@ class ShowroomMapper
             $wsModel['description']
         );
     }
+
+    public function mapDBtoModel(\EVT\DIYBundle\Entity\Showroom $dbModel)
+    {
+        return new Showroom(
+            $dbModel->getEvtId(),
+            $dbModel->getName(),
+            $dbModel->getDescription(),
+            $dbModel->getState()
+        );
+    }
 }
