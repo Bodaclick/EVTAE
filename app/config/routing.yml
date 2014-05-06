@@ -21,3 +21,8 @@ login_check:
 
 logout:
     path: /manager/logout
+
+evt_ae_api:
+    resource: "@EVTDIYBundle/Resources/config/routing.yml"
+    type:     rest
+    prefix:   /api/
