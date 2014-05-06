@@ -90,6 +90,7 @@ doctrine:
                 connection: default
                 mappings:
                     EVTIntranetBundle: ~
+                    EVTDIYBundle: ~
 
 # REDIS
 snc_redis:

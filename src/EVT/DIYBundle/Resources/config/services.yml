@@ -7,6 +7,7 @@ services:
         arguments:
           - @evt.emd.client.showroom
           - @evt.diy.showroom.mapper
+          - @doctrine.orm.entity_manager
 
     evt.diy.showroom.mapper:
         class: EVT\DIYBundle\Model\Mapper\ShowroomMapper
