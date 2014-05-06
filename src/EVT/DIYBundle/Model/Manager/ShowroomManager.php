@@ -30,7 +30,7 @@ class ShowroomManager
         $dbShowroom = $this->em->getRepository('EVTDIYBundle:Showroom')->findOneByEvtId($id);
 
         if (null !== $dbShowroom) {
-            return $this->showroomMapper->mapDBtoModel($dbShowroom);
+            return $dbShowroom;
         }
 
         $emdShowroom = $this->emdShowroomClient->getById($id);

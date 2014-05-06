@@ -20,6 +20,11 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Showroom
 {
+    const RETRIVED = 0;
+    const MODIFIED = 1;
+    const TOREVIEW = 2;
+    const REVIEWED = 3;
+
     /**
      * @ORM\Id
      * @ORM\Column(type="integer")
@@ -51,6 +56,14 @@ class Showroom
      * @var integer $state
      */
     protected $state;
+
+    public function __construct($id, $name, $descr, $state = self::RETRIVED)
+    {
+        $this->evtId = $id;
+        $this->name = $name;
+        $this->description = $descr;
+        $this->state = $state;
+    }
 
     /**
      * @param mixed $description
