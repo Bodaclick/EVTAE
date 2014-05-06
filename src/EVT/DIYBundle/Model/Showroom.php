@@ -10,12 +10,17 @@ namespace EVT\DIYBundle\Model;
  */
 class Showroom
 {
+    const RETRIVED = 0;
+    const MODIFIED = 1;
+    const TOREVIEW = 2;
+    const REVIEWED = 3;
+
     private $id;
     private $name;
     private $description;
     private $state;
 
-    public function __construct($id, $name, $descr, $state = 'mod')
+    public function __construct($id, $name, $descr, $state = self::RETRIVED)
     {
         $this->id = $id;
         $this->name = $name;

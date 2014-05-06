@@ -1,0 +1,3 @@
+services:
+    evt.emd.client.showroom:
+        class: EVT\EMDClientBundle\Client\ShowroomClient

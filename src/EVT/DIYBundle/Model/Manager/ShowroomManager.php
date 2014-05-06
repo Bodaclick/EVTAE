@@ -2,7 +2,8 @@
 
 namespace EVT\DIYBundle\Model\Manager;
 
-use EVT\DIYBundle\Model\Showroom;
+use EVT\DIYBundle\Model\Mapper\ShowroomMapper;
+use EVT\EMDClientBundle\Client\ShowroomClient;
 
 /**
  * Class ShowroomManager
@@ -12,8 +13,19 @@ use EVT\DIYBundle\Model\Showroom;
  */
 class ShowroomManager
 {
-    public function getShowroom($id)
+    private $emdShowroomClient;
+    private $showroomMapper;
+
+    public function __construct(ShowroomClient $emdShowroomClient, ShowroomMapper $showroomMapper)
     {
-        return new Showroom($id, 'Name', 'Desc');
+        $this->emdShowroomClient = $emdShowroomClient;
+        $this->showroomMapper = $showroomMapper;
+    }
+
+    public function get($id)
+    {
+        $emdShowroom = $this->emdShowroomClient->getById($id);
+
+        return $this->showroomMapper->mapWStoModel($emdShowroom);
     }
 }
