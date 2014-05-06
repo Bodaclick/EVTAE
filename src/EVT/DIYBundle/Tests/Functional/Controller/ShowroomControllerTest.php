@@ -2,7 +2,7 @@
 
 namespace EVT\DIYBundle\Tests\Functional\Controller;
 
-use EVT\DIYBundle\Model\Showroom;
+use EVT\DIYBundle\Entity\Showroom;
 use Liip\FunctionalTestBundle\Test\WebTestCase;
 
 /**
@@ -46,11 +46,11 @@ class ShowroomControllerTest extends WebTestCase
         $this->assertEquals(200, $this->client->getResponse()->getStatusCode());
 
         $showroom = json_decode($this->client->getResponse()->getContent(), true);
-        $this->assertArrayHasKey('id', $showroom);
+        $this->assertArrayHasKey('evt_id', $showroom);
         $this->assertArrayHasKey('name', $showroom);
         $this->assertArrayHasKey('state', $showroom);
 
-        $this->assertEquals('1', $showroom['id']);
+        $this->assertEquals('1', $showroom['evt_id']);
         $this->assertEquals(Showroom::RETRIVED, $showroom['state']);
     }
 }

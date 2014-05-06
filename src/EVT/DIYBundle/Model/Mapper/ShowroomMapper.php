@@ -2,7 +2,7 @@
 
 namespace EVT\DIYBundle\Model\Mapper;
 
-use EVT\DIYBundle\Model\Showroom;
+use EVT\DIYBundle\Entity\Showroom;
 
 /**
  * Class ShowroomMapper
@@ -23,16 +23,6 @@ class ShowroomMapper
             $wsModel['id'],
             $wsModel['name'],
             $wsModel['description']
-        );
-    }
-
-    public function mapDBtoModel(\EVT\DIYBundle\Entity\Showroom $dbModel)
-    {
-        return new Showroom(
-            $dbModel->getEvtId(),
-            $dbModel->getName(),
-            $dbModel->getDescription(),
-            $dbModel->getState()
         );
     }
 }
