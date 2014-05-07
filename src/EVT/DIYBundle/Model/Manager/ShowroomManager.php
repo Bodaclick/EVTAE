@@ -2,6 +2,7 @@
 
 namespace EVT\DIYBundle\Model\Manager;
 
+use EVT\DIYBundle\Entity\Showroom;
 use EVT\DIYBundle\Model\Mapper\ShowroomMapper;
 use EVT\EMDClientBundle\Client\ShowroomClient;
 use Doctrine\ORM\EntityManager;
@@ -41,7 +42,7 @@ class ShowroomManager
      */
     public function get($id)
     {
-        //Chech if already in house
+        //Check if already in house
         $dbShowroom = $this->em->getRepository('EVTDIYBundle:Showroom')->findOneByEvtId($id);
 
         if (null !== $dbShowroom) {
@@ -51,5 +52,48 @@ class ShowroomManager
         $emdShowroom = $this->emdShowroomClient->getById($id);
 
         return $this->showroomMapper->mapWStoModel($emdShowroom);
+    }
+
+    public function changeName($id, $name)
+    {
+        $showroom = $this->get($id);
+        if (empty($showroom)) {
+            throw new \Exception("Showroom not found");
+        }
+
+        $showroom->changeName($name);
+
+        // guardar en bbdd
+        // cambiar estado a modified
+
+    }
+
+    public function changeDescription($id, $description)
+    {
+        $showroom = $this->get($id);
+        if (empty($showroom)) {
+            throw new \Exception("Showroom not found");
+        }
+
+        $showroom->changeDescription($description);
+
+        // guardar en bbdd
+        // cambiar estado a modified
+
+    }
+
+    public function toreview($id)
+    {
+        $this->changeState($id, Showroom::TOREVIEW);
+    }
+
+    public function changeState($id, $state)
+    {
+        $showroom = $this->get($id);
+        if (empty($showroom)) {
+            throw new \Exception("Showroom not found");
+        }
+
+        $showroom->changeState($state);
     }
 }
