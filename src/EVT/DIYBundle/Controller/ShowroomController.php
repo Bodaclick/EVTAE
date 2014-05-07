@@ -7,6 +7,7 @@ use FOS\RestBundle\Controller\Annotations as FOS;
 use FOS\RestBundle\Util\Codes;
 use Symfony\Component\HttpFoundation\Request;
 use FOS\RestBundle\View\View;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 /**
  * Class ShowroomController
@@ -26,45 +27,31 @@ class ShowroomController extends Controller
 
     public function nameShowroomAction($id, Request $request)
     {
-        $view = new View('{}', Codes::HTTP_OK);
-
         try {
-            $this->get('evt.diy.showroom.manager')->changeName($id, $request->request->get('name'));
+            return $this->get('evt.diy.showroom.manager')->changeName($id, $request->request->get('name'));
         }
         catch (\Exception $e) {
-            $view->setStatusCode(Codes::HTTP_NOT_FOUND);
-            return $view;
+            throw new NotFoundHttpException();
         }
-
-        return $view;
     }
 
     public function descriptionShowroomAction($id, Request $request)
     {
-        $view = new View('{}', Codes::HTTP_OK);
-
         try {
-            $this->get('evt.diy.showroom.manager')->changeDescription($id, $request->request->get('description'));
+            return $this->get('evt.diy.showroom.manager')->changeDescription($id, $request->request->get('description'));
         }
         catch (\Exception $e) {
-            $view->setStatusCode(Codes::HTTP_NOT_FOUND);
-            return $view;
+            throw new NotFoundHttpException();
         }
-
-        return $view;
     }
+
     public function toreviewShowroomAction($id)
     {
-        $view = new View('{}', Codes::HTTP_OK);
-
         try {
-            $this->get('evt.diy.showroom.manager')->toreview($id);
+            return $this->get('evt.diy.showroom.manager')->toreview($id);
         }
         catch (\Exception $e) {
-            $view->setStatusCode(Codes::HTTP_NOT_FOUND);
-            return $view;
+            throw new NotFoundHttpException();
         }
-
-        return $view;
     }
 }

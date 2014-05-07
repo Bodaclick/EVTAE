@@ -77,7 +77,13 @@ class ShowroomManager
             throw new \Exception("Showroom not found");
         }
 
+        if (Showroom::REVIEWED == $showroom->getState()) {
+            throw new AccessDeniedHttpException();
+        }
+
         $showroom->setName($name);
+        $showroom->setState(Showroom::MODIFIED);
+
         $this->save($showroom);
     }
 
@@ -92,7 +98,13 @@ class ShowroomManager
             throw new \Exception("Showroom not found");
         }
 
+        if (Showroom::REVIEWED == $showroom->getState()) {
+            throw new AccessDeniedHttpException();
+        }
+
         $showroom->setDescription($description);
+        $showroom->setState(Showroom::MODIFIED);
+
         $this->save($showroom);
     }
 
@@ -113,6 +125,8 @@ class ShowroomManager
         }
 
         $showroom->changeState($state);
+
+        $this->save($showroom);
     }
 
     private function canEdit($id)

@@ -73,7 +73,7 @@ class ShowroomControllerTest extends WebTestCase
             $this->header
         );
 
-        $this->assertEquals(200, $this->client->getResponse()->getStatusCode());
+        $this->assertEquals(204, $this->client->getResponse()->getStatusCode());
 
         $this->client->request(
             'GET',
@@ -120,7 +120,7 @@ class ShowroomControllerTest extends WebTestCase
             $this->header
         );
 
-        $this->assertEquals(200, $this->client->getResponse()->getStatusCode());
+        $this->assertEquals(204, $this->client->getResponse()->getStatusCode());
 
         $this->client->request(
             'GET',
