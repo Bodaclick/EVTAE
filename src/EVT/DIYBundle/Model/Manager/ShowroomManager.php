@@ -3,9 +3,11 @@
 namespace EVT\DIYBundle\Model\Manager;
 
 use EVT\DIYBundle\Entity\Showroom;
+use EVT\CoreClientBundle\Client\Client;
 use EVT\DIYBundle\Model\Mapper\ShowroomMapper;
 use EVT\EMDClientBundle\Client\ShowroomClient;
 use Doctrine\ORM\EntityManager;
+use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
 
 /**
  * Class ShowroomManager
@@ -18,6 +20,7 @@ class ShowroomManager
     private $emdShowroomClient;
     private $showroomMapper;
     private $em;
+    private $coreClient;
 
     /**
      *  Construct
@@ -26,11 +29,16 @@ class ShowroomManager
      * @param ShowroomMapper $showroomMapper    The Showroom mapper
      * @param EntityManager  $em                The EntityManager
      */
-    public function __construct(ShowroomClient $emdShowroomClient, ShowroomMapper $showroomMapper, EntityManager $em)
-    {
+    public function __construct(
+        ShowroomClient $emdShowroomClient,
+        ShowroomMapper $showroomMapper,
+        EntityManager $em,
+        Client $coreClient
+    ) {
         $this->emdShowroomClient = $emdShowroomClient;
         $this->showroomMapper = $showroomMapper;
         $this->em = $em;
+        $this->coreClient = $coreClient;
     }
 
     /**
@@ -42,6 +50,10 @@ class ShowroomManager
      */
     public function get($id)
     {
+        if (!$this->canEdit($id)) {
+            throw new AccessDeniedHttpException();
+        }
+
         //Check if already in house
         $dbShowroom = $this->em->getRepository('EVTDIYBundle:Showroom')->findOneByEvtId($id);
 
@@ -95,5 +107,15 @@ class ShowroomManager
         }
 
         $showroom->changeState($state);
+    }
+
+    private function canEdit($id)
+    {
+        //Check if user can modify the showroom.
+        $coreShowroom = $this->coreClient->get('/api/showrooms/'.$id);
+        if (200 != $coreShowroom->getStatusCode()) {
+            return false;
+        }
+        return true;
     }
 }
