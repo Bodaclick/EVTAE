@@ -68,6 +68,10 @@ class ShowroomManager
 
     public function changeName($id, $name)
     {
+        if (!$this->canEdit($id)) {
+            throw new AccessDeniedHttpException();
+        }
+
         $showroom = $this->get($id);
         if (empty($showroom)) {
             throw new \Exception("Showroom not found");
@@ -79,6 +83,10 @@ class ShowroomManager
 
     public function changeDescription($id, $description)
     {
+        if (!$this->canEdit($id)) {
+            throw new AccessDeniedHttpException();
+        }
+
         $showroom = $this->get($id);
         if (empty($showroom)) {
             throw new \Exception("Showroom not found");
@@ -90,6 +98,10 @@ class ShowroomManager
 
     public function toreview($id)
     {
+        if (!$this->canEdit($id)) {
+            throw new AccessDeniedHttpException();
+        }
+
         $this->changeState($id, Showroom::TOREVIEW);
     }
 
@@ -112,7 +124,7 @@ class ShowroomManager
         }
         return true;
     }
-    
+
     private function save($showroom)
     {
         $this->em->persist($showroom);

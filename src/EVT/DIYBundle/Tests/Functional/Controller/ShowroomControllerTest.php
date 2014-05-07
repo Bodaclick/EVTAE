@@ -58,6 +58,9 @@ class ShowroomControllerTest extends WebTestCase
         $this->assertEquals(Showroom::RETRIVED, $showroom['state']);
     }
 
+    /**
+     * @vcr apiShowroom.yml
+     */
     public function testChangeNameOK()
     {
         $this->logInEmployee();
@@ -102,6 +105,9 @@ class ShowroomControllerTest extends WebTestCase
         $this->assertEquals(404, $this->client->getResponse()->getStatusCode());
     }
 
+    /**
+     * @vcr apiShowroom.yml
+     */
     public function testChangeDescriptionOK()
     {
         $this->logInEmployee();
