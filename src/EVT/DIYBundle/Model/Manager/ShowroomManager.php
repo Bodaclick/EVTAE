@@ -28,6 +28,7 @@ class ShowroomManager
      * @param ShowroomClient $emdShowroomClient The showroom client
      * @param ShowroomMapper $showroomMapper    The Showroom mapper
      * @param EntityManager  $em                The EntityManager
+     * @param Client $coreClient                The Client
      */
     public function __construct(
         ShowroomClient $emdShowroomClient,
@@ -72,7 +73,7 @@ class ShowroomManager
             throw new AccessDeniedHttpException();
         }
 
-        $showroom = $this->get($id);
+        $showroom = $this->em->getRepository('EVTDIYBundle:Showroom')->findOneByEvtId($id);
         if (empty($showroom)) {
             throw new \Exception("Showroom not found");
         }
@@ -93,7 +94,7 @@ class ShowroomManager
             throw new AccessDeniedHttpException();
         }
 
-        $showroom = $this->get($id);
+        $showroom = $this->em->getRepository('EVTDIYBundle:Showroom')->findOneByEvtId($id);;
         if (empty($showroom)) {
             throw new \Exception("Showroom not found");
         }
