@@ -2,6 +2,7 @@
 
 namespace EVT\DIYBundle\Tests\Model\Manager;
 
+use EVT\CoreClientBundle\Client\Response;
 use EVT\DIYBundle\Entity\Showroom;
 use EVT\DIYBundle\Model\Manager\ShowroomManager;
 
@@ -40,7 +41,13 @@ class ShowroomManagerTest extends \PHPUnit_Framework_TestCase
             ->method('getRepository')
             ->will($this->returnvalue($showroomRepo));
 
-        $manager = new ShowroomManager($showroomClient, $showroomMapper, $em);
+        $coreClient = $this->getMockBuilder('EVT\CoreClientBundle\Client\Client')
+            ->disableOriginalConstructor()->getMock();
+        $coreClient->expects($this->once())
+            ->method('get')
+            ->will($this->returnvalue(new Response(200, '')));
+
+        $manager = new ShowroomManager($showroomClient, $showroomMapper, $em, $coreClient);
         $showroom = $manager->get(1);
 
         $this->assertEquals(1, $showroom->getEvtId());
@@ -71,7 +78,13 @@ class ShowroomManagerTest extends \PHPUnit_Framework_TestCase
             ->method('getRepository')
             ->will($this->returnvalue($showroomRepo));
 
-        $manager = new ShowroomManager($showroomClient, $showroomMapper, $em);
+        $coreClient = $this->getMockBuilder('EVT\CoreClientBundle\Client\Client')
+            ->disableOriginalConstructor()->getMock();
+        $coreClient->expects($this->once())
+            ->method('get')
+            ->will($this->returnvalue(new Response(200, '')));
+
+        $manager = new ShowroomManager($showroomClient, $showroomMapper, $em, $coreClient);
         $showroom = $manager->get(1);
 
         $this->assertEquals(1, $showroom->getEvtId());
@@ -103,7 +116,13 @@ class ShowroomManagerTest extends \PHPUnit_Framework_TestCase
             ->method('getRepository')
             ->will($this->returnvalue($showroomRepo));
 
-        $manager = new ShowroomManager($showroomClient, $showroomMapper, $em);
+        $coreClient = $this->getMockBuilder('EVT\CoreClientBundle\Client\Client')
+            ->disableOriginalConstructor()->getMock();
+        $coreClient->expects($this->once())
+            ->method('get')
+            ->will($this->returnvalue(new Response(200, '')));
+
+        $manager = new ShowroomManager($showroomClient, $showroomMapper, $em, $coreClient);
         $showroom = $manager->get(1);
 
         $this->assertNull($showroom);

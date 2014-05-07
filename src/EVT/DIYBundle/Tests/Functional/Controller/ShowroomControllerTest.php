@@ -31,7 +31,10 @@ class ShowroomControllerTest extends WebTestCase
         $this->header = ['HTTP_Accept' => 'application/json'];
     }
 
-    public function testShowrooms()
+    /**
+     * @vcr apiShowroom.yml
+     */
+    public function testShowroom()
     {
         $this->logInEmployee();
 

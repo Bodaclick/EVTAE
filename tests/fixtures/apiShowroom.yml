@@ -1,0 +1,59 @@
+
+-
+    request:
+        method: GET
+        url: 'http://api.e-verticals.test/api/showrooms/1?apikey=1234&canView=employee'
+        headers:
+            host: api.e-verticals.test
+            user-agent: 'Guzzle/3.8.1 curl/7.22.0 PHP/5.5.11-3+deb.sury.org~precise+1'
+            content-length: 0
+    response:
+        status: 200
+        headers:
+            Date: 'Wed, 07 May 2014 10:58:42 GMT'
+            Server: 'Apache/2.4.9 (Ubuntu)'
+            X-Powered-By: PHP/5.5.11-3+deb.sury.org~precise+1
+            Cache-Control: no-cache
+            X-Debug-Token: 59c34c
+            X-Debug-Token-Link: /_profiler/59c34c
+            Transfer-Encoding: chunked
+            Content-Type: application/json
+        body: |
+          {
+              "id": 1,
+              "slug": "casa-terrans",
+              "name": "Casa Terrans",
+              "phone": "915558855",
+              "score": 0,
+              "type": {
+                  "type": 1,
+                  "name": "FREE"
+              },
+              "provider": {
+                  "id": 1,
+                  "name": "Casa Terrans",
+                  "slug": "casa-terrans",
+                  "phone": "915558855",
+                  "notification_emails": "info@casaterrans.com",
+                  "managers": {},
+                  "location": {
+                      "lat": 10,
+                      "long": 10,
+                      "admin_level1": "locationAdminLevel1",
+                      "admin_level2": "locationAdminLevel2",
+                      "country": "Spain"
+                  }
+              },
+              "vertical": {
+                  "domain": "test.com",
+                  "showrooms": {}
+              },
+              "information_bag": {
+                  "parameters": {
+                      "name": "Casa Terrans",
+                      "slug": "casa-terrans",
+                      "phone": "915558855"
+                  }
+              },
+              "extra_data": ""
+          }
