@@ -62,13 +62,10 @@ class ShowroomController extends Controller
         }
     }
 
-    public function activeShowroomEditionAction($id)
+    public function starteditionShowroomAction(Request $request, $id)
     {
-        try {
-            return $this->get('evt.diy.showroom.manager')->activeEdition($id);
-        }
-        catch (\Exception $e) {
-            throw new NotFoundHttpException();
-        }
+        $this->checkAuth('edit', $request);
+
+        return $this->get('evt.diy.showroom.manager')->activeEdition($id);
     }
 }

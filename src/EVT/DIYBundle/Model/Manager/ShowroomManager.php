@@ -8,6 +8,7 @@ use EVT\DIYBundle\Model\Mapper\ShowroomMapper;
 use EVT\EMDClientBundle\Client\ShowroomClient;
 use Doctrine\ORM\EntityManager;
 use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\HttpKernel\Exception\PreconditionFailedHttpException;
 
 /**
@@ -150,7 +151,11 @@ class ShowroomManager
                 $mShowroom->setState(Showroom::MODIFIED);
                 $this->save($mShowroom);
             }else{
-                throw new \Exception("Showroom not found");
+                throw new NotFoundHttpException();
+            }
+        }else{
+            if (Showroom::REVIEWED == $showroom->getState()) {
+                throw new PreconditionFailedHttpException();
             }
         }
     }
