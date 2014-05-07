@@ -73,11 +73,8 @@ class ShowroomManager
             throw new \Exception("Showroom not found");
         }
 
-        $showroom->changeName($name);
-
-        // guardar en bbdd
-        // cambiar estado a modified
-
+        $showroom->setName($name);
+        $this->save($showroom);
     }
 
     public function changeDescription($id, $description)
@@ -87,11 +84,8 @@ class ShowroomManager
             throw new \Exception("Showroom not found");
         }
 
-        $showroom->changeDescription($description);
-
-        // guardar en bbdd
-        // cambiar estado a modified
-
+        $showroom->setDescription($description);
+        $this->save($showroom);
     }
 
     public function toreview($id)
@@ -99,7 +93,7 @@ class ShowroomManager
         $this->changeState($id, Showroom::TOREVIEW);
     }
 
-    public function changeState($id, $state)
+    private function changeState($id, $state)
     {
         $showroom = $this->get($id);
         if (empty($showroom)) {
@@ -117,5 +111,11 @@ class ShowroomManager
             return false;
         }
         return true;
+    }
+    
+    private function save($showroom)
+    {
+        $this->em->persist($showroom);
+        $this->em->flush();
     }
 }
