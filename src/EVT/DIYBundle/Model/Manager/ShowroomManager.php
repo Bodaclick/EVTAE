@@ -2,6 +2,7 @@
 
 namespace EVT\DIYBundle\Model\Manager;
 
+use EVT\DIYBundle\Entity\Showroom;
 use EVT\CoreClientBundle\Client\Client;
 use EVT\DIYBundle\Model\Mapper\ShowroomMapper;
 use EVT\EMDClientBundle\Client\ShowroomClient;
@@ -65,6 +66,55 @@ class ShowroomManager
         return $this->showroomMapper->mapWStoModel($emdShowroom);
     }
 
+    public function changeName($id, $name)
+    {
+        if (!$this->canEdit($id)) {
+            throw new AccessDeniedHttpException();
+        }
+
+        $showroom = $this->get($id);
+        if (empty($showroom)) {
+            throw new \Exception("Showroom not found");
+        }
+
+        $showroom->setName($name);
+        $this->save($showroom);
+    }
+
+    public function changeDescription($id, $description)
+    {
+        if (!$this->canEdit($id)) {
+            throw new AccessDeniedHttpException();
+        }
+
+        $showroom = $this->get($id);
+        if (empty($showroom)) {
+            throw new \Exception("Showroom not found");
+        }
+
+        $showroom->setDescription($description);
+        $this->save($showroom);
+    }
+
+    public function toreview($id)
+    {
+        if (!$this->canEdit($id)) {
+            throw new AccessDeniedHttpException();
+        }
+
+        $this->changeState($id, Showroom::TOREVIEW);
+    }
+
+    private function changeState($id, $state)
+    {
+        $showroom = $this->get($id);
+        if (empty($showroom)) {
+            throw new \Exception("Showroom not found");
+        }
+
+        $showroom->changeState($state);
+    }
+
     private function canEdit($id)
     {
         //Check if user can modify the showroom.
@@ -73,5 +123,11 @@ class ShowroomManager
             return false;
         }
         return true;
+    }
+
+    private function save($showroom)
+    {
+        $this->em->persist($showroom);
+        $this->em->flush();
     }
 }
