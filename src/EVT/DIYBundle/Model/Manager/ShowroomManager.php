@@ -136,6 +136,25 @@ class ShowroomManager
         $this->changeState($id, Showroom::TOREVIEW);
     }
 
+    public function activeEdition($id)
+    {
+        if (!$this->canEdit($id)) {
+            throw new AccessDeniedHttpException();
+        }
+
+        $showroom = $this->em->getRepository('EVTDIYBundle:Showroom')->findOneByEvtId($id);
+        if (empty($showroom)) {
+            $emdShowroom = $this->emdShowroomClient->getById($id);
+            if (!empty($emdShowroom)){
+                $mShowroom = $this->showroomMapper->mapWStoModel($emdShowroom);
+                $mShowroom->setState(Showroom::MODIFIED);
+                $this->save($mShowroom);
+            }else{
+                throw new \Exception("Showroom not found");
+            }
+        }
+    }
+
     public function publish($id)
     {
         if (!$this->canEdit($id)) {

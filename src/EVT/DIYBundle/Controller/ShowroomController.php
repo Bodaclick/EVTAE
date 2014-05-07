@@ -61,4 +61,14 @@ class ShowroomController extends Controller
             throw new AccessDeniedException();
         }
     }
+
+    public function activeShowroomEditionAction($id)
+    {
+        try {
+            return $this->get('evt.diy.showroom.manager')->activeEdition($id);
+        }
+        catch (\Exception $e) {
+            throw new NotFoundHttpException();
+        }
+    }
 }
