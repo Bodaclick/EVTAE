@@ -200,4 +200,39 @@ class ShowroomControllerTest extends WebTestCase
         $this->client->getContainer()->set('snc_redis.auth', $this->predisClient);
         $this->logInEmployee();
     }
+
+    /**
+     * @vcr apiShowroom.yml
+     */
+    public function testActiveShowroomEditionOk()
+    {
+        $this->logInEmployee();
+
+        $this->client->request(
+            'PATCH',
+            '/api/showrooms/1/startedition',
+            [],
+            [],
+            $this->header
+        );
+
+        $this->assertEquals(204, $this->client->getResponse()->getStatusCode());
+    }
+
+    public function testActiveShowroomEditionKo()
+    {
+        $this->markTestIncomplete('This test depends everymundo.');
+
+        $this->logInEmployee();
+
+        $this->client->request(
+            'PATCH',
+            '/api/showrooms/10/startedition',
+            [],
+            [],
+            $this->header
+        );
+
+        $this->assertEquals(404, $this->client->getResponse()->getStatusCode());
+    }
 }

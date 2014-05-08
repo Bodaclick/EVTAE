@@ -8,6 +8,7 @@ use EVT\DIYBundle\Model\Mapper\ShowroomMapper;
 use EVT\EMDClientBundle\Client\ShowroomClient;
 use Doctrine\ORM\EntityManager;
 use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\HttpKernel\Exception\PreconditionFailedHttpException;
 
 /**
@@ -134,6 +135,29 @@ class ShowroomManager
         }
 
         $this->changeState($id, Showroom::TOREVIEW);
+    }
+
+    public function activeEdition($id)
+    {
+        if (!$this->canEdit($id)) {
+            throw new AccessDeniedHttpException();
+        }
+
+        $showroom = $this->em->getRepository('EVTDIYBundle:Showroom')->findOneByEvtId($id);
+        if (empty($showroom)) {
+            $emdShowroom = $this->emdShowroomClient->getById($id);
+            if (!empty($emdShowroom)){
+                $mShowroom = $this->showroomMapper->mapWStoModel($emdShowroom);
+                $mShowroom->setState(Showroom::MODIFIED);
+                $this->save($mShowroom);
+            }else{
+                throw new NotFoundHttpException();
+            }
+        }else{
+            if (Showroom::REVIEWED == $showroom->getState()) {
+                throw new PreconditionFailedHttpException();
+            }
+        }
     }
 
     public function publish($id)

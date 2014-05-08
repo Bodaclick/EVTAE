@@ -61,4 +61,11 @@ class ShowroomController extends Controller
             throw new AccessDeniedException();
         }
     }
+
+    public function starteditionShowroomAction(Request $request, $id)
+    {
+        $this->checkAuth('edit', $request);
+
+        return $this->get('evt.diy.showroom.manager')->activeEdition($id);
+    }
 }
