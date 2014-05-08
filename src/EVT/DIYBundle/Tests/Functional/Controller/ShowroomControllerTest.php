@@ -15,6 +15,7 @@ class ShowroomControllerTest extends WebTestCase
 {
     protected $client;
     protected $header;
+    protected $predisClient;
 
     use \EVT\IntranetBundle\Tests\Functional\LoginTrait;
 
@@ -23,6 +24,15 @@ class ShowroomControllerTest extends WebTestCase
      */
     public function setUp()
     {
+        $this->predisClient = $this->getMockBuilder('Predis\Client')
+            ->disableOriginalConstructor()
+            ->setMethods(['get'])
+            ->getMock();
+
+        $this->predisClient->expects($this->atLeastOnce())
+            ->method('get')
+            ->will($this->returnValue('1'));
+
         $classes = [
             'EVT\DIYBundle\Tests\DataFixtures\ORM\LoadShowroomData'
         ];
@@ -30,6 +40,7 @@ class ShowroomControllerTest extends WebTestCase
 
         $this->client = static::createClient();
         $this->header = ['HTTP_Accept' => 'application/json'];
+        $this->client->getContainer()->set('snc_redis.auth', $this->predisClient);
     }
 
     /**
@@ -75,6 +86,8 @@ class ShowroomControllerTest extends WebTestCase
 
         $this->assertEquals(204, $this->client->getResponse()->getStatusCode());
 
+        $this->reinitRedis();
+
         $this->client->request(
             'GET',
             '/api/showrooms/1',
@@ -82,6 +95,8 @@ class ShowroomControllerTest extends WebTestCase
             [],
             $this->header
         );
+
+        $this->assertEquals(200, $this->client->getResponse()->getStatusCode());
         $showroom = json_decode($this->client->getResponse()->getContent(), true);
         $this->assertEquals('newName', $showroom['name']);
     }
@@ -98,7 +113,7 @@ class ShowroomControllerTest extends WebTestCase
             $this->header
         );
 
-        $this->assertEquals(404, $this->client->getResponse()->getStatusCode());
+        $this->assertEquals(403, $this->client->getResponse()->getStatusCode());
     }
 
     /**
@@ -118,6 +133,8 @@ class ShowroomControllerTest extends WebTestCase
 
         $this->assertEquals(204, $this->client->getResponse()->getStatusCode());
 
+        $this->reinitRedis();
+
         $this->client->request(
             'GET',
             '/api/showrooms/1',
@@ -125,6 +142,8 @@ class ShowroomControllerTest extends WebTestCase
             [],
             $this->header
         );
+
+        $this->assertEquals(200, $this->client->getResponse()->getStatusCode());
         $showroom = json_decode($this->client->getResponse()->getContent(), true);
         $this->assertEquals('new description', $showroom['description']);
     }
@@ -141,6 +160,44 @@ class ShowroomControllerTest extends WebTestCase
             $this->header
         );
 
-        $this->assertEquals(404, $this->client->getResponse()->getStatusCode());
+        $this->assertEquals(403, $this->client->getResponse()->getStatusCode());
+    }
+
+    /**
+     * @vcr apiShowroom.yml
+     */
+    public function testPublishShowroom()
+    {
+        $this->logInEmployee();
+
+        $this->client->request(
+            'PATCH',
+            '/api/showrooms/1/toreview',
+            [],
+            [],
+            $this->header
+        );
+
+        $this->reinitRedis();
+
+        $this->client->request(
+            'PATCH',
+            '/api/showrooms/1/publish',
+            [],
+            [],
+            $this->header
+        );
+
+        $this->assertEquals(204, $this->client->getResponse()->getStatusCode());
+    }
+
+    /**
+     * Re-init predis mock. If not executed the second call in a test do not use the mock 8)
+     */
+    private function reinitRedis()
+    {
+        $this->client = static::createClient();
+        $this->client->getContainer()->set('snc_redis.auth', $this->predisClient);
+        $this->logInEmployee();
     }
 }

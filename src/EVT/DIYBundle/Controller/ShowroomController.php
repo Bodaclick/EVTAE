@@ -4,7 +4,7 @@ namespace EVT\DIYBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use FOS\RestBundle\Controller\Annotations as FOS;
-use FOS\RestBundle\Util\Codes;
+use Symfony\Component\Security\Core\Exception\AccessDeniedException;
 use Symfony\Component\HttpFoundation\Request;
 use FOS\RestBundle\View\View;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
@@ -20,38 +20,45 @@ class ShowroomController extends Controller
     /**
      * @FOS\View()
      */
-    public function getShowroomAction($id)
+    public function getShowroomAction(Request $request, $id)
     {
+        $this->checkAuth('view', $request);
+
         return $this->get('evt.diy.showroom.manager')->get($id);
     }
 
-    public function nameShowroomAction($id, Request $request)
+    public function nameShowroomAction(Request $request, $id)
     {
-        try {
-            return $this->get('evt.diy.showroom.manager')->changeName($id, $request->request->get('name'));
-        }
-        catch (\Exception $e) {
-            throw new NotFoundHttpException();
-        }
+        $this->checkAuth('edit', $request);
+
+        return $this->get('evt.diy.showroom.manager')->changeName($id, $request->request->get('name'));
     }
 
-    public function descriptionShowroomAction($id, Request $request)
+    public function descriptionShowroomAction(Request $request, $id)
     {
-        try {
-            return $this->get('evt.diy.showroom.manager')->changeDescription($id, $request->request->get('description'));
-        }
-        catch (\Exception $e) {
-            throw new NotFoundHttpException();
-        }
+        $this->checkAuth('edit', $request);
+
+        return $this->get('evt.diy.showroom.manager')->changeDescription($id, $request->request->get('description'));
     }
 
-    public function toreviewShowroomAction($id)
+    public function toreviewShowroomAction(Request $request, $id)
     {
-        try {
-            return $this->get('evt.diy.showroom.manager')->toreview($id);
-        }
-        catch (\Exception $e) {
-            throw new NotFoundHttpException();
+        $this->checkAuth('edit', $request);
+
+        return $this->get('evt.diy.showroom.manager')->toreview($id);
+    }
+
+    public function publishShowroomAction(Request $request, $id)
+    {
+        $this->checkAuth('edit', $request);
+
+        return $this->get('evt.diy.showroom.manager')->publish($id);
+    }
+
+    private function checkAuth($grantType, Request $request)
+    {
+        if (!$this->container->get('security.context')->isGranted($grantType, $request->get('_route'))) {
+            throw new AccessDeniedException();
         }
     }
 }
