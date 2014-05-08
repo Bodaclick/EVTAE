@@ -25,4 +25,13 @@ class ShowroomMapper
             $wsModel['description']
         );
     }
+
+    public function mapModeltoWS(Showroom $showroom)
+    {
+        return [
+            'id' => $showroom->getEvtId(),
+            'name' => $showroom->getName(),
+            'description' => $showroom->getDescription()
+        ];
+    }
 }
