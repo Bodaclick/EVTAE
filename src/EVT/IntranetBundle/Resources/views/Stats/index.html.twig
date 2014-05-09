@@ -86,7 +86,11 @@
                     <div id="chart_5" style="height:350px;">
                     </div>
                 </div>
-                <script>var statsLeadRawData = {{ statsLeads.data|raw }};</script>
+                <script>
+                    var statsLeadRawData = {{ statsLeads.data|raw }};
+                    var statsLeadFromDate = "{{ statsLeads.from_date|raw }}";
+                    var statsLeadToDate = "{{ statsLeads.to_date|raw }}";
+                </script>
             </div>
 
             <!-- END PAGE CONTENT-->
