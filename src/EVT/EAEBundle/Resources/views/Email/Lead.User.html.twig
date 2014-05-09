@@ -16,14 +16,14 @@
                         <table class="twelve columns" style="margin-bottom: 10px">
                             <tr>
                                 <th>{% trans %}lead.event.date{% endtrans %}</th>
-                                <th>{% trans %}lead.event.type{% endtrans %}</th>
-                                <th>{% trans %}lead.event.location{% endtrans %}</th>
+                                <!-- th>{% trans %}lead.event.type{% endtrans %}</th>
+                                <th>{% trans %}lead.event.location{% endtrans %}</th -->
                                 <th>{% trans %}lead.date{% endtrans %}</th>
                             </tr>
                             <tr>
                                 <td>{{ event.date | date("d/m/Y") }}</td>
-                                <td>{{ event.type.name }}</td>
-                                <td>{{ event.location.admin_level1  }} - {{ event.location.admin_level2 }}</td>
+                                <!-- td>{{ event.type.name }}</td>
+                                <td>{{ event.location.admin_level1  }} - {{ event.location.admin_level2 }}</td -->
                                 <td>{{ created_at | date("d/m/Y") }}</td>
                             </tr>
                         </table>
