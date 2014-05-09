@@ -36,6 +36,24 @@ class ShowroomManagerTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals(1, $showroom->getEvtId());
     }
 
+    /**
+     * @expectedException \Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException
+     */
+    public function testNewShowroomCannot()
+    {
+        $this->setEmptyEmdShowroomMock();
+        $mappedShowroom = new Showroom(1, 'Name', 'Desc');
+        $this->setEmptyShowroomMapperMockup($mappedShowroom);
+        $this->setEmptyShowroomRepoMockup(null);
+        $this->setEmptyEntityManagerMockup();
+        $this->setCoreClientMockup(404);
+
+        $this->buildManager();
+        $showroom = $this->manager->get(1);
+
+        $this->assertEquals(1, $showroom->getEvtId());
+    }
+
     public function testShowroomAlreadyModified()
     {
         $this->setEmptyEmdShowroomMock();
@@ -149,8 +167,7 @@ class ShowroomManagerTest extends \PHPUnit_Framework_TestCase
         $this->showroomClientMockup = $this->getMockBuilder('EVT\EMDClientBundle\Client\ShowroomClient')
             ->disableOriginalConstructor()->getMock();
         $this->showroomClientMockup->expects($this->never())
-            ->method('getById')
-            ->will($this->returnvalue(null));
+            ->method('getById');
     }
 
     private function setShowroomMapperMockup($showroom)
@@ -180,6 +197,15 @@ class ShowroomManagerTest extends \PHPUnit_Framework_TestCase
             ->will($this->returnvalue($showroom));
     }
 
+    private function setEmptyShowroomRepoMockup($showroom)
+    {
+        $this->showroomRepoMockup = $this->getMockBuilder('Doctrine\ORM\EntityRepository')->disableOriginalConstructor()
+            ->setMethods(['findOneByEvtId'])
+            ->getMock();
+        $this->showroomRepoMockup->expects($this->never())
+            ->method('findOneByEvtId');
+    }
+
     private function setEntityManagerMockup()
     {
         $this->emMockup = $this->getMockBuilder('Doctrine\ORM\EntityManager')->disableOriginalConstructor()->getMock();
@@ -188,13 +214,20 @@ class ShowroomManagerTest extends \PHPUnit_Framework_TestCase
             ->will($this->returnvalue($this->showroomRepoMockup));
     }
 
-    private function setCoreClientMockup()
+    private function setEmptyEntityManagerMockup()
+    {
+        $this->emMockup = $this->getMockBuilder('Doctrine\ORM\EntityManager')->disableOriginalConstructor()->getMock();
+        $this->emMockup->expects($this->never())
+            ->method('getRepository');
+    }
+
+    private function setCoreClientMockup($responseCode = 200)
     {
         $this->coreClientMockup = $this->getMockBuilder('EVT\CoreClientBundle\Client\Client')
             ->disableOriginalConstructor()->getMock();
         $this->coreClientMockup->expects($this->once())
             ->method('get')
-            ->will($this->returnvalue(new Response(200, '')));
+            ->will($this->returnvalue(new Response($responseCode, '')));
     }
 
     private function buildManager()
