@@ -27,6 +27,9 @@
         "knplabs/knp-menu": "2.0.*@dev",
         "jms/serializer-bundle": "0.13.*@dev",
         "jms/di-extra-bundle": "1.4.*@dev",
+        "knplabs/knp-gaufrette-bundle": "dev-master",
+        "knplabs/gaufrette": "0.2.*@dev",
+        "aws/aws-sdk-php": "2.6.*@dev",
         "friendsofsymfony/rest-bundle": "1.1.*"
     },
     "require-dev": {
