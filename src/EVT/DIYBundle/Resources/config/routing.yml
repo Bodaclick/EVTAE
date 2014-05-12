@@ -1,3 +1,6 @@
 evt_ae_api_showroom:
     resource: EVT\DIYBundle\Controller\ShowroomController
     type: rest
+evt_ae_image:
+    resource: EVT\DIYBundle\Controller\ImageController
+    type: rest
