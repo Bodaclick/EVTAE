@@ -13,7 +13,7 @@
       </trans-unit>
       <trans-unit id="44fcc3e3657df3aa5d6c6405b29bf9fa" resname="body.new.lead.manager">
         <source>body.new.lead.manager</source>
-        <target>Gentile ospite, hai ricevuto una nuova richiesta di informazioni</target>
+        <target>Gentile Cliente, hai ricevuto una nuova richiesta di informazioni</target>
         
       </trans-unit>
       <trans-unit id="60cc00aae82fb1783a51fcaebfe652e9" resname="lead.user.name">
@@ -250,12 +250,12 @@ Buona giornata</target>
       </trans-unit>
       <trans-unit id="1998763daa17593886144cdc6235e866" resname="products.silver.2">
         <source>products.silver.2</source>
-        <target>%bold%custom%_bold% contenuto</target>
+        <target>contenuto %bold%completo e personalizzato%_bold% </target>
         
       </trans-unit>
       <trans-unit id="150592e96abb248374f375c63d030ce1" resname="products.silver.3">
         <source>products.silver.3</source>
-        <target>%bold%complete%_bold% richieste di informazioni</target>
+        <target>richieste di informazioni %bold%complete%_bold% </target>
         
       </trans-unit>
       <trans-unit id="3f6e0f16b491aee09b862258ae96b621" resname="products.silver.4">
@@ -275,17 +275,17 @@ Buona giornata</target>
       </trans-unit>
       <trans-unit id="1a53a181ea560bdfad8559c2445c6f9c" resname="products.gold.1">
         <source>products.gold.1</source>
-        <target>%bold%4%_bold% presenza sui portali sociali</target>
+        <target>presenza su %bold%4%_bold%  portali sociali</target>
         
       </trans-unit>
       <trans-unit id="4833ddb198ce3f8cf24b0891aecd39ef" resname="products.gold.2">
         <source>products.gold.2</source>
-        <target>%bold%custom%_bold% contenuto</target>
+        <target>contenuto %bold%completo e personalizzato%_bold% </target>
         
       </trans-unit>
       <trans-unit id="e5477495d6da9c733fe2483182a24c54" resname="products.gold.3">
         <source>products.gold.3</source>
-        <target>%bold%complete%_bold% richieste di informazioni</target>
+        <target>richieste di informazioni %bold%complete%_bold% </target>
         
       </trans-unit>
       <trans-unit id="d17d95c10e5b42871cbe36e92238a885" resname="products.gold.4">
@@ -305,17 +305,17 @@ Buona giornata</target>
       </trans-unit>
       <trans-unit id="8f73fffbf36392ab9b29056cfae6e53f" resname="products.platinum.1">
         <source>products.platinum.1</source>
-        <target>%bold%5%_bold% presenza sui portali sociali</target>
+        <target>presenza su %bold%5%_bold%  portali sociali</target>
         
       </trans-unit>
       <trans-unit id="bcb7d43ae0fc5ec6407e1e985a766215" resname="products.platinum.2">
         <source>products.platinum.2</source>
-        <target>%bold%custom%_bold% contenuto</target>
+        <target>contenuto %bold%completo e personalizzato%_bold% </target>
         
       </trans-unit>
       <trans-unit id="cd07219b0de575ed0d3cba0e06b75bb2" resname="products.platinum.3">
         <source>products.platinum.3</source>
-        <target>%bold%complete%_bold% richieste di informazioni</target>
+        <target>richieste di informazioni %bold%complete%_bold% </target>
         
       </trans-unit>
       <trans-unit id="3deaa6abc5602482c0a315a1efa14b06" resname="products.platinum.4">
@@ -325,7 +325,7 @@ Buona giornata</target>
       </trans-unit>
       <trans-unit id="763c1c653432ee2388c0ca8c41154c43" resname="products.platinum.5">
         <source>products.platinum.5</source>
-        <target>%bold%5%_bold% presenza sui portali sociali</target>
+        <target>presenza su %bold%5%_bold% portali sociali</target>
         
       </trans-unit>
       <trans-unit id="e1796b3c87e100001fda44ddd80ccf92" resname="products.mail">

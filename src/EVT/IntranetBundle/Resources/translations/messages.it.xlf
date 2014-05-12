@@ -18,7 +18,7 @@
       </trans-unit>
       <trans-unit id="400f0536669715b53fc66a5b20e36adb" resname="created.at">
         <source>created.at</source>
-        <target>Creato in</target>
+        <target>Data richiesta</target>
         
       </trans-unit>
       <trans-unit id="e6dec152d6a941fccb0a5e8cc2579cc3" resname="vertical">
