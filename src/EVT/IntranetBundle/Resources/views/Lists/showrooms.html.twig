@@ -48,6 +48,12 @@
                                             <td>{{ showroom.type.name }}</td>
                                             <td>{{ showroom.provider.phone }}</td>
                                             <td>{{ showroom.provider.notification_emails }}</td>
+                                            <td class="highlight">
+                                                {% if is_granted('edit', 'evt_intranet_showroom_edit') %}
+                                                <a href="{{ path('evt_intranet_showroom_edit', {'id': showroom.id, '_role': app.session.get('_role')}) }}"
+                                                   class="btn default btn-xs green-stripe">{{ "edit"|trans }}</a>
+                                                {% endif %}
+                                            </td>
                                         </tr>
                                     {% endfor %}
                                     </tbody>
