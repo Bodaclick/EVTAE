@@ -25,12 +25,47 @@ var Charts = function () {
                 }
 
                 var index = 0;
+
+                var currentLastDate = '';
+                var currentDate = statsLeadFromDate;
+
                 for (key in leadsPorDate) {
                     if (leadsPorDate.hasOwnProperty(key)) {
+
+                        if (currentLastDate == '') {
+                            currentLastDate = statsLeadFromDate;
+                        }
+
+                        currentDate = key.substring(0, 10);
+
+                        // Fill days with no datas
+                        while (currentLastDate != currentDate) {
+                            leads.push([index, 0]);
+                            leadsLabel.push([index, currentLastDate]);
+                            index++;
+
+                            var nextDay = new Date(currentLastDate);
+                            nextDay.setDate(nextDay.getDate() + 1);
+
+                            currentLastDate = nextDay.toISOString().substring(0,10);
+                        }
+
                         leads.push([index, leadsPorDate[key]]);
                         leadsLabel.push([index, key.substring(0,10)]);
                         index++;
                     };
+                }
+
+                // Fill days with no datas till to-date
+                while (currentLastDate != statsLeadToDate) {
+                    leads.push([index, 0]);
+                    leadsLabel.push([index, currentLastDate]);
+                    index++;
+
+                    var nextDay = new Date(currentLastDate);
+                    nextDay.setDate(nextDay.getDate() + 1);
+
+                    currentLastDate = nextDay.toISOString().substring(0,10);
                 }
 
                 var stack = 0,

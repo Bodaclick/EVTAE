@@ -41,7 +41,7 @@
                                         <th>{{ "email"|trans }}</th>
                                         <th>{{ "phone"|trans }}</th>
                                         <th>{{ "event.date"|trans }}</th>
-                                        <th>{{ "event.location"|trans }}</th>
+                                        <!-- th>{{ "event.location"|trans }}</th -->
                                         <th>&nbsp;</th>
                                     </tr>
                                     </thead>
@@ -61,9 +61,9 @@
                                             {% else %}{% include 'EVTIntranetBundle::viewMore.html.twig' %}{% endif %}
                                             </td>
                                             <td>{{ lead.event.date|date("d/m/Y") }}</td>
-                                            <td>{{ lead.event.location.admin_level1 }}
+                                            <!-- td>{{ lead.event.location.admin_level1 }}
                                                 ({{ lead.event.location.admin_level2 }})
-                                            </td>
+                                            </td -->
                                             <td class="highlight">
                                                 <a href="{{ path('evt_intranet_lead_showlead', {'id': lead.id, '_role': app.session.get('_role')}) }}"
                                                    class="btn default btn-xs green-stripe">

@@ -73,8 +73,8 @@ class ShowroomManager
     /**
      * @param $id
      * @param $name
+     * @throws \Symfony\Component\HttpKernel\Exception\NotFoundHttpException
      * @throws \Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException
-     * @throws \Exception
      */
     public function changeName($id, $name)
     {
@@ -84,7 +84,7 @@ class ShowroomManager
 
         $showroom = $this->em->getRepository('EVTDIYBundle:Showroom')->findOneByEvtId($id);
         if (empty($showroom)) {
-            throw new \Exception("Showroom not found");
+            throw new NotFoundHttpException();
         }
 
         if (Showroom::REVIEWED == $showroom->getState()) {
@@ -100,8 +100,8 @@ class ShowroomManager
     /**
      * @param $id
      * @param $description
+     * @throws \Symfony\Component\HttpKernel\Exception\NotFoundHttpException
      * @throws \Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException
-     * @throws \Exception
      */
     public function changeDescription($id, $description)
     {
@@ -111,7 +111,7 @@ class ShowroomManager
 
         $showroom = $this->em->getRepository('EVTDIYBundle:Showroom')->findOneByEvtId($id);
         if (empty($showroom)) {
-            throw new \Exception("Showroom not found");
+            throw new NotFoundHttpException();
         }
 
         if (Showroom::REVIEWED == $showroom->getState()) {
@@ -146,20 +146,25 @@ class ShowroomManager
         $showroom = $this->em->getRepository('EVTDIYBundle:Showroom')->findOneByEvtId($id);
         if (empty($showroom)) {
             $emdShowroom = $this->emdShowroomClient->getById($id);
-            if (!empty($emdShowroom)){
+            if (!empty($emdShowroom)) {
                 $mShowroom = $this->showroomMapper->mapWStoModel($emdShowroom);
                 $mShowroom->setState(Showroom::MODIFIED);
                 $this->save($mShowroom);
-            }else{
+            } else {
                 throw new NotFoundHttpException();
             }
-        }else{
+        } else {
             if (Showroom::REVIEWED == $showroom->getState()) {
                 throw new PreconditionFailedHttpException();
             }
         }
     }
 
+    /**
+     * @param $id
+     * @throws \Symfony\Component\HttpKernel\Exception\PreconditionFailedHttpException
+     * @throws \Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException
+     */
     public function publish($id)
     {
         if (!$this->canEdit($id)) {
@@ -186,13 +191,13 @@ class ShowroomManager
     /**
      * @param $id
      * @param $state
-     * @throws \Exception
+     * @throws \Symfony\Component\HttpKernel\Exception\NotFoundHttpException
      */
     private function changeState($id, $state)
     {
         $showroom = $this->get($id);
         if (empty($showroom)) {
-            throw new \Exception("Showroom not found");
+            throw new NotFoundHttpException();
         }
 
         $showroom->setState($state);
