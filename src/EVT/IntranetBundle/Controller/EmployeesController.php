@@ -27,6 +27,9 @@ class EmployeesController extends Controller
 
             switch ($response->getStatusCode()) {
                 case 201:
+                    $authBlender = $this->container->get('evt_auth_manager');
+                    $authBlender->blendForUser($request->request->get('user')['username'], ['ROLE_EMPLOYEE']);
+
                     $content = $this->renderView(
                         'EVTIntranetBundle:Forms:employee_ok.html.twig',
                         ['req' => $request->request->all()]
