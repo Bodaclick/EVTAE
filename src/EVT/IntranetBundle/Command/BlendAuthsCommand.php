@@ -22,7 +22,7 @@ class BlendAuthsCommand extends ContainerAwareCommand
     protected function configure()
     {
         $this
-            ->setName('evt:auth:blend')
+            ->setName('evt:auth:blend:user')
             ->setDescription('Generate the auths in Redis given username.')
             ->setDefinition(
                 [
@@ -33,7 +33,7 @@ class BlendAuthsCommand extends ContainerAwareCommand
                 <<<EOT
     The <info>evt:auth:blend</info> Generate the auths in Redis given username:
 
-  <info>php app/console evt:auth:blend username</info>
+  <info>php app/console evt:auth:blend:user username</info>
 EOT
             );
     }
