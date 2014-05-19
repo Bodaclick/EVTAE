@@ -29,7 +29,7 @@
                     <!-- BEGIN SAMPLE TABLE PORTLET-->
                     <div class="portlet box grey">
                         <div class="portlet-title">
-                            <div class="caption">{{ "managers"|trans }}</div>
+                            <div class="caption">{{ "managers"|trans }} ({{ pagination.total_items }})</div>
                         </div>
                         <div class="portlet-body flip-scroll">
                             {% if managers|length > 0 %}
