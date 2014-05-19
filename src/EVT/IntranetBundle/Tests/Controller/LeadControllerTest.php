@@ -111,14 +111,26 @@ class LeadControllerTest extends WebTestCase
     {
         $this->logInEmployee();
 
-        $response = new Response(200, json_decode('{}', true));
+        $response = new Response(200, json_decode(
+            '{"pagination": {"total_pages": 1, "current_page": 1, "items_per_page": 10, "total_items": 7}}',
+            true
+        ));
+
+        $responseVertical = new Response(200, json_decode(
+            '{{"domain": "aniversarioclick.com","lang": "es_ES","timezone": "Europe/Madrid"}}',
+            true
+        ));
 
         $coreClientMock = $this->getMockBuilder('EVT\CoreClientBundle\Client\Client')
             ->disableOriginalConstructor()->getMock();
 
-        $coreClientMock->expects($this->exactly(2))
+        $coreClientMock->expects($this->at(0))
             ->method('get')
             ->will($this->returnValue($response));
+
+        $coreClientMock->expects($this->at(1))
+            ->method('get')
+            ->will($this->returnValue($responseVertical));
 
         $this->client->getContainer()->set('evt.core.client', $coreClientMock);
         $this->client->request('GET', '/employee/leads');

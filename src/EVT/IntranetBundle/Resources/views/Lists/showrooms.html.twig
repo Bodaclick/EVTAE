@@ -21,10 +21,77 @@
             <!-- BEGIN PAGE CONTENT-->
             <div class="row">
                 <div class="col-md-12">
+
+
+
+
+                    <div class="portlet box green">
+                        <div class="portlet-title">
+                            <div class="caption">
+                                {{ "search"|trans }}
+                            </div>
+                            <div class="tools">
+                                <a href="javascript:;" class="collapse">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="portlet-body form">
+                            <!-- BEGIN FORM-->
+                            <form action="" method="get" class="form-horizontal">
+                                <div class="form-body">
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label class="control-label col-md-4">{{ "vertical"|trans }}</label>
+                                                <div class="col-md-8">
+                                                    {% include 'EVTIntranetBundle:Filters:vertical.html.twig' %}
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label class="control-label col-md-4">{{ "name"|trans }}</label>
+                                                <div class="col-md-8">
+                                                    <input name="name" type="text" class="form-control" placeholder="Hotel California" value="{{ app.request.get('name') }}">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label class="control-label col-md-4">{{ "email"|trans }}</label>
+                                                <div class="col-md-8">
+                                                    <input name="notification_email" type="text" class="form-control" placeholder="notification mail" value="{{ app.request.get('notification_email') }}">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-actions fluid">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="col-md-offset-8 col-md-4">
+                                                <button type="submit" class="btn green">Submit</button>
+                                                <button type="button" class="btn default">Reset</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            <!-- END FORM-->
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
                     <!-- BEGIN SAMPLE TABLE PORTLET-->
                     <div class="portlet box grey">
                         <div class="portlet-title">
-                            <div class="caption">{{ "showrooms"|trans }}</div>
+                            <div class="caption">{{ "showrooms"|trans }} ({{ pagination.total_items }})</div>
                         </div>
                         <div class="portlet-body flip-scroll">
                             {% if showrooms|length > 0 %}

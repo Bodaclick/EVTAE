@@ -14,8 +14,15 @@ class ShowroomController extends Controller
      */
     public function listAction(Request $request)
     {
+        $filter = '';
+        foreach ($request->query as $key => $param) {
+            if ($param != '') {
+                $filter .= '&' . $key . '=' . $param;
+            }
+        }
+
         $showroomResponse = $this->container->get('evt.core.client')
-            ->get('/api/showrooms?page='.$request->query->get('page', 1));
+            ->get('/api/showrooms?'. $filter);
 
         if (404 == $showroomResponse->getStatusCode() && $request->query->get('page', 1)>1) {
             throw new NotFoundHttpException();
@@ -28,12 +35,16 @@ class ShowroomController extends Controller
 
         $pagination = $showroomResponse->getBody()['pagination'];
 
+        $verticalsResponse = $this->container->get('evt.core.client')
+            ->get('/api/verticals');
+
         $content = $this->renderView(
             'EVTIntranetBundle:Lists:showrooms.html.twig',
             [
                 "showrooms" => $showrooms,
                 "pagination" => $pagination,
-                "routeController" => "evt_intranet_showroom_list"
+                "routeController" => "evt_intranet_showroom_list",
+                "verticals" => $verticalsResponse->getBody()
             ]
         );
         return new Response($content);

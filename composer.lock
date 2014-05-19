@@ -11,12 +11,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "629c5ba5b419d2730c0823d5c95ae03066b6817f"
+                "reference": "f67b4c045c6cb47f7c2ac0b5953601fa1c36cda1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/629c5ba5b419d2730c0823d5c95ae03066b6817f",
-                "reference": "629c5ba5b419d2730c0823d5c95ae03066b6817f",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/f67b4c045c6cb47f7c2ac0b5953601fa1c36cda1",
+                "reference": "f67b4c045c6cb47f7c2ac0b5953601fa1c36cda1",
                 "shasum": ""
             },
             "require": {
@@ -71,7 +71,7 @@
                 "s3",
                 "sdk"
             ],
-            "time": "2014-05-06 19:14:32"
+            "time": "2014-05-15 20:42:01"
         },
         {
             "name": "doctrine/annotations",
@@ -1350,12 +1350,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/KnpLabs/Gaufrette.git",
-                "reference": "c2b6af8eb6fc093409ee0753137817dce1673763"
+                "reference": "deea5374266ff6f5e94e3623778c25bce809c932"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/KnpLabs/Gaufrette/zipball/c2b6af8eb6fc093409ee0753137817dce1673763",
-                "reference": "c2b6af8eb6fc093409ee0753137817dce1673763",
+                "url": "https://api.github.com/repos/KnpLabs/Gaufrette/zipball/deea5374266ff6f5e94e3623778c25bce809c932",
+                "reference": "deea5374266ff6f5e94e3623778c25bce809c932",
                 "shasum": ""
             },
             "require": {
@@ -1425,7 +1425,7 @@
                 "filesystem",
                 "media"
             ],
-            "time": "2014-03-24 21:53:22"
+            "time": "2014-05-15 15:31:59"
         },
         {
             "name": "knplabs/knp-gaufrette-bundle",
@@ -1558,12 +1558,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/KnpLabs/KnpMenuBundle.git",
-                "reference": "e5700ed8cbd5c402d24d6dda118aa23400937288"
+                "reference": "f6d6d5081c0e441f953200a6b5f1c760ee54377e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/KnpLabs/KnpMenuBundle/zipball/e5700ed8cbd5c402d24d6dda118aa23400937288",
-                "reference": "e5700ed8cbd5c402d24d6dda118aa23400937288",
+                "url": "https://api.github.com/repos/KnpLabs/KnpMenuBundle/zipball/f6d6d5081c0e441f953200a6b5f1c760ee54377e",
+                "reference": "f6d6d5081c0e441f953200a6b5f1c760ee54377e",
                 "shasum": ""
             },
             "require": {
@@ -1603,7 +1603,7 @@
             "keywords": [
                 "menu"
             ],
-            "time": "2014-03-03 22:44:01"
+            "time": "2014-05-17 17:25:37"
         },
         {
             "name": "kriswallsmith/assetic",
@@ -2728,7 +2728,7 @@
                     "role": "Lead Developer"
                 },
                 {
-                    "name": "Armin Ronacher",
+                    "name": "Armin Ronacher2",
                     "email": "armin.ronacher@active-4.com",
                     "role": "Project Founder"
                 },
@@ -2747,16 +2747,16 @@
         },
         {
             "name": "willdurand/negotiation",
-            "version": "1.0.4",
+            "version": "1.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/willdurand/Negotiation.git",
-                "reference": "8f8c85f6845fbdfc827bedf5bf9315ddaefd8295"
+                "reference": "94733e96952a1f57db600582a8221807bb6f100a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/willdurand/Negotiation/zipball/8f8c85f6845fbdfc827bedf5bf9315ddaefd8295",
-                "reference": "8f8c85f6845fbdfc827bedf5bf9315ddaefd8295",
+                "url": "https://api.github.com/repos/willdurand/Negotiation/zipball/94733e96952a1f57db600582a8221807bb6f100a",
+                "reference": "94733e96952a1f57db600582a8221807bb6f100a",
                 "shasum": ""
             },
             "require": {
@@ -2793,7 +2793,7 @@
                 "header",
                 "negotiation"
             ],
-            "time": "2014-02-06 13:57:08"
+            "time": "2014-05-16 12:31:56"
         }
     ],
     "packages-dev": [
