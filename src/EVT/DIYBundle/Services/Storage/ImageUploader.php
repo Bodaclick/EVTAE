@@ -34,7 +34,14 @@ class ImageUploader
             throw new BadRequestHttpException(sprinf('Max size %s MB', (self::$maxFileSize/1024)));
         }
 
-        $filename = sprintf('%s/%s/%s/%s.%s', date('Y'), date('m'), date('d'), uniqid(), $file->getClientOriginalExtension());
+        $filename = sprintf(
+            '%s/%s/%s/%s.%s',
+            date('Y'),
+            date('m'),
+            date('d'),
+            uniqid(),
+            $file->getClientOriginalExtension()
+        );
 
         $adapter = $this->filesystem->getAdapter();
         $adapter->setMetadata($filename, ['contentType' => $file->getClientMimeType()]);

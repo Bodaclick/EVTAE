@@ -1,0 +1,24 @@
+{% extends "EVTEAEBundle:Email:Base.Mail.twig" %}
+
+{% block title %}{% trans %}title.published.showroom.manager{% endtrans %} {{ vertical.domain }}{% endblock %}
+
+{% block content %}
+<table class="container content" align="center">
+    <tr>
+        <td>
+            <table class="row note">
+                <tr>
+                    <td class="wrapper last">
+                        <h4>{% trans %}body.published.showroom.manager{% endtrans %}</h4>
+                        <p>Showroom: {{ showroom.name }} </p>
+                        <span class="devider"></span>
+                        <a href="http://www.{{ vertical.domain }}/{{ showroom.slug }}">http://www.{{ vertical.domain }}/{{ showroom.slug }}</a>
+                        <!-- BEGIN: Note Panel -->
+                    </td>
+                    <td class="expander"></td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+{% endblock %}

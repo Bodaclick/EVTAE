@@ -88,4 +88,31 @@ class EmailHookController extends Controller
         $response = new JsonResponse();
         return $response->setStatusCode(202);
     }
+
+    /**
+     * @Method("POST")
+     * @Route("showroom/published")
+     */
+    public function postShowroomPublishedAction(Request $request)
+    {
+        $data = [];
+        $content = $request->getContent();
+        if (!empty($content)) {
+            $data = json_decode($content, true);
+        }
+
+        $request->setLocale($data['showroom']['provider']['lang']);
+
+        $data['vertical'] = $data['showroom']['vertical'];
+        $domain = $data['vertical']['domain'];
+
+        $data['mailing']['subject'] = $this->get('translator')
+            ->trans('title.new.lead.manager', [], 'messages', $data['showroom']['provider']['lang']);
+        $data['mailing']['to'] = $data['showroom']['provider']['notification_emails'];
+        $data['mailing']['cc'] = 'support@'. $domain;
+
+        $this->get('evt.mailer')->send($data, 'EVTEAEBundle:Email:Showroom.Published.Manager.html.twig');
+        $response = new JsonResponse();
+        return $response->setStatusCode(202);
+    }
 }
