@@ -1,6 +1,7 @@
 <?php
 
 namespace EVT\DIYBundle\Controller;
+
 use FOS\RestBundle\Util\Codes;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
