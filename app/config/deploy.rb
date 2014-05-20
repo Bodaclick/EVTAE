@@ -76,7 +76,8 @@ namespace :php_fpm do
 end
 
 before "deploy:share_childs", "evt:parameters"
+after "symfony:assets:install", "bdk:assetic"
 before "symfony:composer:install","evt:vendors"
 before "symfony:composer:update", "evt:vendors"
 before "symfony:cache:warmup", "php_fpm:reload"
-after "symfony:assets:install", "evt:assetic", "deploy:cleanup"
+after "deploy", "deploy:cleanup"
