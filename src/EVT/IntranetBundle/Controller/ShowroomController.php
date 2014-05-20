@@ -33,7 +33,11 @@ class ShowroomController extends Controller
             $showrooms = $showroomResponse->getBody()['items'];
         }
 
-        $pagination = $showroomResponse->getBody()['pagination'];
+        $pagination = null;
+        if (isset($showroomResponse->getBody()['pagination'])){
+            $pagination = $showroomResponse->getBody()['pagination'];
+        }
+
 
         $verticalsResponse = $this->container->get('evt.core.client')
             ->get('/api/verticals');
