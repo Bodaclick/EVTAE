@@ -1,0 +1,40 @@
+<div class="portlet box green">
+    <div class="portlet-title">
+        <div class="caption">
+            {{ "search"|trans }}
+        </div>
+        <div class="tools">
+            <a href="javascript:;" class="collapse">
+            </a>
+        </div>
+    </div>
+    <div class="portlet-body form">
+        <!-- BEGIN FORM-->
+        <form action="" method="get" class="form-horizontal">
+            <div class="form-body">
+                <div class="row">
+
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label class="control-label col-md-4">Email</label>
+                            <div class="col-md-8">
+                                <input name="email_search" type="text" class="form-control" placeholder="Email" value="{{ app.request.get('email_search') }}">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-actions fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="col-md-offset-8 col-md-4">
+                            <button type="submit" class="btn green">Submit</button>
+                            <button type="button" class="btn default">Reset</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <!-- END FORM-->
+    </div>
+</div>
