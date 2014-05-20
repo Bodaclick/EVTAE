@@ -115,4 +115,30 @@ class EmailHookController extends Controller
         $response = new JsonResponse();
         return $response->setStatusCode(202);
     }
+
+    /**
+     * @Method("POST")
+     * @Route("welcome/manager")
+     */
+    public function postManagerWelcomeAction(Request $request)
+    {
+        $data = [];
+        $content = $request->getContent();
+        if (!empty($content)) {
+            $data = json_decode($content, true);
+        }
+
+        $request->setLocale($data['user']['lang']);
+
+
+        $data['mailing']['subject'] = $this->get('translator')
+            ->trans('title.welcome.manager', [], 'messages', $data['user']['lang']);
+        $data['mailing']['to'] = $data['user']['email'];
+        $data['mailing']['cc'] = 'support@e-verticals.com';
+        $data['vertical']['domain'] = 'e-verticals.com';
+
+        $this->get('evt.mailer')->send($data, 'EVTEAEBundle:Email:Welcome.Manager.html.twig');
+        $response = new JsonResponse();
+        return $response->setStatusCode(202);
+    }
 }

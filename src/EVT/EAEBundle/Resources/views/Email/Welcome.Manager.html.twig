@@ -1,0 +1,21 @@
+{% extends "EVTEAEBundle:Email:Base.Mail.twig" %}
+
+{% block title %}{% trans %}title.welcome.manager{% endtrans %}{% endblock %}
+
+{% block content %}
+<table class="container content" align="center">
+    <tr>
+        <td>
+            <table class="row note">
+                <tr>
+                    <td class="wrapper last">
+                        <h4>{% trans %}body.welcome.manager{% endtrans %}</h4>
+                        <p>Username: {{ user.username }} </p>
+                    </td>
+                    <td class="expander"></td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+{% endblock %}
