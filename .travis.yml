@@ -9,5 +9,8 @@ before_script:
 
 script: phpunit -c app/
 
+services:
+  - redis-server
+
 notifications:
   slack: bodaclick:96T87K3ZYBkkRS0HXnqdRooi
