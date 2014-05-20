@@ -307,6 +307,14 @@ Have a nice day ...</target>
         <source>home.slider.1.button</source>
         <target>View our products!</target>
       </trans-unit>
+      <trans-unit id="0166131d9877f2fe28efc0e1d3049ad0" resname="title.published.showroom.manager">
+        <source>title.published.showroom.manager</source>
+        <target>Showroom published in vertical: </target>
+      </trans-unit>
+      <trans-unit id="45b1fe0f185e27719e4ec52a4be87ffe" resname="body.published.showroom.manager">
+        <source>body.published.showroom.manager</source>
+        <target>Your showroom is now public!</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>
