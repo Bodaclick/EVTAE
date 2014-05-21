@@ -1,4 +1,6 @@
-EVTAE [![Build Status](http://89.140.90.242:8080/buildStatus/icon?job=EVTAE_DEV)](http://89.140.90.242:8080/job/EVTAE_DEV/)
+EVTAE
 =====
 
 EVT Acceso a Empresas (Intranet)
+
+[![Build Status](https://travis-ci.org/Bodaclick/EVTAE.svg?branch=dev)](https://travis-ci.org/Bodaclick/EVTAE)
