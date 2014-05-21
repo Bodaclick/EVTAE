@@ -107,7 +107,7 @@ class EmailHookController extends Controller
         $domain = $data['vertical']['domain'];
 
         $data['mailing']['subject'] = $this->get('translator')
-            ->trans('title.new.lead.manager', [], 'messages', $data['showroom']['provider']['lang']);
+            ->trans('title.published.showroom.manager', [], 'messages', $data['showroom']['provider']['lang']);
         $data['mailing']['to'] = $data['showroom']['provider']['notification_emails'];
         $data['mailing']['cc'] = 'support@'. $domain;
 

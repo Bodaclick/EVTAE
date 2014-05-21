@@ -11,12 +11,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "f67b4c045c6cb47f7c2ac0b5953601fa1c36cda1"
+                "reference": "75aab119db3141e60ae7f786fd32b8ded0b18d6f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/f67b4c045c6cb47f7c2ac0b5953601fa1c36cda1",
-                "reference": "f67b4c045c6cb47f7c2ac0b5953601fa1c36cda1",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/75aab119db3141e60ae7f786fd32b8ded0b18d6f",
+                "reference": "75aab119db3141e60ae7f786fd32b8ded0b18d6f",
                 "shasum": ""
             },
             "require": {
@@ -71,7 +71,7 @@
                 "s3",
                 "sdk"
             ],
-            "time": "2014-05-15 20:42:01"
+            "time": "2014-05-20 21:52:40"
         },
         {
             "name": "doctrine/annotations",
@@ -2141,12 +2141,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/snc/SncRedisBundle.git",
-                "reference": "6503cfc692c6a5dee81bd32277c45c251694608a"
+                "reference": "e6ea2d0e23535b849acadb44ba226eb125941aed"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/snc/SncRedisBundle/zipball/6503cfc692c6a5dee81bd32277c45c251694608a",
-                "reference": "6503cfc692c6a5dee81bd32277c45c251694608a",
+                "url": "https://api.github.com/repos/snc/SncRedisBundle/zipball/e6ea2d0e23535b849acadb44ba226eb125941aed",
+                "reference": "e6ea2d0e23535b849acadb44ba226eb125941aed",
                 "shasum": ""
             },
             "require": {
@@ -2196,7 +2196,7 @@
                 "redis",
                 "symfony"
             ],
-            "time": "2014-04-18 07:38:06"
+            "time": "2014-05-20 09:20:22"
         },
         {
             "name": "swiftmailer/swiftmailer",
