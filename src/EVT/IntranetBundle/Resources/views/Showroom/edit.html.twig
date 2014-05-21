@@ -10,13 +10,15 @@
                     <h3 class="page-title">{{ "id" }}</h3>
                     <ul class="page-breadcrumb breadcrumb">
                         <li>
-                            <i class="fa fa-exchange"></i>
-                            <a href="#">{{ "showroom"|trans }}</a>
+                            <i class="fa fa-ticket"></i>
+                            <a href="{{ path('evt_intranet_showroom_list', { '_role': app.session.get('_role') }) }}"
+                                {{ "showrooms" |trans}}">{{ "showrooms"|trans }}
+                            </a>
                         </li>
                         <li>
                             <i class="fa fa-angle-right"></i>
                             <a href="#">
-                                {{ "edit"|trans }}
+                                {{ "Edit"|trans }}
                             </a>
                         </li>
                     </ul>
@@ -25,7 +27,7 @@
             </div>
             <!-- END PAGE HEADER-->
             <!-- BEGIN PAGE CONTENT-->
-            <div class="row" ng-controller="EditController">
+            <div class="row" ng-controller="editShowroomCtrl">
                 <div class="col-md-12">
                     <div class="portlet box grey">
                         <div class="portlet-title">
