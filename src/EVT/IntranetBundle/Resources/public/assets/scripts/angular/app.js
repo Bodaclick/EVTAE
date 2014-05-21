@@ -11,14 +11,14 @@ editShowroom.config(['$routeProvider', '$interpolateProvider', '$locationProvide
         $locationProvider.html5Mode(true);
 }]);
 
-editShowroom.controller('EditController', ['$scope', '$http', '$location', 'Showroom',
-    function($scope, $http, $location, Showroom){
+editShowroom.controller('editShowroomCtrl', ['$scope', '$http', '$location', 'ShowroomService',
+    function($scope, $http, $location, ShowroomService){
         var arrayUrl = $location.path().split("/");
         var num = arrayUrl.length;
         var id = arrayUrl[num - 1];
 
         //Get data from showroom
-        Showroom.getShowroomById({id: id}, function(data) {
+        ShowroomService.getShowroomById({id: id}, function(data) {
             $scope.evtId = data.evt_id;
             $scope.evtName = $scope.showroomName = data.name;
             $scope.evtDesc = data.description;

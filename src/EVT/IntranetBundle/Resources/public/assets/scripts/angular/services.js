@@ -1,6 +1,6 @@
 var editShowroomServices = angular.module('editShowroomServices', ['ngResource']);
 
-editShowroomServices.factory('Showroom', ['$resource',
+editShowroomServices.factory('ShowroomService', ['$resource',
     function($resource){
         return $resource(':url', {}, {
             getShowroomById:{
