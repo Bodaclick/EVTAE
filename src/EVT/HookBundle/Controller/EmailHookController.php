@@ -101,13 +101,17 @@ class EmailHookController extends Controller
             $data = json_decode($content, true);
         }
 
-        $request->setLocale($data['showroom']['provider']['lang']);
+        $lang = 'en_EN';
+        if (isset($data['showroom']['provider']['lang'])) {
+            $lang = $data['showroom']['provider']['lang'];
+        }
+        $request->setLocale($lang);
 
         $data['vertical'] = $data['showroom']['vertical'];
         $domain = $data['vertical']['domain'];
 
         $data['mailing']['subject'] = $this->get('translator')
-            ->trans('title.published.showroom.manager', [], 'messages', $data['showroom']['provider']['lang']);
+            ->trans('title.published.showroom.manager', [], 'messages', $lang);
         $data['mailing']['to'] = $data['showroom']['provider']['notification_emails'];
         $data['mailing']['cc'] = 'support@'. $domain;
 
@@ -128,11 +132,15 @@ class EmailHookController extends Controller
             $data = json_decode($content, true);
         }
 
-        $request->setLocale($data['user']['lang']);
+        $lang = 'en_EN';
+        if (isset($data['user']['lang'])) {
+            $lang = $data['user']['lang'];
+        }
 
+        $request->setLocale($lang);
 
         $data['mailing']['subject'] = $this->get('translator')
-            ->trans('title.welcome.manager', [], 'messages', $data['user']['lang']);
+            ->trans('title.welcome.manager', [], 'messages', $lang);
         $data['mailing']['to'] = $data['user']['email'];
         $data['mailing']['cc'] = 'support@e-verticals.com';
         $data['vertical']['domain'] = 'e-verticals.com';
