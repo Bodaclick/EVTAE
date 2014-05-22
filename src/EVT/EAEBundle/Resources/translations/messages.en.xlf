@@ -315,6 +315,14 @@ Have a nice day ...</target>
         <source>body.published.showroom.manager</source>
         <target>Your showroom is now public!</target>
       </trans-unit>
+      <trans-unit id="5f3c76337c7de41087cf4650314514f9" resname="title.welcome.manager">
+        <source>title.welcome.manager</source>
+        <target>Welcome to e-verticals.com</target>
+      </trans-unit>
+      <trans-unit id="ee941d65fd82e88d37f4f729174ac128" resname="body.welcome.manager">
+        <source>body.welcome.manager</source>
+        <target>This is your username, to get access, reset your password. Go to www.e-verticals.com/login and click the "Reset Password link"</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>
