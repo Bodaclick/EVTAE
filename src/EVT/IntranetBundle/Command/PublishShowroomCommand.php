@@ -73,12 +73,12 @@ EOT
             $data['mailing']['to'] = $data['showroom']['provider']['notification_emails'];
             $data['mailing']['cc'] = 'support@'. $domain;
 
-            $data['mailSent'] = true;
+            $data['mailSent'] = 'true';
             try {
                 $this->getContainer()->get('evt.mailer')
                     ->send($data, 'EVTEAEBundle:Email:Showroom.Published.Manager.html.twig');
             } catch (\Exception $e) {
-                $data['mailSent'] = false;
+                $data['mailSent'] = 'false';
                 $output->writeln(sprintf(
                     'ERR No mail: <comment>%s</comment> in <comment>%s</comment> with error: %s',
                     $name,
