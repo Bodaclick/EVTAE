@@ -1,0 +1,13 @@
+[main]
+host = https://www.transifex.com
+
+[bdk-i18n.evtae]
+file_filter = translations/bdk-i18n.evtae/<lang>.xlf
+source_lang = en
+type = XLIFF
+
+[bdk-i18n.evtintranet]
+file_filter = translations/bdk-i18n.evtintranet/<lang>.xlf
+source_lang = en
+type = XLIFF
+
