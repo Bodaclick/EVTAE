@@ -1,0 +1,278 @@
+<?xml version="1.0" ?><xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file datatype="plaintext" original="file.ext" source-language="en">
+    <body>
+      <trans-unit id="dc7161be3dbf2250c8954e560cc35060" resname="dashboard">
+        <source>dashboard</source>
+        
+      </trans-unit>
+      <trans-unit id="8c75093a55081379668152cde7996d33" resname="lead.detail">
+        <source>lead.detail</source>
+        
+      </trans-unit>
+      <trans-unit id="c8ebe87ed3c26b8e31eb5aecef28908f" resname="lead.data.detail">
+        <source>lead.data.detail</source>
+        
+      </trans-unit>
+      <trans-unit id="400f0536669715b53fc66a5b20e36adb" resname="created.at">
+        <source>created.at</source>
+        
+      </trans-unit>
+      <trans-unit id="e6dec152d6a941fccb0a5e8cc2579cc3" resname="vertical">
+        <source>vertical</source>
+        
+      </trans-unit>
+      <trans-unit id="9e9f3d70bd8c8957627eada96d967706" resname="provider">
+        <source>provider</source>
+        
+      </trans-unit>
+      <trans-unit id="b068931cc450442b63f5b3d276ea4297" resname="name">
+        <source>name</source>
+        
+      </trans-unit>
+      <trans-unit id="0c83f57c786a0b4a39efab23731c7ebc" resname="email">
+        <source>email</source>
+        
+      </trans-unit>
+      <trans-unit id="f7a42fe7211f98ac7a60a285ac3a9e87" resname="phone">
+        <source>phone</source>
+        
+      </trans-unit>
+      <trans-unit id="d064542152820df7381a8ce9175f9f11" resname="event.type">
+        <source>event.type</source>
+        
+      </trans-unit>
+      <trans-unit id="28547826e7f72374852175d9da5b2e54" resname="event.date">
+        <source>event.date</source>
+        
+      </trans-unit>
+      <trans-unit id="a46e6fa02d107d722fa2176e106ec6a7" resname="event.location">
+        <source>event.location</source>
+        
+      </trans-unit>
+      <trans-unit id="a5d491060952aa8ad5fdee071be752de" resname="comments">
+        <source>comments</source>
+        
+      </trans-unit>
+      <trans-unit id="d745415de7dbe78a88c1cd077b8a798c" resname="leads">
+        <source>leads</source>
+        
+      </trans-unit>
+      <trans-unit id="ecae13117d6f0584c25a9da6c8f8415e" resname="read">
+        <source>read</source>
+        
+      </trans-unit>
+      <trans-unit id="27792947ed5d5da7c0d1f43327ed9dab" resname="details">
+        <source>details</source>
+        
+      </trans-unit>
+      <trans-unit id="c5b852bd85fc0f11a87b884fe1d28475" resname="no.leads">
+        <source>no.leads</source>
+        
+      </trans-unit>
+      <trans-unit id="4c4ba18475fde9d71cee7c431c015eba" resname="no.leads.for.user">
+        <source>no.leads.for.user</source>
+        
+      </trans-unit>
+      <trans-unit id="7d49d6ff7d16a2bdffbe2e925c6bbcbe" resname="login.account">
+        <source>login.account</source>
+        <target>Faça o login para a sua conta</target>
+        
+      </trans-unit>
+      <trans-unit id="14c4b06b824ec593239362517f538b29" resname="username">
+        <source>username</source>
+        <target>Nome do Utilizador</target>
+        
+      </trans-unit>
+      <trans-unit id="5f4dcc3b5aa765d61d8327deb882cf99" resname="password">
+        <source>password</source>
+        <target>Palavra-passe</target>
+        
+      </trans-unit>
+      <trans-unit id="eaa964aea1d0e8c3c481b7e78dde166e" resname="remember.me">
+        <source>remember.me</source>
+        <target>Memorizar</target>
+        
+      </trans-unit>
+      <trans-unit id="d56b699830e77ba53855679cb1d252da" resname="login">
+        <source>login</source>
+        <target>Login</target>
+        
+      </trans-unit>
+      <trans-unit id="ede8ba59a459b794433b054730f6bebd" resname="forgot.password">
+        <source>forgot.password</source>
+        <target>Esqueceu-se da sua palavra-passe?</target>
+        
+      </trans-unit>
+      <trans-unit id="20b0b785d57d0932e336cf4fbea1fa6a" resname="no.worries">
+        <source>no.worries</source>
+        <target>não se preocupe, click</target>
+        
+      </trans-unit>
+      <trans-unit id="6c92285fa6d3e827b198d120ea3ac674" resname="here">
+        <source>here</source>
+        <target>aqui</target>
+        
+      </trans-unit>
+      <trans-unit id="6113fcf531e09cf5265da6bb6963d50b" resname="to.reset.password">
+        <source>to.reset.password</source>
+        <target>para redefinir a sua palavra-passe</target>
+        
+      </trans-unit>
+      <trans-unit id="16ff5c62feadf52d81dc8a3dee51f0c6" resname="forget.password">
+        <source>forget.password</source>
+        <target>Esqueceu-se da palavra-passe?</target>
+        
+      </trans-unit>
+      <trans-unit id="a64cc9c6b71d7d1e248ea3464b183124" resname="enter.email.address.reset.password">
+        <source>enter.email.address.reset.password</source>
+        <target>Introduza o seu e-mail abaixo para redefinir a sua palavra-passe</target>
+        
+      </trans-unit>
+      <trans-unit id="469bba0a564235dfceede42db14f17b0" resname="back">
+        <source>back</source>
+        <target>Para trás</target>
+        
+      </trans-unit>
+      <trans-unit id="c79bdf421714f5087fc34b7c538b6807" resname="submit">
+        <source>submit</source>
+        <target>Submeter</target>
+        
+      </trans-unit>
+      <trans-unit id="59408631f424a664be9e996e438aed40" resname="email.sent.by.email">
+        <source>email.sent.by.email</source>
+        <target>A sua palavra-passe vai ser enviada por e-mail</target>
+        
+      </trans-unit>
+      <trans-unit id="106a6c241b8797f52e1e77317b96a201" resname="home">
+        <source>home</source>
+        <target>Home</target>
+        
+      </trans-unit>
+      <trans-unit id="4236a440a662cc8253d7536e5aa17942" resname="logout">
+        <source>logout</source>
+        
+      </trans-unit>
+      <trans-unit id="7c6ced792395bde648fdc4a81f1b0371" resname="viewmore">
+        <source>viewmore</source>
+        <target>Ver mais</target>
+        
+      </trans-unit>
+      <trans-unit id="1ac9239f57260cd326f328dd63ab2e77" resname="showrooms">
+        <source>showrooms</source>
+        
+      </trans-unit>
+      <trans-unit id="2dbcba41b9ac4c5d22886ba672463cb4" resname="slug">
+        <source>slug</source>
+        
+      </trans-unit>
+      <trans-unit id="599dcce2998a6b40b1e38e8c6006cb0a" resname="type">
+        <source>type</source>
+        
+      </trans-unit>
+      <trans-unit id="60c4cfab80df183bca570ba9e128ec22" resname="publish.in">
+        <source>publish.in</source>
+        
+      </trans-unit>
+      <trans-unit id="952893e2b9dac779bc90716272111310" resname="phone.contact">
+        <source>phone.contact</source>
+        
+      </trans-unit>
+      <trans-unit id="8abcee72c998579853aae6a8e21340be" resname="email.contact">
+        <source>email.contact</source>
+        
+      </trans-unit>
+      <trans-unit id="8b0de315a0005347a1b72938c8eab5f8" resname="managers">
+        <source>managers</source>
+        
+      </trans-unit>
+      <trans-unit id="620c8c6e564e545c317a50cbec6fd47b" resname="surnames">
+        <source>surnames</source>
+        
+      </trans-unit>
+      <trans-unit id="26840c3f87d7123d6b31074708e6213f" resname="no.user.managers">
+        <source>no.user.managers</source>
+        
+      </trans-unit>
+      <trans-unit id="5428fed0778d2a2ca00db96f8b53e6fe" resname="no.users">
+        <source>no.users</source>
+        
+      </trans-unit>
+      <trans-unit id="a181a603769c1f98ad927e7367c7aa51" resname="all">
+        <source>all</source>
+        
+      </trans-unit>
+      <trans-unit id="ae5361473c0038d7f8c4b4236c50b2da" resname="Leads">
+        <source>Leads</source>
+        
+      </trans-unit>
+      <trans-unit id="98bd1c45684cf587ac2347a92dd7bb51" resname="last">
+        <source>last</source>
+        
+      </trans-unit>
+      <trans-unit id="44fdec47036f482b68b748f9d786801b" resname="days">
+        <source>days</source>
+        
+      </trans-unit>
+      <trans-unit id="b24344b6a2c4a94c9b0d0ebd4602aeca" resname="View more">
+        <source>View more</source>
+        
+      </trans-unit>
+      <trans-unit id="06a943c59f33a34bb5924aaf72cd2995" resname="search">
+        <source>search</source>
+        
+      </trans-unit>
+      <trans-unit id="131c0bdb923cbaef74b70a70b8c434f5" resname="event.location.level2">
+        <source>event.location.level2</source>
+        
+      </trans-unit>
+      <trans-unit id="f40e898d709b1697ea21a91fc778941b" resname="event.location.level1">
+        <source>event.location.level1</source>
+        
+      </trans-unit>
+      <trans-unit id="a0cf2b148d7f6d537136bf7a031d7c41" resname="lead.status">
+        <source>lead.status</source>
+        
+      </trans-unit>
+      <trans-unit id="252cc8c4c9bff93c5f4eece6fdc318f8" resname="lead.status.read">
+        <source>lead.status.read</source>
+        
+      </trans-unit>
+      <trans-unit id="b38a1c3e35c288c42fa5bc30a3b94912" resname="lead.status.unread">
+        <source>lead.status.unread</source>
+        
+      </trans-unit>
+      <trans-unit id="0378b30f90450d995b395d16744dd63c" resname="event.at">
+        <source>event.at</source>
+        
+      </trans-unit>
+      <trans-unit id="0abdb5aece51fa113658cb5c0e7ce9fd" resname="no.showrooms">
+        <source>no.showrooms</source>
+        
+      </trans-unit>
+      <trans-unit id="d779084634ef00013112467a4ae36418" resname="no.showrooms.for.user">
+        <source>no.showrooms.for.user</source>
+        
+      </trans-unit>
+      <trans-unit id="446501053769c06c565094b26d26e8ef" resname="stats">
+        <source>stats</source>
+        
+      </trans-unit>
+      <trans-unit id="a4d3b161ce1309df1c4e25df28694b7b" resname="Submit">
+        <source>Submit</source>
+        
+      </trans-unit>
+      <trans-unit id="526d688f37a86d3c3f27d0c5016eb71d" resname="Reset">
+        <source>Reset</source>
+        
+      </trans-unit>
+      <trans-unit id="d98a07f84921b24ee30f86fd8cd85c3c" resname="from">
+        <source>from</source>
+        
+      </trans-unit>
+      <trans-unit id="01b6e20344b68835c5ed1ddedf20d531" resname="to">
+        <source>to</source>
+        
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
