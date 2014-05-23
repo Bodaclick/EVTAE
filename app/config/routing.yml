@@ -26,3 +26,6 @@ evt_ae_api:
     resource: "@EVTDIYBundle/Resources/config/routing.yml"
     type:     rest
     prefix:   /api/
+
+fos_js_routing:
+    resource: "@FOSJsRoutingBundle/Resources/config/routing/routing.xml"

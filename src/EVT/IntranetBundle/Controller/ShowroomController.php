@@ -53,4 +53,23 @@ class ShowroomController extends Controller
         );
         return new Response($content);
     }
+
+    /**
+     * @Route("/showrooms/edit/{id}", requirements={"id" = "\d+"})
+     */
+    public function editAction($id)
+    {
+        $showroomResponse = $this->container->get('evt.diy.showroom.manager')->get($id);
+
+        var_dump($showroomResponse);
+        die();
+
+        $content = $this->renderView(
+            'EVTIntranetBundle:Showroom:edit.html.twig',
+            [
+                "id" => $id
+            ]
+        );
+        return new Response($content);
+    }
 }
