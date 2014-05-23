@@ -1,7 +1,7 @@
 {% extends 'EVTIntranetBundle::layout.html.twig' %}
 {% block pageContent %}
     <!-- BEGIN CONTENT -->
-    <div class="page-content-wrapper">
+    <div class="page-content-wrapper" ng-app="editShowroom">
         <div class="page-content">
             <!-- BEGIN PAGE HEADER-->
             <div class="row">
@@ -25,15 +25,68 @@
             </div>
             <!-- END PAGE HEADER-->
             <!-- BEGIN PAGE CONTENT-->
-            <div class="row">
+            <div class="row" ng-controller="editShowroomCtrl">
                 <div class="col-md-12">
-                    <!-- BEGIN SAMPLE TABLE PORTLET-->
                     <div class="portlet box grey">
                         <div class="portlet-title">
-                            <div class="caption">{{ "Editing Showroom"|trans }}</div>
+                            <div class="caption">
+                                <i class="fa fa-reorder"></i>{{ "Editing" | trans }} [[ showroomName | uppercase ]]
+                            </div>
+                            <div class="tools">
+                                <a class="collapse" href="javascript:;">
+                                </a>
+                                <a class="reload" href="javascript:;">
+                                </a>
+                            </div>
                         </div>
-                        <div class="portlet-body flip-scroll">
-                            <a href="javascript:history.back()" class="btn"><i class="fa fa-chevron-left"></i> Back</a>
+                        <div class="portlet-body form">
+                            <!-- BEGIN FORM-->
+                            <form class="horizontal-form" action="#">
+                                <div class="form-body">
+                                    <div class="tab-content">
+                                        <div class="alert alert-danger display-none" style="display: none;">
+                                            <button data-dismiss="alert" class="close"></button>
+                                            <label ng-bind="errorMsg"></label>
+                                        </div>
+                                        <div class="alert alert-success display-none" style="display: none;">
+                                            <button data-dismiss="alert" class="close"></button>
+                                            <label ng-bind="successMsg"></label>
+                                        </div>
+                                    </div>
+                                    <h3 class="form-section">{{ "Showroom Info" | trans }}</h3>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="control-label">{{ "Name" | trans }}</label>
+                                                <input type="hidden" ng-model="evtId">
+                                                <input type="text" placeholder="{{ 'Nombre' | trans }}"
+                                                       class="form-control" id="firstName" ng-model="evtName">
+                                            </div>
+                                        </div>
+                                        <!--/span-->
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                            </div>
+                                        </div>
+                                        <!--/span-->
+                                    </div>
+                                    <!--/row-->
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>{{ "Description" | trans }}</label>
+                                                <textarea rows="3" class="form-control" ng-model="evtDesc"
+                                                          placeholder="{{ 'Write a description' | trans }}"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-actions right">
+                                    <button class="btn default" type="button">Cancel</button>
+                                    <button class="btn blue" ng-click="sendFormData()" type="submit"><i class="fa fa-check"></i> Save</button>
+                                </div>
+                            </form>
+                            <!-- END FORM-->
                         </div>
                     </div>
                     <!-- END SAMPLE TABLE PORTLET-->

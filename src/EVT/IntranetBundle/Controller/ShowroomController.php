@@ -53,4 +53,13 @@ class ShowroomController extends Controller
         );
         return new Response($content);
     }
+
+    /**
+     * @Route("/showrooms/edit/{id}", requirements={"id" = "\d+"})
+     */
+    public function editAction($id)
+    {
+        $content = $this->renderView('EVTIntranetBundle:Showroom:edit.html.twig',[]);
+        return new Response($content);
+    }
 }
