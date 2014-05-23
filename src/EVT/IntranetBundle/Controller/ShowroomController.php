@@ -59,17 +59,7 @@ class ShowroomController extends Controller
      */
     public function editAction($id)
     {
-        $showroomResponse = $this->container->get('evt.diy.showroom.manager')->get($id);
-
-        var_dump($showroomResponse);
-        die();
-
-        $content = $this->renderView(
-            'EVTIntranetBundle:Showroom:edit.html.twig',
-            [
-                "id" => $id
-            ]
-        );
+        $content = $this->renderView('EVTIntranetBundle:Showroom:edit.html.twig',[]);
         return new Response($content);
     }
 }

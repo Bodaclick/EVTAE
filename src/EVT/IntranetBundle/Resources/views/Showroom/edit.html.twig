@@ -25,12 +25,12 @@
             </div>
             <!-- END PAGE HEADER-->
             <!-- BEGIN PAGE CONTENT-->
-            <div class="row">
+            <div class="row" ng-controller="EditController">
                 <div class="col-md-12">
                     <div class="portlet box grey">
                         <div class="portlet-title">
                             <div class="caption">
-                                <i class="fa fa-reorder"></i>{{ "Editing Showroom" | trans }}
+                                <i class="fa fa-reorder"></i>{{ "Editing" | trans }} [[ showroomName | uppercase ]]
                             </div>
                             <div class="tools">
                                 <a class="collapse" href="javascript:;">
@@ -43,12 +43,24 @@
                             <!-- BEGIN FORM-->
                             <form class="horizontal-form" action="#">
                                 <div class="form-body">
+                                    <div class="tab-content">
+                                        <div class="alert alert-danger display-none" style="display: none;">
+                                            <button data-dismiss="alert" class="close"></button>
+                                            <label ng-bind="errorMsg"></label>
+                                        </div>
+                                        <div class="alert alert-success display-none" style="display: none;">
+                                            <button data-dismiss="alert" class="close"></button>
+                                            <label ng-bind="successMsg"></label>
+                                        </div>
+                                    </div>
                                     <h3 class="form-section">{{ "Showroom Info" | trans }}</h3>
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label class="control-label">{{ "Name" | trans }}</label>
-                                                <input type="text" placeholder="Chee Kin" class="form-control" id="firstName">
+                                                <input type="hidden" ng-model="evtId">
+                                                <input type="text" placeholder="{{ 'Nombre' | trans }}"
+                                                       class="form-control" id="firstName" ng-model="evtName">
                                             </div>
                                         </div>
                                         <!--/span-->
@@ -63,14 +75,15 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>{{ "Description" | trans }}</label>
-                                                <textarea rows="3" class="form-control"></textarea>
+                                                <textarea rows="3" class="form-control" ng-model="evtDesc"
+                                                          placeholder="{{ 'Write a description' | trans }}"></textarea>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-actions right">
                                     <button class="btn default" type="button">Cancel</button>
-                                    <button class="btn blue" type="submit"><i class="fa fa-check"></i> Save</button>
+                                    <button class="btn blue" ng-click="sendFormData()" type="submit"><i class="fa fa-check"></i> Save</button>
                                 </div>
                             </form>
                             <!-- END FORM-->

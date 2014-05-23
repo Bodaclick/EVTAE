@@ -1,8 +1,14 @@
-var psPostingServices = angular.module('psPostingServices', ['ngResource']);
+var editShowroomServices = angular.module('editShowroomServices', ['ngResource']);
 
-psPostingServices.factory('Brand', ['$resource',
+editShowroomServices.factory('Showroom', ['$resource',
     function($resource){
-        return $resource('js/resources/brands.json', {}, {
-            query: {method:'GET', params:{}, isArray:true}
+        return $resource(':url', {}, {
+            getShowroomById:{
+                url:'/api/showrooms/:id',
+                method:'GET',
+                params: {id:'id'},
+                isArray:false
+            }
         });
-    }]);
+    }
+]);
