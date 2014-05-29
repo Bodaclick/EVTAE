@@ -258,6 +258,42 @@
         <source>to</source>
         <target>to</target>
       </trans-unit>
+      <trans-unit id="e67fbeae035c9edc304e4ce480191bc0" resname="new employee">
+        <source>new employee</source>
+        <target>new employee</target>
+      </trans-unit>
+      <trans-unit id="de95b43bceeb4b998aed4aed5cef1ae7" resname="edit">
+        <source>edit</source>
+        <target>__edit</target>
+      </trans-unit>
+      <trans-unit id="7dce122004969d56ae2e0245cb754d35" resname="Edit">
+        <source>Edit</source>
+        <target>__Edit</target>
+      </trans-unit>
+      <trans-unit id="b1caf7f21c1b8899e11165a6aed71af9" resname="Editing">
+        <source>Editing</source>
+        <target>__Editing</target>
+      </trans-unit>
+      <trans-unit id="f605e8a2bdf773d019f1f63f358ee13c" resname="Showroom Info">
+        <source>Showroom Info</source>
+        <target>__Showroom Info</target>
+      </trans-unit>
+      <trans-unit id="49ee3087348e8d44e1feda1917443987" resname="Name">
+        <source>Name</source>
+        <target>__Name</target>
+      </trans-unit>
+      <trans-unit id="4777bbaaa0aebe104606b77947d0e22d" resname="Nombre">
+        <source>Nombre</source>
+        <target>__Nombre</target>
+      </trans-unit>
+      <trans-unit id="b5a7adde1af5c87d7fd797b6245c2a39" resname="Description">
+        <source>Description</source>
+        <target>__Description</target>
+      </trans-unit>
+      <trans-unit id="5e2ec0719f7f6f1f666d6154538dba79" resname="Write a description">
+        <source>Write a description</source>
+        <target>__Write a description</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>
