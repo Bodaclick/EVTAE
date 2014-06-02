@@ -24,7 +24,11 @@ class ResetPasswordController extends Controller
      */
     public function resetPasswordAction(Request $request)
     {
-        $email = $request->request->get('email');
+        $email = $request->query->get('email');
+        if (null != $request->request->get('email')) {
+            $email = $request->request->get('email');
+        }
+
         $arrayContent = $this->container->get('evt.core.client')->get('/api/resets/' . $email . '/password');
         $arrPass = $arrayContent->getBody();
 

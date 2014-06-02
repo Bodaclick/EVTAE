@@ -323,6 +323,10 @@ Have a nice day ...</target>
         <source>body.welcome.manager</source>
         <target>This is your username, to get access, reset your password. Go to www.e-verticals.com/login and click the "Reset Password link"</target>
       </trans-unit>
+      <trans-unit id="584948f210d52f81615fdf5dfbf509d0" resname="reset.password.click.here">
+        <source>reset.password.click.here</source>
+        <target>Click here for reset your password</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

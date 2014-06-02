@@ -334,6 +334,10 @@
         <source>body.welcome.manager</source>
         
       </trans-unit>
+      <trans-unit id="584948f210d52f81615fdf5dfbf509d0" resname="reset.password.click.here">
+        <source>reset.password.click.here</source>
+        
+      </trans-unit>
     </body>
   </file>
 </xliff>

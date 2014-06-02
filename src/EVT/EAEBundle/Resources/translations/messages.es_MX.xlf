@@ -381,18 +381,36 @@ Que tengas un lindo día</target>
       </trans-unit>
       <trans-unit id="0166131d9877f2fe28efc0e1d3049ad0" resname="title.published.showroom.manager">
         <source>title.published.showroom.manager</source>
+        <target>Estimado cliente;
+ 
+Le informamos que su ShowRoom ya está activado;
+a continuación le pasamos el enlace para que pueda consultarlo:</target>
         
       </trans-unit>
       <trans-unit id="45b1fe0f185e27719e4ec52a4be87ffe" resname="body.published.showroom.manager">
         <source>body.published.showroom.manager</source>
+        <target>ShowRoom activado</target>
         
       </trans-unit>
       <trans-unit id="5f3c76337c7de41087cf4650314514f9" resname="title.welcome.manager">
         <source>title.welcome.manager</source>
+        <target>Bienvenido</target>
         
       </trans-unit>
       <trans-unit id="ee941d65fd82e88d37f4f729174ac128" resname="body.welcome.manager">
         <source>body.welcome.manager</source>
+        <target>Estimado cliente,
+Le informamos que vamos a proceder a la activación de su acceso a la gestión de solicitudes procedente de su vertical contratado, para ello necesitamos que usted mismo genere su clave de acceso, haciendo clic en el enlace de este mail  se le asignaran una clave automática la cual recibirá por correo electrónico.
+
+Muchas gracias
+Reciba un cordial saludo
+
+“clic aquí para generar clave”</target>
+        
+      </trans-unit>
+      <trans-unit id="584948f210d52f81615fdf5dfbf509d0" resname="reset.password.click.here">
+        <source>reset.password.click.here</source>
+        <target>clic aquí para generar clave</target>
         
       </trans-unit>
     </body>
