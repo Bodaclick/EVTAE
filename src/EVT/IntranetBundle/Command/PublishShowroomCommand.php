@@ -65,6 +65,8 @@ EOT
         if ($showroom->getStatusCode() == 200 && $showroom->getBody()['pagination']['total_items'] == 1) {
             $data['showroom'] = $showroom->getBody()['items'][0];
 
+            $this->getContainer()->get('translator')->setLocale($data['showroom']['provider']['lang']);
+
             $data['vertical'] = $data['showroom']['vertical'];
             $domain = $data['vertical']['domain'];
 
