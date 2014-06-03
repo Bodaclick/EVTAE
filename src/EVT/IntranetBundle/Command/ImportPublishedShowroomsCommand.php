@@ -69,9 +69,6 @@ EOT
 
                 $input = new ArrayInput($arguments);
                 $command->run($input, $output);
-
-                $this->getContainer()->get('snc_redis.default_client')
-                    ->set('evt_showrooms:'. str_replace(['http://', 'https://', 'www.'], [''], $line[1]), '1');
             }
         }
     }

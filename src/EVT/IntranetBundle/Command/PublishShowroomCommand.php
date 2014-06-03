@@ -74,11 +74,14 @@ EOT
                 ->trans('title.published.showroom.manager', [], 'messages', $data['showroom']['provider']['lang']);
             $data['mailing']['to'] = $data['showroom']['provider']['notification_emails'];
             $data['mailing']['cc'] = 'support@'. $domain;
+            $data['url'] = str_replace(['http://', 'https://'], [''], $url);
 
             $data['mailSent'] = 'true';
             try {
                 $this->getContainer()->get('evt.mailer')
                     ->send($data, 'EVTEAEBundle:Email:Showroom.Published.Manager.html.twig');
+                $this->getContainer()->get('snc_redis.default_client')
+                    ->set('evt_showrooms:'. str_replace(['http://', 'https://', 'www.'], [''], $url), '1');
             } catch (\Exception $e) {
                 $data['mailSent'] = 'false';
                 $output->writeln(sprintf(
