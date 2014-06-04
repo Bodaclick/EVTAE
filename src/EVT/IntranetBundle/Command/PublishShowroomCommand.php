@@ -77,7 +77,7 @@ EOT
             $data['url'] = str_replace(['http://', 'https://'], [''], $url);
 
             $data['mailSent'] = 'true';
-            try {
+            /*try {
                 $this->getContainer()->get('evt.mailer')
                     ->send($data, 'EVTEAEBundle:Email:Showroom.Published.Manager.html.twig');
                 $this->getContainer()->get('snc_redis.default_client')
@@ -90,7 +90,7 @@ EOT
                     $domain,
                     $e->getMessage()
                 ));
-            }
+            }*/
 
             $request = $this->getContainer()->get('evt.guzzle.client')->post(
                 $urlBack,
