@@ -28,7 +28,8 @@ class PostShowroomPublishedManagerEmailTest extends WebTestCase
                 "vertical"=> [
                     "domain"=> "test.com",
                 ]
-            ]
+            ],
+            'url' => 'http://www.testurl.com/slug'
         ];
 
         $this->client->enableProfiler(); // Enable profiler to get the emails
