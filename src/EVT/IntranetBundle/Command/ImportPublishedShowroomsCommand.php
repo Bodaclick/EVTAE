@@ -55,10 +55,10 @@ EOT
         $fh = fopen($input->getArgument('file'), 'r');
         while ($line = fgetcsv($fh)) {
 
-            /*$val = $this->getContainer()->get('snc_redis.default_client')
+            $val = $this->getContainer()->get('snc_redis.default_client')
                 ->get('evt_showrooms:'. str_replace(['http://', 'https://', 'www.'], [''], $line[1]));
 
-            if (null === $val) {*/
+            if (null === $val) {
                 $arguments = array(
                     'command' => 'evt:showroom:publish',
                     'username'    => $adminUsername,
@@ -69,7 +69,7 @@ EOT
 
                 $input = new ArrayInput($arguments);
                 $command->run($input, $output);
-            //}
+            }
         }
     }
 }
